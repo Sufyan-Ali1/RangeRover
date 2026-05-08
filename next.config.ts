@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
+// Import redirects from generated redirects file
+const redirects = require('./lib/redirects.js');
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return redirects;
+  },
 };
 
 export default nextConfig;

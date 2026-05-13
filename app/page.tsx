@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import EngineServices from "./components/EngineServices";
 import BrowseByModel from "./components/BrowseByModel";
 import WarrantySection from "./components/WarrantySection";
+import TrustedSpecialists from "./components/TrustedSpecialists";
 import AuthorityLeading from "./components/AuthorityLeading";
 import AuthorityNationwide from "./components/AuthorityNationwide";
 import AuthorityPrecision from "./components/AuthorityPrecision";
@@ -27,6 +28,7 @@ export default function Home() {
       <EngineServices services={engineServices.slice(0, 4)} viewMoreHref="/services" />
       <BrowseByModel rangeRoverModels={rangeRoverModels} landRoverModels={landRoverModels} bgImage="/browsebymodel.svg" />
       <WarrantySection />
+      <TrustedSpecialists />
       <AuthorityLeading data={authorityLeading} />
       <AuthorityNationwide data={authorityNationwide} />
       <AuthorityPrecision data={authorityPrecision} />

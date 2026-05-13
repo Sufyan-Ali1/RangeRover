@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { submitContact, type ContactPayload } from "../actions/submitContact";
+import { lookupVehicle, type VehicleResult } from "../actions/lookupVehicle";
 
-type FormFields = ContactPayload;
+type FormFields = Omit<ContactPayload, "browser">;
 type FieldErrors = Partial<Record<keyof FormFields, string>>;
 
 function validate(form: FormFields): FieldErrors {
@@ -16,10 +18,11 @@ function validate(form: FormFields): FieldErrors {
   else if (!/^[A-Za-z\s'\-]+$/.test(form.name))
     errors.name = "Name can only contain letters.";
 
-  if (!form.phone.trim())
+  const phoneDigits = form.phone.replace(/\D/g, "").replace(/^1/, "");
+  if (!phoneDigits)
     errors.phone = "Phone number is required.";
-  else if (!/^\+?[\d\s\-]{10,15}$/.test(form.phone))
-    errors.phone = "Enter a valid phone number (10–15 digits).";
+  else if (phoneDigits.length !== 10)
+    errors.phone = "Enter a valid 10-digit US phone number.";
 
   if (!form.email.trim())
     errors.email = "Email address is required.";
@@ -52,11 +55,11 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 export default function Contact() {
+  const router = useRouter();
   const [form, setForm] = useState<FormFields>({
-    name: "", phone: "", email: "", reg: "", postcode: "", message: "",
+    name: "", phone: "+1 ", email: "", reg: "", postcode: "", message: "",
   });
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
-  const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
@@ -66,8 +69,13 @@ export default function Contact() {
 
     if (name === "reg")
       filtered = value.replace(/[^A-Za-z0-9]/g, "").toUpperCase().slice(0, 8);
-    else if (name === "phone")
-      filtered = value.replace(/[^0-9+\s\-]/g, "");
+    else if (name === "phone") {
+      const digits = value.replace(/\D/g, "").replace(/^1/, "").slice(0, 10);
+      if (digits.length === 0) filtered = "+1 ";
+      else if (digits.length <= 3) filtered = `+1 ${digits}`;
+      else if (digits.length <= 6) filtered = `+1 ${digits.slice(0, 3)}-${digits.slice(3)}`;
+      else filtered = `+1 ${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+    }
     else if (name === "postcode")
       filtered = value.replace(/[^A-Za-z0-9\s]/g, "").toUpperCase();
 
@@ -86,12 +94,12 @@ export default function Contact() {
     }
     setSubmitError("");
     setSubmitting(true);
-    const { ok } = await submitContact(form);
+    const { ok, message } = await submitContact({ ...form, browser: navigator.userAgent });
     setSubmitting(false);
     if (ok) {
-      setSubmitted(true);
+      router.push("/quote-success");
     } else {
-      setSubmitError("Something went wrong. Please try again or call us directly.");
+      setSubmitError(message ?? "Something went wrong. Please try again or call us directly.");
     }
   };
 
@@ -120,18 +128,7 @@ export default function Contact() {
               Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown
             </p>
 
-            {submitted ? (
-              <div className="mt-10 flex flex-col items-center justify-center py-10 text-center">
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#ECFFF3]">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#11633A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12"/>
-                  </svg>
-                </div>
-                <h3 className="mb-2 text-[20px] font-black text-gray-900">Message Sent!</h3>
-                <p className="text-[13.5px] text-gray-500">We&apos;ll respond within 24 hours during business days.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} noValidate className="mt-7 flex flex-col gap-4">
+            <form onSubmit={handleSubmit} noValidate className="mt-7 flex flex-col gap-4">
 
                 {/* Full Name + Phone */}
                 <div className="grid grid-cols-2 gap-4">
@@ -148,14 +145,17 @@ export default function Contact() {
                   </div>
                   <div>
                     <label className="mb-1.5 block text-[12.5px] text-gray-700">Phone Number *</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={form.phone}
-                      onChange={handleChange}
-                      placeholder="07123456789"
-                      className={`${baseInput} ${borderClass("phone")}`}
-                    />
+                    <div className={`relative flex items-center rounded-md border transition focus-within:border-[#4CA66B] focus-within:ring-1 focus-within:ring-[#4CA66B] ${borderClass("phone")}`}>
+                      <span className="pointer-events-none pl-3.5 text-[13.5px] text-gray-800 select-none whitespace-nowrap">+1</span>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={form.phone.startsWith("+1 ") ? form.phone.slice(3) : form.phone}
+                        onChange={handleChange}
+                        placeholder="713-345-6789"
+                        className="w-full rounded-md py-2.5 pl-1 pr-3.5 text-[13.5px] text-gray-800 placeholder-gray-400 outline-none"
+                      />
+                    </div>
                     <FieldError field="phone" />
                   </div>
                 </div>
@@ -225,8 +225,8 @@ export default function Contact() {
                   className="flex items-center justify-center gap-2 rounded-md bg-[#4CA66B] py-3 text-[14px] font-semibold text-white transition hover:bg-[#3D9258] active:bg-[#11633A] disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="22" y1="2" x2="11" y2="13"/>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
                   </svg>
                   {submitting ? "Sending…" : "Send Message"}
                 </button>
@@ -235,7 +235,6 @@ export default function Contact() {
                   We&apos;ll respond to your message within 24 hours during business days.
                 </p>
               </form>
-            )}
           </div>
 
           {/* ── Right: Contact Info ── */}
@@ -248,15 +247,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
-              <div>
-                <SectionLabel>Address</SectionLabel>
-                <div className="mt-4 text-[14px] leading-[2] text-gray-800">
-                  Unit 1 Hedley Ave<br />
-                  Grays RM20 4EL<br />
-                  United Kingdom
-                </div>
-              </div>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div>
                 <SectionLabel>Contact</SectionLabel>
                 <div className="mt-4 flex flex-col gap-3">
@@ -270,6 +261,16 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
+
+              <div>
+                <SectionLabel>Address</SectionLabel>
+                <div className="mt-4 text-[14px] leading-[2] text-gray-800">
+                  Unit 1 Hedley Ave<br />
+                  Grays RM20 4EL<br />
+                  United Kingdom
+                </div>
+              </div>
+
             </div>
 
             <div>
@@ -292,7 +293,7 @@ export default function Contact() {
 
             <div className="overflow-hidden rounded-xl">
               <iframe
-                src="https://maps.google.com/maps?q=Unit+1+Hedley+Ave,+Grays+RM20+4EL,+United+Kingdom&output=embed&hl=en"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42627.347792855464!2d0.3158840742122115!3d51.46191600322437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8b76dba1fd2e1%3A0xf0dc09e9187bf7f8!2sRange%20Rover%20Garage!5e0!3m2!1sen!2suk!4v1778589373205!5m2!1sen!2suk"
                 width="100%"
                 height="290"
                 style={{ border: 0 }}

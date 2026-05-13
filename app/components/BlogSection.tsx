@@ -19,7 +19,9 @@ export default function BlogSection() {
 
   const scroll = (dir: "left" | "right") => {
     if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({ left: dir === "right" ? 360 : -360, behavior: "smooth" });
+    const card = scrollRef.current.querySelector<HTMLElement>(":scope > div");
+    const amount = card ? card.offsetWidth + 16 : 316;
+    scrollRef.current.scrollBy({ left: dir === "right" ? amount : -amount, behavior: "smooth" });
   };
 
   return (
@@ -44,13 +46,13 @@ export default function BlogSection() {
               <div
                 ref={scrollRef}
                 className="flex gap-4 overflow-x-auto pb-2"
-                style={{ scrollbarWidth: "none" }}
+                style={{ scrollbarWidth: "none", scrollSnapType: "x mandatory" }}
               >
                 {posts.map((post) => (
                   <div
                     key={post.slug}
                     className="flex w-[300px] shrink-0 flex-col rounded-2xl p-5"
-                    style={{ background: "#ECFFF3" }}
+                    style={{ background: "#ECFFF3", scrollSnapAlign: "start" }}
                   >
                     <h3 className="mb-2.5 line-clamp-2 text-[15px] font-bold leading-snug text-gray-900">
                       {post.title}

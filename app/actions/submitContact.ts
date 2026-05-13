@@ -1,8 +1,6 @@
 "use server";
 
-// ── Update this URL when your API is ready ──────────────────────────────────
-const CONTACT_API_URL = "https://your-api-url.com/contact";
-// ────────────────────────────────────────────────────────────────────────────
+const CONTACT_API_URL = "https://portal.rangerovergarage.co.uk/api/quote";
 
 export interface ContactPayload {
   name: string;
@@ -11,20 +9,39 @@ export interface ContactPayload {
   reg: string;
   postcode: string;
   message: string;
+  browser: string;
 }
 
-export async function submitContact(data: ContactPayload): Promise<{ ok: boolean }> {
-  // ── Remove this block once CONTACT_API_URL is set ───────────────────────
-  if (CONTACT_API_URL.includes("your-api-url")) return { ok: true };
-  // ────────────────────────────────────────────────────────────────────────
+export async function submitContact(data: ContactPayload): Promise<{ ok: boolean; message?: string }> {
+  const username = process.env.PORTAL_USERNAME ?? "";
+  const password = process.env.PORTAL_PASSWORD ?? "";
+
+  const fields: Record<string, string> = {
+    website_name: "range-rover-garage",
+    name:         data.name,
+    phone:        data.phone,
+    email:        data.email,
+    postcode:     data.postcode,
+    vrm:          data.reg,
+    issue:        data.message,
+    browser:      data.browser,
+    ip_address:   "Client-Side",
+  };
+
+  const formData = new FormData();
+  Object.entries(fields).forEach(([key, value]) => formData.append(key, value));
+
   try {
     const res = await fetch(CONTACT_API_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      headers: { username, password },
+      body: formData,
     });
-    return { ok: res.ok };
+    const json = await res.json().catch(() => null);
+    const message: string | undefined = json?.message;
+    if (res.ok && json?.success) return { ok: true, message };
+    return { ok: false, message: message ?? "Something went wrong. Please try again or call us directly." };
   } catch {
-    return { ok: false };
+    return { ok: false, message: "Something went wrong. Please try again or call us directly." };
   }
 }

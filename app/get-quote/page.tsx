@@ -1,35 +1,12 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import GetQuote, { type VehicleInfo } from "../components/GetQuote";
+import { lookupVehicle } from "../actions/lookupVehicle";
 
 export const metadata = {
   title: "Get a Quote | Range Rover Engines",
   description: "Request a free quote for Range Rover or Land Rover engine repair, replacement, or rebuild.",
 };
-
-// ── Update this URL when your API is ready ──────────────────────────────────
-const VEHICLE_API_URL = "https://your-api-url.com/vehicle";
-
-async function lookupVehicle(reg: string): Promise<{ found: boolean; vehicle?: VehicleInfo }> {
-  try {
-    const res = await fetch(`${VEHICLE_API_URL}?reg=${encodeURIComponent(reg)}`, {
-      next: { revalidate: 0 },
-    });
-    if (!res.ok) return { found: false };
-    const data = await res.json();
-    // ── Map your API response fields here ───────────────────────────────────
-    return {
-      found: true,
-      vehicle: {
-        description: data.description ?? "",
-      },
-    };
-    // ────────────────────────────────────────────────────────────────────────
-  } catch {
-    return { found: false };
-  }
-}
-// ────────────────────────────────────────────────────────────────────────────
 
 interface Props {
   searchParams: Promise<{ reg?: string }>;
@@ -43,8 +20,8 @@ export default async function GetQuotePage({ searchParams }: Props) {
 
   if (reg?.trim()) {
     const result = await lookupVehicle(reg.trim());
-    if (result.found) {
-      vehicleInfo = result.vehicle;
+    if (result.ok) {
+      vehicleInfo = { description: result.vehicle.description, data: result.vehicle };
     } else {
       notFound = true;
     }

@@ -1,3 +1,7 @@
+"use client";
+
+import { useRef, useEffect } from "react";
+
 function Starburst() {
   return (
     <svg
@@ -18,18 +22,15 @@ function Starburst() {
   );
 }
 
-export default function ServicesTicker({ items }: { items: string[] }) {
-  const track = (
+function Strip({ items }: { items: string[] }) {
+  return (
     <>
-      {items.map((item) => (
-        <span key={item} className="flex items-center gap-6 shrink-0">
+      {items.map((item, i) => (
+        <span key={i} className="flex shrink-0 items-center gap-5 pr-10">
           <Starburst />
           <span
-            className="text-[4rem] font-black uppercase leading-none tracking-wide"
-            style={{
-              WebkitTextStroke: "2px #11633A",
-              color: "transparent",
-            }}
+            className="text-[2.5rem] font-black uppercase leading-none tracking-wide sm:text-[4rem]"
+            style={{ WebkitTextStroke: "2px #11633A", color: "transparent" }}
           >
             {item}
           </span>
@@ -37,15 +38,41 @@ export default function ServicesTicker({ items }: { items: string[] }) {
       ))}
     </>
   );
+}
+
+export default function ServicesTicker({ items }: { items: string[] }) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const firstCopyRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    // Measure after fonts are ready so the pixel width is accurate
+    document.fonts.ready.then(() => {
+      if (trackRef.current && firstCopyRef.current) {
+        const w = firstCopyRef.current.offsetWidth;
+        trackRef.current.style.setProperty("--marquee-w", `${w}px`);
+      }
+    });
+  }, [items]);
 
   return (
     <div className="w-full overflow-hidden border-y border-gray-100 bg-white py-5">
       <div
-        className="flex gap-6 whitespace-nowrap"
-        style={{ animation: "marquee 18s linear infinite" }}
+        ref={trackRef}
+        className="flex"
+        style={{ animation: "marquee-exact 18s linear infinite", willChange: "transform" }}
       >
-        {track}
-        {track}
+        <span ref={firstCopyRef} className="flex shrink-0">
+          <Strip items={items} />
+        </span>
+        <span className="flex shrink-0">
+          <Strip items={items} />
+        </span>
+        <span className="flex shrink-0">
+          <Strip items={items} />
+        </span>
+        <span className="flex shrink-0">
+          <Strip items={items} />
+        </span>
       </div>
     </div>
   );

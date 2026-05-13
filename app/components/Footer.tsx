@@ -26,7 +26,7 @@ export default function Footer() {
               alt="Range Rover Garage"
               width={140}
               height={50}
-              className="h-12 w-auto"
+              className="h-12 w-auto self-start"
             />
             <p className="text-[13.5px] leading-[1.75] text-[#9ca3af]">
               The UK&apos;s premier independent specialist for Range Rover and

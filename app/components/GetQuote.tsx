@@ -40,10 +40,11 @@ function validate(form: FormFields): FieldErrors {
   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email))
     errors.email = "Enter a valid email address.";
 
-  if (!form.phone.trim())
+  const phoneDigits = form.phone.replace(/\D/g, "").replace(/^1/, "");
+  if (!phoneDigits)
     errors.phone = "Phone number is required.";
-  else if (!/^\+?[\d\s\-]{10,15}$/.test(form.phone))
-    errors.phone = "Enter a valid phone number (10–15 digits).";
+  else if (phoneDigits.length !== 10)
+    errors.phone = "Enter a valid 10-digit US phone number.";
 
   if (!form.postcode.trim())
     errors.postcode = "Postcode is required.";
@@ -58,8 +59,11 @@ function validate(form: FormFields): FieldErrors {
   return errors;
 }
 
+import type { VehicleResult } from "../actions/lookupVehicle";
+
 export interface VehicleInfo {
   description: string;
+  data?: VehicleResult;
 }
 
 interface GetQuoteProps {
@@ -74,7 +78,7 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
   const [captcha, setCaptcha] = useState("");
   const [vehicleNotFound, setVehicleNotFound] = useState(showNotFound);
   const [form, setForm] = useState<FormFields>({
-    reg: initialReg, name: "", email: "", phone: "", postcode: "", issue: "",
+    reg: initialReg, name: "", email: "", phone: "+1 ", postcode: "", issue: "",
   });
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [submitting, setSubmitting] = useState(false);
@@ -94,8 +98,13 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
 
     if (name === "reg")
       filtered = value.replace(/[^A-Za-z0-9]/g, "").toUpperCase().slice(0, 8);
-    else if (name === "phone")
-      filtered = value.replace(/[^0-9+\s\-]/g, "");
+    else if (name === "phone") {
+      const digits = value.replace(/\D/g, "").replace(/^1/, "").slice(0, 10);
+      if (digits.length === 0) filtered = "+1 ";
+      else if (digits.length <= 3) filtered = `+1 ${digits}`;
+      else if (digits.length <= 6) filtered = `+1 ${digits.slice(0, 3)}-${digits.slice(3)}`;
+      else filtered = `+1 ${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+    }
     else if (name === "postcode")
       filtered = value.replace(/[^A-Za-z0-9\s]/g, "").toUpperCase();
 
@@ -124,12 +133,16 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
 
     setSubmitError("");
     setSubmitting(true);
-    const { ok } = await submitQuote(form);
+    const { ok, message } = await submitQuote({
+      ...form,
+      browser: navigator.userAgent,
+      vehicle: vehicleInfo?.data,
+    });
     setSubmitting(false);
     if (ok) {
       router.push("/quote-success");
     } else {
-      setSubmitError("Something went wrong. Please try again or call us directly.");
+      setSubmitError(message ?? "Something went wrong. Please try again or call us directly.");
     }
   };
 
@@ -266,7 +279,8 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
                       </svg>
-                      <input name="phone" value={form.phone} onChange={handleChange} placeholder="Enter Phone Number" className="flex-1 text-[13.5px] text-gray-700 placeholder:text-gray-400 focus:outline-none" />
+                      <span className="pointer-events-none text-[13.5px] text-gray-700 select-none shrink-0">+1</span>
+                      <input name="phone" value={form.phone.startsWith("+1 ") ? form.phone.slice(3) : form.phone} onChange={handleChange} placeholder="713-345-6789" className="flex-1 text-[13.5px] text-gray-700 placeholder:text-gray-400 focus:outline-none" />
                     </div>
                     <FieldError field="phone" />
                   </div>

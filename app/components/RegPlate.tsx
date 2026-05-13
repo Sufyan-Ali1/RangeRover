@@ -17,12 +17,21 @@ function UnionJack() {
 
 export default function RegPlate() {
   const [reg, setReg] = useState("");
+  const [error, setError] = useState("");
   const router = useRouter();
 
   const handleSearch = () => {
-    if (reg.trim()) {
-      router.push(`/get-quote?reg=${encodeURIComponent(reg.trim())}`);
+    const trimmed = reg.trim();
+    if (!trimmed) {
+      setError("Please enter a registration number.");
+      return;
     }
+    if (!/^[A-Z0-9]{1,8}$/.test(trimmed)) {
+      setError("Registration must be alphanumeric only (max 8 characters).");
+      return;
+    }
+    setError("");
+    router.push(`/get-quote?reg=${encodeURIComponent(trimmed)}`);
   };
 
   return (
@@ -33,7 +42,7 @@ export default function RegPlate() {
       </p>
 
       {/* Unified plate */}
-      <div className="flex w-full overflow-hidden rounded-lg shadow-xl">
+      <div className={`flex w-full overflow-hidden rounded-lg shadow-xl ${error ? "ring-2 ring-red-400" : ""}`}>
         {/* Navy left: flag + UK */}
         <div className="flex flex-col items-center justify-center gap-0.5 bg-[#003087] px-3 py-2">
           <UnionJack />
@@ -44,7 +53,10 @@ export default function RegPlate() {
         <input
           type="text"
           value={reg}
-          onChange={(e) => setReg(e.target.value.toUpperCase())}
+          onChange={(e) => {
+            setReg(e.target.value.replace(/[^A-Za-z0-9]/g, "").toUpperCase().slice(0, 8));
+            if (error) setError("");
+          }}
           onKeyDown={(e) => e.key === "Enter" && handleSearch()}
           placeholder="ENTER REGISTRATION"
           maxLength={8}
@@ -64,6 +76,10 @@ export default function RegPlate() {
           </svg>
         </button>
       </div>
+
+      {error && (
+        <p className="mt-2 text-center text-[11px] font-semibold text-red-300">{error}</p>
+      )}
 
       {/* Below-plate hint */}
       <p className="mt-3 text-center text-[11px] text-white/60">

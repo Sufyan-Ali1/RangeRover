@@ -8,7 +8,8 @@ import NationwideSupport from "@/app/components/NationwideSupport";
 import BlogSection from "@/app/components/BlogSection";
 import CTA from "@/app/components/CTA";
 import VideoSection from "@/app/components/VideoSection";
-import { authorityNationwide, authorityPrecision } from "@/app/data/authority";
+import { getModelAuthorityNationwide, getModelAuthorityPrecision } from "@/app/data/authority";
+import { getModelNationwideSupport } from "@/app/data/sections";
 import AuthorityNationwide from "@/app/components/AuthorityNationwide";
 import AuthorityPrecision from "@/app/components/AuthorityPrecision";
 import ServiceCards from "@/app/components/ServiceCards";
@@ -48,13 +49,13 @@ export default async function ModelPage({ params }: Props) {
       />
       <ServiceCards cards={serviceCards} />
       <Reviews />
-      <AuthorityNationwide data={authorityNationwide} />
-      <AuthorityPrecision data={authorityPrecision} />
-      <NationwideSupport />
+      <AuthorityNationwide data={getModelAuthorityNationwide(brandTitle, modelTitle)} />
+      <AuthorityPrecision data={getModelAuthorityPrecision(brandTitle, modelTitle)} />
+      <NationwideSupport data={getModelNationwideSupport(brandTitle, modelTitle)} />
       <VideoSection />
       <CTA />
       <BlogSection />
-      <NationwideSupport />
+      <NationwideSupport data={getModelNationwideSupport(brandTitle, modelTitle)} />
       <FAQ faqs={faqs} />
       <Location />
       <Footer />

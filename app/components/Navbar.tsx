@@ -151,7 +151,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
 
       {/* Mobile drawer */}
       {open && (
-        <div className="bg-[#11633A] px-6 pb-6 sm:px-10 lg:hidden">
+        <div className="max-h-[calc(100dvh-56px)] overflow-y-auto bg-[#11633A] px-6 pb-6 sm:px-10 lg:hidden">
           <ul className="flex flex-col gap-0.5">
             {navLinks.map(({ label, href, dropdown }) => (
               <li key={label}>

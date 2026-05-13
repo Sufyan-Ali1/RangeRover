@@ -11,7 +11,7 @@ import FAQ from "../components/FAQ";
 import Location from "../components/Location";
 import { brands } from "../data/brands";
 import { faqs } from "../data/faqs";
-import { authorityNationwide, authorityPrecision } from "../data/authority";
+import { enginesPageNationwide, enginesPagePrecision } from "../data/authority";
 
 export const metadata = {
   title: "Engines | Range Rover Engines",
@@ -27,10 +27,16 @@ export default function EnginesPage() {
         title={<>Premium Range Rover<br />&amp; Land Rover Engines.</>}
         subtitle="Evoque • Sport • Vogue • Defender • Discovery • Freelander"
       />
-      <BrowseByModel brands={brands} light />
+      <BrowseByModel
+        brands={brands}
+        light
+        label="Engine Brands We Cover"
+        heading="Specialist Engine Services Across All Major Brands"
+        description="From Range Rover and Land Rover to BMW, Audi, Mercedes and Jaguar — our engineers deliver expert engine rebuilds, replacements and repairs using genuine OEM parts with up to 24-month warranty."
+      />
       <Reviews />
-      <AuthorityNationwide data={authorityNationwide} />
-      <AuthorityPrecision data={authorityPrecision} />
+      <AuthorityNationwide data={enginesPageNationwide} />
+      <AuthorityPrecision data={enginesPagePrecision} />
       <CTA />
       <VideoSection />
       <FAQ faqs={faqs} />

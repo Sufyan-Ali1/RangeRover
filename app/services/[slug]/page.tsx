@@ -11,9 +11,10 @@ import Location from "../../components/Location";
 import BlogSection from "../../components/BlogSection";
 import CTA from "../../components/CTA";
 import VideoSection from "../../components/VideoSection";
-import { serviceCards } from "../../data/serviceCards";
+import { getServiceCards } from "../../data/serviceCards";
 import { faqs } from "../../data/faqs";
-import { authorityNationwide, authorityPrecision } from "../../data/authority";
+import { getServiceAuthorityNationwide, getServiceAuthorityPrecision } from "../../data/authority";
+import { getServiceNationwideSupport } from "../../data/sections";
 import WarrantySection from "@/app/components/WarrantySection";
 
 interface Props {
@@ -50,15 +51,15 @@ export default async function SubServicePage({ params }: Props) {
       />
       <Reviews />
       <WarrantySection />
-      <AuthorityNationwide data={authorityNationwide} />
-      <NationwideSupport />
-      <ServiceCards cards={serviceCards} />
-      <AuthorityPrecision data={authorityPrecision} />
-      <NationwideSupport />
+      <AuthorityNationwide data={getServiceAuthorityNationwide(title)} />
+      <NationwideSupport data={getServiceNationwideSupport(title)} />
+      <ServiceCards cards={getServiceCards(slug)} />
+      <AuthorityPrecision data={getServiceAuthorityPrecision(title)} />
+      <NationwideSupport data={getServiceNationwideSupport(title)} />
       <VideoSection />
       <CTA />
       <BlogSection />
-      <NationwideSupport />
+      <NationwideSupport data={getServiceNationwideSupport(title)} />
       <FAQ faqs={faqs} />
       <Location />
       <Footer />

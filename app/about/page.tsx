@@ -4,7 +4,7 @@ import AboutSection from "../components/AboutSection";
 import AboutCTA from "../components/AboutCTA";
 import VideoSection from "../components/VideoSection";
 import AuthorityPrecision from "../components/AuthorityPrecision";
-import { authorityNationwide, authorityPrecision } from "../data/authority";
+import { aboutPageNationwide, aboutPagePrecision } from "../data/authority";
 import AuthorityNationwide from "../components/AuthorityNationwide";
 
 export const metadata = {
@@ -20,8 +20,8 @@ export default function AboutPage() {
         <AboutSection />
       </div>
       <AboutCTA />
-      <AuthorityNationwide data={authorityNationwide} />
-      <AuthorityPrecision data={authorityPrecision} />
+      <AuthorityNationwide data={aboutPageNationwide} />
+      <AuthorityPrecision data={aboutPagePrecision} />
       <VideoSection />
       <Footer />
     </div>

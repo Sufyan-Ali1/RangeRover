@@ -14,7 +14,8 @@ import Location from "../../components/Location";
 import BlogSection from "../../components/BlogSection";
 import NationwideSupport from "@/app/components/NationwideSupport";
 import { faqs } from "../../data/faqs";
-import { authorityNationwide, authorityPrecision } from "../../data/authority";
+import { getBrandAuthorityNationwide, getBrandAuthorityPrecision } from "../../data/authority";
+import { getBrandNationwideSupport } from "../../data/sections";
 interface Props {
   params: Promise<{ brand: string }>;
 }
@@ -51,15 +52,23 @@ export default async function BrandPage({ params }: Props) {
         title={<>{title}<br />Engines.</>}
         subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
       />
-      {showModels && <BrowseByModel allModels={models} light />}
+      {showModels && (
+        <BrowseByModel
+          allModels={models}
+          light
+          label={`${title} Engine Models`}
+          heading={`Specialist Engine Services for Every ${title} Model`}
+          description={`Choose your ${title} model for expert engine rebuild, replacement and repair. All work is carried out using genuine OEM components by JLR-trained specialists, backed by up to 24-month warranty and free nationwide collection and delivery.`}
+        />
+      )}
       <Reviews />
-      <AuthorityNationwide data={authorityNationwide} />
-      <AuthorityPrecision data={authorityPrecision} />
-      <NationwideSupport />
+      <AuthorityNationwide data={getBrandAuthorityNationwide(title)} />
+      <AuthorityPrecision data={getBrandAuthorityPrecision(title)} />
+      <NationwideSupport data={getBrandNationwideSupport(title)} />
       <VideoSection />
       <CTA />
       <BlogSection />
-      <NationwideSupport />
+      <NationwideSupport data={getBrandNationwideSupport(title)} />
       <FAQ faqs={faqs} />
       <Location />
       <Footer />

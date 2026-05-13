@@ -18,6 +18,7 @@ import { engineServices } from "./data/services";
 import { rangeRoverModels, landRoverModels } from "./data/models";
 import { faqs } from "./data/faqs";
 import { authorityLeading, authorityNationwide, authorityPrecision } from "./data/authority";
+import { homeTrustedSpecialists, homeNationwideSupport } from "./data/sections";
 
 export default function Home() {
   return (
@@ -26,15 +27,22 @@ export default function Home() {
       <Header />
       <Reviews />
       <EngineServices services={engineServices.slice(0, 4)} viewMoreHref="/services" />
-      <BrowseByModel rangeRoverModels={rangeRoverModels} landRoverModels={landRoverModels} bgImage="/browsebymodel.svg" />
+      <BrowseByModel
+        rangeRoverModels={rangeRoverModels}
+        landRoverModels={landRoverModels}
+        bgImage="/browsebymodel.svg"
+        label="Browse By Model"
+        heading="Range Rover & Land Rover Engine Specialists"
+        description="Select your exact model to explore specialist engine rebuild, replacement and repair services. Every job uses genuine OEM parts and is backed by up to 24-month warranty."
+      />
       <WarrantySection />
-      <TrustedSpecialists />
+      <TrustedSpecialists data={homeTrustedSpecialists} />
       <AuthorityLeading data={authorityLeading} />
       <AuthorityNationwide data={authorityNationwide} />
       <AuthorityPrecision data={authorityPrecision} />
       <CTA />
       <BlogSection />
-      <NationwideSupport />
+      <NationwideSupport data={homeNationwideSupport} />
       <FAQ faqs={faqs} />
       <Location />
       <Footer />

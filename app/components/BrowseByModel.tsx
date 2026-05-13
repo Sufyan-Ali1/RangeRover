@@ -127,6 +127,9 @@ interface BrowseByModelProps {
   allModels?: Model[];
   light?: boolean;
   bgImage?: string;
+  label?: string;
+  heading?: string;
+  description?: string;
 }
 
 export default function BrowseByModel({
@@ -136,6 +139,9 @@ export default function BrowseByModel({
   allModels,
   light = false,
   bgImage = "/header.svg",
+  label,
+  heading,
+  description,
 }: BrowseByModelProps) {
   const [activeTab, setActiveTab] = useState<"range-rover" | "land-rover">("range-rover");
 
@@ -160,15 +166,15 @@ export default function BrowseByModel({
 
         <div className="mb-10 text-center">
           <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#4CA66B]">
-            {isBrandsMode ? "Browse By Brand" : "Browse By Model"}
+            {label ?? (isBrandsMode ? "Browse By Brand" : "Browse By Model")}
           </p>
           <h2 className={`text-[28px] font-black sm:text-[36px] ${light ? "text-gray-900" : "text-white"}`}>
-            {isBrandsMode ? "Engine Brands We Service" : "Premium Models We Service"}
+            {heading ?? (isBrandsMode ? "Engine Brands We Specialise In" : "Range Rover & Land Rover Models We Service")}
           </h2>
           <p className={`mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed ${light ? "text-gray-500" : "text-white/55"}`}>
-            {isBrandsMode
-              ? "Select your vehicle brand to explore the full range of specialist engine solutions available."
-              : "Find specialist engine solutions tailored to your exact Range Rover or Land Rover model."}
+            {description ?? (isBrandsMode
+              ? "We provide specialist engine rebuilds, replacements and repairs across all major vehicle brands — using genuine OEM parts and backed by up to 24-month warranty."
+              : "Choose your exact Range Rover or Land Rover model for specialist engine rebuild, replacement and repair services — all carried out by JLR-trained engineers with genuine OEM parts.")}
           </p>
         </div>
 

@@ -15,12 +15,12 @@ export function StarRating({ count }: { count: number }) {
 
 export function ReviewCard({ review }: { review: Review }) {
   return (
-    <div className="flex flex-col gap-3 rounded-2xl bg-[#E8F4ED] p-7">
+    <div className="flex h-full flex-col gap-3 rounded-2xl bg-[#E8F4ED] p-7">
       <div>
         <p className="text-[17px] font-semibold italic text-gray-900">{review.name}</p>
         <p className="mt-0.5 text-[13px] text-gray-500">{review.date}</p>
       </div>
-      <p className="text-[14px] leading-[1.7] text-gray-700">{review.text}</p>
+      <p className="flex-1 text-[14px] leading-[1.7] text-gray-700">{review.text}</p>
       <StarRating count={review.stars} />
     </div>
   );

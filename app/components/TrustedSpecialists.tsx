@@ -1,25 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { TrustedSpecialistsData } from "../data/sections";
 
-const steps = [
-  {
-    id: 1,
-    side: "left" as const,
-    text: "Pellentesque a vehicula mi, et gravida orci. Pellentesque et posuere dui. In non nulla tempus, convallis ligula vitae, posuere magna.",
-  },
-  {
-    id: 2,
-    side: "right" as const,
-    text: "Pellentesque a vehicula mi, et gravida orci. Pellentesque et posuere dui. In non nulla tempus, convallis ligula vitae, posuere magna.",
-  },
-  {
-    id: 3,
-    side: "left" as const,
-    text: "Pellentesque a vehicula mi, et gravida orci. Pellentesque et posuere dui. In non nulla tempus, convallis ligula vitae, posuere magna.",
-  },
-];
-
-export default function TrustedSpecialists() {
+export default function TrustedSpecialists({ data }: { data: TrustedSpecialistsData }) {
   return (
     <section className="w-full overflow-hidden bg-white">
       <div className="mx-auto w-full max-w-[1728px]">
@@ -28,19 +11,18 @@ export default function TrustedSpecialists() {
           {/* ── Left: Content ── */}
           <div className="min-w-0 overflow-hidden px-6 py-10 sm:px-10 xl:px-[101px]">
             <h2 className="text-[24px] font-bold leading-tight text-gray-900 sm:text-[28px] lg:text-[36px]">
-              Trusted Range Rover Specialists<br />
-              Range Rover Garage.
+              {data.heading}
             </h2>
 
             {/* ── Mobile tree (vertical, circle-left + text-right) ── */}
             <div className="mt-6 lg:hidden">
-              {steps.map((step, index) => (
+              {data.steps.map((step, index) => (
                 <div key={step.id} className="flex gap-4">
                   <div className="flex flex-col items-center">
                     <div className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-full bg-[#11633A] text-[17px] font-bold text-white shadow">
                       {step.id}
                     </div>
-                    {index < steps.length - 1 && (
+                    {index < data.steps.length - 1 && (
                       <div className="my-1 w-[2px] flex-1 bg-gray-900" />
                     )}
                   </div>
@@ -53,9 +35,9 @@ export default function TrustedSpecialists() {
 
             {/* ── Desktop tree (branching spine, hidden on mobile) ── */}
             <div className="mx-auto mt-7 hidden lg:block">
-              {steps.map((step, index) => {
+              {data.steps.map((step, index) => {
                 const isFirst = index === 0;
-                const isLast  = index === steps.length - 1;
+                const isLast  = index === data.steps.length - 1;
                 const spineGradient = isFirst
                   ? "linear-gradient(to bottom, transparent 50%, #111827 50%)"
                   : isLast
@@ -110,9 +92,7 @@ export default function TrustedSpecialists() {
 
             {/* Description */}
             <p className="mt-5 text-[13.5px] leading-[1.8] text-gray-700">
-              Range Rover Garage Supplies Used And Reconditioned Range Rover Evoque Engines At
-              Competitive Prices. We Specialize In Engine Replacement, Repair, Reconditioning, And
-              Installation For All Evoque Models.
+              {data.description}
             </p>
 
             {/* CTA */}

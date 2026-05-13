@@ -13,7 +13,7 @@ export default function Location() {
         Visit Our Workshop
       </h2>
       <p className="mb-10 text-center text-[15px] text-gray-500">
-        We provide specialist engine services and vehicle recovery in all surrounding areas.
+        Our fully equipped workshop in Grays, Essex serves customers across London, the South East,<br className="hidden sm:block" /> and the whole of the UK — with free nationwide collection and delivery available.
       </p>
 
       {/* Outer card */}
@@ -31,7 +31,7 @@ export default function Location() {
                 Contact Information
               </h2>
               <p className="mb-8 text-[14px] leading-relaxed text-gray-500">
-                It is a long established fact that a reader be by the readable distracted layout.
+                Visit our specialist workshop in Grays, Essex. We welcome walk-ins and pre-booked appointments for all Range Rover and Land Rover engine enquiries.
               </p>
 
               {/* Address + Contact row */}

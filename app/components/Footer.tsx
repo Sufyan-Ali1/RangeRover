@@ -1,15 +1,6 @@
 import Image from "next/image";
-
-const services = [
-  "Engine Rebuild",
-  "Timing Chain Replacement",
-  "Turbo Replacement",
-  "Head Gasket Replacement",
-  "Engine Repair",
-  "Engine Replacement",
-  "Engine Swap",
-  "Timing Belt Replacement",
-];
+import Link from "next/link";
+import { engineServices } from "../data/services";
 
 export default function Footer() {
   return (
@@ -63,11 +54,11 @@ export default function Footer() {
               Services
             </h3>
             <ul className="flex flex-col gap-[5px]">
-              {services.map((s) => (
-                <li key={s}>
-                  <a href="#" className="text-[13.5px] text-[#9ca3af] transition hover:text-[#4CA66B]">
-                    {s}
-                  </a>
+              {engineServices.map((s) => (
+                <li key={s.slug}>
+                  <Link href={`/services/${s.slug}`} className="text-[13.5px] text-[#9ca3af] transition hover:text-[#4CA66B]">
+                    {s.title}
+                  </Link>
                 </li>
               ))}
             </ul>

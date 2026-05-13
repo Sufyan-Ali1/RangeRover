@@ -123,9 +123,9 @@ export default function Contact() {
 
           {/* ── Left: Form Card ── */}
           <div className="rounded-2xl border border-gray-200 px-8 py-9 shadow-sm sm:px-10">
-            <h2 className="text-[22px] font-bold text-gray-900">Lorem Ipsum Has Been The</h2>
+            <h2 className="text-[22px] font-bold text-gray-900">Send Us Your Engine Enquiry</h2>
             <p className="mt-2.5 text-[13.5px] leading-[1.7] text-gray-500">
-              Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown
+              Fill in the form below and one of our Range Rover and Land Rover engine specialists will get back to you within 24 hours with honest, no-obligation advice.
             </p>
 
             <form onSubmit={handleSubmit} noValidate className="mt-7 flex flex-col gap-4">
@@ -242,8 +242,7 @@ export default function Contact() {
             <div>
               <h2 className="text-[26px] font-bold text-gray-900">Contact Information</h2>
               <p className="mt-2.5 text-[13.5px] leading-[1.7] text-gray-500">
-                It is a long established fact that a reader be by<br className="hidden sm:block" />
-                the readable distracted layout.
+                Reach our specialist team by phone, email, or by visiting our workshop in Grays, Essex. We&apos;re here to help with all Range Rover and Land Rover engine queries.
               </p>
             </div>
 

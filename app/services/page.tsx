@@ -12,7 +12,8 @@ import AuthorityNationwide from "../components/AuthorityNationwide";
 import AuthorityPrecision from "../components/AuthorityPrecision";
 import { engineServices } from "../data/services";
 import { faqs } from "../data/faqs";
-import { authorityNationwide, authorityPrecision } from "../data/authority";
+import { servicesPageNationwide, servicesPagePrecision } from "../data/authority";
+import { servicesNationwideSupport } from "../data/sections";
 
 export const metadata = {
   title: "Engine Services | Range Rover Engines",
@@ -32,12 +33,11 @@ export default function ServicesPage() {
       />
       <EngineServices services={engineServices} />
       <ServicesTicker items={tickerItems} />
-      <AuthorityNationwide data={authorityNationwide} />
-      <AuthorityPrecision data={authorityPrecision} />
-      <NationwideSupport />
+      <AuthorityNationwide data={servicesPageNationwide} />
+      <AuthorityPrecision data={servicesPagePrecision} />
+      <NationwideSupport data={servicesNationwideSupport} />
       <CTA />
       <BlogSection />
-      <NationwideSupport />
       <FAQ faqs={faqs} />
       <Location />
       <Footer />

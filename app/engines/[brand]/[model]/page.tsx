@@ -15,6 +15,7 @@ import AuthorityPrecision from "@/app/components/AuthorityPrecision";
 import ServiceCards from "@/app/components/ServiceCards";
 import { serviceCards } from "@/app/data/serviceCards";
 import Reviews from "@/app/components/Reviews";
+import ServicesTicker from "@/app/components/ServicesTicker";
 
 interface Props {
   params: Promise<{ brand: string; model: string }>;
@@ -47,6 +48,7 @@ export default async function ModelPage({ params }: Props) {
         title={<>{brandTitle}<br />{modelTitle}.</>}
         subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
       />
+      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
       <ServiceCards cards={serviceCards} />
       <Reviews />
       <AuthorityNationwide data={getModelAuthorityNationwide(brandTitle, modelTitle)} />

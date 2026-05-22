@@ -16,6 +16,9 @@ import { faqs } from "../../data/faqs";
 import { getServiceAuthorityNationwide, getServiceAuthorityPrecision } from "../../data/authority";
 import { getServiceNationwideSupport } from "../../data/sections";
 import WarrantySection from "@/app/components/WarrantySection";
+import ServicesTicker from "@/app/components/ServicesTicker";
+import ServiceGallery from "@/app/components/ServiceGallery";
+import { getServiceImages } from "@/app/data/serviceImages";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -49,7 +52,13 @@ export default async function SubServicePage({ params }: Props) {
         title={title}
         subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
       />
+      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
       <Reviews />
+      <ServiceGallery
+        title={`${title} Gallery`}
+        subtitle="A look inside our workshop — precision work on every Range Rover and Land Rover engine."
+        images={getServiceImages(slug)}
+      />
       <WarrantySection />
       <AuthorityNationwide data={getServiceAuthorityNationwide(title)} />
       <NationwideSupport data={getServiceNationwideSupport(title)} />

@@ -10,6 +10,7 @@ import VideoSection from "../components/VideoSection";
 import FAQ from "../components/FAQ";
 import Location from "../components/Location";
 import { brands } from "../data/brands";
+import ServicesTicker from "../components/ServicesTicker";
 import { faqs } from "../data/faqs";
 import { enginesPageNationwide, enginesPagePrecision } from "../data/authority";
 
@@ -27,6 +28,7 @@ export default function EnginesPage() {
         title={<>Premium Range Rover<br />&amp; Land Rover Engines.</>}
         subtitle="Evoque • Sport • Vogue • Defender • Discovery • Freelander"
       />
+      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
       <BrowseByModel
         brands={brands}
         light

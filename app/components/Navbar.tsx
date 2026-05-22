@@ -52,14 +52,16 @@ export default function Navbar({ transparent = false }: NavbarProps) {
       }`}
     >
       <div className="mx-auto flex w-full max-w-[1728px] items-center justify-between px-6 py-3 sm:px-10 sm:py-3.5 xl:px-[101px]">
-        <Image
-          src="/logo.svg"
-          alt="Range Rover Engines"
-          width={130}
-          height={47}
-          priority
-          className="h-8 w-auto md:h-9"
-        />
+        <Link href="/">
+          <Image
+            src="/logo.svg"
+            alt="Range Rover Engines"
+            width={130}
+            height={47}
+            priority
+            className="h-8 w-auto md:h-9"
+          />
+        </Link>
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-5 text-[13.5px] font-medium lg:flex xl:gap-7">

@@ -1,12 +1,12 @@
 <svg width="1752" height="1138" viewBox="0 0 1752 1138" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g filter="url(#filter0_f_45_470)">
-<rect x="10.3999" y="10.4" width="1731" height="1117" fill="url(#pattern0_45_470)"/>
+<rect x="10.4004" y="10.4004" width="1731" height="1117" fill="url(#pattern0_45_470)"/>
 </g>
-<rect x="10.3999" y="10.4" width="1731" height="1117" fill="black" fill-opacity="0.77"/>
+<rect x="10.4004" y="10.4004" width="1731" height="1117" fill="black" fill-opacity="0.4"/>
 <rect x="887.4" y="1127.4" width="877" height="1117" transform="rotate(180 887.4 1127.4)" fill="url(#paint0_linear_45_470)" fill-opacity="0.4"/>
-<rect x="864.4" y="10.4" width="877" height="1117" fill="url(#paint1_linear_45_470)" fill-opacity="0.4"/>
+<rect x="864.4" y="10.4004" width="877" height="1117" fill="url(#paint1_linear_45_470)" fill-opacity="0.4"/>
 <defs>
-<filter id="filter0_f_45_470" x="-9.72748e-05" y="2.47955e-05" width="1751.8" height="1137.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_45_470" x="0.000391006" y="0.000391006" width="1751.8" height="1137.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="5.2" result="effect1_foregroundBlur_45_470"/>

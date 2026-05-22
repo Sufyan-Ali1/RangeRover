@@ -16,6 +16,7 @@ import NationwideSupport from "@/app/components/NationwideSupport";
 import { faqs } from "../../data/faqs";
 import { getBrandAuthorityNationwide, getBrandAuthorityPrecision } from "../../data/authority";
 import { getBrandNationwideSupport } from "../../data/sections";
+import ServicesTicker from "../../components/ServicesTicker";
 interface Props {
   params: Promise<{ brand: string }>;
 }
@@ -52,6 +53,7 @@ export default async function BrandPage({ params }: Props) {
         title={<>{title}<br />Engines.</>}
         subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
       />
+      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
       {showModels && (
         <BrowseByModel
           allModels={models}

@@ -14,6 +14,7 @@ import Reviews from "./components/Reviews";
 import CTA from "./components/CTA";
 import Location from "./components/Location";
 import Footer from "./components/Footer";
+import ServicesTicker from "./components/ServicesTicker";
 import { engineServices } from "./data/services";
 import { rangeRoverModels, landRoverModels } from "./data/models";
 import { faqs } from "./data/faqs";
@@ -25,6 +26,7 @@ export default function Home() {
     <div className="flex flex-1 flex-col bg-black">
       <Navbar transparent />
       <Header />
+      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
       <Reviews />
       <EngineServices services={engineServices.slice(0, 4)} viewMoreHref="/services" />
       <BrowseByModel

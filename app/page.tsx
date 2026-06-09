@@ -23,10 +23,9 @@ import { homeTrustedSpecialists, homeNationwideSupport } from "./data/sections";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col bg-black">
+    <div className="flex w-full flex-1 flex-col bg-white">
       <Navbar transparent />
       <Header />
-      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
       <Reviews />
       <EngineServices services={engineServices.slice(0, 4)} viewMoreHref="/services" />
       <BrowseByModel
@@ -37,6 +36,7 @@ export default function Home() {
         heading="Range Rover & Land Rover Engine Specialists"
         description="Select your exact model to explore specialist engine rebuild, replacement and repair services. Every job uses genuine OEM parts and is backed by up to 24-month warranty."
       />
+      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
       <WarrantySection />
       <TrustedSpecialists data={homeTrustedSpecialists} />
       <AuthorityLeading data={authorityLeading} />

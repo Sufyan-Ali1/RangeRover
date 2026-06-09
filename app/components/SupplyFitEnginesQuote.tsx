@@ -1,0 +1,152 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { supplyFitEngines } from "../data/supplyFitEngines";
+
+function gridClass(visible: number) {
+  if (visible === 1) return "grid-cols-1";
+  if (visible === 2) return "grid-cols-2";
+  if (visible === 3) return "grid-cols-3";
+  return "grid-cols-4";
+}
+
+export default function SupplyFitEnginesQuote() {
+  const [page, setPage] = useState(0);
+  const [visible, setVisible] = useState(4);
+
+  useEffect(() => {
+    const updateVisible = () => {
+      if (window.innerWidth < 640) {
+        setVisible(1);
+      } else if (window.innerWidth < 900) {
+        setVisible(2);
+      } else if (window.innerWidth < 1200) {
+        setVisible(3);
+      } else {
+        setVisible(4);
+      }
+    };
+
+    updateVisible();
+    window.addEventListener("resize", updateVisible);
+    return () => window.removeEventListener("resize", updateVisible);
+  }, []);
+
+  useEffect(() => {
+    setPage(0);
+  }, [visible]);
+
+  const totalPages = Math.ceil(supplyFitEngines.length / visible);
+  const visibleEngines = supplyFitEngines.slice(page * visible, (page + 1) * visible);
+  const canPrev = page > 0;
+  const canNext = page < totalPages - 1;
+
+  return (
+    <section className="w-full bg-[#F3F4F6]">
+      <div className="mx-auto w-full max-w-[1728px] px-6 py-16 sm:px-10 xl:px-[101px] xl:py-20">
+        <div className="mb-8 text-center">
+          <h2 className="text-[32px] font-black uppercase leading-tight tracking-tight text-gray-900 sm:text-[40px] xl:text-[48px]">
+            Popular Range Rover &amp; Land Rover{" "}
+            <span style={{ color: "#11633A" }}>Engines</span>
+            <br />
+            <span style={{ color: "#11633A" }}>Available in Grays England</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-[1.7] text-gray-600">
+            We stock and supply a wide range of reconditioned Range Rover and Land Rover engines for
+            customers in Grays England, Thurrock and beyond. From the powerful SVR 5.0L to the efficient
+            204DTD Ingenium units, our Grays workshop is fully equipped for immediate supply and fit.
+          </p>
+        </div>
+
+        <div className="mx-auto mb-10 max-w-3xl rounded-xl border border-[#b6e8c8] bg-[#f0faf4] px-6 py-5 text-center">
+          <p className="text-[14px] font-semibold leading-[1.7] text-[#11633A]">
+            If you need a specific Range Rover or Land Rover engine code in Grays England, contact our
+            team and we will confirm availability, lead time and a full supply-and-fit price.
+          </p>
+        </div>
+
+        <div className={`grid auto-rows-fr gap-5 ${gridClass(visible)}`}>
+          {visibleEngines.map((engine) => (
+            <div
+              key={engine.id}
+              className="flex h-full min-w-0 flex-col rounded-xl border border-[#c8e6d4] bg-white"
+            >
+              <div className="h-[180px] w-full overflow-hidden rounded-t-xl bg-white">
+                <img
+                  src={engine.image}
+                  alt={engine.title}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+
+              <div className="h-px bg-[#c8e6d4]" />
+
+              <div className="flex flex-1 flex-col p-4">
+                <h3 className="mb-1.5 min-h-[56px] text-[14px] font-bold leading-snug text-gray-900">
+                  {engine.title}
+                </h3>
+                <p className="mb-3 min-h-[56px] text-[12px] leading-[1.55] text-gray-500">
+                  {engine.description}
+                </p>
+                <ul className="mb-3 flex flex-col gap-0.5">
+                  {engine.specs.map((spec) => (
+                    <li key={spec} className="text-[11px] leading-[1.5] text-gray-500">
+                      &bull; {spec}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mb-1 min-h-[44px] text-[12px] font-semibold" style={{ color: "#11633A" }}>
+                  Fits: {engine.fits}
+                </p>
+                <p className="mb-3 text-[22px] font-black leading-tight" style={{ color: "#11633A" }}>
+                  {engine.price}
+                </p>
+                <Link
+                  href="/get-quote"
+                  className="mt-auto inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] transition-opacity hover:opacity-70"
+                  style={{ color: "#11633A" }}
+                >
+                  Get Quote
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {totalPages > 1 && (
+          <div className="mt-6 flex items-center justify-center gap-4">
+            <button
+              type="button"
+              onClick={() => setPage((current) => Math.max(0, current - 1))}
+              disabled={!canPrev}
+              className="flex h-10 w-10 items-center justify-center rounded-full text-white shadow-lg transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:h-11 sm:w-11"
+              style={{ background: "#11633A" }}
+              aria-label="Previous"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setPage((current) => Math.min(totalPages - 1, current + 1))}
+              disabled={!canNext}
+              className="flex h-10 w-10 items-center justify-center rounded-full text-white shadow-lg transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:h-11 sm:w-11"
+              style={{ background: "#11633A" }}
+              aria-label="Next"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

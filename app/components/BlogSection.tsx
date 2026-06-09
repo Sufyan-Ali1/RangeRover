@@ -81,7 +81,7 @@ export default function BlogSection() {
                 type="button"
                 onClick={() => scroll("left")}
                 aria-label="Previous"
-                className="flex h-9 w-9 items-center justify-center bg-[#11633A] text-white transition hover:bg-[#11633A]"
+                className="flex h-9 w-9 items-center justify-center bg-[#11633A] text-white transition hover:bg-[#0d4f2d]"
                 style={{ borderRadius: "6px" }}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -92,7 +92,7 @@ export default function BlogSection() {
                 type="button"
                 onClick={() => scroll("right")}
                 aria-label="Next"
-                className="flex h-9 w-9 items-center justify-center bg-[#11633A] text-white transition hover:bg-[#11633A]"
+                className="flex h-9 w-9 items-center justify-center bg-[#11633A] text-white transition hover:bg-[#0d4f2d]"
                 style={{ borderRadius: "6px" }}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

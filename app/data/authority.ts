@@ -126,6 +126,30 @@ export const aboutPagePrecision: AuthoritySectionData = {
 };
 
 // ─────────────────────────────────────────────────────────
+// SUPPLY & FIT PAGE (/supply-fit)
+// ─────────────────────────────────────────────────────────
+
+export const supplyFitNationwide: AuthoritySectionData = {
+  titleBefore: "Genuine OEM Parts Sourced & Fitted ",
+  titleHighlight: "By Land Rover Specialists",
+  paragraphs: [
+    "Every part we supply is sourced directly from Land Rover-approved UK distributors, ensuring genuine OEM quality on every fitting. Our technicians work exclusively on Range Rover and Land Rover vehicles, which means they understand the exact fitment requirements, torque specifications and assembly sequences for each component — from suspension arms and brake callipers to turbochargers, transfer boxes and complete engine assemblies.",
+    "We verify every part against your vehicle's specific VIN before ordering, eliminating the risk of incorrect fitment that plagues non-specialist garages. Once the part arrives, our engineers complete the installation using manufacturer-approved tooling and complete a full road test before signing the job off. Every supply and fit booking is backed by our 12-month parts and labour warranty as standard.",
+  ],
+  badge: { label: "VIN-Verified Fitment", title: "OEM Parts Only" },
+};
+
+export const supplyFitPrecision: AuthoritySectionData = {
+  titleBefore: "Transparent Pricing & ",
+  titleHighlight: "No Hidden Costs — Ever",
+  paragraphs: [
+    "Before any work begins, you receive a full written quote that separates the part cost from the labour cost. We do not inflate part prices, charge diagnostic fees on top of agreed quotes, or add unexpected extras on collection. What we quote is what you pay — no surprises, no small print.",
+    "Our supply and fit service covers the complete Range Rover and Land Rover model range, from the Freelander and Discovery Sport through to the Defender, Range Rover Sport and full-size Range Rover. Same-day fitting is available for the majority of in-stock components, and our team will always confirm lead times and availability before confirming your booking so you can plan accordingly.",
+  ],
+  badge: { label: "Fixed Written Quote", title: "No Hidden Charges" },
+};
+
+// ─────────────────────────────────────────────────────────
 // DYNAMIC PAGE HELPERS
 // ─────────────────────────────────────────────────────────
 

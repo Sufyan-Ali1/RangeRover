@@ -1,11 +1,13 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
 import { reviews, type Review } from "../data/reviews";
 
 export function StarRating({ count }: { count: number }) {
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-0.5">
       {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#F5A623" xmlns="http://www.w3.org/2000/svg">
+        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#11633A" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       ))}
@@ -14,44 +16,91 @@ export function StarRating({ count }: { count: number }) {
 }
 
 export function ReviewCard({ review }: { review: Review }) {
+  const initial = review.name.charAt(0).toUpperCase();
   return (
-    <div className="flex h-full flex-col gap-3 rounded-2xl bg-[#E8F4ED] p-7">
-      <div>
-        <p className="text-[17px] font-semibold italic text-gray-900">{review.name}</p>
-        <p className="mt-0.5 text-[13px] text-gray-500">{review.date}</p>
-      </div>
-      <p className="flex-1 text-[14px] leading-[1.7] text-gray-700">{review.text}</p>
+    <div className="flex h-full flex-col rounded-2xl border border-[#b6e8c8] bg-white p-6">
       <StarRating count={review.stars} />
+      <p className="mt-4 flex-1 text-[13px] italic leading-relaxed text-gray-700">{review.text}</p>
+      <hr className="my-4 border-[#d6f0e2]" />
+      <div className="flex items-center gap-3">
+        <div
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[#11633A] text-[13px] font-bold text-[#11633A]"
+          style={{ background: "#ECFFF3" }}
+        >
+          {initial}
+        </div>
+        <div>
+          <p className="text-[13px] font-bold text-gray-900">{review.name}</p>
+          <p className="text-[11px] text-gray-400">{review.date}</p>
+        </div>
+      </div>
     </div>
   );
 }
 
+function MarqueeCard({
+  review,
+  onEnter,
+  onLeave,
+}: {
+  review: Review;
+  onEnter: () => void;
+  onLeave: () => void;
+}) {
+  const initial = review.name.charAt(0).toUpperCase();
+  return (
+    <div
+      onMouseEnter={onEnter}
+      onMouseLeave={onLeave}
+      className="flex w-[300px] shrink-0 flex-col rounded-2xl border border-[#b6e8c8] bg-white p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+    >
+      <StarRating count={review.stars} />
+      <p className="mt-4 flex-1 text-[13px] italic leading-relaxed text-gray-700">{review.text}</p>
+      <hr className="my-4 border-[#d6f0e2]" />
+      <div className="flex items-center gap-3">
+        <div
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[#11633A] text-[13px] font-bold text-[#11633A]"
+          style={{ background: "#ECFFF3" }}
+        >
+          {initial}
+        </div>
+        <div>
+          <p className="text-[13px] font-bold text-gray-900">{review.name}</p>
+          <p className="text-[11px] text-gray-400">{review.date}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const allCards = [...reviews, ...reviews, ...reviews, ...reviews];
+
 export default function Reviews() {
-  const preview = reviews.slice(0, 3);
+  const [paused, setPaused] = useState(false);
 
   return (
-    <section className="w-full bg-white">
-      <div className="mx-auto w-full max-w-[1728px] px-6 py-16 sm:px-10 sm:py-20 xl:px-[101px] xl:py-[80px]">
+    <section className="w-full overflow-hidden bg-white py-16 xl:py-20">
+      <div className="mb-10 text-center">
+        <h2 className="text-[28px] font-black text-gray-900 sm:text-[36px]">Reviews</h2>
+      </div>
 
-        <h2 className="mb-10 text-center text-[28px] font-black text-gray-900 sm:text-[36px] xl:mb-14">
-          Reviews
-        </h2>
-
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
-          {preview.map((r) => (
-            <ReviewCard key={r.id} review={r} />
+      <div className="w-full overflow-hidden">
+        <div
+          className="flex w-max gap-5 pr-5"
+          style={{
+            animation: "marquee 80s linear infinite",
+            animationPlayState: paused ? "paused" : "running",
+          }}
+        >
+          {allCards.map((review, i) => (
+            <MarqueeCard
+              key={i}
+              review={review}
+              onEnter={() => setPaused(true)}
+              onLeave={() => setPaused(false)}
+            />
           ))}
         </div>
-
-        <div className="mt-10 flex justify-center xl:mt-12">
-          <Link
-            href="/reviews"
-            className="rounded-lg border-2 border-[#11633A] px-16 py-3 text-[15px] font-semibold text-[#11633A] transition hover:bg-[#11633A] hover:text-white"
-          >
-            View More
-          </Link>
-        </div>
-
       </div>
     </section>
   );

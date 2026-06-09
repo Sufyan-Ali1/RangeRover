@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import type { Service } from "../data/services";
 
@@ -7,6 +9,13 @@ interface EngineServicesProps {
 }
 
 export default function EngineServices({ services, viewMoreHref }: EngineServicesProps) {
+  const [page, setPage] = useState(0);
+  const perPage = 4;
+  const totalPages = Math.ceil(services.length / perPage);
+
+  const prev = () => setPage((p) => Math.max(0, p - 1));
+  const next = () => setPage((p) => Math.min(totalPages - 1, p + 1));
+
   return (
     <section className="w-full bg-[#F3F4F6]">
       <div className="mx-auto w-full max-w-[1728px] px-6 py-16 sm:px-10 sm:py-20 xl:px-[101px] xl:py-[80px]">
@@ -24,25 +33,84 @@ export default function EngineServices({ services, viewMoreHref }: EngineService
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((s) => (
-            <div
-              key={s.slug}
-              className="group flex flex-col rounded-xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:border-[#11633A] hover:bg-[#11633A] hover:shadow-lg"
-            >
-              <h3 className="mb-3 text-[16px] font-bold text-gray-900 transition-colors duration-300 group-hover:text-white">{s.title}</h3>
-              <p className="flex-1 text-[13px] leading-[1.7] text-gray-500 transition-colors duration-300 group-hover:text-white/75">{s.description}</p>
-              <Link
-                href={`/services/${s.slug}`}
-                className="mt-5 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#4CA66B] transition-colors duration-300 group-hover:text-[#A6F0C6]"
+        {/* Slider */}
+        <div className="overflow-hidden">
+          <div
+            className="flex"
+            style={{
+              transform: `translateX(-${page * 100}%)`,
+              transition: "transform 0.5s ease-in-out",
+            }}
+          >
+            {Array.from({ length: totalPages }).map((_, pageIdx) => (
+              <div
+                key={pageIdx}
+                className="grid min-w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
               >
-                Explore More
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </Link>
-            </div>
-          ))}
+                {services.slice(pageIdx * perPage, (pageIdx + 1) * perPage).map((s) => (
+                  <div
+                    key={s.slug}
+                    className="group flex flex-col rounded-xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:border-[#11633A] hover:bg-[#11633A] hover:shadow-lg"
+                  >
+                    <h3 className="mb-3 text-[16px] font-bold text-gray-900 transition-colors duration-300 group-hover:text-white">
+                      {s.title}
+                    </h3>
+                    <p className="flex-1 text-[13px] leading-[1.7] text-gray-500 transition-colors duration-300 group-hover:text-white/75">
+                      {s.description}
+                    </p>
+                    <Link
+                      href={`/services/${s.slug}`}
+                      className="mt-5 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#4CA66B] transition-colors duration-300 group-hover:text-[#A6F0C6]"
+                    >
+                      Explore More
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Controls */}
+        <div className="mt-8 flex items-center justify-center gap-6">
+          <button
+            onClick={prev}
+            disabled={page === 0}
+            aria-label="Previous"
+            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#11633A] text-[#11633A] transition-all duration-200 hover:bg-[#11633A] hover:text-white disabled:cursor-not-allowed disabled:border-gray-300 disabled:text-gray-300"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Dots */}
+          <div className="flex items-center gap-2">
+            {Array.from({ length: totalPages }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setPage(i)}
+                aria-label={`Go to page ${i + 1}`}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  i === page ? "w-6 bg-[#11633A]" : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={next}
+            disabled={page === totalPages - 1}
+            aria-label="Next"
+            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#11633A] text-[#11633A] transition-all duration-200 hover:bg-[#11633A] hover:text-white disabled:cursor-not-allowed disabled:border-gray-300 disabled:text-gray-300"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
 
         {viewMoreHref && (

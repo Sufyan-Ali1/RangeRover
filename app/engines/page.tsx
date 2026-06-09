@@ -13,6 +13,30 @@ import { brands } from "../data/brands";
 import ServicesTicker from "../components/ServicesTicker";
 import { faqs } from "../data/faqs";
 import { enginesPageNationwide, enginesPagePrecision } from "../data/authority";
+import EngineTable from "../components/EngineTable";
+import engineCodesData from "../data/engineCodesData.json";
+import { allBrandModels, toBrandSlug, toModelSlug } from "../data/models";
+
+function mapTableRows(
+  rows: Array<{
+    make: string;
+    model: string;
+    engineCode: string;
+    actualCC: string | number;
+    powerKw: string | number;
+    powerHp: string | number;
+    yearRange: string;
+  }>,
+) {
+  return rows.map((row) => ({
+    make: row.make,
+    model: row.model,
+    engineCode: row.engineCode,
+    actualCC: row.actualCC,
+    powerKwHp: `${row.powerKw} kw / ${row.powerHp} hp`,
+    yearRange: row.yearRange,
+  }));
+}
 
 export const metadata = {
   title: "Engines | Range Rover Engines",
@@ -20,6 +44,13 @@ export const metadata = {
 };
 
 export default function EnginesPage() {
+  const tableRows = allBrandModels.flatMap((model) => {
+    const brandSlug = toBrandSlug(model.brand);
+    const dataKey = `${brandSlug}-${toModelSlug(model.model)}-engines` as keyof typeof engineCodesData;
+    const modelEngineData = engineCodesData[dataKey];
+    return modelEngineData ? mapTableRows(modelEngineData.rows) : [];
+  });
+
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <Navbar />
@@ -34,8 +65,19 @@ export default function EnginesPage() {
         light
         label="Engine Brands We Cover"
         heading="Specialist Engine Services Across All Major Brands"
-        description="From Range Rover and Land Rover to BMW, Audi, Mercedes and Jaguar — our engineers deliver expert engine rebuilds, replacements and repairs using genuine OEM parts with up to 24-month warranty."
+        description="From Range Rover and Land Rover to BMW, Audi, Mercedes and Jaguar - our engineers deliver expert engine rebuilds, replacements and repairs using genuine OEM parts with up to 24-month warranty."
       />
+      {tableRows.length > 0 && (
+        <EngineTable
+          title="Engine Codes to Help You Find Your Vehicle"
+          rows={tableRows}
+          rowsPerPage={9}
+          getQuoteHref="/get-quote"
+          notFoundText="Did Not Find Your Engine code."
+          notFoundLinkText="CLICK HERE"
+          notFoundHref="/get-quote"
+        />
+      )}
       <Reviews />
       <AuthorityNationwide data={enginesPageNationwide} />
       <AuthorityPrecision data={enginesPagePrecision} />

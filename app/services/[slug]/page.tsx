@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Header from "../../components/Header";
-import ServiceCards from "../../components/ServiceCards";
+import BrandShowcase from "../../components/BrandShowcase";
 import Footer from "../../components/Footer";
 import Reviews from "../../components/Reviews";
 import AuthorityNationwide from "../../components/AuthorityNationwide";
@@ -11,7 +11,6 @@ import Location from "../../components/Location";
 import BlogSection from "../../components/BlogSection";
 import CTA from "../../components/CTA";
 import VideoSection from "../../components/VideoSection";
-import { getServiceCards } from "../../data/serviceCards";
 import { faqs } from "../../data/faqs";
 import { getServiceAuthorityNationwide, getServiceAuthorityPrecision } from "../../data/authority";
 import { getServiceNationwideSupport } from "../../data/sections";
@@ -52,7 +51,6 @@ export default async function SubServicePage({ params }: Props) {
         title={title}
         subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
       />
-      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
       <Reviews />
       <ServiceGallery
         title={`${title} Gallery`}
@@ -60,9 +58,10 @@ export default async function SubServicePage({ params }: Props) {
         images={getServiceImages(slug)}
       />
       <WarrantySection />
+      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
       <AuthorityNationwide data={getServiceAuthorityNationwide(title)} />
       <NationwideSupport data={getServiceNationwideSupport(title)} />
-      <ServiceCards cards={getServiceCards(slug)} />
+      <BrandShowcase />
       <AuthorityPrecision data={getServiceAuthorityPrecision(title)} />
       <NationwideSupport data={getServiceNationwideSupport(title)} />
       <VideoSection />

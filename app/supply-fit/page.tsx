@@ -33,8 +33,6 @@ export default function SupplyFitPage() {
       <SupplyFitGetParts />
       <AuthorityNationwide data={supplyFitNationwide} />
       <AuthorityPrecision data={supplyFitPrecision} />
-      <SupplyFitContent />
-      <SupplyFitGetParts />
       <SupplyFitFAQ />
       <Footer />
     </div>

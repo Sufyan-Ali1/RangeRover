@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const features = [
@@ -10,55 +11,50 @@ const features = [
 export default function SupplyFitGetParts() {
   return (
     <section className="relative w-full overflow-hidden">
-      {/* Background */}
-      <img
-        src="/background_fit.svg"
+      <Image
+        src="/images/supply-fit/background-fit.webp"
         alt=""
         aria-hidden="true"
+        fill
+        sizes="100vw"
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/35" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,18,11,0.72)_0%,rgba(6,18,11,0.44)_46%,rgba(17,99,58,0.56)_100%)]" />
 
-      {/* Content */}
       <div className="relative mx-auto w-full max-w-[1728px] px-6 py-14 sm:px-10 xl:px-[101px] xl:py-20">
-        {/* Card */}
         <div
           className="mx-auto overflow-hidden rounded-3xl border-2"
           style={{ borderColor: "#11633A", maxWidth: "1100px" }}
         >
           <div className="flex flex-col lg:flex-row">
-
-            {/* Left — image */}
-            <div className="w-full lg:w-[48%]">
-              <img
-                src="/fit.svg"
+            <div className="relative min-h-[280px] w-full lg:w-[48%]">
+              <Image
+                src="/images/supply-fit/fit.webp"
                 alt="Land Rover parts supply and fit workshop"
-                className="h-full min-h-[280px] w-full object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 48vw"
+                className="object-cover"
               />
             </div>
 
-            {/* Right — content */}
             <div
               className="flex w-full flex-col justify-center px-8 py-10 lg:w-[52%] lg:px-10 xl:px-12"
               style={{ background: "#0d1117" }}
             >
-              {/* Label */}
               <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.26em] text-white/50">
                 Ready When You Are
               </p>
 
-              {/* Heading */}
               <h2 className="mb-4 text-[28px] font-bold leading-tight text-white sm:text-[34px]">
                 Get Your Parts Supplied &amp; Fitted By Experts
               </h2>
 
-              {/* Description */}
               <p className="mb-7 text-[14px] leading-[1.7] text-white/60">
                 Speak to a Land Rover specialist today. Free quotation, transparent pricing,
-                warranty included — book your slot in minutes.
+                warranty included - book your slot in minutes.
               </p>
 
-              {/* Features 2×2 */}
               <div className="mb-8 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
                 {features.map((f) => (
                   <div key={f} className="flex items-start gap-2.5">
@@ -81,7 +77,6 @@ export default function SupplyFitGetParts() {
                 ))}
               </div>
 
-              {/* Buttons */}
               <div className="flex flex-wrap gap-3">
                 <a
                   href="tel:01375531355"
@@ -121,7 +116,6 @@ export default function SupplyFitGetParts() {
                 </Link>
               </div>
             </div>
-
           </div>
         </div>
       </div>

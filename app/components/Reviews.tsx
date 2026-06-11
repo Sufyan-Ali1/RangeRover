@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import { reviews, type Review } from "../data/reviews";
 
 export function StarRating({ count }: { count: number }) {
@@ -17,8 +14,9 @@ export function StarRating({ count }: { count: number }) {
 
 export function ReviewCard({ review }: { review: Review }) {
   const initial = review.name.charAt(0).toUpperCase();
+
   return (
-    <div className="flex h-full flex-col rounded-2xl border border-[#b6e8c8] bg-white p-6">
+    <div className="flex h-full min-h-[260px] w-[320px] shrink-0 flex-col rounded-2xl border border-[#b6e8c8] bg-white p-6 transition-all duration-300 hover:border-[#11633A] hover:shadow-[0_18px_48px_rgba(17,99,58,0.18)] sm:w-[360px]">
       <StarRating count={review.stars} />
       <p className="mt-4 flex-1 text-[13px] italic leading-relaxed text-gray-700">{review.text}</p>
       <hr className="my-4 border-[#d6f0e2]" />
@@ -37,68 +35,30 @@ export function ReviewCard({ review }: { review: Review }) {
     </div>
   );
 }
-
-function MarqueeCard({
-  review,
-  onEnter,
-  onLeave,
-}: {
-  review: Review;
-  onEnter: () => void;
-  onLeave: () => void;
-}) {
-  const initial = review.name.charAt(0).toUpperCase();
-  return (
-    <div
-      onMouseEnter={onEnter}
-      onMouseLeave={onLeave}
-      className="flex w-[300px] shrink-0 flex-col rounded-2xl border border-[#b6e8c8] bg-white p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
-    >
-      <StarRating count={review.stars} />
-      <p className="mt-4 flex-1 text-[13px] italic leading-relaxed text-gray-700">{review.text}</p>
-      <hr className="my-4 border-[#d6f0e2]" />
-      <div className="flex items-center gap-3">
-        <div
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[#11633A] text-[13px] font-bold text-[#11633A]"
-          style={{ background: "#ECFFF3" }}
-        >
-          {initial}
-        </div>
-        <div>
-          <p className="text-[13px] font-bold text-gray-900">{review.name}</p>
-          <p className="text-[11px] text-gray-400">{review.date}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-const allCards = [...reviews, ...reviews, ...reviews, ...reviews];
 
 export default function Reviews() {
-  const [paused, setPaused] = useState(false);
+  const featuredReviews = reviews.slice(0, 6);
+  const marqueeReviews = [...featuredReviews, ...featuredReviews];
 
   return (
     <section className="w-full overflow-hidden bg-white py-16 xl:py-20">
-      <div className="mb-10 text-center">
-        <h2 className="text-[28px] font-black text-gray-900 sm:text-[36px]">Reviews</h2>
+      <div className="mx-auto w-full max-w-[1728px] px-6 sm:px-10 xl:px-[101px]">
+        <div className="mb-10 text-center">
+          <h2 className="text-[28px] font-black text-gray-900 sm:text-[36px]">Reviews</h2>
+        </div>
       </div>
 
-      <div className="w-full overflow-hidden">
+      <div className="reviews-marquee w-full overflow-hidden">
         <div
-          className="flex w-max gap-5 pr-5"
-          style={{
-            animation: "marquee 80s linear infinite",
-            animationPlayState: paused ? "paused" : "running",
-          }}
+          className="reviews-track flex w-max gap-5 px-0 will-change-transform"
         >
-          {allCards.map((review, i) => (
-            <MarqueeCard
-              key={i}
-              review={review}
-              onEnter={() => setPaused(true)}
-              onLeave={() => setPaused(false)}
-            />
+          {marqueeReviews.map((review, index) => (
+            <div
+              key={`${review.id}-${index}`}
+              className="transition-opacity duration-300 group-hover:opacity-60 hover:!opacity-100"
+            >
+              <ReviewCard review={review} />
+            </div>
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Header from "../../components/Header";
-import BrowseByModel from "../../components/BrowseByModel";
+import BrowseByModelStatic from "../../components/BrowseByModelStatic";
 import Footer from "../../components/Footer";
 import { getModelsByBrandSlug, toModelSlug } from "../../data/models";
 import { brands } from "../../data/brands";
@@ -154,7 +154,7 @@ export default async function BrandPage({ params }: Props) {
       <EngineServices services={engineServices} />
       <PopularEngineSizes brandSlug={brand} brandTitle={brandTitle} />
       {showModels && (
-        <BrowseByModel
+        <BrowseByModelStatic
           allModels={models}
           light
           label={`${brandTitle} Engine Models`}
@@ -180,7 +180,6 @@ export default async function BrandPage({ params }: Props) {
       <VideoSection />
       <CTA />
       <BlogSection />
-      <NationwideSupport data={getBrandNationwideSupport(brandTitle)} />
       <FAQ faqs={faqs} />
       <Location />
       <Footer />

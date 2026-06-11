@@ -28,7 +28,6 @@ export default function BlogSection() {
     <section className="w-full overflow-hidden bg-white py-14 xl:py-16">
       <div className="mx-auto w-full max-w-[1728px] px-6 sm:px-10 xl:px-[101px]">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
-
           <div className="shrink-0 lg:w-[280px]">
             <h2 className="text-[28px] font-black leading-tight text-gray-900 sm:text-[36px]">
               Expert<br />Automotive<br />Guides
@@ -101,7 +100,6 @@ export default function BlogSection() {
               </button>
             </div>
           </div>
-
         </div>
       </div>
     </section>

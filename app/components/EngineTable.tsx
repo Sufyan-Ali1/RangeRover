@@ -59,8 +59,8 @@ export default function EngineTable({
         </h2>
 
         {/* Table card */}
-        <div className="overflow-hidden rounded-2xl shadow-md">
-          <table className="w-full border-collapse">
+        <div className="overflow-x-auto rounded-2xl shadow-md">
+          <table className="min-w-[900px] w-full border-collapse">
             <thead>
               <tr className="bg-[#11633A]">
                 {["Make", "Model", "Engine Code", "Actual CC", "Power kw / hp", "Year Range"].map((col) => (

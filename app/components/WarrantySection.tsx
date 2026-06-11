@@ -33,9 +33,11 @@ export default function WarrantySection() {
             <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#A8F0C0]">
               Standard Protection:
             </p>
-            <p className="text-[14px] font-semibold leading-relaxed text-white">
-              Every service includes our comprehensive 6 Months or 6,000 Miles Warranty as standard.
-            </p>
+            <ul className="list-disc space-y-2 pl-5 text-[14px] font-semibold leading-relaxed text-white marker:text-white">
+              <li>1-month for 2nd hand engine swap</li>
+              <li>6-month for engine reconditioning</li>
+              <li>12 to 24-month dealer level warranty available</li>
+            </ul>
           </div>
 
           {/* Extended Coverage */}

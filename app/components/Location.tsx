@@ -91,11 +91,11 @@ export default function Location() {
             </div>
 
             {/* Right — map */}
-            <div className="flex-1">
+            <div className="min-h-[420px] flex-1 lg:min-h-0 lg:w-1/2">
               <iframe
                 src={mapsEmbedUrl}
-                className="h-full w-full"
-                style={{ minHeight: "420px", border: 0 }}
+                className="h-[420px] w-full lg:h-full"
+                style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

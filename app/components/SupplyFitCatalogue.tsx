@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { engineServices } from "../data/services";
 
@@ -9,7 +10,7 @@ const serviceImages: Record<string, string> = {
   "engine-repair": "/services/engine_repair.png",
   "engine-replacement": "/services/engine_replacement.png",
   "engine-swap": "/services/engine_swap.png",
-  "timing-belt-replacement": "/services/timing_belt_Replacement.png",
+  "timing-belt-replacement": "/services/timing_belt_Replacement.jpeg",
 };
 
 const services = engineServices.map((service) => ({
@@ -43,9 +44,11 @@ export default function SupplyFitCatalogue() {
             >
               <div className="relative h-[220px] w-full overflow-hidden">
                 {service.image ? (
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 ) : (

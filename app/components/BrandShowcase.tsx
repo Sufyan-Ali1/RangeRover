@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import { serviceCards } from "../data/serviceCards";
 
 const brandConfig: Record<string, { image: string; href: string }> = {
-  "Range Rover Engines": { image: "/range-rover-cars/sport.svg",       href: "/engines/range-rover" },
-  "Land Rover Engines":  { image: "/land-rover-cars/discovery-1.svg",  href: "/engines/land-rover"  },
+  "Range Rover Engines": { image: "/images/models/sport.webp",       href: "/engines/range-rover" },
+  "Land Rover Engines":  { image: "/images/models/discovery-1.webp", href: "/engines/land-rover"  },
   "Jaguar Engines":      { image: "/jaguar.svg",                        href: "/engines/jaguar"      },
 };
 
@@ -16,9 +17,12 @@ function BrandCard({ title, description }: { title: string; description: string 
   return (
     <div className="flex flex-col rounded-3xl shadow-md overflow-hidden" style={{ background: "#dff0df" }}>
       <div className="flex h-[220px] w-full items-center justify-center px-6 pt-6">
-        <img
+        <Image
           src={config.image}
           alt={title}
+          width={640}
+          height={400}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 580px"
           className="h-full w-full object-contain"
         />
       </div>

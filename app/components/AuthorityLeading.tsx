@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { AuthorityLeadingData } from "../data/authority";
 
 export default function AuthorityLeading({ data }: { data: AuthorityLeadingData }) {
@@ -19,10 +20,13 @@ export default function AuthorityLeading({ data }: { data: AuthorityLeadingData 
           </div>
 
           <div className="flex flex-1 justify-end">
-            <img
-              src="/group.svg"
+            <Image
+              src="/images/group.webp"
               alt=""
               aria-hidden="true"
+              width={765}
+              height={520}
+              sizes="(max-width: 1024px) 100vw, 45vw"
               className="w-full max-w-[765px] object-contain"
             />
           </div>

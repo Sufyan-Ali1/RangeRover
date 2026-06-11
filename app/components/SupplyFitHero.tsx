@@ -1,28 +1,30 @@
+import Image from "next/image";
+
 export default function SupplyFitHero() {
   const features = [
-    { icon: "✓", label: "Genuine Parts" },
-    { icon: "🔧", label: "Expert Technicians" },
-    { icon: "✓", label: "Warranty Included" },
-    { icon: "⏱", label: "Same Day Fitting" },
+    { icon: "+", label: "Genuine Parts" },
+    { icon: "+", label: "Expert Technicians" },
+    { icon: "+", label: "Warranty Included" },
+    { icon: "+", label: "Same Day Fitting" },
   ];
 
   const stats = [
     { value: "15+", label: "YEARS EXPERIENCE" },
     { value: "8.5k", label: "PARTS FITTED" },
-    { value: "4.9★", label: "GOOGLE RATING" },
+    { value: "4.9*", label: "GOOGLE RATING" },
   ];
 
   return (
     <section className="relative w-full overflow-hidden bg-white">
-      {/* Background image */}
-      <img
-        src="/background_hero.svg"
+      <Image
+        src="/images/supply-fit/background-hero.webp"
         alt=""
         aria-hidden="true"
+        fill
+        sizes="100vw"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      {/* Green gradient overlay — left side only */}
       <div
         className="absolute inset-0"
         style={{
@@ -31,33 +33,25 @@ export default function SupplyFitHero() {
         }}
       />
 
-      {/* Content */}
-      <div className="relative mx-auto w-full max-w-[1728px] px-6 pt-24 pb-10 sm:px-10 xl:px-[101px] xl:pt-28 xl:pb-14">
+      <div className="relative mx-auto w-full max-w-[1728px] px-6 pb-10 pt-24 sm:px-10 xl:px-[101px] xl:pb-14 xl:pt-28">
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-14">
-
-          {/* ── Left column ── */}
           <div className="flex w-full flex-col lg:w-[52%]">
-
-            {/* Badge */}
             <span className="mb-3 inline-flex w-fit items-center rounded-full border border-white/30 bg-black/60 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
               Range Rover &amp; Land Rover Specialists
             </span>
 
-            {/* Heading — matches other page section headings (42px/52px) */}
             <h1 className="mb-4 text-[42px] font-black leading-tight sm:text-[52px]">
               <span className="text-white">Supply &amp; Fit</span>
               <br />
               <span style={{ color: "#11633A" }}>Services</span>
             </h1>
 
-            {/* Description */}
             <p className="mb-5 max-w-[520px] text-[15px] font-semibold leading-[1.6] text-white/90">
               Genuine &amp; OEM parts supplied and professionally fitted by Land
               Rover experts in London. Premium quality, transparent pricing, no
               compromise.
             </p>
 
-            {/* Feature badges */}
             <div className="mb-5 flex flex-wrap gap-2">
               {features.map((f) => (
                 <span
@@ -70,7 +64,6 @@ export default function SupplyFitHero() {
               ))}
             </div>
 
-            {/* CTA buttons */}
             <div className="mb-7 flex flex-wrap gap-3">
               <a
                 href="tel:01375531355"
@@ -95,7 +88,6 @@ export default function SupplyFitHero() {
               </a>
             </div>
 
-            {/* Stats */}
             <div className="flex flex-wrap gap-8 sm:gap-12">
               {stats.map((s) => (
                 <div key={s.label} className="flex flex-col">
@@ -110,16 +102,16 @@ export default function SupplyFitHero() {
             </div>
           </div>
 
-          {/* ── Right column — hero image ── */}
           <div className="relative w-full lg:w-[48%]">
-            <div className="relative max-h-[400px] overflow-hidden rounded-2xl shadow-2xl">
-              <img
-                src="/hero_image.svg"
-                alt="Supply & fit workshop — Range Rover engine being professionally fitted"
-                className="h-[400px] w-full object-cover"
+            <div className="relative h-[400px] max-h-[400px] overflow-hidden rounded-2xl shadow-2xl">
+              <Image
+                src="/images/supply-fit/hero-image.webp"
+                alt="Supply and fit workshop with Range Rover engine being professionally fitted"
+                fill
+                sizes="(max-width: 1024px) 100vw, 48vw"
+                className="object-cover"
               />
 
-              {/* Warranty overlay card */}
               <div className="absolute bottom-4 left-4 flex items-center gap-3 rounded-xl bg-black/80 px-4 py-3 backdrop-blur-sm">
                 <div
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"
@@ -136,7 +128,6 @@ export default function SupplyFitHero() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

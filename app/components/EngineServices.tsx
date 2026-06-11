@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import type { Service } from "../data/services";
@@ -19,7 +20,6 @@ export default function EngineServices({ services, viewMoreHref }: EngineService
   return (
     <section className="w-full bg-[#F3F4F6]">
       <div className="mx-auto w-full max-w-[1728px] px-6 py-16 sm:px-10 sm:py-20 xl:px-[101px] xl:py-[80px]">
-
         <div className="mb-12 text-center">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#4CA66B]">
             Professional Solutions
@@ -33,7 +33,6 @@ export default function EngineServices({ services, viewMoreHref }: EngineService
           </p>
         </div>
 
-        {/* Slider */}
         <div className="overflow-hidden">
           <div
             className="flex"
@@ -74,7 +73,6 @@ export default function EngineServices({ services, viewMoreHref }: EngineService
           </div>
         </div>
 
-        {/* Controls */}
         <div className="mt-8 flex items-center justify-center gap-6">
           <button
             onClick={prev}
@@ -87,7 +85,6 @@ export default function EngineServices({ services, viewMoreHref }: EngineService
             </svg>
           </button>
 
-          {/* Dots */}
           <div className="flex items-center gap-2">
             {Array.from({ length: totalPages }).map((_, i) => (
               <button
@@ -123,7 +120,6 @@ export default function EngineServices({ services, viewMoreHref }: EngineService
             </Link>
           </div>
         )}
-
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
-import BrowseByModel from "../components/BrowseByModel";
+import BrowseByModelStatic from "../components/BrowseByModelStatic";
 import Footer from "../components/Footer";
 import Reviews from "../components/Reviews";
 import AuthorityNationwide from "../components/AuthorityNationwide";
@@ -60,7 +60,7 @@ export default function EnginesPage() {
         subtitle="Evoque • Sport • Vogue • Defender • Discovery • Freelander"
       />
       <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
-      <BrowseByModel
+      <BrowseByModelStatic
         brands={brands}
         light
         label="Engine Brands We Cover"

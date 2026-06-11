@@ -17,7 +17,9 @@ interface HeaderProps {
 export default function Header({
   title = (
     <>
-      PREMIUM <span className="text-[#A6F0C6]">RANGE ROVER</span> ENGINES
+      <span className="block sm:inline">Premium </span>
+      <span className="block text-[#A6F0C6] sm:inline">Range Rover </span>
+      <span className="block sm:inline">Engines</span>
     </>
   ),
   subtitle = "Used & Reconditioned  |  Tested & Reliable",
@@ -26,7 +28,7 @@ export default function Header({
   return (
     <section
       className={`relative w-full overflow-hidden ${
-        compact ? "min-h-[660px] lg:min-h-[720px]" : "min-h-[580px] lg:min-h-[640px]"
+        compact ? "min-h-[760px] lg:min-h-[720px]" : "min-h-[760px] lg:min-h-[640px]"
       }`}
     >
       <Image
@@ -46,23 +48,23 @@ export default function Header({
 
       <div
         className={`absolute inset-0 flex flex-col items-center px-6 text-center ${
-          compact ? "justify-start pt-24 pb-8" : "justify-start pt-24 pb-6 lg:pt-28 lg:pb-8"
+          compact ? "justify-start pt-24 pb-8" : "justify-start pt-24 pb-8 lg:pt-28"
         }`}
       >
         <h1
-          className={`font-black uppercase leading-tight tracking-wide text-white ${
+          className={`max-w-5xl font-black uppercase text-white ${
             compact
-              ? "text-3xl sm:text-4xl md:text-5xl xl:text-6xl"
-              : "text-lg font-bold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
+              ? "text-[2.2rem] leading-[0.9] tracking-[0.08em] sm:text-2xl sm:leading-tight sm:tracking-wide md:text-3xl lg:text-4xl xl:text-5xl"
+              : "text-[2.2rem] leading-[0.9] tracking-[0.08em] sm:text-2xl sm:leading-tight sm:tracking-wide md:text-3xl lg:text-4xl xl:text-5xl"
           }`}
         >
           {title}
         </h1>
         <p
-          className={`mt-3 font-medium uppercase tracking-[0.22em] text-white/80 ${
+          className={`max-w-3xl font-semibold uppercase text-white/80 ${
             compact
-              ? "text-[10px] sm:text-xs md:text-[13px]"
-              : "mt-2 text-[11px] sm:text-xs md:text-sm lg:text-base xl:text-lg"
+              ? "mt-4 text-[11px] tracking-[0.22em] sm:text-xs md:text-[13px]"
+              : "mt-4 text-[11px] tracking-[0.18em] sm:text-[12px] md:text-sm lg:text-base"
           }`}
         >
           {subtitle}
@@ -72,12 +74,12 @@ export default function Header({
           {heroHighlights.map((item) => (
             <div
               key={item}
-              className="flex w-fit max-w-full items-center gap-2.5 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-center backdrop-blur-sm sm:px-5"
+              className="flex w-full max-w-full items-start gap-2.5 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-left backdrop-blur-sm sm:w-fit sm:items-center sm:rounded-full sm:py-2 sm:text-center sm:px-5"
             >
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#39f0c0] text-[11px] font-bold text-[#39f0c0]">
+              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#39f0c0] text-[11px] font-bold text-[#39f0c0] sm:mt-0">
                 +
               </span>
-              <span className="text-sm font-semibold leading-snug text-white sm:text-base">
+              <span className="text-[13px] font-semibold leading-snug text-white sm:text-base">
                 {item}
               </span>
             </div>

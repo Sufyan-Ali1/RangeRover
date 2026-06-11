@@ -107,12 +107,11 @@ export default function TrustedSpecialists({ data }: { data: TrustedSpecialistsD
           {/* ── Right: Car SVG ── */}
           <div className="flex items-end justify-end px-6 pb-0 sm:px-10 lg:px-0">
             <Image
-              src="/car.svg"
+              src="/images/car.webp"
               alt="Range Rover specialist mechanic"
               width={500}
               height={380}
               className="w-full max-w-[400px] lg:max-w-none lg:w-[100%]"
-              priority
             />
           </div>
 

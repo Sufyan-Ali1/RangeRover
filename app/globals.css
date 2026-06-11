@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +33,18 @@ body {
 @keyframes marquee-exact {
   from { transform: translateX(0); }
   to   { transform: translateX(calc(-1 * var(--marquee-w, 25%))); }
+}
+
+.reviews-marquee:hover .reviews-track {
+  animation-play-state: paused;
+}
+
+.reviews-track {
+  animation: marquee 30s linear infinite;
+}
+
+.reviews-track:hover {
+  animation-play-state: paused;
 }
 
 .blog-content {

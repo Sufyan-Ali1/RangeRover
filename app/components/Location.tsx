@@ -1,6 +1,9 @@
 export default function Location() {
   const mapsEmbedUrl =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42627.347792855464!2d0.3158840742122115!3d51.46191600322437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8b76dba1fd2e1%3A0xf0dc09e9187bf7f8!2sRange%20Rover%20Garage!5e0!3m2!1sen!2suk!4v1778589373205!5m2!1sen!2suk";
+  const phoneNumber = "07477 733313";
+  const phoneHref = "tel:07477733313";
+  const emailAddress = "sales@rangerovergarage.co.uk";
 
   return (
     <section className="w-full bg-white py-16 xl:py-20">
@@ -44,9 +47,13 @@ export default function Location() {
                   </p>
                   <div className="mb-3 h-[2px] w-8 bg-[#11633A]" />
                   <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-gray-400">Phone:</p>
-                  <p className="mb-4 text-[15px] font-bold text-gray-900">07477 733313</p>
+                  <a href={phoneHref} className="mb-4 block text-[15px] font-bold text-gray-900 transition hover:text-[#11633A]">
+                    {phoneNumber}
+                  </a>
                   <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-gray-400">Email:</p>
-                  <p className="text-[14px] font-bold text-gray-900">sales@rangerovergarage.co.uk</p>
+                  <a href={`mailto:${emailAddress}`} className="block text-[14px] font-bold text-gray-900 transition hover:text-[#11633A]">
+                    {emailAddress}
+                  </a>
                 </div>
 
                 {/* Address */}
@@ -84,11 +91,11 @@ export default function Location() {
             </div>
 
             {/* Right — map */}
-            <div className="flex-1">
+            <div className="min-h-[420px] flex-1 lg:min-h-0 lg:w-1/2">
               <iframe
                 src={mapsEmbedUrl}
-                className="h-full w-full"
-                style={{ minHeight: "420px", border: 0 }}
+                className="h-[420px] w-full lg:h-full"
+                style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

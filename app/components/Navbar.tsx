@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services", dropdown: "services" as const },
   { label: "Engines", href: "/engines", dropdown: "engines" as const },
+  { label: "Supply & Fit", href: "/supply-fit" },
   { label: "Gallery", href: "/gallery" },
   { label: "About Us", href: "/about" },
   { label: "Reviews", href: "/reviews" },

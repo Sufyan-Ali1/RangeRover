@@ -1,7 +1,3 @@
-"use client";
-
-import { useRef, useEffect } from "react";
-
 function Starburst() {
   return (
     <svg
@@ -26,7 +22,7 @@ function Strip({ items }: { items: string[] }) {
   return (
     <>
       {items.map((item, i) => (
-        <span key={i} className="flex shrink-0 items-center gap-5 pr-10">
+        <span key={`${item}-${i}`} className="flex shrink-0 items-center gap-5 pr-10">
           <Starburst />
           <span
             className="text-[2.5rem] font-black uppercase leading-none tracking-wide sm:text-[4rem]"
@@ -41,32 +37,12 @@ function Strip({ items }: { items: string[] }) {
 }
 
 export default function ServicesTicker({ items }: { items: string[] }) {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const firstCopyRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    // Measure after fonts are ready so the pixel width is accurate
-    document.fonts.ready.then(() => {
-      if (trackRef.current && firstCopyRef.current) {
-        const w = firstCopyRef.current.offsetWidth;
-        trackRef.current.style.setProperty("--marquee-w", `${w}px`);
-      }
-    });
-  }, [items]);
-
   return (
     <div className="w-full overflow-hidden border-y border-gray-100 bg-white py-5">
       <div
-        ref={trackRef}
-        className="flex"
-        style={{ animation: "marquee-exact 18s linear infinite", willChange: "transform" }}
+        className="flex w-max will-change-transform"
+        style={{ animation: "marquee 22s linear infinite" }}
       >
-        <span ref={firstCopyRef} className="flex shrink-0">
-          <Strip items={items} />
-        </span>
-        <span className="flex shrink-0">
-          <Strip items={items} />
-        </span>
         <span className="flex shrink-0">
           <Strip items={items} />
         </span>

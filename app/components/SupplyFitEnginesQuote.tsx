@@ -99,18 +99,11 @@ export default function SupplyFitEnginesQuote() {
                 <p className="mb-1 min-h-[44px] text-[12px] font-semibold" style={{ color: "#11633A" }}>
                   Fits: {engine.fits}
                 </p>
-                <p className="mb-3 text-[22px] font-black leading-tight" style={{ color: "#11633A" }}>
-                  {engine.price}
-                </p>
                 <Link
                   href="/get-quote"
-                  className="mt-auto inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] transition-opacity hover:opacity-70"
-                  style={{ color: "#11633A" }}
+                  className="mt-auto inline-flex items-center justify-center rounded-lg bg-[#11633A] px-4 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-opacity hover:opacity-90"
                 >
                   Get Quote
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
                 </Link>
               </div>
             </div>

@@ -3,6 +3,14 @@ import Link from "next/link";
 import { engineServices } from "../data/services";
 
 export default function Footer() {
+  const phoneNumbers = [
+    { label: "01708 592377", href: "tel:+441708592377" },
+    { label: "07477 733313", href: "tel:+447477733313" },
+  ];
+
+  const email = "sales@rangerovergarage.co.uk";
+  const mapHref = "https://maps.app.goo.gl/49cNyUKLEiCa4UL57";
+
   return (
     <footer className="w-full border-t border-[#1f1f1f] bg-black text-white">
       <div className="mx-auto w-full max-w-[1728px] px-6 pt-12 pb-8 sm:px-10 sm:pt-14 xl:px-[101px] xl:pt-[80px] xl:pb-[40px]">
@@ -26,23 +34,36 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="#"
-                aria-label="Instagram"
+                href="https://www.facebook.com/rangerovergarage/"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-[#4CA66B] text-[#4CA66B] transition hover:bg-[#4CA66B] hover:text-black"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <circle cx="12" cy="12" r="4"/>
-                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                 </svg>
               </a>
               <a
-                href="#"
-                aria-label="Facebook"
+                href="https://www.youtube.com/@RangeroverGarage"
+                aria-label="YouTube"
+                target="_blank"
+                rel="noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-[#4CA66B] text-[#4CA66B] transition hover:bg-[#4CA66B] hover:text-black"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.4V8.6L15.8 12l-6.2 3.4Z"/>
+                </svg>
+              </a>
+              <a
+                href="https://uk.pinterest.com/rangerovergaragegrays/"
+                aria-label="Pinterest"
+                target="_blank"
+                rel="noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#4CA66B] text-[#4CA66B] transition hover:bg-[#4CA66B] hover:text-black"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12c0 4.13 2.5 7.66 6.07 9.19-.03-.78-.01-1.72.2-2.57l1.3-5.5s-.32-.65-.32-1.6c0-1.49.86-2.6 1.93-2.6.91 0 1.35.68 1.35 1.5 0 .91-.58 2.28-.88 3.55-.25 1.06.53 1.93 1.58 1.93 1.9 0 3.36-2.01 3.36-4.91 0-2.57-1.85-4.37-4.49-4.37-3.06 0-4.85 2.29-4.85 4.66 0 .92.35 1.91.78 2.45.09.11.1.2.07.31l-.29 1.18c-.05.19-.15.23-.33.14-1.24-.58-2.01-2.41-2.01-3.88 0-3.16 2.29-6.05 6.6-6.05 3.46 0 6.15 2.46 6.15 5.76 0 3.44-2.17 6.21-5.19 6.21-1.01 0-1.96-.53-2.29-1.15l-.62 2.37c-.22.85-.81 1.91-1.2 2.56.9.28 1.86.43 2.86.43 5.52 0 10-4.48 10-10S17.52 2 12 2Z"/>
                 </svg>
               </a>
             </div>
@@ -80,8 +101,17 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-[10.5px] font-semibold uppercase tracking-widest text-[#4CA66B]">Call Us</p>
-                  <p className="mt-1 text-[13.5px] text-white">01708 592377</p>
-                  <p className="text-[13.5px] text-white">07477 733313</p>
+                  <div className="mt-1 flex flex-col gap-1">
+                    {phoneNumbers.map((phone) => (
+                      <a
+                        key={phone.href}
+                        href={phone.href}
+                        className="inline-block w-fit text-[13.5px] text-white transition hover:text-[#4CA66B]"
+                      >
+                        {phone.label}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -95,12 +125,20 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-[10.5px] font-semibold uppercase tracking-widest text-[#4CA66B]">Our Location</p>
-                  <p className="mt-1 text-[13.5px] italic text-white">UNIT 1 Hedley Ave, Grays RM20 4EL</p>
+                  <a
+                    href={mapHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-1 inline-block w-fit text-[13.5px] italic text-white transition hover:text-[#4CA66B]"
+                    aria-label="Open location in Google Maps"
+                  >
+                    UNIT 1 Hedley Ave, Grays RM20 4EL
+                  </a>
                 </div>
               </div>
 
               {/* Email Us */}
-              <div className="flex items-start gap-4">
+              <div className="group flex items-start gap-4">
                 <div className="mt-0.5 shrink-0 text-[#4CA66B]">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="4" width="20" height="16" rx="2"/>
@@ -109,7 +147,12 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-[10.5px] font-semibold uppercase tracking-widest text-[#4CA66B]">Email Us</p>
-                  <p className="mt-1 text-[13.5px] text-white">sales@rangerovergarage.co.uk</p>
+                  <a
+                    href={`mailto:${email}`}
+                    className="mt-1 inline-block w-fit text-[13.5px] text-white transition hover:text-[#4CA66B]"
+                  >
+                    {email}
+                  </a>
                 </div>
               </div>
 

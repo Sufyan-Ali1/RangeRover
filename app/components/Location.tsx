@@ -1,4 +1,5 @@
 export default function Location() {
+  const mapHref = "https://maps.app.goo.gl/49cNyUKLEiCa4UL57";
   const mapsEmbedUrl =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42627.347792855464!2d0.3158840742122115!3d51.46191600322437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8b76dba1fd2e1%3A0xf0dc09e9187bf7f8!2sRange%20Rover%20Garage!5e0!3m2!1sen!2suk!4v1778589373205!5m2!1sen!2suk";
   const phoneNumber = "07477 733313";
@@ -62,11 +63,17 @@ export default function Location() {
                     Address
                   </p>
                   <div className="mb-3 h-[2px] w-8 bg-[#11633A]" />
-                  <p className="text-[14px] font-bold leading-relaxed text-gray-900">
+                  <a
+                    href={mapHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group block text-[14px] font-bold leading-relaxed text-gray-900 transition hover:text-[#11633A]"
+                    aria-label="Open address in Google Maps"
+                  >
                     Unit 1 Hedley Ave<br />
                     Grays RM20 4EL<br />
                     United Kingdom
-                  </p>
+                  </a>
                 </div>
 
               </div>

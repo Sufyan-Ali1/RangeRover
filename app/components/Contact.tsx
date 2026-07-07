@@ -21,15 +21,17 @@ function validate(form: FormFields): FieldErrors {
   const phoneDigits = form.phone.replace(/\D/g, "").replace(/^1/, "");
   if (!phoneDigits)
     errors.phone = "Phone number is required.";
-  else if (phoneDigits.length !== 10)
-    errors.phone = "Enter a valid 10-digit US phone number.";
+  else if (phoneDigits.length < 11)
+    errors.phone = "Enter a valid phone number with at least 11 digits.";
 
   if (!form.email.trim())
     errors.email = "Email address is required.";
   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email))
     errors.email = "Enter a valid email address.";
 
-  if (form.reg && !/^[A-Z0-9]{1,8}$/.test(form.reg))
+  if (!form.reg.trim())
+    errors.reg = "Registration is required.";
+  else if (!/^[A-Z0-9]{1,8}$/.test(form.reg))
     errors.reg = "Registration must be alphanumeric only (max 8 characters).";
 
   if (form.postcode && !/^[A-Z0-9][A-Z0-9\s]{1,7}$/i.test(form.postcode.trim()))
@@ -57,7 +59,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function Contact() {
   const router = useRouter();
   const [form, setForm] = useState<FormFields>({
-    name: "", phone: "+1 ", email: "", reg: "", postcode: "", message: "",
+    name: "", phone: "", email: "", reg: "", postcode: "", message: "",
   });
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [submitting, setSubmitting] = useState(false);
@@ -69,13 +71,8 @@ export default function Contact() {
 
     if (name === "reg")
       filtered = value.replace(/[^A-Za-z0-9]/g, "").toUpperCase().slice(0, 8);
-    else if (name === "phone") {
-      const digits = value.replace(/\D/g, "").replace(/^1/, "").slice(0, 10);
-      if (digits.length === 0) filtered = "+1 ";
-      else if (digits.length <= 3) filtered = `+1 ${digits}`;
-      else if (digits.length <= 6) filtered = `+1 ${digits.slice(0, 3)}-${digits.slice(3)}`;
-      else filtered = `+1 ${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
-    }
+    else if (name === "phone")
+      filtered = value.replace(/\D/g, "").slice(0, 15);
     else if (name === "postcode")
       filtered = value.replace(/[^A-Za-z0-9\s]/g, "").toUpperCase();
 
@@ -146,14 +143,13 @@ export default function Contact() {
                   <div>
                     <label className="mb-1.5 block text-[12.5px] text-gray-700">Phone Number *</label>
                     <div className={`relative flex items-center rounded-md border transition focus-within:border-[#4CA66B] focus-within:ring-1 focus-within:ring-[#4CA66B] ${borderClass("phone")}`}>
-                      <span className="pointer-events-none pl-3.5 text-[13.5px] text-gray-800 select-none whitespace-nowrap">+1</span>
                       <input
                         type="tel"
                         name="phone"
-                        value={form.phone.startsWith("+1 ") ? form.phone.slice(3) : form.phone}
+                        value={form.phone}
                         onChange={handleChange}
-                        placeholder="713-345-6789"
-                        className="w-full rounded-md py-2.5 pl-1 pr-3.5 text-[13.5px] text-gray-800 placeholder-gray-400 outline-none"
+                        placeholder="07123456789"
+                        className="w-full rounded-md py-2.5 px-3.5 text-[13.5px] text-gray-800 placeholder-gray-400 outline-none"
                       />
                     </div>
                     <FieldError field="phone" />
@@ -177,7 +173,7 @@ export default function Contact() {
                 {/* Reg Number + Postcode */}
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="mb-1.5 block text-[12.5px] text-gray-700">Reg Number</label>
+                    <label className="mb-1.5 block text-[12.5px] text-gray-700">Reg Number *</label>
                     <input
                       name="reg"
                       value={form.reg}

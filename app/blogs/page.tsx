@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import blogsData from "../data/blogs.json";
+import { getBlogs } from "../../lib/blogApi";
 
 export const metadata = {
   title: "Blog | Range Rover Engines",
@@ -21,12 +22,16 @@ interface Props {
 }
 
 const PER_PAGE = 18;
-const blogs = blogsData as Blog[];
-const totalPages = Math.ceil(blogs.length / PER_PAGE);
+const localBlogs = blogsData as Blog[];
 
 export default async function BlogsPage({ searchParams }: Props) {
   const { page } = await searchParams;
-  const current = Math.min(Math.max(1, parseInt(page ?? "1", 10)), totalPages);
+
+  const apiBlogs = await getBlogs().catch(() => []);
+  const blogs: Blog[] = [...apiBlogs, ...localBlogs];
+  const totalPages = Math.ceil(blogs.length / PER_PAGE);
+
+  const current = Math.min(Math.max(1, parseInt(page ?? "1", 10)), totalPages || 1);
   const start = (current - 1) * PER_PAGE;
   const paginated = blogs.slice(start, start + PER_PAGE);
 

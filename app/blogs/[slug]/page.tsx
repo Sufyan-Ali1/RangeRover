@@ -3,30 +3,31 @@ import Footer from "../../components/Footer";
 import Link from "next/link";
 import blogsData from "../../data/blogs.json";
 import { notFound } from "next/navigation";
-
-interface Blog {
-  title: string;
-  slug: string;
-  date: string;
-  author: string;
-  image: string;
-  excerpt: string;
-  html_content: string;
-}
+import { fetchBlog, getBlogs, type Blog } from "../../../lib/blogApi";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
-const blogs = blogsData as Blog[];
+const localBlogs = blogsData as Blog[];
+
+async function getSingleBlog(slug: string): Promise<Blog | null> {
+  const apiBlog = await fetchBlog(slug).catch(() => null);
+  if (apiBlog) return apiBlog;
+
+  return localBlogs.find((b) => b.slug === slug) ?? null;
+}
 
 export async function generateStaticParams() {
-  return blogs.map((blog) => ({ slug: blog.slug }));
+  const apiBlogs = await getBlogs().catch(() => []);
+  const apiPaths = apiBlogs.map((blog) => ({ slug: blog.slug }));
+  const localPaths = localBlogs.map((blog) => ({ slug: blog.slug }));
+  return [...apiPaths, ...localPaths];
 }
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const blog = blogs.find((b) => b.slug === slug);
+  const blog = await getSingleBlog(slug);
   if (!blog) return {};
   return {
     title: `${blog.title} | Range Rover Engines`,
@@ -36,11 +37,14 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function BlogDetailPage({ params }: Props) {
   const { slug } = await params;
-  const idx = blogs.findIndex((b) => b.slug === slug);
-  if (idx === -1) notFound();
+  const blog = await getSingleBlog(slug);
+  if (!blog) notFound();
 
-  const blog = blogs[idx];
-  const image2 = blogs[(idx + 1) % blogs.length].image;
+  const apiBlogs = await getBlogs().catch(() => []);
+  const allBlogs = [...apiBlogs, ...localBlogs];
+  const idx = allBlogs.findIndex((b) => b.slug === slug);
+  const sibling = idx !== -1 ? allBlogs[(idx + 1) % allBlogs.length] : blog;
+  const image2 = sibling.image || blog.image;
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
@@ -81,7 +85,7 @@ export default async function BlogDetailPage({ params }: Props) {
           <div className="mb-10 overflow-hidden rounded-xl">
             <img
               src={image2}
-              alt={blogs[(idx + 1) % blogs.length].title}
+              alt={sibling.title}
               className="w-full object-cover max-h-[500px]"
             />
           </div>

@@ -19,7 +19,7 @@ interface PageProps {
     slug: string;
   }>;
 }
-const SITE_URL = "https://www.rangerover.co.uk";
+
 
 export async function generateMetadata({
   params,
@@ -34,11 +34,11 @@ export async function generateMetadata({
   }
 
   return {
-    metadataBase: new URL(SITE_URL),
+    metadataBase: new URL(process.env.SITE_URL || "https://www.rangerover.co.uk"),
     title: area.metaTitle,
     description: area.metaDescription,
     alternates: {
-      canonical: `${SITE_URL}/areas/${area.slug}`,
+      canonical: `${process.env.SITE_URL || "https://www.rangerover.co.uk"}/areas/${area.slug}`,
     },
   };
 }

@@ -17,15 +17,14 @@ import AuthorityLeading from "../components/AuthorityLeading";
 import Footer from "../components/Footer";
 import EngineServices from "../components/EngineServices";
 import { engineServices } from "../data/services";
-const SITE_URL = "https://www.rangerover.co.uk";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(process.env.SITE_URL || "https://www.rangerover.co.uk"),
   title: "Range Rover Engine Rebuild Across the UK | Find Your Area",
   description:
     "Range Rover Engines UK offers fast, warrantied engine rebuilds nationwide. Browse your county below for tested engines, expert fitting and a free local quote.",
   alternates: {
-    canonical: `${SITE_URL}/areas`,
+    canonical: `${process.env.SITE_URL || "https://www.rangerover.co.uk"}/areas`,
   },
 };
 

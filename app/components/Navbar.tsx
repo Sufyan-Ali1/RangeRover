@@ -12,6 +12,7 @@ const navLinks = [
   { label: "Engines", href: "/engines", dropdown: "engines" as const },
   { label: "Supply & Fit", href: "/supply-fit" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Areas", href: "/areas" },
   { label: "About Us", href: "/about" },
   { label: "Reviews", href: "/reviews" },
   { label: "Blogs", href: "/blogs" },
@@ -49,7 +50,9 @@ export default function Navbar({ transparent = false }: NavbarProps) {
   return (
     <nav
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        active ? "bg-[#11633A] shadow-[0_2px_12px_rgba(0,0,0,0.18)]" : "bg-transparent"
+        active
+          ? "bg-[#11633A] shadow-[0_2px_12px_rgba(0,0,0,0.18)]"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex w-full max-w-[1728px] items-center justify-between px-6 py-3 sm:px-10 sm:py-3.5 xl:px-[101px]">
@@ -145,9 +148,15 @@ export default function Navbar({ transparent = false }: NavbarProps) {
             className="flex flex-col justify-center gap-[5px] lg:hidden"
             onClick={() => setOpen((o) => !o)}
           >
-            <span className={`block h-0.5 w-5 bg-white transition-transform duration-300 ${open ? "translate-y-[7px] rotate-45" : ""}`} />
-            <span className={`block h-0.5 w-5 bg-white transition-opacity duration-300 ${open ? "opacity-0" : ""}`} />
-            <span className={`block h-0.5 w-5 bg-white transition-transform duration-300 ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
+            <span
+              className={`block h-0.5 w-5 bg-white transition-transform duration-300 ${open ? "translate-y-[7px] rotate-45" : ""}`}
+            />
+            <span
+              className={`block h-0.5 w-5 bg-white transition-opacity duration-300 ${open ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block h-0.5 w-5 bg-white transition-transform duration-300 ${open ? "-translate-y-[7px] -rotate-45" : ""}`}
+            />
           </button>
         </div>
       </div>
@@ -163,7 +172,11 @@ export default function Navbar({ transparent = false }: NavbarProps) {
                     <button
                       type="button"
                       className="flex w-full items-center justify-between py-2.5 text-sm font-medium text-white transition hover:text-[#A6F0C6]"
-                      onClick={() => setMobileExpanded(mobileExpanded === dropdown ? null : dropdown)}
+                      onClick={() =>
+                        setMobileExpanded(
+                          mobileExpanded === dropdown ? null : dropdown,
+                        )
+                      }
                     >
                       {label}
                       <svg

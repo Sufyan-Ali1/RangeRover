@@ -18,6 +18,7 @@ import WarrantySection from "@/app/components/WarrantySection";
 import ServicesTicker from "@/app/components/ServicesTicker";
 import ServiceGallery from "@/app/components/ServiceGallery";
 import { getServiceImages } from "@/app/data/serviceImages";
+import { reviews } from "@/app/data/reviews";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -51,7 +52,7 @@ export default async function SubServicePage({ params }: Props) {
         title={title}
         subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
       />
-      <Reviews />
+      <Reviews reviews={reviews} />
       <ServiceGallery
         title={`${title} Gallery`}
         subtitle="A look inside our workshop — precision work on every Range Rover and Land Rover engine."

@@ -14,7 +14,11 @@ import Location from "../../components/Location";
 import BlogSection from "../../components/BlogSection";
 import NationwideSupport from "@/app/components/NationwideSupport";
 import { faqs } from "../../data/faqs";
-import { getBrandAuthorityNationwide, getBrandAuthorityPrecision, getModelAuthorityNationwide } from "../../data/authority";
+import {
+  getBrandAuthorityNationwide,
+  getBrandAuthorityPrecision,
+  getModelAuthorityNationwide,
+} from "../../data/authority";
 import { getBrandNationwideSupport } from "../../data/sections";
 import ServicesTicker from "../../components/ServicesTicker";
 import PopularEngineSizes from "../../components/PopularEngineSizes";
@@ -27,16 +31,22 @@ import engineCodesData from "../../data/engineCodesData.json";
 import { engineServices } from "@/app/data/services";
 import EngineServices from "@/app/components/EngineServices";
 import { engineSizes } from "../../data/engineSizes";
+import { reviews } from "../../data/reviews";
 
 interface Props {
   params: Promise<{ brand: string }>;
 }
 
 function slugToTitle(slug: string) {
-  return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+  return slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
 }
 
-function parseSizeSlug(slug: string): { brandSlug: string; sizeLabel: string } | null {
+function parseSizeSlug(
+  slug: string,
+): { brandSlug: string; sizeLabel: string } | null {
   const match = slug.match(/^(.+)-(\d+\.\d+)$/);
   if (!match) return null;
   return { brandSlug: match[1], sizeLabel: match[2] };
@@ -98,7 +108,8 @@ export default async function BrandPage({ params }: Props) {
   if (parsed) {
     const { brandSlug, sizeLabel } = parsed;
     const brandTitle = slugToTitle(brandSlug);
-    const dataKey = `${brandSlug}-${sizeLabel}-engines` as keyof typeof engineCodesData;
+    const dataKey =
+      `${brandSlug}-${sizeLabel}-engines` as keyof typeof engineCodesData;
     const engineData = engineCodesData[dataKey] ?? null;
     const tableRows = engineData ? mapTableRows(engineData.rows) : [];
 
@@ -107,11 +118,26 @@ export default async function BrandPage({ params }: Props) {
         <Navbar />
         <Header
           compact
-          title={<>{brandTitle}<br />{sizeLabel} Engines.</>}
+          title={
+            <>
+              {brandTitle}
+              <br />
+              {sizeLabel} Engines.
+            </>
+          }
           subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
         />
-        <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
-        <AuthorityNationwide data={getModelAuthorityNationwide(brandTitle, sizeLabel)} />
+        <ServicesTicker
+          items={[
+            "Engine Rebuild",
+            "Replacement",
+            "Diagnostics",
+            "Performance Solutions",
+          ]}
+        />
+        <AuthorityNationwide
+          data={getModelAuthorityNationwide(brandTitle, sizeLabel)}
+        />
         {engineData && (
           <EngineTable
             title={engineData.title}
@@ -137,7 +163,8 @@ export default async function BrandPage({ params }: Props) {
   const models = getModelsByBrandSlug(brand);
   const showModels = brand === "range-rover" || brand === "land-rover";
   const brandTableRows = models.flatMap((model) => {
-    const dataKey = `${brand}-${toModelSlug(model.model)}-engines` as keyof typeof engineCodesData;
+    const dataKey =
+      `${brand}-${toModelSlug(model.model)}-engines` as keyof typeof engineCodesData;
     const modelEngineData = engineCodesData[dataKey];
     return modelEngineData ? mapTableRows(modelEngineData.rows) : [];
   });
@@ -147,10 +174,23 @@ export default async function BrandPage({ params }: Props) {
       <Navbar />
       <Header
         compact
-        title={<>{brandTitle}<br />Engines.</>}
+        title={
+          <>
+            {brandTitle}
+            <br />
+            Engines.
+          </>
+        }
         subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
       />
-      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
+      <ServicesTicker
+        items={[
+          "Engine Rebuild",
+          "Replacement",
+          "Diagnostics",
+          "Performance Solutions",
+        ]}
+      />
       <EngineServices services={engineServices} />
       <PopularEngineSizes brandSlug={brand} brandTitle={brandTitle} />
       {showModels && (
@@ -173,7 +213,7 @@ export default async function BrandPage({ params }: Props) {
           notFoundHref="/get-quote"
         />
       )}
-      <Reviews />
+      <Reviews reviews={reviews} />
       <AuthorityNationwide data={getBrandAuthorityNationwide(brandTitle)} />
       <AuthorityPrecision data={getBrandAuthorityPrecision(brandTitle)} />
       <NationwideSupport data={getBrandNationwideSupport(brandTitle)} />

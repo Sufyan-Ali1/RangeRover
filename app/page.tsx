@@ -20,13 +20,14 @@ import { allBrandModels } from "./data/models";
 import { faqs } from "./data/faqs";
 import { authorityLeading, authorityNationwide, authorityPrecision } from "./data/authority";
 import { homeTrustedSpecialists, homeNationwideSupport } from "./data/sections";
+import { reviews } from "./data/reviews";
 
 export default function Home() {
   return (
     <div className="flex w-full flex-1 flex-col bg-white">
       <Navbar transparent />
       <Header />
-      <Reviews />
+      <Reviews reviews={reviews} />
       <EngineServices services={engineServices.slice(0, 4)} viewMoreHref="/services" />
       <BrowseByModelStatic
         allModels={allBrandModels.filter((model) => model.brand !== "JAGUAR")}

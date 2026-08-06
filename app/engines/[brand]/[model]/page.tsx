@@ -19,6 +19,7 @@ import Reviews from "@/app/components/Reviews";
 import EngineTable from "@/app/components/EngineTable";
 import { getModelAuthorityNationwide, getModelAuthorityPrecision } from "@/app/data/authority";
 import { getModelNationwideSupport } from "@/app/data/sections";
+import { reviews } from "@/app/data/reviews";
 
 interface Props {
   params: Promise<{ brand: string; model: string }>;
@@ -84,7 +85,7 @@ export default async function ModelPage({ params }: Props) {
         />
       )}
 
-      <Reviews />
+      <Reviews  reviews={reviews}/>
       <AuthorityNationwide data={getModelAuthorityNationwide(brandTitle, modelTitle)} />
       <AuthorityPrecision data={getModelAuthorityPrecision(brandTitle, modelTitle)} />
       <NationwideSupport data={getModelNationwideSupport(brandTitle, modelTitle)} />

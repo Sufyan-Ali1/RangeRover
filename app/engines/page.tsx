@@ -16,6 +16,7 @@ import { enginesPageNationwide, enginesPagePrecision } from "../data/authority";
 import EngineTable from "../components/EngineTable";
 import engineCodesData from "../data/engineCodesData.json";
 import { allBrandModels, toBrandSlug, toModelSlug } from "../data/models";
+import { reviews } from "../data/reviews";
 
 function mapTableRows(
   rows: Array<{
@@ -78,7 +79,7 @@ export default function EnginesPage() {
           notFoundHref="/get-quote"
         />
       )}
-      <Reviews />
+      <Reviews  reviews={reviews}/>
       <AuthorityNationwide data={enginesPageNationwide} />
       <AuthorityPrecision data={enginesPagePrecision} />
       <CTA />

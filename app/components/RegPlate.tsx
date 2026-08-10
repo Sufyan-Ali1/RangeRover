@@ -36,10 +36,6 @@ export default function RegPlate() {
 
   return (
     <div className="mt-6 w-full max-w-[780px]">
-      {/* Label */}
-      <p className="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.18em] text-white">
-        Enter Your Reg Number For Free Quote.
-      </p>
 
       {/* Unified plate */}
       <div className={`flex w-full overflow-hidden rounded-lg shadow-xl ${error ? "ring-2 ring-red-400" : ""}`}>

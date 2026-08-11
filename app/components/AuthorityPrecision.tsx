@@ -47,7 +47,7 @@ export default function AuthorityPrecision({ data }: { data: AuthoritySectionDat
               {data.titleBefore}
               <span className="text-[#1a5c2e]">{data.titleHighlight}</span>
             </h2>
-            {data.paragraphs.map((p, i) => (
+            {data?.paragraphs && data.paragraphs.map((p, i) => (
               <p key={i} className={`text-[13px] leading-relaxed text-gray-600 ${i < data.paragraphs.length - 1 ? "mb-5" : ""}`}>
                 {p}
               </p>

@@ -10,18 +10,27 @@ import CTA from "../components/CTA";
 import ServicesTicker from "../components/ServicesTicker";
 import AuthorityNationwide from "../components/AuthorityNationwide";
 import AuthorityPrecision from "../components/AuthorityPrecision";
-import { engineServices } from "../data/services";
-import { faqs } from "../data/faqs";
-import { servicesPageNationwide, servicesPagePrecision } from "../data/authority";
-import { servicesNationwideSupport } from "../data/sections";
+import { faqs } from "../data/services/serviceMainPage";
+import {
+  servicesPageNationwide,
+  servicesPagePrecision,
+} from "../data/services/serviceMainPage";
+import { servicesNationwideSupport } from "../data/services/serviceMainPage";
 import BrandShowcase from "../components/BrandShowcase";
+import { highlights, MainServicesData } from "../data/services/serviceMainPage";
 
 export const metadata = {
   title: "Engine Services | Range Rover Engines",
-  description: "Premium Range Rover engine rebuild, replacement, diagnostics and performance solutions.",
+  description:
+    "Premium Range Rover engine rebuild, replacement, diagnostics and performance solutions.",
 };
 
-const tickerItems = ["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"];
+const tickerItems = [
+  "Engine Rebuild",
+  "Replacement",
+  "Diagnostics",
+  "Performance Solutions",
+];
 
 export default function ServicesPage() {
   return (
@@ -29,10 +38,23 @@ export default function ServicesPage() {
       <Navbar />
       <Header
         compact
-        title={<>Premium Engine<br />Services.</>}
-        subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
+        title={
+          <>
+            Engine Services Built Around
+            <br />
+            Your Range Rover.
+          </>
+        }
+        subtitle="From early warning signs to full engine replacement, we cover every stage of engine care.
+        One specialist team, every service your vehicle could need, in a single workshop.
+"
+        highlights={highlights}
       />
-      <EngineServices services={engineServices} />
+      <EngineServices
+        services={MainServicesData.services}
+        heading={MainServicesData.heading}
+        intro={MainServicesData.intro}
+      />
       <ServicesTicker items={tickerItems} />
       <BrandShowcase />
       <AuthorityNationwide data={servicesPageNationwide} />

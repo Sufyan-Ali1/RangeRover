@@ -15,33 +15,60 @@ import CTA from "./components/CTA";
 import Location from "./components/Location";
 import Footer from "./components/Footer";
 import ServicesTicker from "./components/ServicesTicker";
-import { engineServices } from "./data/services";
-import { allBrandModels } from "./data/models";
-import { faqs } from "./data/faqs";
-import { authorityLeading, authorityNationwide, authorityPrecision } from "./data/authority";
-import { homeTrustedSpecialists, homeNationwideSupport } from "./data/sections";
-import { reviews } from "./data/reviews";
+
+// data
+import { engineServices } from "./data/home/engineServicesData";
+import { allBrandModels } from "./data/home/EngineModels";
+import { engineModels } from "./data/home/EngineModels";
+import { faqs } from "./data/home/faqData";
+import { authorityPrecision } from "./data/home/AuthorityPrecision";
+import { authorityNationwide } from "./data/home/AuthorityNationwide";
+import { authorityLeading } from "./data/home/AuthorityLeadingData";
+
+import { homeTrustedSpecialists } from "./data/home/homeTrustedSpecialists";
+import { homeNationwideSupport } from "./data/home/HomeNationwideSupport";
+import { reviews } from "./data/home/reviewsData";
+import { headerData } from "./data/home/heroData";
+import { engineServicesMain } from "./data/home/engineServicesData";
 
 export default function Home() {
   return (
     <div className="flex w-full flex-1 flex-col bg-white">
       <Navbar transparent />
-      <Header />
+      <Header
+        title={headerData.title}
+        subtitle={headerData.subtitle}
+        highlights={headerData.highlights}
+      />
       <Reviews reviews={reviews} />
-      <EngineServices services={engineServices.slice(0, 4)} viewMoreHref="/services" />
+      <EngineServices
+        services={engineServices}
+        heading={engineServicesMain.heading}
+        intro={engineServicesMain.intro}
+        viewMoreHref={engineServicesMain.viewMoreHref}
+      />
       <BrowseByModelStatic
         allModels={allBrandModels.filter((model) => model.brand !== "JAGUAR")}
         bgImage="/images/browsebymodel.webp"
-        label="Browse By Model"
-        heading="Range Rover & Land Rover Engine Specialists"
-        description="Select your exact model to explore specialist engine rebuild, replacement and repair services. Every job uses genuine OEM parts and is backed by up to 24-month warranty."
-        viewMoreHref="/engines"
+        label={engineModels.label}
+        heading={engineModels.heading}
+        description={engineModels.description}
+        viewMoreHref={engineModels.viewMoreHref}
       />
-      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
+      <ServicesTicker
+        items={[
+          "Engine Rebuild",
+          "Replacement",
+          "Diagnostics",
+          "Performance Solutions",
+        ]}
+      />
       <WarrantySection />
       <TrustedSpecialists data={homeTrustedSpecialists} />
       <AuthorityLeading data={authorityLeading} />
+
       <AuthorityNationwide data={authorityNationwide} />
+
       <AuthorityPrecision data={authorityPrecision} />
       <CTA />
       <BlogSection />

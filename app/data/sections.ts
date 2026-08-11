@@ -14,10 +14,6 @@ export interface TrustedSpecialistsData {
   steps: { id: number; side: "left" | "right"; text: string }[];
 }
 
-// ─────────────────────────────────────────────────────────
-// TRUSTED SPECIALISTS — Home page only
-// ─────────────────────────────────────────────────────────
-
 export const homeTrustedSpecialists: TrustedSpecialistsData = {
   heading: "Trusted Range Rover & Land Rover Specialists — Range Rover Garage.",
   description:

@@ -10,7 +10,7 @@ export interface EngineServicesData {
   services: Service[];
 }
 
-import { AuthoritySectionData } from "../authority";
+import { AuthoritySectionData } from "../types";
 import { Review } from "../types";
 
 export interface HeaderData {
@@ -37,12 +37,7 @@ export interface EngineRebuildData {
     image: string;
     href: string;
   }[];
-  certifiedSpecialistsData: {
-    titleBefore: string;
-    titleHighlight: string;
-    paragraphs: string[];
-    badge: { label: string; title: string };
-  };
+  certifiedSpecialistsData: AuthoritySectionData;
   TrustData: BookData;
   faqs: {
     q: string;

@@ -164,4 +164,9 @@ export interface NationwideSupportData {
   titleBefore: string;
   titleHighlight: string;
   paragraphs: string[];
-} 
+}
+
+export interface AboutData {
+  heading: string;
+  body: string;
+}

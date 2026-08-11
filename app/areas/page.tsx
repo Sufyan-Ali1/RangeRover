@@ -3,20 +3,22 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import { AreaCard } from "../components/Areas/AreaCard";
 import Location from "../components/Location";
-import { areasData } from "../data/areas";
-import {
-  homeTrustedSpecialists,
-  servicesNationwideSupport,
-} from "../data/sections";
-import NationwideSupport from "../components/NationwideSupport";
-import WarrantySection from "../components/WarrantySection";
-import CTA from "../components/CTA";
-import TrustedSpecialists from "../components/TrustedSpecialists";
-import { authorityLeading } from "../data/authority";
 import AuthorityLeading from "../components/AuthorityLeading";
 import Footer from "../components/Footer";
 import EngineServices from "../components/EngineServices";
-import { engineServices } from "../data/services";
+import CTA from "../components/CTA";
+import TrustedSpecialists from "../components/TrustedSpecialists";
+import NationwideSupport from "../components/NationwideSupport";
+import WarrantySection from "../components/WarrantySection";
+
+// data
+import { areasData } from "../data/areas";
+import { homeTrustedSpecialists } from "../data/areas/main/TrustedSpecialistData";
+import { servicesNationwideSupport } from "../data/areas/main/ServiceNationwideData";
+import { authorityLeading } from "../data/areas/main/AuthorityLeadingData";
+import { engineServices } from "../data/areas/main/EngineServicesData";
+import { engineServicesMain } from "../data/areas/main/EngineServicesData";
+import { headerData } from "../data/areas/main/HeroData";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL || "https://www.rangerover.co.uk"),
@@ -33,15 +35,9 @@ export default function AreasPage() {
     <div className="flex min-h-screen flex-col bg-white">
       <Navbar />
       <Header
-        compact
-        title={
-          <>
-            Our Premium
-            <br />
-            Areas.
-          </>
-        }
-        subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
+        title={headerData.title}
+        subtitle={headerData.subtitle}
+        highlights={headerData.highlights}
       />
 
       {/* Covered Areas Section with balanced vertical spacing */}
@@ -65,8 +61,10 @@ export default function AreasPage() {
         <NationwideSupport data={servicesNationwideSupport} />
       </div>
       <EngineServices
-        services={engineServices.slice(0, 4)}
-        viewMoreHref="/services"
+        services={engineServices}
+        heading={engineServicesMain.heading}
+        intro={engineServicesMain.intro}
+        viewMoreHref={engineServicesMain.viewMoreHref}
       />
       <WarrantySection />
       <TrustedSpecialists data={homeTrustedSpecialists} />

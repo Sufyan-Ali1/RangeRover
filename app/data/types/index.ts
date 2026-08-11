@@ -87,8 +87,8 @@ export interface ReviewsData {
 export interface Area {
   id: string;
   slug: string;
-  metaTitle:string;
-  metaDescription:string;
+  metaTitle: string;
+  metaDescription: string;
   title: string;
   hero?: AreaHero[];
   eyebrow: string;
@@ -112,3 +112,56 @@ export interface Review {
   text: string;
   stars: number;
 }
+
+export interface Service {
+  slug: string;
+  title: string;
+  description: string;
+}
+
+export interface EngineServicesMain {
+  heading?: string;
+  intro?: string;
+  viewMoreHref?: string;
+}
+
+export interface Model {
+  brand: string;
+  model: string;
+  service: string;
+  desc: string;
+}
+
+export interface EngineModelsMain {
+  label: string;
+  heading: string;
+  description: string;
+  viewMoreHref: string;
+}
+
+export interface TrustedSpecialistsData {
+  heading: string;
+  description: string;
+  steps: { id: number; side: "left" | "right"; text: string }[];
+}
+
+export interface AuthorityLeadingData {
+  label: string;
+  titleBefore: string;
+  titleHighlight: string;
+  titleAfter: string;
+  body: string;
+}
+
+export interface AuthoritySectionData {
+  titleBefore: string;
+  titleHighlight: string;
+  paragraphs: string[];
+  badge: { label: string; title: string };
+}
+
+export interface NationwideSupportData {
+  titleBefore: string;
+  titleHighlight: string;
+  paragraphs: string[];
+} 

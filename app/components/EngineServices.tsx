@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import type { Service } from "../data/services/types";
+import type { Service } from "../data/types";
 
 interface EngineServicesProps {
   services: Service[];

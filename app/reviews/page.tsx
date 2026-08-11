@@ -7,7 +7,8 @@ import { reviews } from "../data/reviews";
 
 export const metadata = {
   title: "Customer Reviews | Range Rover Engines",
-  description: "Read what our customers say about our Range Rover and Land Rover engine services.",
+  description:
+    "Read what our customers say about our Range Rover and Land Rover engine services.",
 };
 
 export default function ReviewsPage() {
@@ -21,10 +22,11 @@ export default function ReviewsPage() {
           What Our Customers Say
         </p>
         <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-          Customer Reviews
+          Real Owner Feedback
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-gray-500">
-          Trusted by hundreds of Range Rover and Land Rover owners across the UK.
+          See what Range Rover and Land Rover owners say after trusting us with
+          their engine work.
         </p>
       </div>
 

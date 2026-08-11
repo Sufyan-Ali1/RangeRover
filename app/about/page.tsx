@@ -4,12 +4,16 @@ import AboutSection from "../components/AboutSection";
 import AboutCTA from "../components/AboutCTA";
 import VideoSection from "../components/VideoSection";
 import AuthorityPrecision from "../components/AuthorityPrecision";
-import { aboutPageNationwide, aboutPagePrecision } from "../data/authority";
 import AuthorityNationwide from "../components/AuthorityNationwide";
+
+
+import { aboutPagePrecision } from "../data/about/AboutPrecision";
+import { authorityNationwide } from "../data/about/Nationwide";
 
 export const metadata = {
   title: "About Us | Range Rover Engines",
-  description: "Learn about Range Rover Garage — the UK's premier independent specialist for Range Rover and Land Rover engine services.",
+  description:
+    "Learn about Range Rover Garage — the UK's premier independent specialist for Range Rover and Land Rover engine services.",
 };
 
 export default function AboutPage() {
@@ -20,7 +24,7 @@ export default function AboutPage() {
         <AboutSection />
       </div>
       <AboutCTA />
-      <AuthorityNationwide data={aboutPageNationwide} />
+      <AuthorityNationwide data={authorityNationwide} />
       <AuthorityPrecision data={aboutPagePrecision} />
       <VideoSection />
       <Footer />

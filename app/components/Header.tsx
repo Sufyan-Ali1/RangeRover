@@ -51,36 +51,36 @@ export default function Header({
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(38,126,71,0.45),transparent_40%)]" />
       {compact && <div className="absolute inset-0 bg-black/10" />}
 
-      {/* Content Wrapper - Using relative + flex instead of absolute to allow natural vertical stretching */}
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-6 text-center pt-6 lg:pt-0">
+      {/* Content Wrapper */}
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 text-center pt-6 lg:pt-0">
         
-        {/* Title */}
-        <h1 className="max-w-5xl font-black uppercase text-white text-2xl leading-tight sm:text-3xl md:text-4xl lg:text-5xl tracking-wide">
+        {/* Title - Optimized for flexible and long content */}
+        <h1 className="w-full font-extrabold tracking-tight text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-[1.2] drop-shadow-sm">
           {title}
         </h1>
 
-        {/* Subtitle - Clamped text sizes and better mobile wrapping */}
-        <p className="mt-4 max-w-3xl font-medium text-white/90 text-xs sm:text-sm md:text-base leading-relaxed text-balance px-2">
+        {/* Subtitle */}
+        <p className="mt-3 max-w-2xl font-medium text-white/90 text-xs sm:text-sm md:text-base leading-relaxed px-2">
           {subtitle}
         </p>
 
         {/* Registration Plate Component */}
-        <div className="my-6 w-full flex justify-center">
+        <div className="my-5 w-full flex justify-center">
           <RegPlate />
         </div>
 
         {/* Highlights Badges */}
         {highlights && highlights.length > 0 && (
-          <div className="flex w-full max-w-5xl flex-col items-center gap-2">
+          <div className="flex w-full max-w-4xl flex-col items-center gap-2">
             {highlights.map((item) => (
               <div
                 key={item}
-                className="flex w-full max-w-full items-start gap-2.5 rounded-xl border border-white/15 bg-white/10 px-4 py-2.5 text-left backdrop-blur-sm sm:w-fit sm:items-center sm:rounded-full sm:text-center sm:px-5"
+                className="flex w-full items-start gap-2.5 rounded-xl border border-white/15 bg-white/10 px-4 py-2.5 text-left backdrop-blur-sm sm:w-fit sm:items-center sm:rounded-full sm:px-5"
               >
                 <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#39f0c0] text-[10px] font-bold text-[#39f0c0] sm:mt-0 sm:h-5 sm:w-5 sm:text-[11px]">
                   +
                 </span>
-                <span className="text-xs font-semibold leading-snug text-white sm:text-sm md:text-base">
+                <span className="text-xs font-semibold leading-snug text-white sm:text-sm">
                   {item}
                 </span>
               </div>

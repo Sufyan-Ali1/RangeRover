@@ -55,8 +55,7 @@ export default function AreasPage() {
           </div>
         </div>
       </div>
-
-      {/* Nationwide Support Section with matching uniform bottom spacing */}
+      
       <div className="w-full bg-white">
         <NationwideSupport data={servicesNationwideSupport} />
       </div>

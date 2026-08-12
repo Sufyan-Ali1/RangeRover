@@ -13,10 +13,10 @@ export const lincolnshireArea: Area = {
       heading:
         "Ford Engine Replacement Across Lincolnshire, England's Big-Sky County",
       introParagraph:
-        "Lincoln, Grantham, Boston and Scunthorpe drivers get tested reconditioned engines, thorough rebuilds and complete fitting service — free collection anywhere in the county, fixed pricing, full warranty.",
+        "Lincoln, Grantham, Boston and Scunthorpe drivers get tested reconditioned engines, thorough rebuilds and complete fitting service — collection anywhere in the county, fixed pricing, full warranty.",
       ctaButtonText: "Get A Price",
       trustBadges: [
-        "County-Wide Free Collection",
+        "County-Wide  Collection",
         "Steelworks Fleet Experience",
         "Documented Engine Testing",
         "Comparison-Ready Fixed Quotes",
@@ -56,7 +56,7 @@ export const lincolnshireArea: Area = {
         "Why England's Second-Largest County Needs A Different Approach",
       fullOverviewParagraphs: [
         "Lincolnshire's size shapes its motoring like nowhere else. Long, dead-straight A-roads across the Fens cover serious distance at consistent speed — good for some engine components, brutal on others under constant load. Scunthorpe's steelworks keeps heavy-duty Fords earning around the clock; Boston's port trade adds its own commercial pressure; and the sheer scale of arable farming means Rangers and Transits covering enormous acreages during planting and harvest seasons.",
-        "We built our service to match that scale without losing the personal touch smaller counties expect. Diagnosis is evidenced with readings specific to how your Ford actually works — sustained A-road cruising, steelworks shift patterns, or harvest-season intensity. Reconditioned engines arrive code-matched and bench-tested; rebuilds are documented stage by stage; and free collection reaches the county's furthest corners exactly as readily as its towns.",
+        "We built our service to match that scale without losing the personal touch smaller counties expect. Diagnosis is evidenced with readings specific to how your Ford actually works — sustained A-road cruising, steelworks shift patterns, or harvest-season intensity. Reconditioned engines arrive code-matched and bench-tested; rebuilds are documented stage by stage; and collection reaches the county's furthest corners exactly as readily as its towns.",
       ],
     },
   ],
@@ -97,7 +97,7 @@ export const lincolnshireArea: Area = {
     {
       heading: "Collection, County-Sized",
       paragraphs: [
-        "A Scunthorpe steelworks yard, a Boston dockside unit, a Grantham farm or the furthest Fenland lane — collection is genuinely free everywhere in Lincolnshire, distance never triggering a surcharge that smaller-county thinking assumes.",
+        "A Scunthorpe steelworks yard, a Boston dockside unit, a Grantham farm or the furthest Fenland lane — collection is genuinely everywhere in Lincolnshire, distance never triggering a surcharge that smaller-county thinking assumes.",
         "Updates arrive by message throughout, and your Ford returns road-tested on the agreed day. The invoice matches the fixed quote exactly, wherever in this large county the job started.",
       ],
       buttonText: "Arrange Pickup",
@@ -155,7 +155,7 @@ export const lincolnshireArea: Area = {
     bullets: [
       {
         title: "Distance Irrelevant",
-        body: "Full service and free collection wherever in the county you are.",
+        body: "Full service and collection wherever in the county you are.",
       },
       {
         title: "Comparison Ready",
@@ -176,7 +176,7 @@ export const lincolnshireArea: Area = {
     subheading:
       "Replacement, rebuilds, repairs and honest comparison-ready pricing for every Ford across Lincolnshire's full expanse.",
     paragraph:
-      "Send your registration and symptoms; we'll diagnose from evidence, price every route transparently enough to compare, and collect free wherever in the county you're based.",
+      "Send your registration and symptoms; we'll diagnose from evidence, price every route transparently enough to compare, and collect wherever in the county you're based.",
     features: [
       "Harvest Priority Booking",
       "Steelworks Shift Scheduling",

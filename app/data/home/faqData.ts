@@ -34,6 +34,6 @@ export const faqs: faqs[] = [
   },
   {
     q: "Do you collect vehicles or do I need to bring it in?",
-    a: "We offer free UK-wide collection and delivery, so you never need to arrange your own transport or take time off work to bring your vehicle to us.",
+    a: "We offer UK-wide collection and delivery, so you never need to arrange your own transport or take time off work to bring your vehicle to us.",
   },
 ];

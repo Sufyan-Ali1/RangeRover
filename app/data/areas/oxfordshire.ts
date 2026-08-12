@@ -13,7 +13,7 @@ export const oxfordshireArea: Area = {
       heading:
         " Expert Ford Engine Replacement & Rebuilds Across Oxfordshire, Fully Guaranteed",
       introParagraph:
-        "From Oxford to Banbury, we supply, rebuild and fit tested Ford engines — backed by extended warranty cover, free collection and delivery, and honest fixed-price quotes within hours",
+        "From Oxford to Banbury, we supply, rebuild and fit tested Ford engines — backed by extended warranty cover,  collection and delivery, and honest fixed-price quotes within hours",
       ctaButtonText: "Get a Quote",
       trustBadges: [
         " Up to 24-Month Warranty",

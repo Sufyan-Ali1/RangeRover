@@ -17,7 +17,7 @@ export default function Location() {
         Visit Our Workshop
       </h2>
       <p className="mb-10 text-center text-[15px] text-gray-500">
-        Our fully equipped workshop in Grays, Essex serves customers across London, the South East,<br className="hidden sm:block" /> and the whole of the UK — with free nationwide collection and delivery available.
+        Our fully equipped workshop in Grays, Essex serves customers across London, the South East,<br className="hidden sm:block" /> and the whole of the UK — with nationwide collection and delivery available.
       </p>
 
       {/* Outer card */}

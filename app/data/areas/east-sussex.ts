@@ -25,7 +25,7 @@ export const eastSussexArea: Area = {
   ],
   eyebrow: "Coastal",
   description:
-    "Need a Ford engine replacement in East Sussex? We supply and fit reconditioned engines with full warranty and free vehicle collection.",
+    "Need a Ford engine replacement in East Sussex? We supply and fit reconditioned engines with full warranty and vehicle collection.",
   fordEngineFaults: [
     {
       heading: "Outcomes We Deliver For East Sussex Owners",

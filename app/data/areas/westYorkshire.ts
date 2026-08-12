@@ -13,7 +13,7 @@ export const westYorkshireArea: Area = {
       heading:
         "Ford Engine Replacement Across West Yorkshire, Wherever You're Based",
       introParagraph:
-        "Leeds, Bradford, Wakefield and Huddersfield drivers get tested reconditioned engines, thorough rebuilds and complete fitting from one specialist — free collection, fixed pricing, warranty on the whole job.",
+        "Leeds, Bradford, Wakefield and Huddersfield drivers get tested reconditioned engines, thorough rebuilds and complete fitting from one specialist — with collection, fixed pricing, warranty on the whole job.",
       ctaButtonText: "Get A Quote",
       trustBadges: [
         "All Four Cities Covered",
@@ -97,7 +97,7 @@ export const westYorkshireArea: Area = {
     {
       heading: "Collection, Four Cities Deep",
       paragraphs: [
-        "City-centre Leeds office, a Bradford mill-conversion unit, a Wakefield depot or a Huddersfield hillside terrace — collection is free throughout West Yorkshire, worked around whichever city's traffic patterns apply that day.",
+        "City-centre Leeds office, a Bradford mill-conversion unit, a Wakefield depot or a Huddersfield hillside terrace — collection throughout West Yorkshire, worked around whichever city's traffic patterns apply that day.",
         "Updates arrive by message at each stage, and your Ford returns road-tested on the agreed day with the invoice matching the quote. Working vehicles get priority slots, wherever their base city sits.",
       ],
       buttonText: "Book Collection",
@@ -176,7 +176,7 @@ export const westYorkshireArea: Area = {
     subheading:
       "Every Ford engine service West Yorkshire needs, delivered to the same standard whichever city you call from.",
     paragraph:
-      "Send your registration and symptoms before early afternoon for a same-day fixed quote; we'll collect free from Leeds, Bradford, Wakefield, Huddersfield or anywhere between.",
+      "Send your registration and symptoms before early afternoon for a same-day fixed quote; we'll collect  from Leeds, Bradford, Wakefield, Huddersfield or anywhere between.",
     features: [
       "True Same-Day Quotes",
       "Gradient-Specific Checks",

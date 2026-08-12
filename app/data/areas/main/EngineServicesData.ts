@@ -29,7 +29,7 @@ export const engineServices: Service[] = [
     slug: "engine-repair",
     title: "Engine Repair",
     description:
-      "Targeted fault diagnosis and repair, saving you a trip to us through our free collection and delivery service. ",
+      "Targeted fault diagnosis and repair, saving you a trip to us through our collection and delivery service. ",
   },
   {
     slug: "engine-replacement",

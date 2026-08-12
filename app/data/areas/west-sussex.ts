@@ -13,11 +13,11 @@ export const westSussexArea: Area = {
       heading:
         "West Sussex Ford Engine Replacement Handled Start To Finish By Specialists",
       introParagraph:
-        " Crawley, Horsham, Worthing and Chichester trust us for reconditioned Ford engines, expert rebuilds and complete supply-and-fit service — with free collection and warranty covering the entire job.",
+        " Crawley, Horsham, Worthing and Chichester trust us for reconditioned Ford engines, expert rebuilds and complete supply-and-fit service — with collection and warranty covering the entire job.",
       ctaButtonText: " Begin Quote",
       trustBadges: [
         "Full Supply & Fit",
-        "Countywide Free Collection",
+        "Countywide Collection",
         "Bench-Proven Engine Stock",
         "Parts-And-Labour Guarantee",
       ],
@@ -47,7 +47,7 @@ export const westSussexArea: Area = {
     {
       technicalHeader: "Supply And Fit, Step By Step",
       technicalParagraph:
-        "Enquiry, diagnosis, fixed quote, free collection, engine fitted and tested, vehicle returned, warranty issued. Seven stages, one point of contact, zero chasing — you'll know which stage your Ford is at throughout.",
+        "Enquiry, diagnosis, fixed quote, collection, engine fitted and tested, vehicle returned, warranty issued. Seven stages, one point of contact, zero chasing — you'll know which stage your Ford is at throughout.",
     },
   ],
   overview: [

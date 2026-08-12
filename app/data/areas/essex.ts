@@ -17,7 +17,7 @@ export const essexArea: Area = {
       ctaButtonText: "Sort Mine",
       trustBadges: [
         "Ford-Only Workshop Focus",
-        "Whole-County Free Collection",
+        "Whole-County ",
         "Test Results Supplied",
         "Warranty Covering Everything",
       ],

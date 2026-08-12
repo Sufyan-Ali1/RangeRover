@@ -17,7 +17,7 @@ export const oxfordshireArea: Area = {
       ctaButtonText: "Get a Quote",
       trustBadges: [
         " Up to 24-Month Warranty",
-        "Free Collection & Delivery",
+        "Collection & Delivery",
         "Tested & Mileage Verified",
         "Same-Day Quotes Available",
       ],
@@ -101,7 +101,7 @@ export const oxfordshireArea: Area = {
       heading: "Supply & Fit Packages",
       paragraphs: [
         "Want one price and zero hassle? Our supply and fit service covers everything: the replacement engine, professional installation, fresh fluids, filters and ancillary checks, plus a full post-fit road test before your Ford is handed back.",
-        "We can collect your vehicle from anywhere in Oxfordshire free of charge, keep you updated throughout, and deliver it back running as it should. One quote, one point of contact, one guarantee covering the lot.",
+        "We can collect your vehicle from anywhere in Oxfordshire, keep you updated throughout, and deliver it back running as it should. One quote, one point of contact, one guarantee covering the lot.",
       ],
       buttonText: "Get Supply & Fit Quote",
       serviceTag: "Premium service",
@@ -181,7 +181,7 @@ export const oxfordshireArea: Area = {
     paragraph:
       "Tell us your registration and symptoms, and we'll confirm the exact engine you need, provide a same-day quote, and arrange collection at a time that suits you, anywhere in Oxfordshire.",
     features: [
-      "Free Vehicle Collection",
+      "Vehicle Collection",
       "Same-Day Quotes",
       "Part Exchange Welcome",
       "Fleet & Trade Rates",

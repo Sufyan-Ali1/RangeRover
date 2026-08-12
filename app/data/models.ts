@@ -61,7 +61,7 @@ export const landRoverModels: Model[] = [
     brand: "LAND ROVER",
     model: "DISCOVERY 3",
     service: "ENGINE SUPPLY & FIT",
-    desc: "Precision engine repair and rebuild for the Land Rover Discovery 3, covering 2.7L TDV6 diesel and 4.0L V6 petrol units. Full diagnostic-led rebuild and engine replacement with free nationwide collection.",
+    desc: "Precision engine repair and rebuild for the Land Rover Discovery 3, covering 2.7L TDV6 diesel and 4.0L V6 petrol units. Full diagnostic-led rebuild and engine replacement with  nationwide collection.",
   },
   {
     brand: "LAND ROVER",

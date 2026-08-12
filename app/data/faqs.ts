@@ -18,7 +18,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Do you offer a nationwide collection and delivery service?",
-    a: "Yes — we provide free, secure collection and delivery from anywhere in the UK on every job we carry out. Our dedicated transport team handles the safe movement of your vehicle to our workshop in Grays, Essex and back to your door once the work is complete and road-tested.",
+    a: "Yes — we provide, secure collection and delivery from anywhere in the UK on every job we carry out. Our dedicated transport team handles the safe movement of your vehicle to our workshop in Grays, Essex and back to your door once the work is complete and road-tested.",
   },
   {
     q: "How much does a Range Rover engine rebuild cost?",

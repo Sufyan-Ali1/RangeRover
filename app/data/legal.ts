@@ -250,7 +250,7 @@ The Company shall not be liable for any loss or damage suffered by the Customer 
     },
     {
       title: "Warranties",
-      content: `The Company warrants Work free from defects for a period of six (6) months from Completion or until the Vehicle has covered 6000 miles (whichever occurs sooner).
+      content: `The Company warrants Work  from defects for a period of six (6) months from Completion or until the Vehicle has covered 6000 miles (whichever occurs sooner).
 
 If the 2000 Miles interim (Running In) service has not been carried out from us after covering this mileage then Warranty will be null and void.
 

@@ -13,7 +13,7 @@ export const eastSussexArea: Area = {
       heading:
         "East Sussex Ford Engine Replacement With Testing, Fitting And Warranty Included",
       introParagraph:
-        "From Brighton's busy streets to Hastings and Eastbourne on the coast, we replace, rebuild and repair Ford engines — collected free, matched precisely, and guaranteed in plain written terms.",
+        "From Brighton's busy streets to Hastings and Eastbourne on the coast, we replace, rebuild and repair Ford engines — collected , matched precisely, and guaranteed in plain written terms.",
       ctaButtonText: "Request a Quote",
       trustBadges: [
         "Clear All-Inclusive Pricing",

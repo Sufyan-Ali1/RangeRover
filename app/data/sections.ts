@@ -32,7 +32,7 @@ export const homeTrustedSpecialists: TrustedSpecialistsData = {
     {
       id: 3,
       side: "left",
-      text: "Our engineers rebuild or replace your Range Rover or Land Rover engine using genuine OEM components. Every job is road-tested and backed by up to 24 months warranty, with free nationwide collection and delivery included.",
+      text: "Our engineers rebuild or replace your Range Rover or Land Rover engine using genuine OEM components. Every job is road-tested and backed by up to 24 months warranty, with nationwide collection and delivery included.",
     },
   ],
 };
@@ -74,7 +74,7 @@ export function getServiceNationwideSupport(serviceTitle: string): NationwideSup
     titleBefore: `Book Your ${serviceTitle} — `,
     titleHighlight: "Simple, Fast & Fully Managed",
     paragraphs: [
-      `Booking a ${serviceTitle.toLowerCase()} with Range Rover Garage takes minutes. Call our team or submit your registration online and we will respond with a no-obligation quote, usually within the same working day. Once you approve the quote, we arrange a free collection of your vehicle from your home or workplace — wherever you are in the UK — and transport it securely to our workshop in Grays, Essex.`,
+      `Booking a ${serviceTitle.toLowerCase()} with Range Rover Garage takes minutes. Call our team or submit your registration online and we will respond with a no-obligation quote, usually within the same working day. Once you approve the quote, we arrange a  collection of your vehicle from your home or workplace — wherever you are in the UK — and transport it securely to our workshop in Grays, Essex.`,
       `You will receive a direct contact number for your assigned engineer, who will keep you updated throughout the ${serviceTitle.toLowerCase()} process. When the work is complete and your vehicle has passed our final road test, we deliver it back to your door, fully documented and covered by up to 24 months warranty. No uncertainty, no surprises — just a straightforward, professional service from start to finish.`,
     ],
   };
@@ -86,7 +86,7 @@ export function getBrandNationwideSupport(brandTitle: string): NationwideSupport
     titleBefore: `Getting Your ${brandTitle} to Us `,
     titleHighlight: "Is Easier Than You Think",
     paragraphs: [
-      `${brandTitle} owners across the UK use our free collection and delivery service every week. You do not need to arrange transport, take time off work or find a way to get your vehicle to Essex. We come to you — at a time that suits you — and return your vehicle once the rebuild is complete and road-tested. The entire logistics process is managed by us, at no additional cost.`,
+      `${brandTitle} owners across the UK use our  collection and delivery service every week. You do not need to arrange transport, take time off work or find a way to get your vehicle to Essex. We come to you — at a time that suits you — and return your vehicle once the rebuild is complete and road-tested. The entire logistics process is managed by us, at no additional cost.`,
       `From the moment you make contact to the moment your ${brandTitle} is returned to your door, you deal with the same team throughout. We provide a dedicated engineer contact, a fixed-price quote before any work begins, regular progress updates and a written warranty on completion. It is the kind of personal, accountable service that simply does not exist at a main dealer.`,
     ],
   };
@@ -98,7 +98,7 @@ export function getModelNationwideSupport(brandTitle: string, modelTitle: string
     titleBefore: `Your ${brandTitle} ${modelTitle} — `,
     titleHighlight: "Returned Better Than It Left",
     paragraphs: [
-      `When you book your ${brandTitle} ${modelTitle} in with Range Rover Garage, the process is designed to be as straightforward as possible. We collect your vehicle free of charge from anywhere in the UK, carry out a comprehensive diagnostic inspection on arrival, and contact you with our findings before a single bolt is turned. You approve the fixed-price quote — and only then does the rebuild begin.`,
+      `When you book your ${brandTitle} ${modelTitle} in with Range Rover Garage, the process is designed to be as straightforward as possible. We collect your vehicle of charge from anywhere in the UK, carry out a comprehensive diagnostic inspection on arrival, and contact you with our findings before a single bolt is turned. You approve the fixed-price quote — and only then does the rebuild begin.`,
       `Most ${brandTitle} ${modelTitle} engine rebuilds and replacements are completed and returned within 7 to 14 working days. Your vehicle is delivered back to your door having passed our full road-test sign-off, with a written warranty certificate and a complete record of every component replaced during the rebuild. It arrives ready to drive, with the confidence that the job has been done properly.`,
     ],
   };

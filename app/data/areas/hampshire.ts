@@ -13,11 +13,11 @@ export const hampshireArea: Area = {
       heading:
         " Reconditioned Ford Engines Supplied And Fitted Across Hampshire With Confidence",
       introParagraph:
-        " Whether you're in Southampton, Portsmouth, Basingstoke or Winchester, our Ford engine replacement, rebuild and supply service gets you moving again — collected free, fitted properly, guaranteed on paper.",
+        " Whether you're in Southampton, Portsmouth, Basingstoke or Winchester, our Ford engine replacement, rebuild and supply service gets you moving again — collected , fitted properly, guaranteed on paper.",
       ctaButtonText: "Price My Engine",
       trustBadges: [
         "Guaranteed Parts & Labour",
-        "Free Hampshire-Wide Collection",
+        "Hampshire-Wide Collection",
         "Verified Low-Mileage Units",
         "Fixed Prices, No Surprises",
       ],

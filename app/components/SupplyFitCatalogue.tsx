@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { engineServices } from "../data/services";
+import { engineServices } from "../data/supplyFit/services";
 
 const serviceImages: Record<string, string> = {
   "engine-rebuild": "/services/engine_rebuild.png",
@@ -30,8 +30,9 @@ export default function SupplyFitCatalogue() {
             Engine Services We Offer
           </h2>
           <p className="mx-auto max-w-2xl text-[15px] leading-[1.7] text-gray-500">
-            Browse our specialist Range Rover and Land Rover engine services, from rebuilds and repairs
-            to replacements, swaps and timing system work.
+            Supply and fit is only one part of what we offer. Our workshop
+            handles the full spectrum of engine work, so whatever your vehicle
+            needs, our specialists can take care of it.
           </p>
         </div>
 
@@ -40,7 +41,10 @@ export default function SupplyFitCatalogue() {
             <div
               key={service.slug}
               className="group overflow-hidden rounded-xl border"
-              style={{ borderColor: "rgba(74,166,107,0.45)", background: "#0d1117" }}
+              style={{
+                borderColor: "rgba(74,166,107,0.45)",
+                background: "#0d1117",
+              }}
             >
               <div className="relative h-[220px] w-full overflow-hidden">
                 {service.image ? (
@@ -53,7 +57,14 @@ export default function SupplyFitCatalogue() {
                   />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center bg-[#111]">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2a2a2a" strokeWidth="1.5">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#2a2a2a"
+                      strokeWidth="1.5"
+                    >
                       <rect x="3" y="3" width="18" height="18" rx="2" />
                       <circle cx="8.5" cy="8.5" r="1.5" />
                       <path d="M21 15l-5-5L5 21" />
@@ -76,7 +87,16 @@ export default function SupplyFitCatalogue() {
                   style={{ color: "#4CA66B" }}
                 >
                   Explore More
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </Link>

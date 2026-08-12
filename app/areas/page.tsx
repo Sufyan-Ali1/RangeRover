@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL || "https://www.rangerover.co.uk"),
   title: "Range Rover Engine Rebuild Across the UK | Find Your Area",
   description:
-    "Range Rover Engines UK offers fast, warrantied engine rebuilds nationwide. Browse your county below for tested engines, expert fitting and a free local quote.",
+    "Range Rover Engines UK offers fast, warrantied engine rebuilds nationwide. Browse your county below for tested engines, expert fitting.",
   alternates: {
     canonical: `${process.env.SITE_URL || "https://www.rangerover.co.uk"}/areas`,
   },

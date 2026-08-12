@@ -16,7 +16,7 @@ export const rangeRoverModels: Model[] = [
     brand: "RANGE ROVER",
     model: "SPORT",
     service: "ENGINE REBUILD & REPLACEMENT",
-    desc: "Expert engine solutions for the Range Rover Sport, including 3.0L SDV6, TDV6 and 5.0L V8 Supercharged units. Rebuild, replacement and timing chain service with free nationwide collection and delivery.",
+    desc: "Expert engine solutions for the Range Rover Sport, including 3.0L SDV6, TDV6 and 5.0L V8 Supercharged units. Rebuild, replacement and timing chain service with nationwide collection and delivery.",
   },
   {
     brand: "RANGE ROVER",

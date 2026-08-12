@@ -12,7 +12,7 @@ const defaultCards: ExtendedServiceCard[] = [
   {
     title: "Range Rover Engines",
     description:
-      "Specialist rebuilds and replacements for the full Range Rover lineup — TDV6, SDV6, SDV8 and 5.0L V8 Supercharged — using genuine OEM parts, backed by up to 24 months warranty and free UK collection and delivery.",
+      "Specialist rebuilds and replacements for the full Range Rover lineup — TDV6, SDV6, SDV8 and 5.0L V8 Supercharged — using genuine OEM parts, backed by up to 24 months warranty.",
     image: "/images/models/sport.webp",
     href: "/engines/range-rover",
   },

@@ -199,7 +199,7 @@ export default async function BrandPage({ params }: Props) {
           light
           label={`${brandTitle} Engine Models`}
           heading={`Specialist Engine Services for Every ${brandTitle} Model`}
-          description={`Choose your ${brandTitle} model for expert engine rebuild, replacement and repair. All work is carried out using genuine OEM components by JLR-trained specialists, backed by up to 24-month warranty and free nationwide collection and delivery.`}
+          description={`Choose your ${brandTitle} model for expert engine rebuild, replacement and repair. All work is carried out using genuine OEM components by JLR-trained specialists, backed by up to 24-month warranty and  nationwide collection and delivery.`}
         />
       )}
       {brandTableRows.length > 0 && (

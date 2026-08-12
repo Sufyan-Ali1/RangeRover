@@ -170,3 +170,20 @@ export interface AboutData {
   heading: string;
   body: string;
 }
+
+export interface SupplyFitEngine {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  specs: string[];
+}
+
+export interface SupplyFitEnginesQuoteDataProps {
+  headingPart1: string;
+  headingPart2: string;
+  headingPart3: string;
+  description: string;
+  noticeText: string;
+  engines: SupplyFitEngine[];
+}

@@ -14,12 +14,8 @@ import Location from "../../components/Location";
 import BlogSection from "../../components/BlogSection";
 import NationwideSupport from "@/app/components/NationwideSupport";
 import { faqs } from "../../data/faqs";
-import {
-  getBrandAuthorityNationwide,
-  getBrandAuthorityPrecision,
-  getModelAuthorityNationwide,
-} from "../../data/authority";
-import { getBrandNationwideSupport } from "../../data/sections";
+import { getModelAuthorityNationwide } from "../../data/authority";
+
 import ServicesTicker from "../../components/ServicesTicker";
 import PopularEngineSizes from "../../components/PopularEngineSizes";
 import EngineTable from "../../components/EngineTable";
@@ -28,10 +24,11 @@ import SupplyFitPrecision from "../../components/SupplyFitPrecision";
 import SupplyFitContent from "../../components/SupplyFitContent";
 import SupplyFitGetParts from "../../components/SupplyFitGetParts";
 import engineCodesData from "../../data/engineCodesData.json";
-import { engineServices } from "@/app/data/services";
+
 import EngineServices from "@/app/components/EngineServices";
 import { engineSizes } from "../../data/engineSizes";
-import { reviews } from "../../data/reviews";
+import { getBrandData } from "@/app/data/engines/brands/GetBrandData";
+import { notFound } from "next/navigation";
 
 interface Props {
   params: Promise<{ brand: string }>;
@@ -159,6 +156,21 @@ export default async function BrandPage({ params }: Props) {
     );
   }
 
+  const data = getBrandData(brand);
+
+  if (!data) {
+    notFound();
+  }
+
+  const {
+    headerData,
+    engineServices,
+    NationwideData,
+    ReviewsData,
+    PrecisionData,
+    NationwideSupportData,
+    faqsData,
+  } = data;
   const brandTitle = slugToTitle(brand);
   const models = getModelsByBrandSlug(brand);
   const showModels = brand === "range-rover" || brand === "land-rover";
@@ -173,15 +185,9 @@ export default async function BrandPage({ params }: Props) {
     <div className="flex min-h-screen flex-col bg-white">
       <Navbar />
       <Header
-        compact
-        title={
-          <>
-            {brandTitle}
-            <br />
-            Engines.
-          </>
-        }
-        subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
+        title={headerData.title}
+        subtitle={headerData.subtitle}
+        highlights={headerData.highlights}
       />
       <ServicesTicker
         items={[
@@ -213,14 +219,14 @@ export default async function BrandPage({ params }: Props) {
           notFoundHref="/get-quote"
         />
       )}
-      <Reviews reviews={reviews} />
-      <AuthorityNationwide data={getBrandAuthorityNationwide(brandTitle)} />
-      <AuthorityPrecision data={getBrandAuthorityPrecision(brandTitle)} />
-      <NationwideSupport data={getBrandNationwideSupport(brandTitle)} />
+      <Reviews reviews={ReviewsData} />
+      <AuthorityNationwide data={NationwideData} />
+      <AuthorityPrecision data={PrecisionData} />
+      <NationwideSupport data={NationwideSupportData} />
       <VideoSection />
       <CTA />
       <BlogSection />
-      <FAQ faqs={faqs} />
+      <FAQ faqs={faqsData} />
       <Location />
       <Footer />
     </div>

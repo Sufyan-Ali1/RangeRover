@@ -3,9 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import type { AuthoritySectionData } from "../data/authority";
+import { AuthoritySectionData } from "../data/types";
 
-export default function AuthorityNationwide({ data }: { data: AuthoritySectionData }) {
+export default function AuthorityNationwide({
+  data,
+}: {
+  data: AuthoritySectionData | undefined;
+}) {
   const [hydrated, setHydrated] = useState(false);
   const [visible, setVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -24,26 +28,30 @@ export default function AuthorityNationwide({ data }: { data: AuthoritySectionDa
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     observer.observe(ref.current);
     return () => observer.disconnect();
   }, [hydrated]);
 
-  const leftClassName = hydrated && !visible
-    ? "translate-x-[-80px] translate-y-[-80px] opacity-0"
-    : "translate-x-0 translate-y-0 opacity-100";
+  const leftClassName =
+    hydrated && !visible
+      ? "translate-x-[-80px] translate-y-[-80px] opacity-0"
+      : "translate-x-0 translate-y-0 opacity-100";
 
-  const rightClassName = hydrated && !visible
-    ? "translate-x-[80px] translate-y-[80px] opacity-0"
-    : "translate-x-0 translate-y-0 opacity-100";
+  const rightClassName =
+    hydrated && !visible
+      ? "translate-x-[80px] translate-y-[80px] opacity-0"
+      : "translate-x-0 translate-y-0 opacity-100";
 
   return (
     <div className="w-full bg-[#F3F4F6]" ref={ref}>
       <div className="mx-auto w-full max-w-[1728px] px-6 py-16 sm:px-10 xl:px-[101px] xl:py-20">
         <div className="flex flex-col-reverse gap-12 lg:flex-row lg:items-stretch lg:gap-16">
-          <div className={`relative flex min-h-[260px] flex-1 flex-col transition-all duration-700 ease-out motion-reduce:transform-none motion-reduce:opacity-100 sm:min-h-[320px] ${leftClassName}`}>
+          <div
+            className={`relative flex min-h-[260px] flex-1 flex-col transition-all duration-700 ease-out motion-reduce:transform-none motion-reduce:opacity-100 sm:min-h-[320px] ${leftClassName}`}
+          >
             <Image
               src="/images/workshop-5.webp"
               alt="Range Rover Garage workshop"
@@ -53,21 +61,26 @@ export default function AuthorityNationwide({ data }: { data: AuthoritySectionDa
             />
             <div className="absolute bottom-6 left-6 z-10">
               <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#9EECBA]">
-                {data.badge.label}
+                {data?.badge?.label}
               </p>
               <p className="text-[18px] font-black uppercase tracking-wider text-white">
-                {data.badge.title}
+                {data?.badge?.title}
               </p>
             </div>
           </div>
 
-          <div className={`flex flex-1 flex-col transition-all delay-150 duration-700 ease-out motion-reduce:transform-none motion-reduce:opacity-100 ${rightClassName}`}>
+          <div
+            className={`flex flex-1 flex-col transition-all delay-150 duration-700 ease-out motion-reduce:transform-none motion-reduce:opacity-100 ${rightClassName}`}
+          >
             <h2 className="mb-4 text-[28px] font-black leading-tight text-gray-900 sm:text-[36px]">
-              {data.titleBefore}
-              <span className="text-[#1a5c2e]">{data.titleHighlight}</span>
+              {data?.titleBefore}
+              <span className="text-[#1a5c2e]">{data?.titleHighlight}</span>
             </h2>
-            {data.paragraphs.map((p, i) => (
-              <p key={i} className={`text-[13px] leading-relaxed text-gray-600 ${i < data.paragraphs.length - 1 ? "mb-5" : ""}`}>
+            {data?.paragraphs?.map((p, i) => (
+              <p
+                key={i}
+                className={`text-[13px] leading-relaxed text-gray-600 ${i > 0 ? "mt-4" : ""}`}
+              >
                 {p}
               </p>
             ))}

@@ -1,5 +1,4 @@
-import { Faq } from "../faqs";
-import { HeaderData } from "../services/types";
+import { BrandsDataType, HeaderData } from "../services/types";
 
 export interface AreaService {
   heading?: string;
@@ -157,10 +156,10 @@ export interface AuthorityLeadingData {
 }
 
 export interface AuthoritySectionData {
-  titleBefore: string;
-  titleHighlight: string;
-  paragraphs: string[];
-  badge: { label: string; title: string };
+  titleBefore?: string;
+  titleHighlight?: string;
+  paragraphs?: string[];
+  badge?: { label: string; title: string };
 }
 
 export interface NationwideSupportData {
@@ -190,7 +189,10 @@ export interface SupplyFitEnginesQuoteDataProps {
   noticeText: string;
   engines: SupplyFitEngine[];
 }
-
+export interface Faq {
+  q: string;
+  a: string;
+}
 export interface EnginePageData {
   headerData: HeaderData;
   engineServices: Service[];
@@ -199,4 +201,15 @@ export interface EnginePageData {
   PrecisionData: AuthoritySectionData;
   NationwideSupportData: NationwideSupportData;
   faqsData: Faq[];
+}
+
+export interface ModelData {
+  headerData?: HeaderData;
+  BrandsData?: BrandsDataType[];
+  ReviewsData?: Review[];
+  NationwideData?: AuthoritySectionData;
+  PrecisionData?: AuthoritySectionData;
+  NationwideSupportData1?: NationwideSupportData;
+  NationwideSupportData2?: NationwideSupportData;
+  faqsData?: Faq[];
 }

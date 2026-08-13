@@ -7,10 +7,10 @@ export interface AuthorityLeadingData {
 }
 
 export interface AuthoritySectionData {
-  titleBefore: string;
-  titleHighlight: string;
-  paragraphs: string[];
-  badge: { label: string; title: string };
+  titleBefore?: string;
+  titleHighlight?: string;
+  paragraphs?: string[];
+  badge?: { label: string; title: string };
 }
 
 // ─────────────────────────────────────────────────────────

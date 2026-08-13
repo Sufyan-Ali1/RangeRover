@@ -10,37 +10,37 @@ export const rangeRoverModels: Model[] = [
     brand: "RANGE ROVER",
     model: "EVOQUE",
     service: "ENGINE REBUILD & REPLACEMENT",
-    desc: "Specialist engine rebuild and replacement for the Range Rover Evoque, covering 2.0L Si4 petrol, 2.0L Sd4 diesel and eD4 units. Full timing chain, turbo and head gasket services with up to 24-month warranty.",
+    desc: "Reconditioned and replacement engine options for every Evoque generation, covering both petrol and diesel variants.",
   },
   {
     brand: "RANGE ROVER",
     model: "SPORT",
     service: "ENGINE REBUILD & REPLACEMENT",
-    desc: "Expert engine solutions for the Range Rover Sport, including 3.0L SDV6, TDV6 and 5.0L V8 Supercharged units. Rebuild, replacement and timing chain service with nationwide collection and delivery.",
+    desc: "Rebuild and replacement engines for the Range Rover Sport, matched precisely to diesel, petrol or hybrid specification.",
   },
   {
     brand: "RANGE ROVER",
     model: "VOGUE OLD MK-3",
     service: "ENGINE REBUILD & REPLACEMENT",
-    desc: "Specialist engine rebuild and replacement for the Range Rover Vogue (Mk3), covering 3.0L TDV6, 3.6L TDV8, 4.2L V8 Supercharged and 4.4L V8 powertrains. All work by JLR-trained engineers with genuine OEM parts.",
+    desc: "Specialist engine sourcing and rebuild work for the L322 Vogue, tackling age-related wear with proven expertise..",
   },
   {
     brand: "RANGE ROVER",
     model: "VOGUE NEW MK-4",
     service: "ENGINE REBUILD & REPLACEMENT",
-    desc: "Specialist engine rebuild and replacement for the Range Rover Vogue (Mk4/Mk5), covering 3.0L SDV6, SDV8, 4.4L SDV8 and 5.0L V8 Supercharged powertrains. Road-test sign-off and up to 24-month warranty included.",
+    desc: "Modern engine supply and rebuild solutions for the L405 Vogue, tested against strict factory tolerances throughout. ",
   },
   {
     brand: "RANGE ROVER",
     model: "VELAR",
     service: "ENGINE REBUILD & REPLACEMENT",
-    desc: "Precision engine repair and rebuild for the Range Rover Velar, including 2.0L Ingenium D180, D240 diesel and P250, P380 petrol variants. Full timing chain, turbo and engine replacement available.",
+    desc: "Reconditioned engine supply and rebuild services for the Velar, restoring smooth, dependable everyday performance reliably. ",
   },
   {
     brand: "RANGE ROVER",
     model: "SPORT SVR",
     service: "ENGINE REBUILD & REPLACEMENT",
-    desc: "High-performance engine rebuild and replacement for the Range Rover Sport SVR, specialising in the 5.0L AJ133 V8 Supercharged unit (508ps). Full strip-down rebuild with OEM components and road-test sign-off guaranteed.",
+    desc: "High-performance engine rebuild and replacement for the SVR, engineered to restore power without cutting corners. ",
   },
 ];
 
@@ -49,52 +49,51 @@ export const landRoverModels: Model[] = [
     brand: "LAND ROVER",
     model: "DISCOVERY 1",
     service: "ENGINE SUPPLY & FIT",
-    desc: "Specialist engine rebuild and replacement for the Land Rover Discovery 1, covering 2.0L Mpi, 3.5L V8 and 200Tdi/300Tdi diesel units. Full rebuild, engine swap and replacement with genuine OEM parts.",
+    desc: "Reconditioned and replacement engines for the original Discovery, sourced and tested to handle its classic diesel and V8 units.",
   },
   {
     brand: "LAND ROVER",
     model: "DISCOVERY 2",
     service: "ENGINE SUPPLY & FIT",
-    desc: "Expert engine solutions for the Land Rover Discovery 2, including 2.5L TD5 diesel and 4.0L V8 petrol units. Timing chain, head gasket and full reconditioned engine supply and fit with up to 24-month warranty.",
+    desc: "Engine supply and rebuild work for Discovery 2, covering Td5 diesel and V8 petrol variants with genuine care.",
   },
   {
     brand: "LAND ROVER",
     model: "DISCOVERY 3",
     service: "ENGINE SUPPLY & FIT",
-    desc: "Precision engine repair and rebuild for the Land Rover Discovery 3, covering 2.7L TDV6 diesel and 4.0L V6 petrol units. Full diagnostic-led rebuild and engine replacement with  nationwide collection.",
+    desc: "Reconditioned engine sourcing for Discovery 3, matched precisely to TDV6 and other factory-fitted engine specifications available.",
   },
   {
     brand: "LAND ROVER",
     model: "DISCOVERY 4",
     service: "ENGINE SUPPLY & FIT",
-    desc: "Specialist engine rebuild and replacement for the Land Rover Discovery 4, covering 3.0L TDV6, SDV6 and 5.0L V8 petrol units. All work by JLR-trained engineers with genuine OEM components and road-test sign-off.",
+    desc: "Rebuild and replacement engines for Discovery 4, addressing SDV6 and TDV6 platforms with tested, warrantied units. ",
   },
   {
     brand: "LAND ROVER",
     model: "DISCOVERY 5",
     service: "ENGINE SUPPLY & FIT",
-    desc: "Expert engine solutions for the Land Rover Discovery 5, including 2.0L Ingenium SD4, 3.0L SDV6 and 3.0L Si6 petrol units. Full rebuild and replacement service with up to 24-month warranty.",
+    desc: "Modern engine supply and fitting for Discovery 5, covering Ingenium diesel platforms to strict testing standards. ",
   },
   {
     brand: "LAND ROVER",
     model: "DISCOVERY SPORT",
     service: "ENGINE SUPPLY & FIT",
-    desc: "Specialist engine rebuild and replacement for the Land Rover Discovery Sport, covering 2.0L Ingenium TD4 and Si4 units. Timing chain, turbo, EGR and full diagnostic-led engine repair service.",
+    desc: "Reconditioned engine solutions for Discovery Sport, matched to its specific Ingenium diesel and petrol variants.",
   },
   {
     brand: "LAND ROVER",
     model: "FREELANDER 1",
     service: "ENGINE SUPPLY & FIT",
-    desc: "Dedicated engine rebuild and replacement for the Land Rover Freelander 1, covering 1.8L K-Series petrol, 2.0L TD4 and V6 diesel units. Head gasket, timing belt and full reconditioned engine replacement available.",
+    desc: "Specialist engine sourcing for the Freelander 1, covering K-series and diesel units with proven rebuild expertise.",
   },
   {
     brand: "LAND ROVER",
     model: "FREELANDER 2",
     service: "ENGINE SUPPLY & FIT",
-    desc: "Precision engine repair and rebuild for the Land Rover Freelander 2, covering 2.2L SD4 diesel and 3.2L Si6 petrol units. Head gasket, timing chain and full reconditioned engine replacement with OEM parts.",
+    desc: "Engine supply and rebuild services for Freelander 2, addressing TD4 diesel platforms with genuine tested parts. ",
   },
 ];
-
 
 export const jaguarModels: Model[] = [
   {

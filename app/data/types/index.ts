@@ -1,3 +1,6 @@
+import { Faq } from "../faqs";
+import { HeaderData } from "../services/types";
+
 export interface AreaService {
   heading?: string;
   subheading?: string;
@@ -186,4 +189,14 @@ export interface SupplyFitEnginesQuoteDataProps {
   description: string;
   noticeText: string;
   engines: SupplyFitEngine[];
+}
+
+export interface EnginePageData {
+  headerData: HeaderData;
+  engineServices: Service[];
+  NationwideData: AuthoritySectionData;
+  ReviewsData: Review[];
+  PrecisionData: AuthoritySectionData;
+  NationwideSupportData: NationwideSupportData;
+  faqsData: Faq[];
 }

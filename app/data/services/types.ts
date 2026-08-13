@@ -31,16 +31,18 @@ export interface EngineRebuildData {
   galleryData: { title: string; subtitle: string };
   whyEngineData: AuthoritySectionData;
   bookEngineData: BookData;
-  BrandsData: {
-    title: string;
-    description: string;
-    image: string;
-    href: string;
-  }[];
+  BrandsData: BrandsDataType[];
   certifiedSpecialistsData: AuthoritySectionData;
   TrustData: BookData;
   faqs: {
     q: string;
     a: string;
   }[];
+}
+
+export interface BrandsDataType {
+  title: string;
+  description: string;
+  image: string;
+  href: string;
 }

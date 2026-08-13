@@ -161,7 +161,6 @@ export default async function BrandPage({ params }: Props) {
   if (!data) {
     notFound();
   }
-
   const {
     headerData,
     engineServices,

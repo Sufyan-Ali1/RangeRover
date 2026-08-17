@@ -2,7 +2,6 @@ import Navbar from "../../../components/Navbar";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import FAQ from "@/app/components/FAQ";
-import { faqs } from "@/app/data/faqs";
 import ServicesTicker from "@/app/components/ServicesTicker";
 import engineCodesData from "@/app/data/engineCodesData.json";
 
@@ -16,12 +15,6 @@ import AuthorityPrecision from "@/app/components/AuthorityPrecision";
 import BrandShowcase from "@/app/components/BrandShowcase";
 import Reviews from "@/app/components/Reviews";
 import EngineTable from "@/app/components/EngineTable";
-import {
-  getModelAuthorityNationwide,
-  getModelAuthorityPrecision,
-} from "@/app/data/authority";
-import { getModelNationwideSupport } from "@/app/data/sections";
-import { reviews } from "@/app/data/reviews";
 import { getBrandsModelsBySlug } from "@/app/data/engines/brands/GetBrandData";
 
 interface Props {

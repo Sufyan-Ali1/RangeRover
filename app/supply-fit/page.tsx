@@ -13,6 +13,8 @@ import SupplyFitCatalogue from "../components/SupplyFitCatalogue";
 import SupplyFitEnginesQuote from "../components/SupplyFitEnginesQuote";
 import SupplyFitFAQ from "../components/SupplyFitFAQ";
 import Footer from "../components/Footer";
+import { whyData } from "../data/supplyFit/WhyData";
+import { supplyFitGetParts } from "../data/supplyFit/supplyFitGet";
 
 export const metadata = {
   title: "Supply & Fit Services | Range Rover Garage",
@@ -27,11 +29,11 @@ export default function SupplyFitPage() {
       <SupplyFitHero />
       <SupplyFitEnginesQuote />
       <SupplyFitCatalogue />
-      <SupplyFitPrecision />
+      <SupplyFitPrecision data={whyData} />
       <SupplyFitWorkflow />
       <SupplyFitCTA />
       <SupplyFitContent />
-      <SupplyFitGetParts />
+      <SupplyFitGetParts data={supplyFitGetParts} />
       <AuthorityNationwide data={supplyFitNationwide} />
       <AuthorityPrecision data={supplyFitPrecision} />
       <SupplyFitFAQ />

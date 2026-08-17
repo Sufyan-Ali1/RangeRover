@@ -213,3 +213,47 @@ export interface ModelData {
   NationwideSupportData2?: NationwideSupportData;
   faqsData?: Faq[];
 }
+
+type FeatureIcon =
+  | "tested"
+  | "warranty"
+  | "specialist"
+  | "ancillaries"
+  | "pricing"
+  | "collection";
+
+export interface Feature {
+  icon: FeatureIcon;
+  title: string;
+  description: string;
+}
+
+export interface SupplyFitPrecisionData {
+  eyebrow: string;
+  title: string;
+  description: string;
+  features: Feature[];
+}
+
+export interface SupplyFitGetPartsData {
+  eyebrow: string;
+  title: string;
+  description: string;
+  features: string[];
+}
+
+export interface SupplyFitContentDataProps {
+  headingPart1: string;
+  headingPart2: string;
+  paragraphs: string[];
+  bulletList: string[];
+}
+
+export interface EngineSizesData {
+  headerData?: HeaderData;
+  NationwideData?: AuthoritySectionData;
+  supplyFitGetParts: SupplyFitGetPartsData;
+  supplyFitPrecision: SupplyFitPrecisionData;
+  supplyFitContentData: SupplyFitContentDataProps;
+  faqsData?: Faq[];
+}

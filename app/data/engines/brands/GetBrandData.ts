@@ -12,7 +12,7 @@ export function getBrandData(brandSlug: string) {
       return JaguarData;
   }
 }
-import { ModelData } from "@/app/data/types";
+import { EngineSizesData, ModelData } from "@/app/data/types";
 import { RREvoqueData } from "./RangeRower/models/EvoqueData";
 import { RRSportData } from "./RangeRower/models/SportData";
 import { RRVogueMK3Data } from "./RangeRower/models/VogueMK3Data";
@@ -27,6 +27,16 @@ import { Discovery5Data } from "./LandRower/models/Discover5Data";
 import { DiscoverySportData } from "./LandRower/models/DiscoverySport";
 import { Freelander1Data } from "./LandRower/models/Freelander1Data";
 import { Freelander2Data } from "./LandRower/models/Freelander2Data";
+import { RRSizes20Data } from "./RangeRower/RangeRoverSizes/2.0Data";
+import { RRSizes44Data } from "./RangeRower/RangeRoverSizes/4.4Data";
+import { RRSizes50Data } from "./RangeRower/RangeRoverSizes/5.0Data";
+import { RRSizes30Data } from "./RangeRower/RangeRoverSizes/3.0Data";
+import { RRSizes22Data } from "./RangeRower/RangeRoverSizes/2.2Data";
+import { LandRoverSizes20Data } from "./LandRower/LandRoverSizes/Land2.0Data";
+import { LandRoverSizes22Data } from "./LandRower/LandRoverSizes/Land2.2Data";
+import { LandRoverSizes30Data } from "./LandRower/LandRoverSizes/Land3.0Data";
+import { LandRoverSizes44Data } from "./LandRower/LandRoverSizes/Land4.4Data";
+import { LandRoverSizes50Data } from "./LandRower/LandRoverSizes/Land5.0Data";
 export function getBrandsModelsBySlug(modelSlug: string): ModelData {
   switch (modelSlug) {
     case "evoque":
@@ -59,5 +69,34 @@ export function getBrandsModelsBySlug(modelSlug: string): ModelData {
       return Freelander2Data;
     default:
       throw new Error(`Model data not found for slug: ${modelSlug}`);
+  }
+}
+
+export function getBrandsModelSizesDataBySlug(
+  sizeSlug: string,
+): EngineSizesData {
+  switch (sizeSlug) {
+    case "range-rover-2.0":
+      return RRSizes20Data;
+    case "range-rover-2.2":
+      return RRSizes22Data;
+    case "range-rover-3.0":
+      return RRSizes30Data;
+    case "range-rover-4.4":
+      return RRSizes44Data;
+    case "range-rover-5.0":
+      return RRSizes50Data;
+    case "land-rover-2.0":
+      return LandRoverSizes20Data;
+    case "land-rover-2.2":
+      return LandRoverSizes22Data;
+    case "land-rover-3.0":
+      return LandRoverSizes30Data;
+    case "land-rover-4.4":
+      return LandRoverSizes44Data;
+    case "land-rover-5.0":
+      return LandRoverSizes50Data;
+    default:
+      throw new Error(`Model size data not found for slug: ${sizeSlug}`);
   }
 }

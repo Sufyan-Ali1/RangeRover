@@ -1,6 +1,11 @@
 import { EngineRebuildData } from "./types";
 
 export const headGasketReplacementData: EngineRebuildData = {
+  meta: {
+    title: "Range Rover Head Gasket Replacement | Stop Overheating",
+    description:
+      "Professional Range Rover head gasket replacement addressing overheating, coolant loss and oil contamination fast. Warranty included. Book your repair now.",
+  },
   headerData: {
     title:
       "Range Rover Head Gasket Replacement Before Minor Faults Turn Serious",

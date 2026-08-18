@@ -17,9 +17,9 @@ import { whyData } from "../data/supplyFit/WhyData";
 import { supplyFitGetParts } from "../data/supplyFit/supplyFitGet";
 
 export const metadata = {
-  title: "Supply & Fit Services | Range Rover Garage",
+  title: "Range Rover Engine Supply and Fit | Genuine OEM Parts",
   description:
-    "Genuine & OEM parts supplied and professionally fitted by Land Rover experts in London. Premium quality, transparent pricing, no compromise.",
+    "Genuine and OEM Range Rover engine supply and fit, professionally installed by JLR specialists in Essex. 12-month warranty, same-day fitting. Get a free quote.",
 };
 
 export default function SupplyFitPage() {

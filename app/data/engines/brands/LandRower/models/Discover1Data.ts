@@ -1,6 +1,11 @@
 import { ModelData } from "@/app/data/types";
 
 export const Discovery1Data: ModelData = {
+    meta: {
+    title: "Land Rover Discovery 1 Engine | Supply & Fit Specialists",
+    description:
+      "Reliable Land Rover Discovery 1 engine supply, rebuild and replacement using thoroughly tested reconditioned units. Warranty included. Get a free quote.",
+  },
   headerData: {
     title: "Land Rover Discovery 1 Engine Specialists",
     subtitle:

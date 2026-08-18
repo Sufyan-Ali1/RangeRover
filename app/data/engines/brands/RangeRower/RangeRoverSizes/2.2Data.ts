@@ -1,10 +1,14 @@
 import { EngineSizesData } from "@/app/data/types";
 
 export const RRSizes22Data: EngineSizesData = {
+  meta: {
+    title: "Range Rover 2.2 Engine | Diesel Rebuild & Replacement",
+    description:
+      "Expert Range Rover 2.2 diesel engine rebuilds and replacements, addressing common faults with genuine parts and a workmanship warranty. Get a free quote.",
+  },
   headerData: {
     title: "Range Rover 2.2 Diesel Engine Specialists",
-    subtitle:
-      "Trusted repair and replacement for TD4 and SD4 diesel engines.",
+    subtitle: "Trusted repair and replacement for TD4 and SD4 diesel engines.",
     highlights: [
       "Specialists in the legacy 224DT TD4 and SD4 diesel unit",
       "EGR, DPF and turbo diagnostics carried out in-house",

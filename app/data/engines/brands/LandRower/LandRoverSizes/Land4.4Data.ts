@@ -1,6 +1,11 @@
 import { EngineSizesData } from "@/app/data/types";
 
 export const LandRoverSizes44Data: EngineSizesData = {
+    meta: {
+    title: "Land Rover 4.4 Engine | TDV8 Rebuild Specialists",
+    description:
+      "Land Rover 4.4 TDV8 engine rebuilds and replacements carried out to factory tolerances by JLR-trained specialists. Warranty included. Get a free quote.",
+  },
   headerData: {
     title: "Land Rover 4.4 SDV8 Engine Repair",
     subtitle:

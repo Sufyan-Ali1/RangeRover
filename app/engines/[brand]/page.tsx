@@ -13,7 +13,6 @@ import FAQ from "../../components/FAQ";
 import Location from "../../components/Location";
 import BlogSection from "../../components/BlogSection";
 import NationwideSupport from "@/app/components/NationwideSupport";
-import { faqs } from "../../data/faqs";
 
 import ServicesTicker from "../../components/ServicesTicker";
 import PopularEngineSizes from "../../components/PopularEngineSizes";
@@ -77,17 +76,18 @@ export async function generateMetadata({ params }: Props) {
   const parsed = parseSizeSlug(brand);
 
   if (parsed) {
-    const brandTitle = slugToTitle(parsed.brandSlug);
+    const sizeData = getBrandsModelSizesDataBySlug(brand);
+
     return {
-      title: `${brandTitle} ${parsed.sizeLabel} Engines | Range Rover Engines`,
-      description: `Specialist engine rebuild and replacement for ${brandTitle} ${parsed.sizeLabel} engines - expert JLR-certified service in Grays, Essex.`,
+      title: `${sizeData.meta.title}`,
+      description: `${sizeData.meta.description}`,
     };
   }
 
-  const brandTitle = slugToTitle(brand);
+  const data = getBrandData(brand);
   return {
-    title: `${brandTitle} Engines | Range Rover Engines`,
-    description: `Specialist engine solutions for all ${brandTitle} models - trusted by owners across the UK.`,
+    title: `${data?.meta.title}`,
+    description: `${data?.meta.description}`,
   };
 }
 

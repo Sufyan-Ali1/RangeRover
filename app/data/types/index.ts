@@ -194,6 +194,10 @@ export interface Faq {
   a: string;
 }
 export interface EnginePageData {
+  meta: {
+    title: string;
+    description: string;
+  };
   headerData: HeaderData;
   engineServices: Service[];
   NationwideData: AuthoritySectionData;
@@ -204,6 +208,10 @@ export interface EnginePageData {
 }
 
 export interface ModelData {
+  meta: {
+    title: string;
+    description: string;
+  };
   headerData?: HeaderData;
   BrandsData?: BrandsDataType[];
   ReviewsData?: Review[];
@@ -250,6 +258,10 @@ export interface SupplyFitContentDataProps {
 }
 
 export interface EngineSizesData {
+  meta: {
+    title: string;
+    description: string;
+  };
   headerData?: HeaderData;
   NationwideData?: AuthoritySectionData;
   supplyFitGetParts: SupplyFitGetPartsData;

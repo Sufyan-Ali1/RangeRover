@@ -6,9 +6,9 @@ import CTA from "../components/CTA";
 import { reviews } from "../data/reviews";
 
 export const metadata = {
-  title: "Customer Reviews | Range Rover Engines",
+  title: "Range Rover Engine Specialist Reviews | Verified Feedback",
   description:
-    "Read what our customers say about our Range Rover and Land Rover engine services.",
+    "Read genuine Range Rover engine specialist reviews from owners across the UK, and see why they trust us for rebuilds, repairs and replacements. Read more.",
 };
 
 export default function ReviewsPage() {

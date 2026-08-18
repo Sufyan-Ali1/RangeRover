@@ -1,6 +1,11 @@
 import { ModelData } from "@/app/data/types";
 
 export const Discovery4Data: ModelData = {
+    meta: {
+    title: "Land Rover Discovery 4 Engine | Supply & Fit Experts",
+    description:
+      "Expert Land Rover Discovery 4 engine supply and fit service, matched precisely to your vehicle's specification. Genuine parts, warranty. Get a free quote.",
+  },
   headerData: {
     title: "Land Rover Discovery 4 Engine Specialists",
     subtitle:

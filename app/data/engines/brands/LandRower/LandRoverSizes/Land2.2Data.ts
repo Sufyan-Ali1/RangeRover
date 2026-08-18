@@ -1,6 +1,11 @@
 import { EngineSizesData } from "@/app/data/types";
 
 export const LandRoverSizes22Data: EngineSizesData = {
+    meta: {
+    title: "Land Rover 2.2 Engine | Diesel Rebuild Specialists",
+    description:
+      "Expert Land Rover 2.2 diesel engine rebuilds and replacements, addressing common wear points with genuine parts and a full warranty. Get a free quote.",
+  },
   headerData: {
     title: "Land Rover 2.2 TD4 & SD4 Engine Repair",
     subtitle: "Turbo and fuel pump specialists for the 2.2 diesel engine.",

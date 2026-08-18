@@ -1,6 +1,11 @@
 import { ModelData } from "@/app/data/types";
 
 export const Freelander2Data: ModelData = {
+  meta: {
+    title: "Land Rover Freelander 2 Engine | Rebuild & Replacement",
+    description:
+      "Professional Land Rover Freelander 2 engine replacement and rebuild, restoring smooth performance with fully tested units. Warranty included. Enquire now.",
+  },
   headerData: {
     title: "Land Rover Freelander 2 Engine Specialists",
     subtitle:

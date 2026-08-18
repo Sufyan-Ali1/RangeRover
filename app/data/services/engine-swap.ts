@@ -1,6 +1,11 @@
 import { EngineRebuildData } from "./types";
 
 export const engineSwapData: EngineRebuildData = {
+  meta: {
+    title: "Range Rover Engine Swap | Specialist Conversion Service",
+    description:
+      "Considering a Range Rover engine swap? We handle conversion, compatibility and compliance for genuine swap projects, backed by warranty. Get a free quote.",
+  },
   headerData: {
     title: "Expert Range Rover Engine Swap Specialists",
     subtitle:

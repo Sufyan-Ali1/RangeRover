@@ -1,6 +1,11 @@
 import { EngineSizesData } from "@/app/data/types";
 
 export const LandRoverSizes50Data: EngineSizesData = {
+  meta: {
+    title: "Land Rover 5.0 Engine | V8 Rebuild & Replacement",
+    description:
+      "Specialist Land Rover 5.0 V8 engine rebuilds and replacements, dyno tested for factory-matched performance and backed by warranty. Get a free quote.",
+  },
   headerData: {
     title: "Land Rover 5.0 V8 Petrol Engine Repair",
     subtitle: "Specialist care for the naturally aspirated Discovery V8.",

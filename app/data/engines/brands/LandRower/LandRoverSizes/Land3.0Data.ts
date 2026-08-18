@@ -1,6 +1,11 @@
 import { EngineSizesData } from "@/app/data/types";
 
 export const LandRoverSizes30Data: EngineSizesData = {
+    meta: {
+    title: "Land Rover 3.0 Engine | TDV6 Rebuild & Replacement",
+    description:
+      "Specialist Land Rover 3.0 TDV6 engine rebuilds and replacements, restoring reliability with genuine parts and a workmanship warranty. Get a free quote.",
+  },
   headerData: {
     title: "Land Rover 3.0 Discovery Engine Repair",
     subtitle:

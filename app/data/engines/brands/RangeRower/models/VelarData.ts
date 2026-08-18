@@ -1,6 +1,11 @@
 import { ModelData } from "@/app/data/types";
 
 export const RRVelarData: ModelData = {
+  meta: {
+    title: "Range Rover Velar Engine Repair | Specialist Rebuilds",
+    description:
+      "Precision Range Rover Velar engine repair, rebuild and replacement, restoring refinement and dependable performance. Genuine parts, warranty. Get a quote.",
+  },
   headerData: {
     title: "Range Rover Velar Engine Repair Specialists",
     subtitle:

@@ -1,6 +1,11 @@
 import { EngineSizesData } from "@/app/data/types";
 
 export const RRSizes50Data: EngineSizesData = {
+  meta: {
+    title: "Range Rover 5.0 Engine | V8 Supercharged Specialists",
+    description:
+      "Specialist Range Rover 5.0 V8 Supercharged engine rebuilds and replacements, dyno tested to factory tolerances with a full warranty. Get a free quote.",
+  },
   headerData: {
     title: "Range Rover 5.0 V8 Engine Specialists",
     subtitle:

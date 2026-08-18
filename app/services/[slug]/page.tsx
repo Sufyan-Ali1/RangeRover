@@ -35,11 +35,9 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const data = getServiceData(slug);
 
-  const title = data?.headerData?.title || slugToTitle(slug);
-
   return {
-    title: `${title} | Range Rover Engines`,
-    description: `Expert Range Rover service — trusted specialists in Grays, Essex.`,
+    title: `${data?.meta.title}`,
+    description: `${data?.meta.description}`,
   };
 }
 

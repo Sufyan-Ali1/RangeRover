@@ -1,10 +1,14 @@
 import { EngineSizesData } from "@/app/data/types";
 
 export const RRSizes30Data: EngineSizesData = {
+  meta: {
+    title: "Range Rover 3.0 Engine | TDV6 & SDV6 Rebuild Specialists",
+    description:
+      "Specialist Range Rover 3.0 engine rebuilds covering TDV6 and SDV6 units, with precision machining and genuine parts. Warranty included. Get a free quote.",
+  },
   headerData: {
     title: "Range Rover 3.0 Engine Repair & Rebuild",
-    subtitle:
-      "Specialist support for TDV6, SDV6 and Ingenium 3.0 engines.",
+    subtitle: "Specialist support for TDV6, SDV6 and Ingenium 3.0 engines.",
     highlights: [
       "Covering TDV6, SDV6 and Ingenium I6 diesel and petrol engines",
       "Timing chain tensioner and guide wear diagnosed correctly",

@@ -1,9 +1,13 @@
 import { EngineRebuildData } from "./types";
 
 export const engineReplacementData: EngineRebuildData = {
+  meta: {
+    title: "Range Rover Engine Replacement | Genuine & Reconditioned",
+    description:
+      "Range Rover engine replacement using genuine or reconditioned units, fully tested and fitted by specialists. Warranty included, UK-wide delivery. Enquire now.",
+  },
   headerData: {
-    title:
-      "Range Rover Engine Replacement That Costs Far Less Than a New Car",
+    title: "Range Rover Engine Replacement That Costs Far Less Than a New Car",
     subtitle:
       "A failed engine doesn't have to mean the end of the road for your Range Rover. Get an instant estimate and see why a full engine replacement usually makes far more financial sense.",
     highlights: [

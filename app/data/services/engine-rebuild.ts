@@ -1,6 +1,11 @@
 import { EngineRebuildData } from "./types";
 
 export const engineRebuildData: EngineRebuildData = {
+  meta: {
+    title: "Range Rover Engine Rebuild | Precision Workmanship",
+    description:
+      "Expert Range Rover engine rebuild service using genuine OEM parts and dyno testing to restore factory performance. Warranty included. Get a free quote.",
+  },
   headerData: {
     title:
       "Precision Range Rover Engine Rebuilds Built to Outlast the Original",

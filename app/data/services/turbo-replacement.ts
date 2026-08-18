@@ -1,6 +1,11 @@
 import { EngineRebuildData } from "./types";
 
 export const turboReplacementData: EngineRebuildData = {
+  meta: {
+    title: "Range Rover Turbo Replacement | Restore Power Fast",
+    description:
+      "Expert Range Rover turbo replacement for whining, smoke or power loss. Reconditioned and genuine options available, backed by warranty. Get a free quote.",
+  },
   headerData: {
     title:
       "Range Rover Turbo Replacement from Trusted Diesel and V6 Specialists",

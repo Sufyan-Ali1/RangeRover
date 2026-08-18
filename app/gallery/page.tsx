@@ -4,8 +4,8 @@ import VideoSection from "../components/VideoSection";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Gallery | Range Rover Engines",
-  description: "A look inside our workshop — engine rebuilds, replacements, and precision work on Range Rover and Land Rover vehicles.",
+  title: "Range Rover Engine Rebuild Gallery | Our Workshop",
+  description: "Browse our Range Rover engine rebuild gallery, showcasing strip-downs, precision machining and finished rebuilds from our Essex workshop. View the photos.",
 };
 
 const images = Array.from({ length: 20 }, (_, i) => ({

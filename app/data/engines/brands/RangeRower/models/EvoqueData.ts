@@ -1,6 +1,11 @@
 import { ModelData } from "@/app/data/types";
 
 export const RREvoqueData: ModelData = {
+  meta: {
+    title: "Range Rover Evoque Engine Repair | Specialist Rebuilds",
+    description:
+      "Expert Range Rover Evoque engine repair, rebuild and replacement addressing common faults with genuine parts and warranty. Get a quote.",
+  },
   headerData: {
     title: "Range Rover Evoque Engine Repair Specialists",
     subtitle:

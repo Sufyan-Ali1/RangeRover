@@ -1,6 +1,11 @@
 import { EngineSizesData } from "@/app/data/types";
 
 export const LandRoverSizes20Data: EngineSizesData = {
+    meta: {
+    title: "Land Rover 2.0 Engine | Ingenium Rebuild & Replacement",
+    description:
+      "Specialist Land Rover 2.0 Ingenium engine rebuilds and replacements, using genuine parts and dyno testing for lasting reliability. Get a free quote today.",
+  },
   headerData: {
     title: "Land Rover 2.0 Ingenium Engine Repair",
     subtitle:

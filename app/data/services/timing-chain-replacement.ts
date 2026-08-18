@@ -1,6 +1,11 @@
 import { EngineRebuildData } from "./types";
 
 export const timingChainReplacementData: EngineRebuildData = {
+  meta: {
+    title: "Range Rover Timing Chain Replacement | Expert Fitting",
+    description:
+      "Specialist Range Rover timing chain replacement, stopping rattling, wear and catastrophic engine damage. Genuine parts, warranty included. Book your repair.",
+  },
   headerData: {
     title:
       "Range Rover Timing Chain Replacement by Genuine Land Rover Specialists",

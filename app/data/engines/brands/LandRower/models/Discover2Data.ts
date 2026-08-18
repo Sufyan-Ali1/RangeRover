@@ -1,6 +1,11 @@
 import { ModelData } from "@/app/data/types";
 
 export const Discovery2Data: ModelData = {
+    meta: {
+    title: "Land Rover Discovery 2 Engine | Rebuild & Supply Fit",
+    description:
+      "Trusted Land Rover Discovery 2 engine replacement and rebuild, backed by warranty-covered supply and professional fitting. Get a free quote today.",
+  },
   headerData: {
     title: "Land Rover Discovery 2 Engine Specialists",
     subtitle:

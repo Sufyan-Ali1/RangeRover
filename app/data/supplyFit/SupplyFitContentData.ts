@@ -1,9 +1,4 @@
-export interface SupplyFitContentDataProps {
-  headingPart1: string;
-  headingPart2: string;
-  paragraphs: string[];
-  bulletList: string[];
-}
+import { SupplyFitContentDataProps } from "../types";
 
 export const supplyFitContentData: SupplyFitContentDataProps = {
   headingPart1: "Understanding Engine Supply and Fit for Range Rover, ",

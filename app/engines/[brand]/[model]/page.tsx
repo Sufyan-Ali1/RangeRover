@@ -29,12 +29,13 @@ function slugToTitle(slug: string) {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { brand, model } = await params;
-  const brandTitle = slugToTitle(brand);
-  const modelTitle = slugToTitle(model);
+  const { model } = await params;
+
+  const data = getBrandsModelsBySlug(model);
+
   return {
-    title: `${brandTitle} ${modelTitle} Engine | Range Rover Engines`,
-    description: `Specialist engine rebuild and replacement for the ${brandTitle} ${modelTitle} — expert JLR-certified service in Grays, Essex.`,
+    title: `${data.meta?.title}`,
+    description: `${data.meta?.description}`,
   };
 }
 

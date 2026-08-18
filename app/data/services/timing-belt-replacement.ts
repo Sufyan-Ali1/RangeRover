@@ -1,9 +1,13 @@
 import { EngineRebuildData } from "./types";
 
 export const timingBeltReplacementData: EngineRebuildData = {
+  meta: {
+    title: "Range Rover Timing Belt Replacement | Avoid Failure",
+    description:
+      "Scheduled and emergency Range Rover timing belt replacement, including tensioners and water pump, to protect your engine. Warranty included. Book today.",
+  },
   headerData: {
-    title:
-      "Range Rover Timing Belt Replacement Before It Becomes an Emergency",
+    title: "Range Rover Timing Belt Replacement Before It Becomes an Emergency",
     subtitle:
       "Unlike a chain, a timing belt wears on a schedule, not a warning light. Missing the interval risks a snapped belt and severe engine damage that's entirely avoidable with timely replacement.",
     highlights: [

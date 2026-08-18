@@ -1,6 +1,11 @@
 import { ModelData } from "@/app/data/types";
 
 export const RRSportSVRData: ModelData = {
+  meta: {
+    title: "Range Rover Sport SVR Engine | Rebuild Specialists",
+    description:
+      "High-performance Range Rover Sport SVR engine rebuild and replacement, engineered to restore power without compromising reliability. Get a free quote.",
+  },
   headerData: {
     title: "Range Rover Sport SVR Engine Specialists",
     subtitle:

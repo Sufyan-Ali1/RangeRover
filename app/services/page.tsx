@@ -20,9 +20,9 @@ import BrandShowcase from "../components/BrandShowcase";
 import { highlights, MainServicesData } from "../data/services/serviceMainPage";
 
 export const metadata = {
-  title: "Engine Services | Range Rover Engines",
+  title: "Range Rover & Land Rover Engine Services | Full Range",
   description:
-    "Premium Range Rover engine rebuild, replacement, diagnostics and performance solutions.",
+    "Explore our full range of Range Rover and Land Rover engine services, from rebuilds and replacements to timing chain and turbo repairs. Get a free quote.",
 };
 
 const tickerItems = [

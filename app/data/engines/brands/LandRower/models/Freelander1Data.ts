@@ -1,6 +1,11 @@
 import { ModelData } from "@/app/data/types";
 
 export const Freelander1Data: ModelData = {
+  meta: {
+    title: "Land Rover Freelander 1 Engine | Supply & Fit Service",
+    description:
+      "Dependable Land Rover Freelander 1 engine supply and fitting, ideal for owners seeking a cost-effective, lasting solution. Warranty included. Get a quote.",
+  },
   headerData: {
     title: "Land Rover Freelander 1 Engine Specialists",
     subtitle:

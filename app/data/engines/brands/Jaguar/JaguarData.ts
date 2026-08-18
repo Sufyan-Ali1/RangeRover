@@ -1,6 +1,11 @@
 import { EnginePageData } from "@/app/data/types";
 
 export const JaguarData: EnginePageData = {
+  meta: {
+    title: "Jaguar Engines | Specialist Rebuilds & Replacements",
+    description:
+      "Specialist Jaguar engines rebuilt and replaced for XE, XF, XJ, F-Pace and F-Type models. Genuine Ingenium and AJ133 parts, up to 24-month warranty. Enquire.",
+  },
   headerData: {
     title: "Jaguar Engines, Backed by JLR Expertise",
     subtitle:

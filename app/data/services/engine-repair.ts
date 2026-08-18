@@ -1,6 +1,11 @@
 import { EngineRebuildData } from "./types";
 
 export const engineRepairData: EngineRebuildData = {
+  meta: {
+    title: "Range Rover Engine Repair | Diagnostic-Led Fault Fixing",
+    description:
+      "Trusted Range Rover engine repair covering oil leaks, misfires and sensor faults. Diagnostic-led fixes from JLR specialists, backed by warranty. Get a quote.",
+  },
   headerData: {
     title: "Range Rover Engine Repair from Diagnosis Through to Full Fix",
     subtitle:

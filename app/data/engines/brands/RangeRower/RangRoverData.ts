@@ -1,6 +1,11 @@
 import { EnginePageData } from "@/app/data/types";
 
 export const RangeRoverData: EnginePageData = {
+  meta: {
+    title: "Range Rover Engines | Rebuilds, Replacements & Supply",
+    description:
+      "Specialist Range Rover engines rebuilt, replaced and supplied across the full lineup, from TDV6 to 5.0 V8 Supercharged. Genuine parts, warranty. Get a quote.",
+  },
   headerData: {
     title: "Every Range Rover Engine, Sourced Right",
     subtitle:

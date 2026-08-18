@@ -13,8 +13,6 @@ import FAQ from "../../components/FAQ";
 import Location from "../../components/Location";
 import BlogSection from "../../components/BlogSection";
 import NationwideSupport from "@/app/components/NationwideSupport";
-import { faqs } from "../../data/faqs";
-import { getModelAuthorityNationwide } from "../../data/authority";
 
 import ServicesTicker from "../../components/ServicesTicker";
 import PopularEngineSizes from "../../components/PopularEngineSizes";
@@ -27,7 +25,10 @@ import engineCodesData from "../../data/engineCodesData.json";
 
 import EngineServices from "@/app/components/EngineServices";
 import { engineSizes } from "../../data/engineSizes";
-import { getBrandData } from "@/app/data/engines/brands/GetBrandData";
+import {
+  getBrandData,
+  getBrandsModelSizesDataBySlug,
+} from "@/app/data/engines/brands/GetBrandData";
 import { notFound } from "next/navigation";
 
 interface Props {
@@ -75,17 +76,18 @@ export async function generateMetadata({ params }: Props) {
   const parsed = parseSizeSlug(brand);
 
   if (parsed) {
-    const brandTitle = slugToTitle(parsed.brandSlug);
+    const sizeData = getBrandsModelSizesDataBySlug(brand);
+
     return {
-      title: `${brandTitle} ${parsed.sizeLabel} Engines | Range Rover Engines`,
-      description: `Specialist engine rebuild and replacement for ${brandTitle} ${parsed.sizeLabel} engines - expert JLR-certified service in Grays, Essex.`,
+      title: `${sizeData.meta.title}`,
+      description: `${sizeData.meta.description}`,
     };
   }
 
-  const brandTitle = slugToTitle(brand);
+  const data = getBrandData(brand);
   return {
-    title: `${brandTitle} Engines | Range Rover Engines`,
-    description: `Specialist engine solutions for all ${brandTitle} models - trusted by owners across the UK.`,
+    title: `${data?.meta.title}`,
+    description: `${data?.meta.description}`,
   };
 }
 
@@ -104,25 +106,28 @@ export default async function BrandPage({ params }: Props) {
 
   if (parsed) {
     const { brandSlug, sizeLabel } = parsed;
-    const brandTitle = slugToTitle(brandSlug);
     const dataKey =
       `${brandSlug}-${sizeLabel}-engines` as keyof typeof engineCodesData;
     const engineData = engineCodesData[dataKey] ?? null;
     const tableRows = engineData ? mapTableRows(engineData.rows) : [];
+    const sizeData = getBrandsModelSizesDataBySlug(brand);
+    const {
+      headerData,
+      NationwideData,
+      supplyFitPrecision,
+      supplyFitContentData,
+      supplyFitGetParts,
+      faqsData,
+    } = sizeData;
 
     return (
       <div className="flex min-h-screen flex-col bg-white">
         <Navbar />
         <Header
           compact
-          title={
-            <>
-              {brandTitle}
-              <br />
-              {sizeLabel} Engines.
-            </>
-          }
-          subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
+          title={headerData?.title}
+          subtitle={headerData?.subtitle}
+          highlights={headerData?.highlights}
         />
         <ServicesTicker
           items={[
@@ -132,9 +137,7 @@ export default async function BrandPage({ params }: Props) {
             "Performance Solutions",
           ]}
         />
-        <AuthorityNationwide
-          data={getModelAuthorityNationwide(brandTitle, sizeLabel)}
-        />
+        <AuthorityNationwide data={NationwideData} />
         {engineData && (
           <EngineTable
             title={engineData.title}
@@ -147,10 +150,10 @@ export default async function BrandPage({ params }: Props) {
           />
         )}
         <SupplyFitCTA />
-        <SupplyFitPrecision />
-        <SupplyFitContent />
-        <SupplyFitGetParts />
-        <FAQ faqs={faqs} />
+        <SupplyFitPrecision data={supplyFitPrecision} />
+        <SupplyFitContent data={supplyFitContentData} />
+        <SupplyFitGetParts data={supplyFitGetParts} />
+        <FAQ faqs={faqsData} />
         <Footer />
       </div>
     );

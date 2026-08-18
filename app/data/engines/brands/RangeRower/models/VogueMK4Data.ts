@@ -1,6 +1,11 @@
 import { ModelData } from "@/app/data/types";
 
 export const RRVogueMK4Data: ModelData = {
+  meta: {
+    title: "Range Rover Vogue MK4 Engine | Rebuild & Replacement",
+    description:
+      "Modern rebuild and replacement services for the Range Rover Vogue MK4 engine, matched to strict factory tolerances. Warranty included. Get a quote today.",
+  },
   headerData: {
     title: "Range Rover Vogue MK4 Engine Specialists",
     subtitle:

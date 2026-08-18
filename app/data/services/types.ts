@@ -26,6 +26,10 @@ export interface BookData {
 }
 
 export interface EngineRebuildData {
+  meta: {
+    title: string;
+    description: string;
+  };
   headerData: HeaderData;
   reviews: Review[];
   galleryData: { title: string; subtitle: string };

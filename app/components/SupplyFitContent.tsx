@@ -1,7 +1,5 @@
-import {
-  supplyFitContentData,
-  SupplyFitContentDataProps,
-} from "../data/supplyFit/SupplyFitContentData";
+import { supplyFitContentData } from "../data/supplyFit/SupplyFitContentData";
+import { SupplyFitContentDataProps } from "../data/types";
 
 interface SupplyFitContentProps {
   data?: SupplyFitContentDataProps;

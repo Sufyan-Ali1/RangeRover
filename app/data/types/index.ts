@@ -194,6 +194,10 @@ export interface Faq {
   a: string;
 }
 export interface EnginePageData {
+  meta: {
+    title: string;
+    description: string;
+  };
   headerData: HeaderData;
   engineServices: Service[];
   NationwideData: AuthoritySectionData;
@@ -204,6 +208,10 @@ export interface EnginePageData {
 }
 
 export interface ModelData {
+  meta: {
+    title: string;
+    description: string;
+  };
   headerData?: HeaderData;
   BrandsData?: BrandsDataType[];
   ReviewsData?: Review[];
@@ -211,5 +219,53 @@ export interface ModelData {
   PrecisionData?: AuthoritySectionData;
   NationwideSupportData1?: NationwideSupportData;
   NationwideSupportData2?: NationwideSupportData;
+  faqsData?: Faq[];
+}
+
+type FeatureIcon =
+  | "tested"
+  | "warranty"
+  | "specialist"
+  | "ancillaries"
+  | "pricing"
+  | "collection";
+
+export interface Feature {
+  icon: FeatureIcon;
+  title: string;
+  description: string;
+}
+
+export interface SupplyFitPrecisionData {
+  eyebrow: string;
+  title: string;
+  description: string;
+  features: Feature[];
+}
+
+export interface SupplyFitGetPartsData {
+  eyebrow: string;
+  title: string;
+  description: string;
+  features: string[];
+}
+
+export interface SupplyFitContentDataProps {
+  headingPart1: string;
+  headingPart2: string;
+  paragraphs: string[];
+  bulletList: string[];
+}
+
+export interface EngineSizesData {
+  meta: {
+    title: string;
+    description: string;
+  };
+  headerData?: HeaderData;
+  NationwideData?: AuthoritySectionData;
+  supplyFitGetParts: SupplyFitGetPartsData;
+  supplyFitPrecision: SupplyFitPrecisionData;
+  supplyFitContentData: SupplyFitContentDataProps;
   faqsData?: Faq[];
 }

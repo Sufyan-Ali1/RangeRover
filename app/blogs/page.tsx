@@ -5,8 +5,9 @@ import blogsData from "../data/blogs.json";
 import { getBlogs } from "../../lib/blogApi";
 
 export const metadata = {
-  title: "Blog | Range Rover Engines",
-  description: "Expert guides, tips, and industry news about Range Rover engines from the specialists at Range Rover Garage.",
+  title: "Range Rover Engine Advice Blog | Expert Guides & Tips",
+  description:
+    "Explore our Range Rover engine advice blog for expert guides on rebuilds, common faults, reconditioned engines and maintenance. Read the latest articles.",
 };
 
 interface Blog {
@@ -31,7 +32,10 @@ export default async function BlogsPage({ searchParams }: Props) {
   const blogs: Blog[] = [...apiBlogs, ...localBlogs];
   const totalPages = Math.ceil(blogs.length / PER_PAGE);
 
-  const current = Math.min(Math.max(1, parseInt(page ?? "1", 10)), totalPages || 1);
+  const current = Math.min(
+    Math.max(1, parseInt(page ?? "1", 10)),
+    totalPages || 1,
+  );
   const start = (current - 1) * PER_PAGE;
   const paginated = blogs.slice(start, start + PER_PAGE);
 

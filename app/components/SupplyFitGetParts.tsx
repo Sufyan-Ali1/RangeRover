@@ -1,17 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SupplyFitGetPartsData } from "../data/types";
 
-const features = [
-  "Honest advice, no upselling",
-  "Clear breakdown of costs involved",
-  "Model-specific engine knowledge",
-  "Fast response on enquiries",
-  "Options explained before you decide",
-];
+interface SupplyFitGetPartsProps {
+  data: SupplyFitGetPartsData;
+}
 
-export default function SupplyFitGetParts() {
+export default function SupplyFitGetParts({ data }: SupplyFitGetPartsProps) {
   return (
     <section className="relative w-full overflow-hidden">
+      {/* Background - Static */}
       <Image
         src="/images/supply-fit/background-fit.webp"
         alt=""
@@ -20,15 +18,21 @@ export default function SupplyFitGetParts() {
         sizes="100vw"
         className="absolute inset-0 h-full w-full object-cover"
       />
+
       <div className="absolute inset-0 bg-black/35" />
+
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,18,11,0.72)_0%,rgba(6,18,11,0.44)_46%,rgba(17,99,58,0.56)_100%)]" />
 
       <div className="relative mx-auto w-full max-w-[1728px] px-6 py-14 sm:px-10 xl:px-[101px] xl:py-20">
         <div
           className="mx-auto overflow-hidden rounded-3xl border-2"
-          style={{ borderColor: "#11633A", maxWidth: "1100px" }}
+          style={{
+            borderColor: "#11633A",
+            maxWidth: "1100px",
+          }}
         >
           <div className="flex flex-col lg:flex-row">
+            {/* Image - Static */}
             <div className="relative min-h-[280px] w-full lg:w-[48%]">
               <Image
                 src="/images/supply-fit/fit.webp"
@@ -39,28 +43,33 @@ export default function SupplyFitGetParts() {
               />
             </div>
 
+            {/* Content */}
             <div
               className="flex w-full flex-col justify-center px-8 py-10 lg:w-[52%] lg:px-10 xl:px-12"
-              style={{ background: "#0d1117" }}
+              style={{
+                background: "#0d1117",
+              }}
             >
+              {/* Eyebrow - Dynamic */}
               <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.26em] text-white/50">
-                Ready When You Are
+                {data.eyebrow}
               </p>
 
+              {/* Title - Dynamic */}
               <h2 className="mb-4 text-[28px] font-bold leading-tight text-white sm:text-[34px]">
-                Talk to a Specialist Before You Commit to a Repair
+                {data.title}
               </h2>
 
+              {/* Description - Dynamic */}
               <p className="mb-7 text-[14px] leading-[1.7] text-white/60">
-                Not sure whether supply and fit or a rebuild is right for your
-                vehicle? Our engineers can talk you through the options
-                honestly, based on your engine's actual condition rather than a
-                generic quote.
+                {data.description}
               </p>
 
+              {/* Features - Dynamic */}
               <div className="mb-8 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
-                {features.map((f) => (
-                  <div key={f} className="flex items-start gap-2.5">
+                {data.features.map((feature) => (
+                  <div key={feature} className="flex items-start gap-2.5">
+                    {/* Check Icon - Static */}
                     <svg
                       width="16"
                       height="16"
@@ -75,19 +84,25 @@ export default function SupplyFitGetParts() {
                       <circle cx="12" cy="12" r="10" />
                       <path d="M9 12l2 2 4-4" />
                     </svg>
+
                     <span className="text-[13px] leading-snug text-white/75">
-                      {f}
+                      {feature}
                     </span>
                   </div>
                 ))}
               </div>
 
+              {/* Buttons */}
               <div className="flex flex-wrap gap-3">
+                {/* Phone - Static */}
                 <a
                   href="tel:01375531355"
                   className="flex items-center gap-2 rounded-lg px-5 py-2.5 text-[13px] font-semibold text-white transition hover:opacity-90"
-                  style={{ background: "#11633A" }}
+                  style={{
+                    background: "#11633A",
+                  }}
                 >
+                  {/* Phone Icon - Static */}
                   <svg
                     width="15"
                     height="15"
@@ -103,10 +118,12 @@ export default function SupplyFitGetParts() {
                   Call Now
                 </a>
 
+                {/* Quote - Static */}
                 <Link
                   href="/get-quote"
                   className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-5 py-2.5 text-[13px] font-semibold text-white transition hover:bg-white/10"
                 >
+                  {/* Document Icon - Static */}
                   <svg
                     width="15"
                     height="15"

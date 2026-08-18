@@ -11,9 +11,9 @@ import { aboutPagePrecision } from "../data/about/AboutPrecision";
 import { authorityNationwide } from "../data/about/Nationwide";
 
 export const metadata = {
-  title: "About Us | Range Rover Engines",
+  title: "About Us | Range Rover Engine Specialists in Essex",
   description:
-    "Learn about Range Rover Garage — the UK's premier independent specialist for Range Rover and Land Rover engine services.",
+    "Meet the JLR-trained team behind our Range Rover engine specialists workshop in Grays, Essex, and our honest, no-nonsense approach to engine care. Learn more.",
 };
 
 export default function AboutPage() {

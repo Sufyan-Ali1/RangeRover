@@ -1,6 +1,11 @@
 import { EnginePageData } from "@/app/data/types";
 
 export const LandRoverData: EnginePageData = {
+  meta: {
+    title: "Land Rover Engines | Rebuilds, Replacements & Repairs",
+    description:
+      "Specialist Land Rover engines covering Discovery, Defender and Freelander platforms. Genuine parts, warranty-backed rebuilds and UK-wide collection. Enquire.",
+  },
   headerData: {
     title: "Land Rover Engines, Sourced by Model",
     subtitle:

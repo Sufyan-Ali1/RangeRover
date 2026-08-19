@@ -1,213 +1,177 @@
-import type { Area } from "../types";
+import { Area } from "../types";
 
-export const berkshireArea: Area = {
+export const berkshireArea:Area = {
   id: "berkshire",
   slug: "berkshire",
   title: "Berkshire",
-  metaTitle: "Ford Engine Replacement Berkshire | Get a Quote Now",
-  metaDescription:
-    "Ford engine replacement made simple in Berkshire, serving Reading, Slough and Windsor. Tested engines fitted with a warranty. Request your free quote today.",
-  hero: [
+  meta: {
+    metaTitle: "Range Rover Engine Replacement Berkshire | Fast, Trusted Fit",
+    metaDescription:
+      "Range Rover engine replacement across Berkshire, covering Reading, Slough and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+  },
+  headerData: {
+    title: "Berkshire Range Rover Engine Specialists",
+    subtitle:
+      "Trusted engine reconditioning, rebuilds and diagnostics nearby.",
+    highlights: [
+      "Range Rover & Land Rover engine specialists only",
+      "Genuine OEM parts fitted on every rebuild",
+      "Collection and delivery across Berkshire",
+      "Clear pricing agreed before work starts",
+    ],
+  },
+  reviews: [
     {
-      eyebrowLabel: " Berkshire's Ford Engine Supply & Fitting Experts",
-      heading:
-        " Replacement Ford Engines For Berkshire — Sourced, Tested And Installed Professionally",
-      introParagraph:
-        "Covering Reading, Slough, Bracknell, Windsor and Newbury, we take failed Ford engines from diagnosis through to a warranted, road-tested replacement — with collection included and pricing agreed upfront",
-      ctaButtonText: "Get a Quote",
-      trustBadges: [
-        "Documented Engine Testing",
-        "Berkshire Collection Included",
-        "Fleet & Business Accounts",
-        "Upfront Agreed Pricing",
-      ],
+      id: 1,
+      name: "Peter Wardley",
+      date: "3 weeks ago",
+      text: '"Full engine rebuild on my Range Rover Sport after a persistent oil leak turned serious. The whole process was explained clearly and the car drives brilliantly now."',
+      stars: 5,
     },
-  ],
-  eyebrow: " Central",
-  description:
-    " Fast, warrantied Ford engine replacement in Berkshire, with nationwide collection and genuine parts fitted by our specialist technicians.",
-  fordEngineFaults: [
     {
-      heading: "Berkshire Drivers And Businesses We Regularly Support",
-      faults: [
-        "Delivery Fleets",
-        "Trades & Contractors",
-        "Daily Commuters",
-        "Taxi Operators",
-        "Family Motorists",
-        "Performance Owners",
-        "Small Businesses",
-        "Courier Franchises",
-      ],
+      id: 2,
+      name: "Nadia Farouk",
+      date: "1 month ago",
+      text: '"Same-day diagnostics near Reading identified a head gasket fault straight away. Quote was fair and the repair was finished within days."',
+      stars: 5,
+    },
+    {
+      id: 3,
+      name: "Connor Aitchison",
+      date: "5 weeks ago",
+      text: '"Went for a reconditioned engine on my Range Rover Vogue instead of a rebuild. Saved a good amount and fitting was quick and professional."',
+      stars: 5,
+    },
+    {
+      id: 4,
+      name: "Fiona Marsh",
+      date: "2 months ago",
+      text: '"Head gasket had gone on my Evoque near Slough. They talked through every option honestly and the car was ready sooner than promised."',
+      stars: 5,
+    },
+    {
+      id: 5,
+      name: "Ashwin Rangan",
+      date: "6 weeks ago",
+      text: '"Sourced a used engine for my Discovery after a bearing failure left it undriveable. Fair pricing and clear communication throughout the job."',
+      stars: 5,
     },
   ],
   overview: [
     {
-      eyebrowLabel: "On The M4 Corridor",
       overviewHeading:
-        "Ford Engine Failures Along The M4 Deserve A Specialist Response",
+        "Range Rover Engine Reconditioning For Berkshire Drivers",
       fullOverviewParagraphs: [
-        "Berkshire's Fords live demanding double lives. Fleet vans out of Slough's trading estates and courier Transits circling Heathrow's fringe clock relentless commercial miles, while Reading and Bracknell commuters grind through M4 congestion that never lets a DPF regenerate or a turbo cool properly. By the time a warning light or a knock announces itself, wear has usually been building for months.",
-        "Getting the response right matters as much as speed. We start with proper diagnostics — live data, compression figures, physical inspection — so the quote you receive addresses the actual fault, not a symptom. From there, choose between targeted repair, a documented rebuild of your original engine, or a bench-tested reconditioned unit matched to your code plate and fitted by Ford-only technicians with warranty on the whole job.",
+        "A struggling Range Rover engine rarely improves without proper attention, and delaying repair usually turns a manageable job into a costly one. Our Berkshire-based specialists diagnose the actual fault first, then recommend whether reconditioning, replacement, or a targeted repair suits your vehicle best.",
+        "We work exclusively on Range Rover and Land Rover engines, following manufacturer-approved rebuild procedures and fitting genuine OEM parts throughout. Drivers around Reading and Slough benefit from specialist diagnosis, transparent pricing, and a faster turnaround than most multi-brand garages can offer.",
       ],
     },
   ],
   technicalContent: [
     {
-      technicalHeader: "Reconditioned Or Used: Know The Difference",
+      technicalHeader: "Worth Knowing First",
       technicalParagraph:
-        "A used engine is history unknown — you inherit its wear. A reconditioned engine has that wear engineered out: stripped, measured, renewed and tested. The price gap is smaller than the risk gap.",
-    },
-  ],
-  supportedModels: [
-    {
-      heading: "Checks Carried Out On Every Engine We Supply",
-      models: [
-        "Compression Testing",
-        "Oil Pressure Verification",
-        "Leak-Down Checks",
-        "Crack Inspection",
-        "Endoscope Examination",
-        "Mileage Verification",
-        "Code Plate Matching",
-        "Final Bench Run",
-      ],
+        "Not every warning light or unusual noise means your engine needs replacing. A proper diagnostic check identifies the real fault before any work is agreed, so you're never paying for parts or labour your Range Rover doesn't need.",
     },
   ],
   premiumServices: [
     {
-      heading: "Recon, Not Roulette",
+      heading: "Engine Reconditioning & Rebuild",
       paragraphs: [
-        "Scrapyard engines tempt with low prices, but you're buying someone else's neglect blind. Our reconditioned units flip that equation: known condition, renewed wear components, verified compression — certainty engineered in before the engine ever reaches Berkshire.",
-        "Because every unit is rebuilt against factory tolerances and bench-proven, we back them with genuine warranty cover. The modest premium over a used gamble typically vanishes the first time a used engine would have failed.",
+        "Complete strip-down reconditioning matched to your Range Rover's exact model and mileage.",
+        "Worn internal components are replaced and correct tolerances restored, with every rebuild carried out using genuine OEM parts for dealer-standard reliability at a fairer price.",
       ],
-      buttonText: "Why Recon Wins",
-      serviceTag: "Premium service",
+      buttonText: "Get Rebuild Quote",
+      serviceTag: "01",
     },
     {
-      heading: "Rebuilds On Schedule",
+      heading: "Used & Reconditioned Engine Supply",
       paragraphs: [
-        "How long will it take? is usually the first question, so we answer it before you commit. Most full rebuilds run seven to ten working days including machining; complex performance units may need longer, and we say so upfront.",
-        "You'll get a dated schedule with your quote — strip-down, machining, assembly, testing — and updates as each stage completes. Deadlines are commitments here, not aspirations, because we know your Ford being away costs you daily.",
+        "If a rebuild isn't the right fit, we source fully inspected used and reconditioned Range Rover engines matched to your specification.",
+        "Each unit is tested before fitting and road-checked afterwards by technicians who specialise in these engines.",
       ],
-      buttonText: "Rebuild Timeline",
-      serviceTag: "Premium service",
+      buttonText: "Get Supply Quote",
+      serviceTag: "02",
     },
     {
-      heading: "Built For Business",
+      heading: "Diagnostics & Head Gasket Service",
       paragraphs: [
-        "When a fleet van dies, the meter starts running. Our business service is structured accordingly: priority booking for commercial vehicles, direct trade pricing, VAT invoicing that satisfies your accountant, and realistic return dates you can plan deliveries around.",
-        "Multi-vehicle operators across Slough, Reading and Bracknell use us as their standing engine partner — one contact, consistent standards, and a warranty process that doesn't leave vans stranded while paperwork argues.",
+        "Accurate diagnostics uncover the real cause behind warning lights, overheating, or power loss, including head gasket failure.",
+        "You'll get an honest explanation and transparent quote before we touch your vehicle.",
       ],
-      buttonText: "Fleet Enquiries",
-      serviceTag: "Premium service",
+      buttonText: "Book Diagnostics",
+      serviceTag: "03",
     },
   ],
-  services: {
-    heading: "Straight Answers To The Engine Questions Owners Ask",
-    subheading: "Understanding the fault properly is half of fixing it.",
-    items: [
-      {
-        heading: "What Causes Wet Belt Failure?",
-        paragraph:
-          "Oil is the culprit and the victim. Extended service intervals, wrong-specification oil and short-trip fuel dilution all attack the wet belt's rubber, which sheds fragments into the very oil meant to protect it. We replace belts before that spiral completes — and clean the contamination out of engines where it's already begun.",
-      },
-      {
-        heading: "DPF Cleaning Or DPF Replacement?",
-        paragraph:
-          "Most blocked filters are recoverable: professional cleaning dissolves accumulated soot and restores flow for a fraction of replacement cost. Replacement only becomes necessary once the ceramic core is melted, cracked or ash-saturated beyond recovery. We measure back-pressure before and after, prove which situation you're in, and never sell the expensive answer unproven.",
-      },
-      {
-        heading: "Misfires, Knocks And Warning Lights",
-        paragraph:
-          "Not every alarming symptom means a dead engine. Misfires trace to coils, injectors and compression; knocks to bearings, timing or something trivial rattling on the heat shield. Our diagnostic sessions separate the terminal from the trivial with evidence, so Berkshire owners repair what's broken instead of replacing what isn't.",
-      },
-    ],
+  services: [
+    {
+      slug: "timing-chain-replacement",
+      title: "Timing Chain Replacement",
+      description:
+        "A stretched timing chain causes rattling, misfires, and long-term internal wear if left unaddressed. We replace chains, tensioners, and guides with genuine parts to restore correct engine timing.",
+    },
+    {
+      slug: "timing-belt-replacement",
+      title: "Timing Belt Replacement",
+      description:
+        "On belt-driven models, we replace the belt, tensioner, and water pump together where appropriate, following manufacturer intervals to reduce the risk of sudden failure.",
+    },
+    {
+      slug: "turbo-replacement",
+      title: "Turbo Replacement",
+      description:
+        "Reduced power, unusual whining, or heavy smoke often signal turbo failure. We diagnose, source, and fit replacement turbos matched precisely to your engine's specification.",
+    },
+    {
+      slug: "head-gasket-replacement",
+      title: "Head Gasket Replacement",
+      description:
+        "Left unresolved, a failed head gasket leads to overheating and coolant contamination. We replace gaskets correctly first time and check surrounding components to prevent recurrence.",
+    },
+    {
+      slug: "engine-repair",
+      title: "Engine Repair",
+      description:
+        "A full rebuild or replacement isn't always necessary. We assess whether a targeted repair can properly resolve the fault, saving unnecessary cost where possible.",
+    },
+    {
+      slug: "engine-swap",
+      title: "Engine Swap",
+      description:
+        "Considering an upgrade or replacing an engine beyond economical repair? We manage the full swap process, from sourcing the right unit through to fitting and calibration.",
+    },
+  ],
+  engineServicesMain: {
+    heading: "Full Engine & Drivetrain Support For Berkshire Owners",
+    intro:
+      "From timing components through to a complete engine replacement, our workshop covers the essential work your Range Rover or Land Rover genuinely needs.",
+    viewMoreHref: "/services",
   },
   specialistData: {
-    eyebrow: "Accountable By Design",
-    heading: "Standing Behind Everything",
+    heading: "Berkshire's Trusted Engine Specialists",
     paragraphs: [
-      "Ask any engine supplier about quality and you'll hear the same assurances — so judge us on structure instead. Named technicians accountable for each job. Test data retained and shared, not just claimed. Warranty terms written into the quote rather than produced afterwards. Old components available for your inspection. A complaints process that escalates to ownership within a day. Berkshire customers rarely need any of it, which is precisely the point of building it.",
+      "Our technicians work exclusively on Range Rover and Land Rover engines, giving Berkshire drivers access to genuinely specialist knowledge rather than mechanical work spread thinly across every make and model. Each rebuild, supply, and diagnostic follows manufacturer-approved procedures, with genuine OEM parts fitted as standard throughout. We explain your options clearly and price everything transparently, so you always understand exactly what work is being carried out and why, without pressure to agree to anything you're unsure about.",
     ],
     mainBullets: [
-      "Named technician on every engine job",
-      "Warranty terms embedded in the quotation",
-      "Direct escalation route if anything's wrong",
+      "Specialist focus on Range Rover and Land Rover engines only",
+      "Genuine OEM parts fitted as standard on every job",
+      "Transparent, itemised quotes before work begins",
+      "Most rebuilds completed within days rather than weeks",
+      "Collection and delivery available across Berkshire",
     ],
     sidePanel: {
-      heading: "Engine Stock Live",
-      chips: ["EcoBoost", "TDCi", "EcoBlue", "Zetec"],
-      bullets: [
-        "Registration search returns guaranteed-fit matches",
-        "Test certificates viewable before you order",
-        "Fitting dates offered at confirmation",
+      heading: "Reconditioned vs Used: Quick Guide",
+      chips: [
+        "Longer Lifespan",
+        "Warranty Included",
+        "Tested Reliability",
       ],
-      buttonLabel: "View Stock",
+      bullets: [
+        "Reconditioned engines are tested to manufacturer tolerances",
+        "Warranty cover included across both parts and labour",
+        "Better long-term value than an unknown-history used engine",
+      ],
+      buttonLabel: "Compare My Options",
     },
-  },
-  whyChooseData: {
-    heading: "Chosen Along The Corridor",
-    introParagraph:
-      "From Slough's estates to Newbury's lanes, Berkshire drivers pick us for reasons that survive comparison shopping.",
-    bullets: [
-      {
-        title: "Verified Condition",
-        body: "Engines proven by measurement and paperwork, never described by adjectives alone.",
-      },
-      {
-        title: "Commercial Awareness",
-        body: "Downtime treated as a cost we're helping you cut, not ignore.",
-      },
-      {
-        title: "Consistent Pricing",
-        body: "Trade, retail or fleet, the quote structure is identical and transparent.",
-      },
-      {
-        title: "Lasting Support",
-        body: "Warranty backing that responds in days, not disputes that drag weeks.",
-      },
-    ],
-  },
-  whatWeOfferData: {
-    heading: "Complete Engine Care",
-    subheading:
-      "Supply, fitting, repairs and honest guidance under one accountable roof for every Ford on Berkshire's roads.",
-    paragraph:
-      "One message with your registration starts it: we confirm the exact engine, set out your options with fixed prices, and book collection anywhere from Windsor to Newbury.",
-    features: [
-      "Priority Fleet Slots",
-      "Weekend Drop-Offs",
-      "Warranty Transfer Available",
-      "Courtesy Progress Reports",
-    ],
-  },
-  reviewsData: {
-    heading: "Trusted Feedback",
-    subheading:
-      "4.9 stars maintained across Reading, Slough, Bracknell and Windsor customers.",
-    reviews: [
-      {
-        content:
-          "We run eight Transits from Slough. Two engine swaps this year, both back on schedule with proper invoices. They're now our fixed supplier.",
-        name: "Danielle O.",
-        meta: "Fleet Replacement",
-        rating: 5,
-      },
-      {
-        content:
-          "Puma wet belt replaced after their honest advice — they showed me the deteriorating belt. That transparency earned a customer for life.",
-        name: "Sam W.",
-        meta: "Wet Belt",
-        rating: 5,
-      },
-      {
-        content:
-          "DPF light on my S-Max near Newbury. Others quoted a new filter; these guys cleaned it and proved the readings. Superb.",
-        name: "Karen L.",
-        meta: "DPF Cleaning",
-        rating: 5,
-      },
-    ],
   },
 };

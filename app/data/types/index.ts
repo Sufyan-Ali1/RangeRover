@@ -9,14 +9,6 @@ export interface AreaService {
   }[];
 }
 
-export interface AreaHero {
-  eyebrowLabel: string;
-  heading?: string;
-  introParagraph?: string;
-  ctaButtonText?: string;
-  trustBadges?: string[];
-}
-
 export interface ServiceCardData {
   heading?: string;
   paragraphs?: string[];
@@ -38,7 +30,6 @@ export interface WhyChooseData {
 export interface Overview {
   fullOverviewParagraphs: string[];
   overviewHeading?: string;
-  eyebrowLabel?: string;
 }
 
 export interface SupportedModels {
@@ -57,7 +48,6 @@ export interface PopularFaults {
   faults: string[];
 }
 export interface AreaSpecialistData {
-  eyebrow: string;
   heading: string;
   paragraphs: string[];
   mainBullets?: string[];
@@ -85,26 +75,24 @@ export interface ReviewsData {
   subheading: string;
   reviews: ReviewItem[];
 }
+export interface Meta {
+  metaTitle: string;
+  metaDescription: string;
+}
 
 export interface Area {
   id: string;
   slug: string;
-  metaTitle: string;
-  metaDescription: string;
   title: string;
-  hero?: AreaHero[];
-  eyebrow: string;
-  description: string;
-  fordEngineFaults?: PopularFaults[];
+  meta: Meta;
+  headerData?: HeaderData;
+  reviews: Review[];
   overview?: Overview[];
   technicalContent?: TechnicalContent[];
-  supportedModels: SupportedModels[];
   premiumServices?: ServiceCardData[];
-  services: AreaService;
+  services: Service[];
+  engineServicesMain?: EngineServicesMain;
   specialistData?: AreaSpecialistData;
-  whyChooseData?: WhyChooseData;
-  whatWeOfferData?: AreaWhatWeOfferData;
-  reviewsData?: ReviewsData;
 }
 
 export interface Review {

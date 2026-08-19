@@ -1,27 +1,22 @@
-export type {
-  Area,
-  AreaHero,
-  AreaService,
-  Overview,
-  AreaSpecialistData,
-  PopularFaults,
-  ServiceCardData,
-  WhyChooseData,
-  SupportedModels,
-  AreaWhatWeOfferData,
-  ReviewsData,
-  TechnicalContent,
-} from "../types";
-
 import { berkshireArea } from "./berkshire";
 import { eastSussexArea } from "./east-sussex";
 import { essexArea } from "./essex";
-import { lincolnshireArea } from "./lincolnshire";
 import { londonArea } from "./london";
-import { westYorkshireArea } from "./westYorkshire";
 import { westSussexArea } from "./west-sussex";
 import { oxfordshireArea } from "./oxfordshire";
 import { hampshireArea } from "./hampshire";
+import { bedfordshireArea } from "./bedfordshire";
+import { buckinghamshireArea } from "./buckinghamshire";
+import { cambridgeshireArea } from "./cambridgeshire";
+import { wiltshireArea } from "./wiltshire";
+import { leicestershireArea } from "./leicestershire";
+import { norfolkArea } from "./norfolk";
+import { kentArea } from "./kent";
+import { northamptonshireArea } from "./northamptonshire";
+import { hertfordshireArea } from "./hertfordshire";
+import { gloucestershireArea } from "./gloucestershire";
+import { suffolkArea } from "./suffolk";
+import { surreyArea } from "./surrey";
 
 export const areasData = [
   oxfordshireArea,
@@ -29,8 +24,18 @@ export const areasData = [
   berkshireArea,
   eastSussexArea,
   essexArea,
-  lincolnshireArea,
   londonArea,
-  westYorkshireArea,
   westSussexArea,
+  bedfordshireArea,
+  buckinghamshireArea,
+  cambridgeshireArea,
+  gloucestershireArea,
+  hertfordshireArea,
+  kentArea,
+  leicestershireArea,
+  norfolkArea,
+  northamptonshireArea,
+  suffolkArea,
+  surreyArea,
+  wiltshireArea,
 ];

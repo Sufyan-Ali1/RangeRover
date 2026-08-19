@@ -1,4 +1,4 @@
-import { ServiceCardData } from "@/app/data/areas";
+import { ServiceCardData } from "@/app/data/types";
 import Link from "next/link";
 
 interface PremiumServiceCardsProps {
@@ -46,11 +46,6 @@ export function PremiumServiceCards({ cards }: PremiumServiceCardsProps) {
                 <div className="relative flex flex-1 flex-col p-6 sm:p-7">
                   <div className="flex items-start justify-between gap-4">
                     <CardIcon label={`0${idx + 1}`} />
-
-                    {/* Dynamic service tag */}
-                    <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 shadow-sm">
-                      {card.serviceTag}
-                    </span>
                   </div>
 
                   {/* Dynamic heading */}

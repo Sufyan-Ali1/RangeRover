@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { areasData } from "@/app/data/areas";
-import { type Area } from "@/app/data/types";
+import { Area } from "@/app/data/types";
 
 type Props = {
   currentArea: Area;
@@ -8,7 +8,7 @@ type Props = {
 
 export function AreaMapAndLinks({ currentArea }: Props) {
   const otherAreas = areasData.filter((a) => a.slug !== currentArea.slug);
-  // Construct map query based on area name or slug
+
   const mapQuery = encodeURIComponent(`${currentArea.title}, UK`);
   const mapSrc = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
   const mapHref = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
@@ -21,7 +21,8 @@ export function AreaMapAndLinks({ currentArea }: Props) {
             {currentArea.title} Map and Other Areas
           </h2>
           <p className="mt-1 text-sm text-slate-600">
-            Browse the rest of our area pages and jump straight to the location you need.
+            Browse the rest of our area pages and jump straight to the location
+            you need.
           </p>
         </div>
 
@@ -70,7 +71,8 @@ export function AreaMapAndLinks({ currentArea }: Props) {
                 Linked Pages
               </div>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Browse the rest of our area pages and jump straight to the location you need.
+                Browse the rest of our area pages and jump straight to the
+                location you need.
               </p>
             </div>
 

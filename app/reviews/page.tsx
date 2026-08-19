@@ -4,11 +4,15 @@ import { ReviewCard } from "../components/Reviews";
 import VideoSection from "../components/VideoSection";
 import CTA from "../components/CTA";
 import { reviews } from "../data/reviews";
-
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Range Rover Engine Specialist Reviews | Verified Feedback",
   description:
     "Read genuine Range Rover engine specialist reviews from owners across the UK, and see why they trust us for rebuilds, repairs and replacements. Read more.",
+  alternates: {
+    canonical: "/reviews",
+  },
 };
 
 export default function ReviewsPage() {

@@ -3,9 +3,15 @@ import Footer from "../components/Footer";
 import GetQuote, { type VehicleInfo } from "../components/GetQuote";
 import { lookupVehicle } from "../actions/lookupVehicle";
 
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Get a Quote | Range Rover Engines",
-  description: "Request a free quote for Range Rover or Land Rover engine repair, replacement, or rebuild.",
+  description:
+    "Request a free quote for Range Rover or Land Rover engine repair, replacement, or rebuild.",
+  alternates: {
+    canonical: "/get-quote",
+  },
 };
 
 interface Props {
@@ -21,7 +27,10 @@ export default async function GetQuotePage({ searchParams }: Props) {
   if (reg?.trim()) {
     const result = await lookupVehicle(reg.trim());
     if (result.ok) {
-      vehicleInfo = { description: result.vehicle.description, data: result.vehicle };
+      vehicleInfo = {
+        description: result.vehicle.description,
+        data: result.vehicle,
+      };
     } else {
       notFound = true;
     }

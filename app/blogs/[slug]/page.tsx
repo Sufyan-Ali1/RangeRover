@@ -17,7 +17,7 @@ async function getSingleBlog(slug: string): Promise<Blog | null> {
 
   return localBlogs.find((b) => b.slug === slug) ?? null;
 }
-
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export async function generateStaticParams() {
   const apiBlogs = await getBlogs().catch(() => []);
   const apiPaths = apiBlogs.map((blog) => ({ slug: blog.slug }));
@@ -32,6 +32,10 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `${blog.title} | Range Rover Engines`,
     description: blog.excerpt,
+    alternates: {
+      canonical: `/blogs/${slug}`,
+    },
+    metadataBase: new URL(siteUrl),
   };
 }
 
@@ -52,7 +56,6 @@ export default async function BlogDetailPage({ params }: Props) {
 
       <main className="flex-1 pt-24 pb-16">
         <div className="mx-auto w-full max-w-[1728px] px-6 sm:px-10 xl:px-[101px]">
-
           {/* ── 1. Image left + Title/Excerpt right ── */}
           <div className="mb-10 grid grid-cols-1 gap-8 lg:grid-cols-[3fr_2fr] lg:items-start">
             <div className="overflow-hidden rounded-xl">
@@ -69,7 +72,10 @@ export default async function BlogDetailPage({ params }: Props) {
               <h1 className="mb-4 text-[28px] font-black leading-tight tracking-wide text-gray-900 sm:text-[36px]">
                 {blog.title}
               </h1>
-              <p className="text-[14px] leading-[1.4] text-gray-600" style={{ textAlign: "justify" }}>
+              <p
+                className="text-[14px] leading-[1.4] text-gray-600"
+                style={{ textAlign: "justify" }}
+              >
                 {blog.excerpt}
               </p>
             </div>
@@ -91,7 +97,10 @@ export default async function BlogDetailPage({ params }: Props) {
           </div>
 
           {/* ── 4. Excerpt text ── */}
-          <p className="mb-10 text-[14px] leading-[1.4] text-gray-600" style={{ textAlign: "justify" }}>
+          <p
+            className="mb-10 text-[14px] leading-[1.4] text-gray-600"
+            style={{ textAlign: "justify" }}
+          >
             {blog.excerpt}
           </p>
 
@@ -104,7 +113,6 @@ export default async function BlogDetailPage({ params }: Props) {
               ← Back to Blogs
             </Link>
           </div>
-
         </div>
       </main>
 

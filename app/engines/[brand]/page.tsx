@@ -71,6 +71,7 @@ function mapTableRows(
   }));
 }
 
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export async function generateMetadata({ params }: Props) {
   const { brand } = await params;
   const parsed = parseSizeSlug(brand);
@@ -79,15 +80,23 @@ export async function generateMetadata({ params }: Props) {
     const sizeData = getBrandsModelSizesDataBySlug(brand);
 
     return {
+      metadataBase: new URL(siteUrl),
       title: `${sizeData.meta.title}`,
       description: `${sizeData.meta.description}`,
+      alternates: {
+        canonical: `/engines/${brand}`,
+      },
     };
   }
 
   const data = getBrandData(brand);
   return {
+    metadataBase: new URL(siteUrl),
     title: `${data?.meta.title}`,
     description: `${data?.meta.description}`,
+    alternates: {
+      canonical: `/engines/${brand}`,
+    },
   };
 }
 

@@ -2,10 +2,15 @@ import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Contact Our Range Rover Engine Specialist Team",
   description:
     "Contact our Range Rover engine specialist team in Grays, Essex for honest advice and a free, no-obligation quote. UK-wide collection available. Get in touch.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

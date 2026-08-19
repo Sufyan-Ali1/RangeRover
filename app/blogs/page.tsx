@@ -3,11 +3,15 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import blogsData from "../data/blogs.json";
 import { getBlogs } from "../../lib/blogApi";
-
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Range Rover Engine Advice Blog | Expert Guides & Tips",
   description:
     "Explore our Range Rover engine advice blog for expert guides on rebuilds, common faults, reconditioned engines and maintenance. Read the latest articles.",
+  alternates: {
+    canonical: "/blogs",
+  },
 };
 
 interface Blog {

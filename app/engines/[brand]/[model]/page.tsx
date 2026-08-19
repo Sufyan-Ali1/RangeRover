@@ -21,21 +21,19 @@ interface Props {
   params: Promise<{ brand: string; model: string }>;
 }
 
-function slugToTitle(slug: string) {
-  return slug
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
-}
-
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export async function generateMetadata({ params }: Props) {
-  const { model } = await params;
+  const { model, brand } = await params;
 
   const data = getBrandsModelsBySlug(model);
 
   return {
+    metadataBase: new URL(siteUrl),
     title: `${data.meta?.title}`,
     description: `${data.meta?.description}`,
+    alternates: {
+      canonical: `/engines/${brand}/${model}`,
+    },
   };
 }
 

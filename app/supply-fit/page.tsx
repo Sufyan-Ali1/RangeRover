@@ -15,11 +15,15 @@ import SupplyFitFAQ from "../components/SupplyFitFAQ";
 import Footer from "../components/Footer";
 import { whyData } from "../data/supplyFit/WhyData";
 import { supplyFitGetParts } from "../data/supplyFit/supplyFitGet";
-
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Range Rover Engine Supply and Fit | Genuine OEM Parts",
   description:
     "Genuine and OEM Range Rover engine supply and fit, professionally installed by JLR specialists in Essex. 12-month warranty, same-day fitting. Get a free quote.",
+  alternates: {
+    canonical: "/supply-fit",
+  },
 };
 
 export default function SupplyFitPage() {

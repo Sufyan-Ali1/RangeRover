@@ -5,9 +5,9 @@ export const rutlandArea: Area = {
   slug: "rutland",
   title: "Rutland",
   meta: {
-    metaTitle: "Rutland Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Reconditioned Range Rover Engine Supply & Fit | Rutland",
     metaDescription:
-      "Range Rover engine supply and fit across Rutland, covering Oakham, Uppingham and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Rutland Range Rover owners can source a reconditioned, code-matched engine with full testing, warranty cover and fitting support. Find your engine today.",
   },
   headerData: {
     title: "Rutland Engine Supply & Fit Service",

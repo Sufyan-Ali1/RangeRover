@@ -5,9 +5,9 @@ export const cheshireArea: Area = {
   slug: "cheshire",
   title: "Cheshire",
   meta: {
-    metaTitle: "Cheshire Range Rover Engine Supply & Delivery | Fast, Trusted",
+    metaTitle: "Trusted Range Rover Reconditioned Engine Supply Cheshire",
     metaDescription:
-      "Range Rover engine supply and delivery across Cheshire, covering Chester, Warrington and surrounding areas. Tested engines, code-matched, clear pricing. Free quote today.",
+      "Cheshire drivers can source a reconditioned Range Rover engine, correctly matched to your engine code, tested and warranty-backed. Get a quote today.",
   },
   headerData: {
     title: "Reconditioned Engines Delivered To Cheshire",

@@ -5,9 +5,9 @@ export const buckinghamshireArea: Area = {
   slug: "buckinghamshire",
   title: "Buckinghamshire",
   meta: {
-    metaTitle: "Range Rover Engine Replacement Buckinghamshire | Fast, Trusted Fit",
+    metaTitle: "Range Rover Engine Reconditioning | Buckinghamshire",
     metaDescription:
-      "Range Rover engine replacement across Buckinghamshire, covering Milton Keynes, Aylesbury and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Trusted Range Rover engine reconditioning for Buckinghamshire, with accurate engine-code matching, rigorous testing and warranty. Check compatibility now.",
   },
   headerData: {
     title: "Buckinghamshire Range Rover Engine Care",

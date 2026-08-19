@@ -5,9 +5,9 @@ export const westSussexArea:Area = {
   slug: "west-sussex",
   title: "West Sussex",
   meta: {
-    metaTitle: "West Sussex Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Range Rover Engine Supply & Fit | West Sussex Experts",
     metaDescription:
-      "Range Rover engine supply and fit across West Sussex, covering Crawley, Worthing and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Reconditioned Range Rover engine supply & fit across West Sussex, from engine-code sourcing to fitting support, tested and warranty covered. Enquire now.",
   },
   headerData: {
     title: "West Sussex Engine Supply & Fit Service",

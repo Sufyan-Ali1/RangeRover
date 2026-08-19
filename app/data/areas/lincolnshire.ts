@@ -5,9 +5,9 @@ export const lincolnshireArea: Area = {
   slug: "lincolnshire",
   title: "Lincolnshire",
   meta: {
-    metaTitle: "Lincolnshire Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Range Rover Engine Supply & Fit | Lincolnshire Experts",
     metaDescription:
-      "Range Rover engine supply and fit across Lincolnshire, covering Lincoln, Grantham and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Lincolnshire reconditioned Range Rover engine supply & fit, matched precisely to your engine code, tested and warranty covered. Get a quote today.",
   },
   headerData: {
     title: "Lincolnshire Engine Supply & Fit Service",

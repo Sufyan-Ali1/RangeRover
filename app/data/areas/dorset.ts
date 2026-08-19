@@ -5,9 +5,9 @@ export const dorsetArea: Area = {
   slug: "dorset",
   title: "Dorset",
   meta: {
-    metaTitle: "Dorset Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Reconditioned Range Rover Engine Supply & Fit | Dorset",
     metaDescription:
-      "Range Rover engine supply and fit across Dorset, covering Bournemouth, Poole and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Dorset Range Rover engine supply & fit, reconditioned to strict standards with engine-code matching and warranty cover included. Compare options and enquire.",
   },
   headerData: {
     title: "Dorset Engine Supply & Fit Service",

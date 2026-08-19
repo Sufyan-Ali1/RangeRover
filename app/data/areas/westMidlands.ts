@@ -5,9 +5,9 @@ export const westMidlandsArea: Area = {
   slug: "west-midlands",
   title: "West Midlands",
   meta: {
-    metaTitle: "West Midlands Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Range Rover Engine Supply & Fit | West Midlands Experts",
     metaDescription:
-      "Range Rover engine supply and fit across the West Midlands, covering Birmingham, Coventry and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "West Midlands reconditioned Range Rover engine supply & fit, with careful engine-code matching, tested units and warranty cover. Find your engine today.",
   },
   headerData: {
     title: "West Midlands Engine Supply & Fit Service",

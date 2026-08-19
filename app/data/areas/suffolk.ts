@@ -5,9 +5,9 @@ export const suffolkArea:Area = {
   slug: "suffolk",
   title: "Suffolk",
   meta: {
-    metaTitle: "Suffolk Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Reconditioned Range Rover Engine Supply & Fit | Suffolk",
     metaDescription:
-      "Range Rover engine supply and fit across Suffolk, covering Ipswich, Bury St Edmunds and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Reconditioned Range Rover engine supply & fit for Suffolk, from correct engine-code sourcing to fitting support. Tested units, warranty included. Get a quote.",
   },
   headerData: {
     title: "Suffolk Engine Supply & Fit Service",

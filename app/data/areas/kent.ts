@@ -5,9 +5,9 @@ export const kentArea: Area = {
   slug: "kent",
   title: "Kent",
   meta: {
-    metaTitle: "Range Rover Engine Replacement Kent | Fast, Trusted Fit",
+    metaTitle: "Trusted Range Rover Engine Reconditioning | Kent",
     metaDescription:
-      "Range Rover engine replacement across Kent, covering Maidstone, Dartford and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "20+ years' experience reconditioning Range Rover engines for Kent, matched to the correct engine code and covered by warranty. Check compatibility now.",
   },
   headerData: {
     title: "Kent's Range Rover Engine Specialists",

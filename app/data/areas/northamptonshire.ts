@@ -5,9 +5,9 @@ export const northamptonshireArea: Area = {
   slug: "northamptonshire",
   title:"Northamptonshire",
   meta: {
-    metaTitle: "Northamptonshire Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Range Rover Engine Supply & Fit | Northamptonshire",
     metaDescription:
-      "Range Rover engine supply and fit across Northamptonshire, covering Northampton, Kettering and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Range Rover reconditioned engine supply & fit for Northamptonshire, matched to your exact engine code, tested and warranty-backed. Get your quote today.",
   },
   headerData: {
     title: "Northamptonshire Engine Supply & Fit Service",

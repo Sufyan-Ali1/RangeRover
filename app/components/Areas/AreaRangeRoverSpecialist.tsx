@@ -20,9 +20,6 @@ export function AreaRangeRoverSpecialist({
           <div className="relative grid gap-8 lg:grid-cols-3 lg:items-start">
             {/* Main Content Area */}
             <div className="lg:col-span-2">
-              <p className="inline-flex items-center rounded-full bg-[#11633A]/10 px-3 py-1 text-xs font-semibold tracking-wide text-[#11633A] ring-1 ring-[#11633A]/15 shadow-sm">
-                {data.eyebrow}
-              </p>
               <h2 className="mt-4 text-balance text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
                 {data.heading}
               </h2>

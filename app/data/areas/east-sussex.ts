@@ -1,213 +1,177 @@
-import type { Area } from "../types";
+import { Area } from "../types";
 
 export const eastSussexArea: Area = {
   id: "east-sussex",
   slug: "east-sussex",
   title: "East Sussex",
-  metaTitle: "Ford Engine Replacement East Sussex | Fast Fitting",
-  metaDescription:
-    "Need your Ford engine replaced in East Sussex? We cover Brighton, Hastings and Eastbourne with tested engines. Get a free, no-obligation quote today.",
-  hero: [
+  meta: {
+    metaTitle: "East Sussex Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaDescription:
+      "Range Rover engine supply and fit across East Sussex, covering Brighton, Hastings and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+  },
+  headerData: {
+    title: "East Sussex Engine Supply & Fit Service",
+    subtitle:
+      "Reconditioned Range Rover engines, collected, fitted and delivered.",
+    highlights: [
+      "Reconditioned engines matched to your exact model",
+      "Collection from East Sussex, fitted at our workshop",
+      "Genuine OEM parts used throughout every rebuild",
+      "Clear delivery timescales confirmed before booking",
+    ],
+  },
+  reviews: [
     {
-      eyebrowLabel: "East Sussex's Dedicated Ford Engine Service Centre",
-      heading:
-        "East Sussex Ford Engine Replacement With Testing, Fitting And Warranty Included",
-      introParagraph:
-        "From Brighton's busy streets to Hastings and Eastbourne on the coast, we replace, rebuild and repair Ford engines — collected , matched precisely, and guaranteed in plain written terms.",
-      ctaButtonText: "Request a Quote",
-      trustBadges: [
-        "Clear All-Inclusive Pricing",
-        "Coast-To-Downs Collection",
-        "Proven Tested Engines",
-        "Straightforward Written Warranty",
-      ],
+      id: 1,
+      name: "Barnaby Rossiter",
+      date: "3 weeks ago",
+      text: '"Arranged collection from Brighton for a reconditioned engine on my Range Rover Evoque. Kept me updated throughout and the fitted engine runs faultlessly."',
+      stars: 5,
     },
-  ],
-  eyebrow: "Coastal",
-  description:
-    "Need a Ford engine replacement in East Sussex? We supply and fit reconditioned engines with full warranty and vehicle collection.",
-  fordEngineFaults: [
     {
-      heading: "Outcomes We Deliver For East Sussex Owners",
-      faults: [
-        "Repaired Not Replaced",
-        "Rebuilt To Last",
-        "Replaced And Warranted",
-        "Belt Renewed In Time",
-        "DPF Restored",
-        "Turbo Revived",
-        "Head Gasket Cured",
-        "MOT Emissions Passed",
-      ],
+      id: 2,
+      name: "Cordelia Nash",
+      date: "1 month ago",
+      text: '"Was unsure about the distance from Hastings, but collection was arranged quickly and the whole process felt easy to follow."',
+      stars: 5,
+    },
+    {
+      id: 3,
+      name: "Casper Wynne",
+      date: "5 weeks ago",
+      text: '"Booked engine diagnostics after my Sport started losing power on the A27. Diagnosis was accurate and the recommended repair matched exactly what it needed."',
+      stars: 5,
+    },
+    {
+      id: 4,
+      name: "Delphine Osei",
+      date: "2 months ago",
+      text: '"Head gasket failure on my Vogue meant I needed a specialist that could collect from East Sussex. Straightforward process with honest pricing throughout."',
+      stars: 5,
+    },
+    {
+      id: 5,
+      name: "Nathanael Brookfield",
+      date: "6 weeks ago",
+      text: '"Used engine sourced and fitted for my Discovery after unexpected engine failure. Delivery timescale was exactly as promised and the price was fair."',
+      stars: 5,
     },
   ],
   overview: [
     {
-      eyebrowLabel: "Coastal & Countryside Care",
       overviewHeading:
-        "Engine Care Built Around How East Sussex Actually Drives",
+        "Reconditioned Range Rover Engines Supplied & Fitted For East Sussex",
       fullOverviewParagraphs: [
-        "East Sussex is tougher terrain than it looks. Salt-laden coastal air works on everything metal from Brighton round to Hastings; the South Downs demand long climbs that heat turbos and strain cooling systems; and dense seafront traffic means diesels rarely get the sustained runs their particulate filters need. Many local Fords are also older, cherished cars — kept for years and worth keeping right.",
-        "So our approach starts with respect for that. Before quoting, we establish what your engine genuinely needs — sometimes a repair measured in hundreds, not a replacement measured in thousands. When replacement is the honest answer, your reconditioned unit is matched by code plate, verified by documented testing, and fitted with new fluids, filters and a thorough shakedown across exactly the kinds of roads it'll live on.",
+        "East Sussex drivers don't need a local Range Rover specialist nearby to get proper engine work done. We arrange collection from across the county, carry out the reconditioning or supply-and-fit work at our workshop, then return your vehicle running properly with the whole process managed from start to finish.",
+        "Every reconditioned engine we supply is matched precisely to your model and fitted using genuine OEM parts. Drivers around Brighton and Hastings get the same specialist attention as customers who visit us directly, backed by clear delivery timescales and honest pricing throughout.",
       ],
     },
   ],
   technicalContent: [
     {
-      technicalHeader: "What Actually Determines Your Replacement Price",
+      technicalHeader: "Before You Arrange Collection",
       technicalParagraph:
-        "Engine variant, unit availability, ancillary condition and fitting complexity set the figure — not haggling skill. We explain each element on your quote, so you can compare suppliers on substance rather than sales patter.",
-    },
-  ],
-  supportedModels: [
-    {
-      heading: "Coastal Wear Points Checked During Every Job",
-      models: [
-        "Cooling System Corrosion",
-        "Radiator Condition",
-        "Hose Degradation",
-        "Exhaust Corrosion",
-        "Sensor Connections",
-        "Turbo Heat Stress",
-        "Belt Perishing",
-        "Mount Deterioration",
-      ],
+        "Unsure whether your Range Rover needs a full engine replacement or a smaller repair? A diagnostic check confirms the actual fault first, so collection and fitting only go ahead once you know exactly what work is required.",
     },
   ],
   premiumServices: [
     {
-      heading: "Repair Where Possible",
+      heading: "Reconditioned Engine Supply & Fit",
       paragraphs: [
-        "Plenty of engine's gone verdicts turn out to be a failed injector, a tired coil pack or a sensor confusing the ECU. Our diagnostics distinguish genuine internal failure from fixable faults before anyone spends replacement money.",
-        "When repair is viable, we'll champion it — even though it earns us less. East Sussex owners keeping much-loved older Fords on the road deserve a specialist who protects their wallet as carefully as their engine.",
+        "We source a reconditioned engine matched to your Range Rover's exact model, then arrange collection from East Sussex for fitting at our workshop.",
+        "Every unit is genuine OEM specification, tested before dispatch, and fitted by technicians who specialise in these vehicles.",
       ],
-      buttonText: "Diagnose First",
-      serviceTag: "Premium service",
+      buttonText: "Get Supply Quote",
+      serviceTag: "01",
     },
     {
-      heading: "Replace With Certainty",
+      heading: "Engine Rebuild & Reconditioning",
       paragraphs: [
-        "When internal damage makes replacement the right call, certainty replaces gambling. Our reconditioned engines arrive with renewed wear components, documented compression and oil pressure results, and mileage verification — condition you can read, not just hope for.",
-        "Fitting includes coolant and fuel system checks that coastal cars particularly need, fresh consumables throughout, and a road test over hills and stop-start traffic alike. The warranty then covers parts and labour together.",
+        "Prefer to keep your existing engine rather than swap it out? We carry out full strip-down reconditioning, replacing worn components and restoring correct tolerances.",
+        "Your vehicle is collected from East Sussex and returned once complete.",
       ],
-      buttonText: "Replacement Route",
-      serviceTag: "Premium service",
+      buttonText: "Get Rebuild Quote",
+      serviceTag: "02",
     },
     {
-      heading: "Restore And Rebuild",
+      heading: "Diagnostics Before Collection",
       paragraphs: [
-        "For engines with history worth preserving — a long-owned ST, an S-Max that's carried the family for a decade — rebuilding the original keeps identity and value intact while curing the fault at its root.",
-        "We strip, machine and reassemble to Ford tolerances, replacing every wear item along the way, and document the process photographically. What returns is your engine, renewed — not a stranger under your bonnet.",
+        "A proper diagnostic check confirms the real fault before any collection is arranged, so you know exactly what work your Range Rover needs.",
+        "Clear pricing provided before committing to anything.",
       ],
-      buttonText: "Rebuild Enquiry",
-      serviceTag: "Premium service",
+      buttonText: "Book Diagnostics",
+      serviceTag: "03",
     },
   ],
-  services: {
-    heading: "Targeted Engine Services Shaped By Coastal Driving Demands",
-    subheading: "Hills, salt and seafront traffic each take their toll.",
-    items: [
-      {
-        heading: "Turbo Strain From Downs Driving",
-        paragraph:
-          "Long climbs out of Brighton, Lewes and Eastbourne keep turbochargers spinning hot, and hard stops at the top deny them cool-down time. We test boost delivery and actuator response against specification, repair worn units, and advise on the driving habits that double a turbo's life on hilly routes.",
-      },
-      {
-        heading: "Belts And Chains On Ageing Fords",
-        paragraph:
-          "East Sussex keeps its cars longer than most counties — which means more timing belts, wet belts and chains quietly passing their safe limits. We check service history against known intervals, inspect for perishing that coastal air accelerates, and renew timing systems before an interference engine meets its own valves.",
-      },
-      {
-        heading: "Seafront Stop-Start DPF Recovery",
-        paragraph:
-          "Crawling along the A259 seafront never generates the exhaust temperature a diesel particulate filter needs to self-clean, so soot loads climb until limp mode strikes. Our professional cleaning restores blocked filters without replacement in most cases, and back-pressure readings taken before and after prove the result honestly.",
-      },
-    ],
+  services: [
+    {
+      slug: "timing-chain-replacement",
+      title: "Timing Chain Replacement",
+      description:
+        "A worn timing chain causes rattling, misfires, and long-term wear if left unaddressed. We replace chains, tensioners, and guides with genuine parts once your vehicle arrives at our workshop.",
+    },
+    {
+      slug: "timing-belt-replacement",
+      title: "Timing Belt Replacement",
+      description:
+        "On belt-driven models, we replace the belt, tensioner, and water pump together where appropriate, following manufacturer intervals to reduce the risk of failure.",
+    },
+    {
+      slug: "turbo-replacement",
+      title: "Turbo Replacement",
+      description:
+        "Loss of power, whining noises, or excessive smoke often point to turbo failure. We source and fit replacement turbos matched precisely to your engine's specification.",
+    },
+    {
+      slug: "head-gasket-replacement",
+      title: "Head Gasket Replacement",
+      description:
+        "A failed head gasket left unresolved leads to overheating and coolant contamination. We replace gaskets correctly first time and check surrounding components carefully.",
+    },
+    {
+      slug: "engine-repair",
+      title: "Engine Repair",
+      description:
+        "Not every issue requires a full rebuild or replacement. We assess whether a targeted repair can resolve the fault properly, saving unnecessary cost.",
+    },
+    {
+      slug: "engine-swap",
+      title: "Engine Swap",
+      description:
+        "Considering a full engine swap rather than a rebuild? We manage sourcing, collection, fitting, and calibration from start to finish.",
+    },
+  ],
+  engineServicesMain: {
+    heading: "Complete Engine & Drivetrain Support For East Sussex Owners",
+    intro:
+      "From timing components to a full engine replacement, we handle the essential work Range Rover and Land Rover engines actually need, with collection arranged from across East Sussex.",
+    viewMoreHref: "/services",
   },
   specialistData: {
-    eyebrow: "Keeping Fords Alive",
-    heading: "Longevity Is The Goal",
+    heading: "Trusted Beyond Our Own Workshop Doors",
     paragraphs: [
-      "Our measure of success isn't engines sold — it's years added. That philosophy changes decisions all the way down: recommending the injector repair over the profitable swap, flushing contamination properly instead of leaving it to kill the new belt, fitting cooling components that coastal corrosion hasn't already weakened. East Sussex customers often arrive expecting a sales pitch and leave with a smaller bill than feared, which is exactly how repeat trust gets built.",
+      "Distance from our workshop shouldn't stand between East Sussex drivers and proper specialist engine work. We arrange collection and delivery so the process feels just as straightforward as booking locally, with the same manufacturer-approved procedures and genuine OEM parts used on every job. Clear timescales, transparent pricing, and honest communication mean you always know where your vehicle is in the process, whether it's still on collection or already back on the road.",
     ],
     mainBullets: [
-      "Cheapest sound option always presented first",
-      "Contamination cleaned, never left behind",
-      "Coastal corrosion factored into every fit",
+      "Collection and delivery arranged across East Sussex",
+      "Genuine OEM parts fitted as standard on every job",
+      "Transparent, itemised quotes before collection is booked",
+      "Most rebuilds completed within days of arrival",
+      "Specialist focus on Range Rover and Land Rover only",
     ],
     sidePanel: {
-      heading: "Your Options, Priced",
-      chips: ["Repair", "Rebuild", "Replace", "Advice"],
-      bullets: [
-        "Send symptoms, receive routes with costs",
-        "No-pressure guidance on borderline cases",
-        "Decisions backed by test evidence",
+      heading: "Collection & Delivery, Explained",
+      chips: [
+        "Tracked Progress",
+        "Fixed Timescales",
+        "No Hidden Costs",
       ],
-      buttonLabel: "Get Options",
+      bullets: [
+        "Collection arranged directly from your East Sussex address",
+        "Fixed delivery timescale confirmed before work begins",
+        "Vehicle returned fully tested once fitting is complete",
+      ],
+      buttonLabel: "Book My Collection",
     },
-  },
-  whyChooseData: {
-    heading: "Grounds For Confidence",
-    introParagraph:
-      "Brighton to Hastings, our reputation rests on habits competitors treat as optional extras.",
-    bullets: [
-      {
-        title: "Repair-First Ethics",
-        body: "Replacement recommended only once repair is genuinely ruled out.",
-      },
-      {
-        title: "Coastal Competence",
-        body: "Salt-air wear anticipated and addressed, not discovered later.",
-      },
-      {
-        title: "Evidence Supplied",
-        body: 'Test readings and findings shared, never summarised into "trust us."',
-      },
-      {
-        title: "Whole-Job Warranty",
-        body: "Engine and installation covered together under one written promise.",
-      },
-    ],
-  },
-  whatWeOfferData: {
-    heading: "Every Route Covered",
-    subheading:
-      "Whether your Ford needs a small fix or a full engine, the same specialist team handles it.",
-    paragraph:
-      "Share your registration and what's happening, and we'll respond with honest routes and real prices — then collect from anywhere between the Downs and the sea.",
-    features: [
-      "Seven-Day Quote Validity",
-      "Retired-Owner Friendly Service",
-      "Seafront & Rural Collection",
-      "Part Exchange Considered",
-    ],
-  },
-  reviewsData: {
-    heading: "Local Trust",
-    subheading:
-      "4.9-star average earned across Brighton, Eastbourne, Hastings and Lewes drivers.",
-    reviews: [
-      {
-        content:
-          "Was quoted for a full engine elsewhere. They found a failed injector instead and charged a fraction. Honesty like that is rare.",
-        name: "Brian H.",
-        meta: "Engine Repair",
-        rating: 5,
-      },
-      {
-        content:
-          "My delivery Fiesta died in central Brighton. Collection was painless, the recon engine strong, and the warranty paperwork properly clear.",
-        name: "Jade M.",
-        meta: "Engine Replacement",
-        rating: 5,
-      },
-      {
-        content:
-          "Turbo blew on my Transit Custom near Lewes. They arranged recovery immediately and had the replacement fitted within days. Highly recommended.",
-        name: "Colin D.",
-        meta: "Turbo Replacement",
-        rating: 5,
-      },
-    ],
   },
 };

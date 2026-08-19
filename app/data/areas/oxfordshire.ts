@@ -1,218 +1,177 @@
-import type { Area } from "../types";
+import { Area } from "../types";
 
-export const oxfordshireArea: Area = {
+export const oxfordshireArea:Area = {
   id: "oxfordshire",
   slug: "oxfordshire",
-  metaTitle: "Ford Engine Replacement Oxfordshire | Fast, Fitted",
-  metaDescription:
-    "Need a Ford engine replacement in Oxfordshire? We fit tested engines across Oxford, Banbury and Witney, backed by a warranty. Get your free quote today.",
   title: "Oxfordshire",
-  hero: [
+  meta: {
+    metaTitle: "Oxfordshire Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaDescription:
+      "Range Rover engine supply and fit across Oxfordshire, covering Oxford, Banbury and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+  },
+  headerData: {
+    title: "Oxfordshire Engine Supply & Fit Service",
+    subtitle:
+      "Reconditioned Range Rover engines, collected, fitted and delivered.",
+    highlights: [
+      "Reconditioned engines matched to your exact model",
+      "Collection from Oxfordshire, fitted at our workshop",
+      "Genuine OEM parts used throughout every rebuild",
+      "Clear delivery timescales confirmed before booking",
+    ],
+  },
+  reviews: [
     {
-      eyebrowLabel: "Oxfordshire's Dedicated Ford Engine Service Centre",
-      heading:
-        " Expert Ford Engine Replacement & Rebuilds Across Oxfordshire, Fully Guaranteed",
-      introParagraph:
-        "From Oxford to Banbury, we supply, rebuild and fit tested Ford engines — backed by extended warranty cover,  collection and delivery, and honest fixed-price quotes within hours",
-      ctaButtonText: "Get a Quote",
-      trustBadges: [
-        " Up to 24-Month Warranty",
-        "Collection & Delivery",
-        "Tested & Mileage Verified",
-        "Same-Day Quotes Available",
-      ],
+      id: 1,
+      name: "Benedict Ashworth",
+      date: "3 weeks ago",
+      text: '"Arranged collection from Oxford for a reconditioned engine on my Range Rover Sport. Kept me updated at every stage and the fitted engine runs perfectly."',
+      stars: 5,
+    },
+    {
+      id: 2,
+      name: "Freya Woolmer",
+      date: "1 month ago",
+      text: '"Was unsure about the distance from Banbury, but collection was arranged quickly and the whole process was easy to follow from start to finish."',
+      stars: 5,
+    },
+    {
+      id: 3,
+      name: "Theo Blackstock",
+      date: "5 weeks ago",
+      text: '"Booked engine diagnostics after my Vogue began losing power on the motorway. Diagnosis was accurate and the recommended fix matched exactly what it needed."',
+      stars: 5,
+    },
+    {
+      id: 4,
+      name: "Sienna Radcliffe",
+      date: "2 months ago",
+      text: '"Head gasket failure on my Evoque meant I needed a specialist that could collect from Oxfordshire. Simple process with upfront pricing throughout."',
+      stars: 5,
+    },
+    {
+      id: 5,
+      name: "Kwame Osei",
+      date: "6 weeks ago",
+      text: '"Used engine sourced and fitted for my Discovery after unexpected engine failure. Delivery timescale was exactly as promised and the price was fair."',
+      stars: 5,
     },
   ],
-  eyebrow: "Central",
-  description:
-    "Fast, warrantied Ford engine replacement in Oxfordshire, with nationwide collection and genuine parts fitted by our specialist technicians.",
   overview: [
     {
-      eyebrowLabel: " Local Knowledge, Specialist Skill",
       overviewHeading:
-        "Trusted Ford Engine Specialists Serving Every Corner of Oxfordshire",
+        "Reconditioned Range Rover Engines Supplied & Fitted For Oxfordshire",
       fullOverviewParagraphs: [
-        "Oxfordshire drivers put serious miles on their Fords. Transit vans working the A34 corridor, EcoBoost hatchbacks commuting into Oxford, and family Kugas covering rural routes around Witney and Bicester all face the same realities — wet belt degradation, timing chain stretch, and turbo strain that eventually demand professional attention. When power fades, warning lights appear, or an engine fails outright, you need a specialist who understands Ford powertrains inside out.",
-        " That's exactly what we deliver. Our workshop focuses solely on Ford engines, from the 1.0 EcoBoost through to the 2.0 and 2.2 TDCi Duratorq diesels found in the Transit range. Every reconditioned unit is stripped, measured, rebuilt with OEM-quality components and tested before dispatch. We match engines precisely using your registration and engine code plate, so fitment issues simply don't happen.",
-      ],
-    },
-  ],
-  supportedModels: [
-    {
-      heading: "Ford Models and Engine Families We Work On Daily",
-      models: [
-        "Transit TDCi",
-        "Fiesta ST",
-        "Focus ST",
-        "Kuga",
-        "Mondeo",
-        "Ranger",
-        "S-Max",
-        "Puma",
-        "EcoBoost",
-        "Duratorq",
-        "Duratec",
-        "Zetec",
-      ],
-    },
-  ],
-  fordEngineFaults: [
-    {
-      heading: "Common Ford Engine Faults We Diagnose and Resolve",
-      faults: [
-        "Wet Belt Failure",
-        "Timing Chain Wear",
-        "Turbo Actuator Faults",
-        "DPF Blockages",
-        "Head Gasket Failure",
-        "Low Oil Pressure",
-        "Misfires",
-        "Excess Exhaust Smoke",
+        "Oxfordshire drivers don't need a local Range Rover specialist nearby to get proper engine work done. We arrange collection from across the county, carry out the reconditioning or supply-and-fit work at our workshop, then return your vehicle running properly with the whole process managed from start to finish.",
+        "Every reconditioned engine we supply is matched precisely to your model and fitted using genuine OEM parts. Drivers around Oxford and Banbury get the same specialist attention as customers who visit us directly, backed by clear delivery timescales and honest pricing throughout.",
       ],
     },
   ],
   technicalContent: [
     {
-      technicalHeader: "Wet Belt Trouble? Act Before It's Terminal",
+      technicalHeader: "Before You Arrange Collection",
       technicalParagraph:
-        " Ford's 1.0 EcoBoost wet timing belt runs in oil and deteriorates silently. Debris blocking the oil pickup can destroy an otherwise healthy engine. If yours is overdue, we can replace the belt — or the engine, quickly and affordably.",
+        "Unsure whether your Range Rover needs a full engine replacement or a smaller repair? A diagnostic check confirms the actual fault first, so collection and fitting only go ahead once you know exactly what work is required.",
     },
   ],
   premiumServices: [
     {
-      heading: "Reconditioned Ford Engines",
+      heading: "Reconditioned Engine Supply & Fit",
       paragraphs: [
-        "Choose a fully reconditioned Ford engine and you're getting far more than a used unit. Each engine is dismantled, cleaned, measured against factory tolerances and rebuilt with new bearings, seals, gaskets and timing components wherever wear is found.",
-        "Every unit undergoes compression testing and quality checks before it leaves our workshop, and arrives with documented history and warranty cover. It's the smart middle ground between an unpredictable second-hand engine and the cost of buying new.",
+        "We source a reconditioned engine matched to your Range Rover's exact model, then arrange collection from Oxfordshire for fitting at our workshop.",
+        "Every unit is genuine OEM specification, tested before dispatch, and fitted by technicians who specialise in these vehicles.",
       ],
-      buttonText: "Explore Recon Engines",
-      serviceTag: "Premium service",
+      buttonText: "Get Supply Quote",
+      serviceTag: "01",
     },
     {
-      heading: "Complete Engine Rebuilds",
+      heading: "Engine Rebuild & Reconditioning",
       paragraphs: [
-        "Prefer to keep your original engine? Our full rebuild service restores your existing unit to dependable health. We strip it down, identify every worn or damaged component, and rebuild using genuine or OEM-equivalent Ford parts throughout.",
-        "Rebuilding is often the right call after head gasket failure, bearing wear or timing-related damage — particularly on higher-value vehicles. You keep your matching-numbers engine while gaining renewed performance, efficiency and years of extra service life.",
+        "Prefer to keep your existing engine rather than swap it out? We carry out full strip-down reconditioning, replacing worn components and restoring correct tolerances.",
+        "Your vehicle is collected from Oxfordshire and returned once complete.",
       ],
-      buttonText: "Book A Rebuild",
-      serviceTag: "Premium service",
+      buttonText: "Get Rebuild Quote",
+      serviceTag: "02",
     },
     {
-      heading: "Supply & Fit Packages",
+      heading: "Diagnostics Before Collection",
       paragraphs: [
-        "Want one price and zero hassle? Our supply and fit service covers everything: the replacement engine, professional installation, fresh fluids, filters and ancillary checks, plus a full post-fit road test before your Ford is handed back.",
-        "We can collect your vehicle from anywhere in Oxfordshire, keep you updated throughout, and deliver it back running as it should. One quote, one point of contact, one guarantee covering the lot.",
+        "A proper diagnostic check confirms the real fault before any collection is arranged, so you know exactly what work your Range Rover needs.",
+        "Clear pricing provided before committing to anything.",
       ],
-      buttonText: "Get Supply & Fit Quote",
-      serviceTag: "Premium service",
+      buttonText: "Book Diagnostics",
+      serviceTag: "03",
     },
   ],
-  services: {
-    heading: "Complete Ford Engine Services Under One Trusted Roof",
-    subheading:
-      "Specialist workmanship covering every major Ford engine repair need.",
-    items: [
-      {
-        heading: "Timing Belt & Wet Belt Replacement",
-        paragraph:
-          "Ford's wet belt design demands strict service intervals — miss them and the consequences can be catastrophic. We replace wet belts, cam belts and timing chains on all affected Ford models using correct-specification parts and oils, resetting service data and road testing thoroughly. Preventative replacement now costs a fraction of engine failure later.",
-      },
-      {
-        heading: "Turbo Repair & DPF Cleaning",
-        paragraph:
-          "Losing power, hearing whistling, or seeing the DPF warning light? Our diagnostics pinpoint whether you're facing a failing turbocharger, sticking actuator or blocked diesel particulate filter. We repair or replace turbos and offer professional DPF cleaning that restores flow and emissions compliance — helping your Ford sail through its next MOT test.",
-      },
-      {
-        heading: "Head Gasket & Engine Diagnostics",
-        paragraph:
-          "Overheating, white exhaust smoke and coolant loss usually point to head gasket trouble. We carry out pressure and compression testing to confirm the fault before recommending repair, rebuild or replacement, whichever genuinely makes financial sense for your vehicle. Honest diagnosis first, then a clear written quote with no hidden extras.",
-      },
-    ],
+  services: [
+    {
+      slug: "timing-chain-replacement",
+      title: "Timing Chain Replacement",
+      description:
+        "A worn timing chain causes rattling, misfires, and long-term wear if left unaddressed. We replace chains, tensioners, and guides with genuine parts once your vehicle arrives at our workshop.",
+    },
+    {
+      slug: "timing-belt-replacement",
+      title: "Timing Belt Replacement",
+      description:
+        "On belt-driven models, we replace the belt, tensioner, and water pump together where appropriate, following manufacturer intervals to reduce the risk of failure.",
+    },
+    {
+      slug: "turbo-replacement",
+      title: "Turbo Replacement",
+      description:
+        "Loss of power, whining noises, or excessive smoke often point to turbo failure. We source and fit replacement turbos matched precisely to your engine's specification.",
+    },
+    {
+      slug: "head-gasket-replacement",
+      title: "Head Gasket Replacement",
+      description:
+        "A failed head gasket left unresolved leads to overheating and coolant contamination. We replace gaskets correctly first time and check surrounding components carefully.",
+    },
+    {
+      slug: "engine-repair",
+      title: "Engine Repair",
+      description:
+        "Not every issue requires a full rebuild or replacement. We assess whether a targeted repair can resolve the fault properly, saving unnecessary cost.",
+    },
+    {
+      slug: "engine-swap",
+      title: "Engine Swap",
+      description:
+        "Considering a full engine swap rather than a rebuild? We manage sourcing, collection, fitting, and calibration from start to finish.",
+    },
+  ],
+  engineServicesMain: {
+    heading: "Complete Engine & Drivetrain Support For Oxfordshire Owners",
+    intro:
+      "From timing components to a full engine replacement, we handle the essential work Range Rover and Land Rover engines actually need, with collection arranged from across Oxfordshire.",
+    viewMoreHref: "/services",
   },
   specialistData: {
-    eyebrow: "Built On Proven Expertise",
-    heading: "Why Experience Matters",
+    heading: "Trusted Beyond Our Own Workshop Doors",
     paragraphs: [
-      "Ford engines have their own personalities, and their own weak points. Knowing that a 1.0 EcoBoost needs its oil pickup inspected during belt work, or that certain Duratorq units suffer injector seal issues that mimic bigger faults, comes only from years of hands-on specialisation. Our technicians work exclusively on Ford powertrains, which means faster diagnosis, fewer wasted parts, accurate quotes and repairs that hold up long after the warranty paperwork is filed away.",
+      "Distance from our workshop shouldn't stand between Oxfordshire drivers and proper specialist engine work. We arrange collection and delivery so the process feels just as straightforward as booking locally, with the same manufacturer-approved procedures and genuine OEM parts used on every job. Clear timescales, transparent pricing, and honest communication mean you always know where your vehicle is in the process, whether it's still on collection or already back on the road.",
     ],
     mainBullets: [
-      "Ford-only workshop with specialist tooling",
-      "Engine code matching via registration lookup",
-      "Transparent written quotes before any work",
+      "Collection and delivery arranged across Oxfordshire",
+      "Genuine OEM parts fitted as standard on every job",
+      "Transparent, itemised quotes before collection is booked",
+      "Most rebuilds completed within days of arrival",
+      "Specialist focus on Range Rover and Land Rover only",
     ],
     sidePanel: {
-      heading: "Engines Ready To Go",
-      chips: ["Petrol", "Diesel", "EcoBoost", "Commercial"],
-      bullets: [
-        "Stock checked against your exact engine code",
-        "Fast lead times across the county",
-        "Tested, verified and warranty-backed units",
+      heading: "Collection & Delivery, Explained",
+      chips: [
+        "Tracked Progress",
+        "Fixed Timescales",
+        "No Hidden Costs",
       ],
-      buttonLabel: "Check Availability",
+      bullets: [
+        "Collection arranged directly from your Oxfordshire address",
+        "Fixed delivery timescale confirmed before work begins",
+        "Vehicle returned fully tested once fitting is complete",
+      ],
+      buttonLabel: "Book My Collection",
     },
-  },
-  whyChooseData: {
-    heading: "The Difference You'll Notice",
-    introParagraph:
-      "Plenty of garages will fit an engine. Very few live and breathe Ford powertrains the way our team does, every single day.",
-    bullets: [
-      {
-        title: "Fixed Pricing",
-        body: "The quote we give is the price you pay, guaranteed in writing.",
-      },
-      {
-        title: "Genuine Parts",
-        body: "OEM and equivalent components throughout, never unbranded gamble parts.",
-      },
-      {
-        title: "Rapid Turnaround",
-        body: "Minimal downtime for private drivers and working Transit fleets alike.",
-      },
-      {
-        title: "Real Warranty",
-        body: "Meaningful cover on parts and labour, honoured without argument.",
-      },
-    ],
-  },
-  whatWeOfferData: {
-    heading: "Everything Handled Properly",
-    subheading:
-      "From first phone call to final road test, every stage of your engine replacement is managed by specialists.",
-    paragraph:
-      "Tell us your registration and symptoms, and we'll confirm the exact engine you need, provide a same-day quote, and arrange collection at a time that suits you, anywhere in Oxfordshire.",
-    features: [
-      "Vehicle Collection",
-      "Same-Day Quotes",
-      "Part Exchange Welcome",
-      "Fleet & Trade Rates",
-    ],
-  },
-  reviewsData: {
-    heading: "Customer Voices",
-    subheading:
-      "Rated 4.9 out of 5 by Ford owners across Oxfordshire and beyond.",
-    reviews: [
-      {
-        content:
-          "My Transit's engine let go near Bicester. They collected it next morning, fitted a recon unit and had me working again within the week.",
-        name: "James H.",
-        meta: "Engine Replacement",
-        rating: 5,
-      },
-      {
-        content:
-          "Honest advice from the start. They explained the wet belt issue clearly, quoted fairly, and my Fiesta now drives better than it has in years.",
-        name: "Sarah M.",
-        meta: "Wet Belt Replacement",
-        rating: 5,
-      },
-      {
-        content:
-          "Compared three quotes and these were the only specialists who matched my engine code properly. Superb communication and a genuine warranty.",
-        name: "David P.",
-        meta: "Recon Engine Supply",
-        rating: 5,
-      },
-    ],
   },
 };

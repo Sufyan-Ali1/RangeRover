@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata: Metadata = {
   title: "Range Rover Engine Specialist | Rebuilds & Replacements",
   description:
     "UK-wide Range Rover, Land Rover & Jaguar engine specialists. Warranty-backed rebuilds, repairs and replacements with UK collection. Get a free quote today.",
   icons: {
     icon: "/favicon.svg",
+  },
+  alternates: {
+    canonical: `${siteUrl}`,
   },
 };
 

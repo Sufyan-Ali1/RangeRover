@@ -1,214 +1,180 @@
-import type { Area } from "../types";
+import { Area } from "../types";
 
 export const essexArea: Area = {
   id: "essex",
   slug: "essex",
   title: "Essex",
-  metaTitle: "Ford Engine Replacement Essex | Fast, Trusted Fit",
-  metaDescription:
-    "Ford engine replacement across Essex, covering Chelmsford, Colchester and Basildon. Tested engines, expert fitting, clear pricing. Free quote today.",
-  hero: [
+  meta: {
+    metaTitle: "Ford Engine Replacement Essex | Fast, Trusted Fit",
+    metaDescription:
+      "Ford engine replacement across Essex, covering Chelmsford, Colchester and Basildon. Tested engines, expert fitting, clear pricing. Free quote today.",
+  },
+  headerData: {
+    title: "Range Rover Engine Specialists, Essex",
+    subtitle:
+      "Trusted engine reconditioning, rebuilds and replacement across Essex",
+    highlights: [
+      "Genuine OEM parts on every job",
+      "Same-day diagnostics available",
+      "Fixed, transparent pricing upfront",
+      "Trusted by Range Rover owners across Essex",
+    ],
+  },
+  reviews: [
     {
-      eyebrowLabel: "Serving Britain's Ford Heartland Since Forever",
-      heading:
-        "Essex Ford Engine Replacement From People Who Speak Fluent Ford",
-      introParagraph:
-        "Chelmsford, Basildon, Colchester, Southend and Thurrock — wherever your Ford lives, we deliver tested reconditioned engines, honest rebuilds and complete fitting with collection and written warranty included.",
-      ctaButtonText: "Sort Mine",
-      trustBadges: [
-        "Ford-Only Workshop Focus",
-        "Whole-County ",
-        "Test Results Supplied",
-        "Warranty Covering Everything",
-      ],
+      id: 1,
+      name: "James Whitfield",
+      date: "2 weeks ago",
+      text: '"My Range Rover Sport had zero power after a warning light appeared. They diagnosed it same day and had the engine rebuilt within the week."',
+      stars: 5,
+    },
+    {
+      id: 2,
+      name: "Sarah Ockendon",
+      date: "1 month ago",
+      text: '"Quoted a fair price for a reconditioned engine supply and fit, and stuck to it. No surprise charges when I collected the car."',
+      stars: 5,
+    },
+    {
+      id: 3,
+      name: "Michael Barrett",
+      date: "3 weeks ago",
+      text: '"Head gasket had gone on my Evoque and two other garages couldn\'t source the parts. These guys had it sorted in four days."',
+      stars: 5,
+    },
+    {
+      id: 4,
+      name: "Priya Anand",
+      date: "1 month ago",
+      text: '"Honest diagnosis from the start — told me a rebuild made more sense than a full replacement and saved me a lot of money."',
+      stars: 5,
+    },
+    {
+      id: 5,
+      name: "Daniel Foxwell",
+      date: "5 days ago",
+      text: '"Collected my Range Rover, did the full engine reconditioning, and delivered it back running better than when I bought it."',
+      stars: 5,
     },
   ],
-  eyebrow: "Eastern",
-  description:
-    "Looking for Ford engine replacement in Essex? Our team collects your vehicle, fits a reconditioned engine and returns it fully tested.",
-
-  fordEngineFaults: [
+  overview: [
     {
-      heading: "Essex Journeys That Grind Engines Down Fastest",
-      faults: [
-        "A13 Stop-Start Runs",
-        "Dartford Crossing Queues",
-        "Tilbury Port Circuits",
-        "A12 Commuter Slogs",
-        "Seafront Season Crawls",
-        "M25 Orbital Grind",
-        "Site-To-Site Trades Days",
-        "London-And-Back Doubles",
+      overviewHeading:
+        "Range Rover Engine Reconditioning You Can Rely On in Essex",
+      fullOverviewParagraphs: [
+        "If your Range Rover or Land Rover is showing warning lights, losing power, or burning oil faster than it should, our Essex workshop specialises in diagnosing and fixing the problem properly. We work exclusively on Range Rover and Land Rover engines, from the Evoque to the Sport and Vogue.",
+        "Every reconditioning, rebuild and replacement is carried out by technicians who understand these engines inside out, using genuine OEM parts wherever possible. We cover Essex from our Grays base, with customers regularly travelling from Chelmsford, Colchester, Basildon and Southend for work they trust.",
       ],
     },
   ],
   technicalContent: [
     {
-      technicalHeader: "Reconditioned Versus Brand New, Explained Honestly",
+      technicalHeader: "Not sure if you need a rebuild or a full replacement?",
       technicalParagraph:
-        "A new crate engine buys factory freshness at a punishing price. A properly reconditioned unit renews every wearing part for a fraction of it — and for most Essex Fords, delivers indistinguishable daily performance.",
-    },
-  ],
-  overview: [
-    {
-      eyebrowLabel: "Ford Country, Properly Served",
-      overviewHeading: "Nowhere Runs More Fords Per Mile Than Essex Does",
-      fullOverviewParagraphs: [
-        "Essex and Ford grew up together — Dagenham built the engines, and the county has run on them ever since. Today that heritage looks like Transits streaming down the A13 to London jobs, logistics fleets circling Tilbury and the Gateway port through Thurrock, Dartford Crossing queues cooking engines twice daily, and Southend's seasonal traffic crawling the seafront. Essex Fords earn hard, and their engines pay for it.",
-        "Serving Ford country means meeting its standards. Our workshop touches nothing but Ford engines, from the smallest Fox-family EcoBoost to Transit's big diesels, so the faults arriving on our ramps are ones we've solved dozens of times before. Diagnosis comes evidenced, quotes come itemised, engines come bench-tested with paperwork, and everything — unit, parts, fitting labour — sits under one written warranty.",
-      ],
-    },
-  ],
-  supportedModels: [
-    {
-      heading: "Ford Engine Families We Know By Codename",
-      models: [
-        "Fox 1.0 EcoBoost",
-        "Dragon 1.5 EcoBoost",
-        "Sigma 1.6 Petrol",
-        "Panther 2.0 EcoBlue",
-        "Puma 2.2 Duratorq",
-        "ZSD Transit Diesel",
-        "Duratec HE",
-        "Zetec-S",
-      ],
+        "A reconditioned engine unit is often the more cost-effective route if the block and internals are sound. Our diagnostics team will always recommend the option that actually suits your car and budget — not the most expensive one.",
     },
   ],
   premiumServices: [
     {
-      heading: "Recon Done Right",
+      heading: "Engine Reconditioning",
       paragraphs: [
-        "Reconditioning here means the full discipline: engines stripped to castings, every dimension measured against Ford's figures, machining where wear demands it, and reassembly with renewed bearings, seals, gaskets and complete timing kits.",
-        'Nothing ships until the test bench agrees — compression, oil pressure and leak-down all recorded against the unit\'s serial. That documentation reaches you with the engine, turning "trust me" into "check for yourself."',
+        "A full strip-down, inspection and rebuild of your existing engine using genuine parts. Ideal when the core unit is sound but internal components have worn out.",
+        "Restores performance and reliability without the cost of a brand-new engine, backed by our workshop guarantee.",
       ],
-      buttonText: "Recon Standards",
-      serviceTag: "Premium service",
+      buttonText: "Get a Quote",
+      serviceTag: "Most Requested",
     },
     {
-      heading: "Your Engine, Reborn",
+      heading: "Engine Replacement",
       paragraphs: [
-        "Rebuilding suits Fords with stories — the ST bought new in Chelmsford, the Transit that's built a business. We restore the original unit with genuine-specification components, photographing the strip-down so you see precisely what failed and why.",
-        "Rebuild pricing always arrives beside the equivalent replacement figure, itemised the same way. Sometimes rebuilding wins, sometimes swapping does; either way you're choosing from evidence, never from sales pressure.",
+        "Where a rebuild isn't viable, we supply and fit a reconditioned or used replacement engine matched exactly to your model.",
+        "Every unit is tested before fitting, and we handle the full swap in-house so your car is off the road for as little time as possible.",
       ],
-      buttonText: "Explore Rebuilds",
-      serviceTag: "Premium service",
+      buttonText: "Book Now",
+      serviceTag: "Fast Turnaround",
     },
     {
-      heading: "Fitted Fully, Fast",
+      heading: "Head Gasket Replacement",
       paragraphs: [
-        "Supply and fit means one call handles everything: collection from any Essex postcode, careful transfer of ancillaries, fresh fluids and filters throughout, then diagnostic verification before an honest road test on real roads.",
-        "Working vans get priority slots because Essex trades live out of them. Most straightforward swaps complete within the week, with your agreed price and return date both honoured to the letter.",
+        "A failed head gasket can quickly cause serious engine damage if ignored. We diagnose the issue accurately, source the correct gasket for your exact model.",
+        "Carried out to prevent overheating, oil contamination and further breakdown.",
       ],
-      buttonText: "Full Package",
-      serviceTag: "Premium service",
+      buttonText: "Enquire Today",
+      serviceTag: "Common Fault",
     },
   ],
-  services: {
-    heading: "Beyond Replacement: The Repairs Essex Calls Us For",
-    subheading:
-      "Rapid response, precise electronics and complete transparency throughout.",
-    items: [
-      {
-        heading: "Emergency Response, Engine Down",
-        paragraph:
-          "When a working Ford dies mid-job, hours matter. Our emergency line prioritises stranded commercial vehicles across Essex: rapid collection from roadside or recovery yard, same-day diagnosis where the vehicle arrives by early afternoon, and engines reserved from stock so fitting starts without waiting on couriers.",
-      },
-      {
-        heading: "Turbo Actuators And Boost Electronics",
-        paragraph:
-          "Modern Ford turbos fail electronically as often as mechanically — sticking actuators, faulty position sensors and wiring faults all mimic a dying turbo. We test actuation range and boost delivery against specification before condemning anything, frequently saving Essex owners the cost of a turbocharger their van never needed.",
-      },
-      {
-        heading: "Reconditioning, Shown Not Told",
-        paragraph:
-          "Wonder what reconditioning actually involves? Ask to see. We'll walk you through a strip-down in progress — the measuring, the machining, the renewed components — so the engine you're buying stops being a mystery box. Customers who visit rarely shop elsewhere afterwards, which tells you everything about transparency's value.",
-      },
-    ],
+
+  services: [
+    {
+      slug: "timing-chain-replacement",
+      title: "Timing Chain Replacement",
+      description:
+        "A stretched or noisy timing chain affects engine timing and can cause serious internal damage if left unchecked. We replace the chain, tensioners and guides to restore smooth, reliable running.",
+    },
+    {
+      slug: "turbo-replacement",
+      title: "Turbo Replacement",
+      description:
+        "Loss of power, unusual whining, or excess smoke often points to a failing turbo. We diagnose the fault correctly and fit a genuine or reconditioned replacement built for your engine.",
+    },
+    {
+      slug: "engine-diagnostics",
+      title: "Engine Diagnostics",
+      description:
+        "Same-day diagnostic checks pinpoint exactly what's wrong before any work begins, so you get an accurate quote and a clear explanation, not guesswork.",
+    },
+    {
+      slug: "engine-repair",
+      title: "Engine Repair",
+      description:
+        "For faults that don't require a full rebuild, our technicians carry out targeted repairs to get your Range Rover back to full health quickly and affordably.",
+    },
+    {
+      slug: "engine-swap",
+      title: "Engine Swap",
+      description:
+        "A complete engine swap for vehicles where reconditioning isn't practical, using a matched replacement unit fitted and tested to manufacturer standards.",
+    },
+    {
+      slug: "timing-belt-replacement",
+      title: "Timing Belt Replacement",
+      description:
+        "Scheduled or emergency timing belt replacement to prevent catastrophic engine failure, carried out to the correct intervals for your specific Range Rover model.",
+    },
+  ],
+  engineServicesMain: {
+    heading: "Complete Engine Care for Every Range Rover Fault",
+    intro:
+      "From timing components to full engine swaps, our Essex team handles the job start to finish.",
+    viewMoreHref: "/services",
   },
   specialistData: {
-    eyebrow: "Heritage Meets Rigour",
-    heading: "Fluent In Ford",
+    heading: "Essex's Trusted Range Rover Engine Team",
     paragraphs: [
-      "Essex customers know Fords, which keeps suppliers honest — you can't blag a county that grew up around Dagenham. So we don't try. Our technicians talk engine families by codename, quote known fault patterns from memory, and back every opinion with a reading or a photograph. When a Basildon builder or Thurrock fleet manager quizzes us on wet belt intervals or Panther injector quirks, they get answers that survive their own experience. That's the bar here, and we clear it daily.",
+      "We specialise exclusively in Range Rover and Land Rover engines, which means our technicians understand the specific faults these vehicles develop, from timing chain wear to turbo failure, far better than a general garage. Every job, from a same-day diagnostics check to a full engine reconditioning, is carried out using genuine OEM parts and tested thoroughly before your car leaves our workshop. Customers across Essex choose us because we explain the problem honestly, quote fairly, and stand behind every repair we carry out.",
     ],
     mainBullets: [
-      "Technicians conversant in every Ford family",
-      "Known fault patterns recognised on arrival",
-      "Opinions backed by readings, not rhetoric",
+      "Specialists in Range Rover and Land Rover engines only",
+      "Genuine OEM parts used across every repair",
+      "Transparent, fixed quotes before work begins",
+      "Fast turnaround without cutting corners",
+      "Trusted by drivers across Chelmsford, Colchester and Essex",
     ],
     sidePanel: {
-      heading: "Plate To Price",
-      chips: ["EcoBoost", "EcoBlue", "Duratorq", "Zetec"],
-      bullets: [
-        "Registration decodes your exact engine build",
-        "Matched stock priced while you wait",
-        "Collection booked in the same conversation",
+      heading: "Why Choose Us",
+      chips: [
+        "Certified",
+        "Genuine Parts",
+        "Same-Day Diagnostics",
+        "Fixed Pricing",
       ],
-      buttonLabel: "Decode Mine",
+      bullets: [
+        "Free initial diagnostics quote",
+        "No hidden costs on any job",
+        "Collection available across Essex",
+        "Workshop guarantee on all engine work",
+      ],
+      buttonLabel: "Get in Touch",
     },
-  },
-  whyChooseData: {
-    heading: "Why Essex Rates Us",
-    introParagraph:
-      "In the county that knows Fords best, reputations are earned the hard way. Ours rests on these.",
-    bullets: [
-      {
-        title: "Genuine Specialism",
-        body: "Ford engines exclusively, with depth that generalist garages cannot fake.",
-      },
-      {
-        title: "Emergency Ready",
-        body: "Stranded working vehicles collected and prioritised across all Essex.",
-      },
-      {
-        title: "Open Workshop",
-        body: "See the reconditioning process yourself before spending a pound.",
-      },
-      {
-        title: "Complete Cover",
-        body: "Engine, components and labour warranted together in plain writing.",
-      },
-    ],
-  },
-  whatWeOfferData: {
-    heading: "Everything Engine",
-    subheading:
-      "Replacement, rebuilds, repairs and rapid response for every Ford earning its keep across Essex.",
-    paragraph:
-      "Fire over your registration and the symptoms; we'll decode the engine, diagnose from evidence, price every sensible route, and collect from Chelmsford to the Thurrock docks.",
-    features: [
-      "Emergency Priority Line",
-      "Open-Door Workshop Visits",
-      "White-Van Fast Track",
-      "Same-Week Turnarounds",
-    ],
-  },
-  reviewsData: {
-    heading: "Essex Verdicts",
-    subheading:
-      "4.9 stars across Chelmsford, Basildon, Colchester, Southend and Thurrock reviews.",
-    reviews: [
-      {
-        content:
-          "Transit died on a Basildon site with two jobs booked. Emergency collection same afternoon, back earning inside the week. Lifesavers.",
-        name: "Terry M.",
-        meta: "Emergency Replacement",
-        rating: 5,
-      },
-      {
-        content:
-          "Run six vans out of Thurrock for port work. Their turbo diagnosis saved us replacing two units that only needed actuators.",
-        name: "Donna R.",
-        meta: "Turbo Repair",
-        rating: 5,
-      },
-      {
-        content:
-          "Visited the workshop before committing — watched an engine being built. That transparency won me instantly. My Puma runs superbly.",
-        name: "Ashley V.",
-        meta: "Engine Replacement",
-        rating: 5,
-      },
-    ],
   },
 };

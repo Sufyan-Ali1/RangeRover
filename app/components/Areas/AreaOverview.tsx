@@ -1,13 +1,11 @@
 import React from "react";
 
 interface AreaOverviewProps {
-  eyebrowLabel?: string;
   overviewHeading?: string;
   fullOverviewParagraphs?: string[];
 }
 
 export function AreaOverview({ 
-  eyebrowLabel, 
   overviewHeading, 
   fullOverviewParagraphs 
 }: AreaOverviewProps) {
@@ -15,12 +13,6 @@ export function AreaOverview({
     <>
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-6">
         <div>
-          {/* Dynamic Eyebrow Label */}
-          {eyebrowLabel && (
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#11633A]">
-              {eyebrowLabel}
-            </p>
-          )}
           {/* Dynamic Overview Heading */}
           {overviewHeading && (
             <h2 className="text-3xl font-black text-slate-900 mt-1">

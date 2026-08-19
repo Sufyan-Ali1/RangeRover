@@ -1,215 +1,180 @@
-import type { Area } from "../types";
+import { Area } from "../types";
 
 export const londonArea: Area = {
   id: "london",
-  slug: "london",
   title: "London",
-  metaTitle: "Ford Engine Replacement London | Same-Week Fitting",
-  metaDescription:
-    "Searching for Ford engine replacement in London? We fit tested engines across all boroughs, with warranty cover and competitive prices. Get a free quote now.",
-  hero: [
+  slug: "london",
+
+  meta: {
+    metaTitle: "Range Rover Engine Replacement London | Fast, Trusted Fit",
+    metaDescription:
+      "Range Rover engine replacement across London, covering Croydon, Ilford and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+  },
+  headerData: {
+    title: "Range Rover Engine Experts, London",
+    subtitle:
+      "Specialist engine reconditioning, rebuilds and repair for London drivers",
+    highlights: [
+      "Genuine OEM parts fitted as standard",
+      "Collection available across London",
+      "Clear, fixed quotes before any work starts",
+      "Specialists in Range Rover and Land Rover only",
+    ],
+  },
+  reviews: [
     {
-      eyebrowLabel: "London's Ford Engine Replacement And Rebuild Specialists",
-      heading:
-        "Ford Engine Replacement Across London Without The Capital's Usual Complications",
-      introParagraph:
-        "From East London and Romford to Ilford and Croydon, we collect your Ford, fit a tested reconditioned engine or rebuild your own, and return it warranted — kerbside to kerbside.",
-      ctaButtonText: "Fast Quote",
-      trustBadges: [
-        "Kerbside Collection Citywide",
-        "Tested Warranted Engines",
-        "Working-Van Fast Lanes",
-        "No Congestion Surcharges",
-      ],
+      id: 1,
+      name: "Thomas Aldridge",
+      date: "1 week ago",
+      text: '"Warning light came on near Croydon and I had a diagnosis by the afternoon. Turned out to be a straightforward fix, not the rebuild I was dreading."',
+      stars: 5,
+    },
+    {
+      id: 2,
+      name: "Aisha Rahman",
+      date: "3 weeks ago",
+      text: '"They sourced a reconditioned engine for my Vogue faster than any of the local garages I called. Fitted and running within days."',
+      stars: 5,
+    },
+    {
+      id: 3,
+      name: "Gregory Nash",
+      date: "1 month ago",
+      text: '"Explained exactly why a rebuild made more sense than replacing the whole engine. Saved me thousands and the car drives perfectly now."',
+      stars: 5,
+    },
+    {
+      id: 4,
+      name: "Fatima Osei",
+      date: "2 weeks ago",
+      text: '"Head gasket failure on the motorway and they had it sorted within the week, including collection from my address."',
+      stars: 5,
+    },
+    {
+      id: 5,
+      name: "Callum Reeve",
+      date: "6 days ago",
+      text: '"Straightforward pricing from the first phone call, no changes once the work started. Exactly what I wanted after a bad experience elsewhere."',
+      stars: 5,
     },
   ],
-
-  eyebrow: "Capital",
-  description:
-    "From diagnosis to fitting, we handle Ford engine replacement throughout London, supported by a comprehensive warranty and genuine components.",
-
-  fordEngineFaults: [
+  overview: [
     {
-      heading: "London Fords That Keep The Capital Running",
-      faults: [
-        "Last-Mile Courier Transits",
-        "Private Hire Galaxys",
-        "Market Trader Connects",
-        "Minicab Mondeos",
-        "Sole-Trader Customs",
-        "Family Kugas",
-        "City Fiestas",
-        "Weekend STs",
+      overviewHeading:
+        "London's Specialist Range Rover Engine Workshop",
+      fullOverviewParagraphs: [
+        "If your Range Rover or Land Rover has developed a serious engine fault, you need a team that actually understands these vehicles, not a general mechanic guessing at the problem. We work exclusively on Range Rover and Land Rover engines, covering everything from diagnostics to full reconditioning and replacement.",
+        "We serve drivers across London and the surrounding areas, with regular customers travelling in from Croydon, Ilford and beyond. Every engine that leaves our workshop has been rebuilt, repaired or replaced using genuine parts and tested thoroughly before collection.",
       ],
     },
   ],
   technicalContent: [
     {
-      technicalHeader: "New Engine Or New Car? Do The Maths",
+      technicalHeader: "Wondering what a London engine reconditioning job actually costs?",
       technicalParagraph:
-        "If your Ford is ULEZ-compliant, a tested replacement engine usually costs a fraction of changing vehicles — and you keep the van or car you know. We'll give you honest figures for that comparison, free.",
-    },
-  ],
-  overview: [
-    {
-      eyebrowLabel: "Made For City Miles",
-      overviewHeading:
-        "Why London Driving Destroys Ford Engines Faster Than Anywhere",
-      fullOverviewParagraphs: [
-        "No environment punishes an engine like the capital. Endless idling and crawling never lets oil reach temperature, so fuel dilution quietly attacks wet belts and bearings; diesels doing last-mile drops from Romford to Croydon can't regenerate their DPFs; and turbos coke up in traffic that averages walking pace. London's hardest-working Fords — courier Transits, private-hire Galaxys, traders' Connects — feel it first and worst.",
-        "We've shaped our service around city reality. Kerbside collection from any London postcode, because you haven't got a driveway to leave a dead van on. Engines matched by registration and code plate, bench-tested with documented results, and fitted by Ford-only technicians. Fixed pricing agreed before collection, priority turnaround for vehicles that earn, and a written warranty spanning the engine and our labour together.",
-      ],
-    },
-  ],
-  supportedModels: [
-    {
-      heading: "What Crawling Traffic Does Inside An Engine",
-      models: [
-        "Fuel-Diluted Oil",
-        "Swollen Wet Belts",
-        "Soot-Choked DPFs",
-        "Coked Turbos",
-        "Clogged EGR Valves",
-        "Carbon On Valves",
-        "Condensation Corrosion",
-        "Stretched Cold-Start Chains",
-      ],
+        "Pricing depends on the model, the extent of the fault and whether a rebuild or full replacement is needed. We provide a fixed quote after diagnostics, so you know the exact cost before any work begins.",
     },
   ],
   premiumServices: [
     {
-      heading: "City-Proof Recon Engines",
+      heading: "Engine Reconditioning",
       paragraphs: [
-        "Our reconditioned Ford engines go back into the toughest environment in Britain, so they're prepared accordingly: full strip and inspection, renewed bearings, seals, gaskets and timing components, and assembly verified against factory tolerances.",
-        "Documented bench testing — compression, oil pressure, leak checks — precedes every dispatch into London. The unit you receive has proven itself before it ever meets the North Circular, and the warranty confirms our confidence in writing.",
+        "We strip down, inspect and rebuild your existing engine to as-new condition using genuine parts. A cost-effective route when the core unit is still sound but worn internally.",
+        "Every rebuild is tested thoroughly before your Range Rover leaves our workshop, backed by our workmanship guarantee.",
       ],
-      buttonText: "London Stock",
-      serviceTag: "Premium service",
+      buttonText: "Get a Quote",
+      serviceTag: "Popular Choice",
     },
     {
-      heading: "Rebuilds Worth Keeping",
+      heading: "Engine Replacement",
       paragraphs: [
-        "For ULEZ-compliant Fords, Euro-6 engines are assets worth preserving. Our rebuild service restores your original unit — machining, renewing and reassembling to specification — so the compliant vehicle you rely on stays exactly that.",
-        "Strip-down findings come photographed, quotes itemise every operation, and rebuild pricing sits beside replacement figures for honest comparison. Whichever route you take, the fault that stopped you gets engineered out permanently.",
+        "When a rebuild isn't the right call, we supply and fit a matched reconditioned or used replacement engine for your exact model.",
+        "Every unit is checked before fitting, and the swap is carried out in-house so your car spends as little time off the road as possible.",
       ],
-      buttonText: "Rebuild Route",
-      serviceTag: "Premium service",
+      buttonText: "Book Today",
+      serviceTag: "Full Service",
     },
     {
-      heading: "Logistics, Solved",
+      heading: "Head Gasket Replacement",
       paragraphs: [
-        "No transporter through city traffic, no crosstown recovery bill, no van blocking a permit bay for weeks. We collect kerbside anywhere from Central London to Croydon at an agreed hour — early starts included.",
-        "Your Ford travels to our workshop, gets its engine fitted and road-tested, and returns to your kerb on the promised day. Updates land by message throughout, so a phone that's busy earning never needs to chase.",
+        "Left unchecked, a failed head gasket can cause serious, expensive engine damage. We diagnose the fault properly, source the correct part for your model.",
+        "Carried out to stop overheating and further deterioration in its tracks.",
       ],
-      buttonText: "Book Kerbside",
-      serviceTag: "Premium service",
+      buttonText: "Enquire Now",
+      serviceTag: "Common Fault",
     },
   ],
-  services: {
-    heading: "Specialist Answers To The Capital's Engine Problems",
-    subheading: "City symptoms have city causes — we treat both.",
-    items: [
-      {
-        heading: "EcoBoost Care For Urban Life",
-        paragraph:
-          "Short hops and cold crawls hit the 1.0 EcoBoost hardest: fuel dilutes the oil, the wet belt swells and sheds, and coolant systems weep under heat cycling. Our EcoBoost service checks all three together — belt condition, oil contamination and cooling integrity — because in London these failures arrive as a package.",
-      },
-      {
-        heading: "Diesels Kept Clean And Compliant",
-        paragraph:
-          "A compliant diesel with a saturated DPF is a contradiction London can't afford. We force regenerations, professionally clean blocked filters, clear soot-choked EGR systems and verify emissions against MOT limits afterwards — keeping Euro-6 Transits and cars both legal for the zone and strong enough to earn within it.",
-      },
-      {
-        heading: "Timing Wear From Endless Restarts",
-        paragraph:
-          "Every restart at every light loads the timing system before oil pressure arrives — and London serves thousands of them weekly. Chains stretch, tensioners tire and wet belts age fast here. We inspect via diagnostics and endoscope, renew what's genuinely worn, and reset your Ford's timing life to zero.",
-      },
-    ],
+  services: [
+    {
+      slug: "timing-chain-replacement",
+      title: "Timing Chain Replacement",
+      description:
+        "A worn or stretched timing chain throws engine timing out and can cause serious internal damage over time. We replace the chain, tensioners and guides to restore smooth, dependable running.",
+    },
+    {
+      slug: "turbo-replacement",
+      title: "Turbo Replacement",
+      description:
+        "Reduced power, unusual noise or excess exhaust smoke often points to a turbo fault. We diagnose the cause accurately and fit a genuine or reconditioned replacement matched to your engine.",
+    },
+    {
+      slug: "engine-diagnostics",
+      title: "Engine Diagnostics",
+      description:
+        "Same-day diagnostic checks identify the exact fault before any work begins, giving you an honest explanation and an accurate quote, not vague guesswork.",
+    },
+    {
+      slug: "engine-repair",
+      title: "Engine Repair",
+      description:
+        "Not every fault needs a full rebuild. Our technicians carry out targeted repairs to get your Range Rover running properly again, quickly and affordably.",
+    },
+    {
+      slug: "engine-swap",
+      title: "Engine Swap",
+      description:
+        "A complete engine swap for vehicles where reconditioning isn't practical, using a correctly matched replacement unit fitted to manufacturer standards.",
+    },
+    {
+      slug: "timing-belt-replacement",
+      title: "Timing Belt Replacement",
+      description:
+        "Scheduled or emergency timing belt replacement carried out at the correct intervals for your specific Range Rover model, helping prevent catastrophic engine failure.",
+    },
+  ],
+  engineServicesMain: {
+    heading: "Full Engine Support for Every London Range Rover Owner",
+    intro:
+      "From timing components to complete engine swaps, our London team covers the full range of engine work.",
+    viewMoreHref: "/services",
   },
   specialistData: {
-    eyebrow: "Capital-Grade Operations",
-    heading: "Organised For London",
+    heading: "London's Trusted Range Rover Engine Specialists",
     paragraphs: [
-      "Serving London well is an operations problem as much as an engineering one, and we've solved both. Collection drivers who know the city's timings and restrictions. Slots planned around loading bays, permit hours and school streets. Engines reserved before collection so workshop time isn't wasted waiting. Message-first communication for customers who can't answer calls mid-shift. The engineering is matched by logistics that respect how this city actually works.",
+      "We work exclusively on Range Rover and Land Rover engines, which means our technicians recognise the specific faults these vehicles develop far quicker than a general garage would. Every job, from a same-day diagnostics check through to a complete engine reconditioning, uses genuine OEM parts and is tested thoroughly before your car is handed back. London customers choose us because we give an honest diagnosis, a fair fixed quote, and a repair we stand behind.",
     ],
     mainBullets: [
-      "Collections timed around restrictions and permits",
-      "Engines allocated before your vehicle arrives",
-      "Message updates built for busy shifts",
+      "Specialists in Range Rover and Land Rover engines only",
+      "Genuine OEM parts used on every repair",
+      "Fixed, transparent quotes before work starts",
+      "Fast turnaround without cutting corners",
+      "Trusted by drivers across Croydon, Ilford and London",
     ],
     sidePanel: {
-      heading: "Instant London Match",
-      chips: ["Transit", "Connect", "Galaxy", "Fiesta"],
-      bullets: [
-        "Plate in, exact engine match out",
-        "Kerbside slot offered in minutes",
-        "Return day fixed at booking",
+      heading: "Why Drivers Choose Us",
+      chips: [
+        "Certified",
+        "Genuine Parts",
+        "Same-Day Diagnostics",
+        "Fixed Pricing",
       ],
-      buttonLabel: "Match Now",
+      bullets: [
+        "Free diagnostics quote on every enquiry",
+        "No hidden costs once work begins",
+        "Collection available across London",
+        "Workshop guarantee on all engine work",
+      ],
+      buttonLabel: "Request a Callback",
     },
-  },
-  whyChooseData: {
-    heading: "The London Difference",
-    introParagraph:
-      "Plenty promise the capital everything. Here's what we actually structure the business to deliver.",
-    bullets: [
-      {
-        title: "Zone Economics",
-        body: "Honest engine-versus-vehicle advice that respects ULEZ realities and your budget.",
-      },
-      {
-        title: "Earning Priority",
-        body: "Couriers, cabs and trades jump the queue because downtime is income.",
-      },
-      {
-        title: "Kerb To Kerb",
-        body: "Full service without you ever needing a driveway or trailer.",
-      },
-      {
-        title: "Documented Everything",
-        body: "Testing, findings and warranty terms in writing, always.",
-      },
-    ],
-  },
-  whatWeOfferData: {
-    heading: "Citywide Engine Care",
-    subheading:
-      "Every Ford engine service the capital needs, coordinated around the way Londoners actually live and work.",
-    paragraph:
-      "Message your registration and postcode with the symptoms; we'll confirm the engine, price your options honestly, and offer a kerbside collection slot anywhere from Ilford to Croydon.",
-    features: [
-      "Pre-7am Collections",
-      "Permit-Bay Friendly",
-      "Trade Card Rates",
-      "WhatsApp Job Updates",
-    ],
-  },
-  reviewsData: {
-    heading: "Street Credibility",
-    subheading:
-      "4.9-star average from working Londoners across Romford, Ilford, Croydon and beyond.",
-    reviews: [
-      {
-        content:
-          "Courier Custom died in Romford on a Monday. Collected from the kerb Tuesday, earning again the following Monday. Exactly as promised.",
-        name: "Kwame A.",
-        meta: "Engine Replacement",
-        rating: 5,
-      },
-      {
-        content:
-          "Private hire Galaxy, 210k miles. They rebuilt it rather than pushing a swap — showed me photos of everything. Proper professionals.",
-        name: "Farid H.",
-        meta: "Engine Rebuild",
-        rating: 5,
-      },
-      {
-        content:
-          "My flower-market Connect kept losing power in traffic. DPF and EGR sorted, runs like new, and the price matched the quote.",
-        name: "Sandra P.",
-        meta: "DPF & EGR",
-        rating: 5,
-      },
-    ],
   },
 };

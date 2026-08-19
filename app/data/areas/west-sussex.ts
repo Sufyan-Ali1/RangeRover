@@ -1,215 +1,177 @@
-import type { Area } from "../types";
+import { Area } from "../types";
 
-export const westSussexArea: Area = {
+export const westSussexArea:Area = {
   id: "west-sussex",
   slug: "west-sussex",
   title: "West Sussex",
-  metaTitle: "Ford Engine Replacement West Sussex | Warranty Fit",
-  metaDescription:
-    "Fast, reliable Ford engine replacement across West Sussex, including Crawley, Worthing and Chichester. Quality engines, warranty. Request your free quote now.",
-  hero: [
+  meta: {
+    metaTitle: "West Sussex Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaDescription:
+      "Range Rover engine supply and fit across West Sussex, covering Crawley, Worthing and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+  },
+  headerData: {
+    title: "West Sussex Engine Supply & Fit Service",
+    subtitle:
+      "Reconditioned Range Rover engines, collected, fitted and delivered.",
+    highlights: [
+      "Reconditioned engines matched to your exact model",
+      "Collection from West Sussex, fitted at our workshop",
+      "Genuine OEM parts used throughout every rebuild",
+      "Clear delivery timescales confirmed before booking",
+    ],
+  },
+  reviews: [
     {
-      eyebrowLabel: " High-Mileage Ford Engine Experts, West Sussex",
-      heading:
-        "West Sussex Ford Engine Replacement Handled Start To Finish By Specialists",
-      introParagraph:
-        " Crawley, Horsham, Worthing and Chichester trust us for reconditioned Ford engines, expert rebuilds and complete supply-and-fit service — with collection and warranty covering the entire job.",
-      ctaButtonText: " Begin Quote",
-      trustBadges: [
-        "Full Supply & Fit",
-        "Countywide Collection",
-        "Bench-Proven Engine Stock",
-        "Parts-And-Labour Guarantee",
-      ],
+      id: 1,
+      name: "Rupert Standish",
+      date: "3 weeks ago",
+      text: '"Arranged collection from Crawley for a reconditioned engine on my Range Rover Sport. Kept me updated at every stage and the fitted engine runs beautifully."',
+      stars: 5,
+    },
+    {
+      id: 2,
+      name: "Imogen Trask",
+      date: "1 month ago",
+      text: '"Was unsure about the distance from Worthing, but collection was arranged quickly and the whole process felt easy to follow."',
+      stars: 5,
+    },
+    {
+      id: 3,
+      name: "Dexter Halloran",
+      date: "5 weeks ago",
+      text: '"Booked engine diagnostics after my Vogue started losing power on the A23. Diagnosis was accurate and the recommended repair matched exactly what it needed."',
+      stars: 5,
+    },
+    {
+      id: 4,
+      name: "Verity Chamberlin",
+      date: "2 months ago",
+      text: '"Head gasket failure on my Discovery meant I needed a specialist that could collect from West Sussex. Straightforward process with honest pricing throughout."',
+      stars: 5,
+    },
+    {
+      id: 5,
+      name: "Solomon Adeyinka",
+      date: "6 weeks ago",
+      text: '"Used engine sourced and fitted for my Evoque after unexpected engine failure. Delivery timescale was exactly as promised and the price was fair."',
+      stars: 5,
     },
   ],
-
-  eyebrow: "Coastal",
-  description:
-    "Our West Sussex customers trust us for reliable Ford engine replacement, backed by genuine parts, expert fitting and nationwide collection.",
-
-  fordEngineFaults: [
+  overview: [
     {
-      heading: "High-Mileage Failure Points We See Most Often",
-      faults: [
-        "Turbo Bearing Wear",
-        "Injector Fatigue",
-        "Chain Stretch",
-        "Wet Belt Breakdown",
-        "DPF Saturation",
-        "EGR Clogging",
-        "Head Gasket Creep",
-        "Oil Pump Wear",
+      overviewHeading:
+        "Reconditioned Range Rover Engines Supplied & Fitted For West Sussex",
+      fullOverviewParagraphs: [
+        "West Sussex drivers don't need a local Range Rover specialist nearby to get proper engine work done. We arrange collection from across the county, carry out the reconditioning or supply-and-fit work at our workshop, then return your vehicle running properly with the whole process managed from start to finish.",
+        "Every reconditioned engine we supply is matched precisely to your model and fitted using genuine OEM parts. Drivers around Crawley and Worthing get the same specialist attention as customers who visit us directly, backed by clear delivery timescales and honest pricing throughout.",
       ],
     },
   ],
   technicalContent: [
     {
-      technicalHeader: "Supply And Fit, Step By Step",
+      technicalHeader: "Before You Arrange Collection",
       technicalParagraph:
-        "Enquiry, diagnosis, fixed quote, collection, engine fitted and tested, vehicle returned, warranty issued. Seven stages, one point of contact, zero chasing — you'll know which stage your Ford is at throughout.",
-    },
-  ],
-  overview: [
-    {
-      eyebrowLabel: "Where Miles Add Up",
-      overviewHeading:
-        "Specialist Support For West Sussex Fords That Never Stop Working",
-      fullOverviewParagraphs: [
-        "Gatwick sets the tempo for much of West Sussex motoring. Airport transfer cars and taxis out of Crawley routinely pass six-figure mileages; parcel vans hammer the M23 and A23 daily; and Horsham commuters stack motorway miles onto school-run short trips. Engines living this life wear predictably — turbos tire, DPFs clog, timing components stretch — and when one finally taps out, the owner usually needed it back yesterday.",
-        "Speed without shortcuts is our answer. The moment you call, registration lookup identifies your exact engine variant; diagnostic evidence confirms what's failed; and you receive a fixed supply-and-fit price with a realistic return date. Your reconditioned unit arrives bench-tested with documented results, gets fitted with fresh fluids and filters by Ford-only technicians, and leaves after a proper road test — warranted as one complete job.",
-      ],
-    },
-  ],
-  supportedModels: [
-    {
-      heading: "Hard-Working Duties Our Engines Go Back Into",
-      models: [
-        "Airport Transfers",
-        "Taxi & Private Hire",
-        "Parcel Logistics",
-        "Trades Fleets",
-        "Motorway Commuting",
-        "School-Run Duty",
-        "Rural Chichester Miles",
-        "Weekend Towing",
-      ],
+        "Unsure whether your Range Rover needs a full engine replacement or a smaller repair? A diagnostic check confirms the actual fault first, so collection and fitting only go ahead once you know exactly what work is required.",
     },
   ],
   premiumServices: [
     {
-      heading: "Engines For Working Cars",
+      heading: "Reconditioned Engine Supply & Fit",
       paragraphs: [
-        "Six-figure-mileage Fords need engines built for a second six figures. Our reconditioned units get exactly that treatment: complete strip-down, measurement against factory tolerances, and renewal of every bearing, seal, gasket and timing component showing wear.",
-        "Bench testing then proves compression and oil pressure before dispatch, with figures recorded on paperwork that travels with the engine. Taxi drivers and fleet owners across Crawley choose us because that proof survives scrutiny.",
+        "We source a reconditioned engine matched to your Range Rover's exact model, then arrange collection from West Sussex for fitting at our workshop.",
+        "Every unit is genuine OEM specification, tested before dispatch, and fitted by technicians who specialise in these vehicles.",
       ],
-      buttonText: "Engine Options",
-      serviceTag: "Premium service",
+      buttonText: "Get Supply Quote",
+      serviceTag: "01",
     },
     {
-      heading: "Rebuilds That Pay Back",
+      heading: "Engine Rebuild & Reconditioning",
       paragraphs: [
-        "Is it cheaper to rebuild or replace? Genuinely, it depends — and we'll show you the arithmetic. Rebuilds win when damage is localised and the block is sound; replacement wins when wear is everywhere at once.",
-        "Every rebuild quote arrives beside a replacement price for the same vehicle, itemised identically, so the comparison is honest. Whichever you choose, the underlying fault gets engineered out — not painted over.",
+        "Prefer to keep your existing engine rather than swap it out? We carry out full strip-down reconditioning, replacing worn components and restoring correct tolerances.",
+        "Your vehicle is collected from West Sussex and returned once complete.",
       ],
-      buttonText: "Compare Costs",
-      serviceTag: "Premium service",
+      buttonText: "Get Rebuild Quote",
+      serviceTag: "02",
     },
     {
-      heading: "Downtime Kept Short",
+      heading: "Diagnostics Before Collection",
       paragraphs: [
-        "For working vehicles, our scheduling starts from your deadline and works backwards. Collection slots early and late, engines reserved before your Ford even arrives, and fitting bays held so commercial jobs never queue behind leisurely ones.",
-        "Progress updates reach you at every stage — collected, stripped, fitted, tested, returning — so you can promise customers dates with confidence. Most straightforward replacements are turned around within the working week.",
+        "A proper diagnostic check confirms the real fault before any collection is arranged, so you know exactly what work your Range Rover needs.",
+        "Clear pricing provided before committing to anything.",
       ],
-      buttonText: "Priority Booking",
-      serviceTag: "Premium service",
+      buttonText: "Book Diagnostics",
+      serviceTag: "03",
     },
   ],
-  services: {
-    heading: "Answers For The Faults High Mileage Brings",
-    subheading: "Diagnosis grounded in patterns we've seen hundreds of times.",
-    items: [
-      {
-        heading: "Transit Power Loss Explained",
-        paragraph:
-          "A Transit that's lost its pull usually has one of four culprits: a tired turbo or sticking actuator, a saturated DPF forcing limp mode, worn injectors starving cylinders, or a clogged EGR upsetting airflow. We test each systematically rather than guessing, then fix the confirmed cause — restoring the payload-hauling grunt you bought the van for.",
-      },
-      {
-        heading: "Timing Chains: When To Act",
-        paragraph:
-          "Chains are sold as lifetime parts, but six-figure mileages rewrite that promise. Cold-start rattle, timing correction codes, or metal glitter in the oil all say the chain and tensioner are due. We inspect wear through diagnostics and endoscope before recommending renewal — and when it's genuinely fine, we'll tell you that instead.",
-      },
-      {
-        heading: "Head Gaskets Under Sustained Load",
-        paragraph:
-          "Motorway-heavy Fords run hot for hours, and marginal head gaskets eventually surrender to that duty cycle. Combustion gas testing and pressure checks confirm failure beyond doubt; the repair then includes head skimming, crack testing and genuine gasket sets torqued to sequence — done once, properly, with warranty on the outcome.",
-      },
-    ],
+  services: [
+    {
+      slug: "timing-chain-replacement",
+      title: "Timing Chain Replacement",
+      description:
+        "A worn timing chain causes rattling, misfires, and long-term wear if left unaddressed. We replace chains, tensioners, and guides with genuine parts once your vehicle arrives at our workshop.",
+    },
+    {
+      slug: "timing-belt-replacement",
+      title: "Timing Belt Replacement",
+      description:
+        "On belt-driven models, we replace the belt, tensioner, and water pump together where appropriate, following manufacturer intervals to reduce the risk of failure.",
+    },
+    {
+      slug: "turbo-replacement",
+      title: "Turbo Replacement",
+      description:
+        "Loss of power, whining noises, or excessive smoke often point to turbo failure. We source and fit replacement turbos matched precisely to your engine's specification.",
+    },
+    {
+      slug: "head-gasket-replacement",
+      title: "Head Gasket Replacement",
+      description:
+        "A failed head gasket left unresolved leads to overheating and coolant contamination. We replace gaskets correctly first time and check surrounding components carefully.",
+    },
+    {
+      slug: "engine-repair",
+      title: "Engine Repair",
+      description:
+        "Not every issue requires a full rebuild or replacement. We assess whether a targeted repair can resolve the fault properly, saving unnecessary cost.",
+    },
+    {
+      slug: "engine-swap",
+      title: "Engine Swap",
+      description:
+        "Considering a full engine swap rather than a rebuild? We manage sourcing, collection, fitting, and calibration from start to finish.",
+    },
+  ],
+  engineServicesMain: {
+    heading: "Complete Engine & Drivetrain Support For West Sussex Owners",
+    intro:
+      "From timing components to a full engine replacement, we handle the essential work Range Rover and Land Rover engines actually need, with collection arranged from across West Sussex.",
+    viewMoreHref: "/services",
   },
   specialistData: {
-    eyebrow: "Volume Breeds Judgement",
-    heading: "Pattern Recognition Pays",
+    heading: "Trusted Beyond Our Own Workshop Doors",
     paragraphs: [
-      "Handle enough high-mileage Fords and diagnosis becomes pattern-matching backed by evidence. We've learned which Gatwick-run Galaxys eat turbos at predictable intervals, which EcoBlue Transits show injector fatigue first, and which 'catastrophic' symptoms are actually a sensor. That library of prior cases means West Sussex customers get faster answers, fewer exploratory charges, and quotes that reflect the true fault — because we've usually met their exact problem many times before.",
+      "Distance from our workshop shouldn't stand between West Sussex drivers and proper specialist engine work. We arrange collection and delivery so the process feels just as straightforward as booking locally, with the same manufacturer-approved procedures and genuine OEM parts used on every job. Clear timescales, transparent pricing, and honest communication mean you always know where your vehicle is in the process, whether it's still on collection or already back on the road.",
     ],
     mainBullets: [
-      "Hundreds of high-mileage cases informing diagnosis",
-      "Known failure intervals tracked by variant",
-      "Exploratory guesswork charged to nobody",
+      "Collection and delivery arranged across West Sussex",
+      "Genuine OEM parts fitted as standard on every job",
+      "Transparent, itemised quotes before collection is booked",
+      "Most rebuilds completed within days of arrival",
+      "Specialist focus on Range Rover and Land Rover only",
     ],
     sidePanel: {
-      heading: "Fast-Track Enquiry",
-      chips: ["Taxi", "Courier", "Trade", "Private"],
-      bullets: [
-        "Priority lanes for working vehicles",
-        "Registration in, matched engine out",
-        "Return dates confirmed at booking",
+      heading: "Collection & Delivery, Explained",
+      chips: [
+        "Tracked Progress",
+        "Fixed Timescales",
+        "No Hidden Costs",
       ],
-      buttonLabel: "Jump Queue",
+      bullets: [
+        "Collection arranged directly from your West Sussex address",
+        "Fixed delivery timescale confirmed before work begins",
+        "Vehicle returned fully tested once fitting is complete",
+      ],
+      buttonLabel: "Book My Collection",
     },
-  },
-  whyChooseData: {
-    heading: "Why We Win Comparisons",
-    introParagraph:
-      "Shop around — we encourage it. These are the differences West Sussex owners report when they do.",
-    bullets: [
-      {
-        title: "Realistic Dates",
-        body: "Return timelines we actually hit, planned around your working week.",
-      },
-      {
-        title: "Proof Culture",
-        body: "Diagnosis, engine condition and completed work all evidenced in writing.",
-      },
-      {
-        title: "Duty-Matched Advice",
-        body: "Recommendations shaped by how your Ford earns its keep.",
-      },
-      {
-        title: "One-Job Warranty",
-        body: "Engine and labour warranted together, claims handled without friction.",
-      },
-    ],
-  },
-  whatWeOfferData: {
-    heading: "All Bases Covered",
-    subheading:
-      "From high-mileage taxis to family runabouts, every Ford engine problem finds its solution here.",
-    paragraph:
-      "Text or call with your registration and symptoms; we'll come back fast with the fault, the options and the numbers — then collect anywhere from Crawley to the Chichester lanes.",
-    features: [
-      "Early-Morning Collections",
-      "Live Job Tracking",
-      "Taxi & Fleet Rates",
-      "Engines Held On Reserve",
-    ],
-  },
-  reviewsData: {
-    heading: "Working Verdicts",
-    subheading:
-      "Rated 4.9 by drivers and operators across Crawley, Horsham, Worthing and Chichester.",
-    reviews: [
-      {
-        content:
-          "My airport-run Galaxy hit 180k and the engine went. Replacement fitted in five days flat — I barely lost any bookings.",
-        name: "Imran S.",
-        meta: "Engine Replacement",
-        rating: 5,
-      },
-      {
-        content:
-          "They compared rebuild against replacement for my Horsham commuter Focus, numbers side by side. Chose the rebuild, zero regrets since.",
-        name: "Nadia R.",
-        meta: "Engine Rebuild",
-        rating: 5,
-      },
-      {
-        content:
-          "Builder's Transit down near Chichester. Turned out injectors, not the engine everyone else condemned. Saved me thousands, earned my loyalty.",
-        name: "Craig B.",
-        meta: "Engine Repair",
-        rating: 5,
-      },
-    ],
   },
 };

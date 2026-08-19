@@ -28,15 +28,14 @@ export async function generateMetadata({
       title: "Area Not Found | Range Rover Engines UK",
     };
   }
+  const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 
   return {
-    metadataBase: new URL(
-      process.env.SITE_URL || "https://www.rangerover.co.uk",
-    ),
+    metadataBase: new URL(siteUrl),
     title: area.meta.metaTitle,
     description: area.meta.metaDescription,
     alternates: {
-      canonical: `${process.env.SITE_URL || "https://www.rangerover.co.uk"}/areas/${area.slug}`,
+      canonical: `/areas/${area.slug}`,
     },
   };
 }
@@ -63,7 +62,7 @@ export default async function AreaDetailPage({ params }: PageProps) {
         subtitle={area.headerData?.subtitle}
         highlights={area.headerData?.highlights}
       />
-      <Reviews reviews={area.reviews} />
+
       <div className="mx-auto w-full max-w-[1728px] space-y-12 px-6 py-16 sm:px-10 xl:px-[101px] xl:py-20">
         <section className="rounded-2xl bg-slate-50 p-8 sm:p-10 border border-slate-200 space-y-8">
           <AreaOverview
@@ -116,7 +115,7 @@ export default async function AreaDetailPage({ params }: PageProps) {
           <AreaRangeRoverSpecialist data={area.specialistData} />
         )}
       </div>
-
+      <Reviews reviews={area.reviews} />
       <AreaMapAndLinks currentArea={area} />
       <Footer />
     </div>

@@ -10,6 +10,7 @@ import { AreaRangeRoverSpecialist } from "@/app/components/Areas/AreaRangeRoverS
 import Reviews from "@/app/components/Reviews";
 import { AreaMapAndLinks } from "@/app/components/Areas/AreaMapAndLinks";
 import Footer from "@/app/components/Footer";
+import EngineServices from "@/app/components/EngineServices";
 
 interface PageProps {
   params: Promise<{
@@ -79,42 +80,16 @@ export default async function AreaDetailPage({ params }: PageProps) {
           <PremiumServiceCards cards={area.premiumServices} />
         )}
 
-        <section className="space-y-8">
-          <div className="text-center sm:text-left space-y-2">
-            <h2 className="line-clamp-2 text-3xl font-black text-slate-900">
-              {area.engineServicesMain?.heading}
-            </h2>
-            <p className="line-clamp-3 text-slate-600 text-sm">
-              {area.engineServicesMain?.intro}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {area.services?.map((service, idx) => (
-              <div
-                key={idx}
-                className="group relative rounded-2xl bg-gradient-to-br from-white via-slate-50/60 to-slate-100/70 p-6 border border-slate-200/90 hover:border-green-500/40 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full overflow-hidden"
-              >
-                {/* Permanent subtle gradient shade background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-500/[0.03] to-green-500/[0.04] pointer-events-none" />
-
-                <div className="relative z-10 h-14 flex items-center mb-4">
-                  <h3 className="line-clamp-2 text-lg font-bold text-slate-900 group-hover:text-[#11633A] transition-colors">
-                    {service.title}
-                  </h3>
-                </div>
-                <p className="relative z-10 line-clamp-4 text-slate-600 text-sm leading-relaxed pt-4 border-t border-slate-200/80 flex-1">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {area.specialistData && (
           <AreaRangeRoverSpecialist data={area.specialistData} />
         )}
       </div>
+      <EngineServices
+        services={area.services}
+        heading={area.engineServicesMain?.heading}
+        intro={area.engineServicesMain?.intro}
+        viewMoreHref={area.engineServicesMain?.viewMoreHref}
+      />
       <Reviews reviews={area.reviews} />
       <AreaMapAndLinks currentArea={area} />
       <Footer />

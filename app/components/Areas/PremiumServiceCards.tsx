@@ -61,7 +61,7 @@ export function PremiumServiceCards({ cards }: PremiumServiceCardsProps) {
 
                   <div className="mt-6 pt-2">
                     <Link
-                      href="/contact"
+                      href="/get-quote"
                       className="inline-flex h-11 w-full items-center justify-center rounded-2xl bg-[#11633A] px-5 text-sm font-semibold text-white shadow-sm ring-1 ring-black/5 hover:bg-[#0e512f] transition-colors whitespace-nowrap"
                     >
                       Get Quote

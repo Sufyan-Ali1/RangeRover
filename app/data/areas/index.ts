@@ -17,6 +17,16 @@ import { hertfordshireArea } from "./hertfordshire";
 import { gloucestershireArea } from "./gloucestershire";
 import { suffolkArea } from "./suffolk";
 import { surreyArea } from "./surrey";
+import { warwickshireArea } from "./warwickshire";
+import { lincolnshireArea } from "./lincolnshire";
+import { rutlandArea } from "./rutland";
+import { isleOfWightArea } from "./isleOfWight";
+import { dorsetArea } from "./dorset";
+import { westMidlandsArea } from "./westMidlands";
+import { cheshireArea } from "./cheshire";
+import { greaterManchesterArea } from "./greaterManchester";
+import { westYorkshireArea } from "./westYorkshire";
+import { eastRidingOfYorkshireArea } from "./eastRidingOfYorkshire";
 
 export const areasData = [
   oxfordshireArea,
@@ -38,4 +48,14 @@ export const areasData = [
   suffolkArea,
   surreyArea,
   wiltshireArea,
+  rutlandArea,
+  lincolnshireArea,
+  warwickshireArea,
+  isleOfWightArea,
+  dorsetArea,
+  westMidlandsArea,
+  cheshireArea,
+  greaterManchesterArea,
+  westYorkshireArea,
+  eastRidingOfYorkshireArea,
 ];

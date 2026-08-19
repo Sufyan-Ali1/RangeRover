@@ -6,14 +6,18 @@ import VideoSection from "../components/VideoSection";
 import AuthorityPrecision from "../components/AuthorityPrecision";
 import AuthorityNationwide from "../components/AuthorityNationwide";
 
-
 import { aboutPagePrecision } from "../data/about/AboutPrecision";
 import { authorityNationwide } from "../data/about/Nationwide";
 
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "About Us | Range Rover Engine Specialists in Essex",
   description:
     "Meet the JLR-trained team behind our Range Rover engine specialists workshop in Grays, Essex, and our honest, no-nonsense approach to engine care. Learn more.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

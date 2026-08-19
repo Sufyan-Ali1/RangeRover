@@ -3,9 +3,15 @@ import Footer from "../components/Footer";
 import VideoSection from "../components/VideoSection";
 import Image from "next/image";
 
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Range Rover Engine Rebuild Gallery | Our Workshop",
-  description: "Browse our Range Rover engine rebuild gallery, showcasing strip-downs, precision machining and finished rebuilds from our Essex workshop. View the photos.",
+  description:
+    "Browse our Range Rover engine rebuild gallery, showcasing strip-downs, precision machining and finished rebuilds from our Essex workshop. View the photos.",
+  alternates: {
+    canonical: "/gallery",
+  },
 };
 
 const images = Array.from({ length: 20 }, (_, i) => ({
@@ -27,7 +33,10 @@ export default function GalleryPage() {
 
           <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 xl:columns-4">
             {images.map((img) => (
-              <div key={img.src} className="mb-4 overflow-hidden rounded-xl break-inside-avoid">
+              <div
+                key={img.src}
+                className="mb-4 overflow-hidden rounded-xl break-inside-avoid"
+              >
                 <Image
                   src={img.src}
                   alt={img.alt}

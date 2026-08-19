@@ -30,7 +30,7 @@ function slugToTitle(slug: string) {
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 }
-
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const data = getServiceData(slug);
@@ -38,6 +38,10 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `${data?.meta.title}`,
     description: `${data?.meta.description}`,
+    metadataBase: new URL(siteUrl),
+    alternates: {
+      canonical: `/services/${slug}`,
+    },
   };
 }
 

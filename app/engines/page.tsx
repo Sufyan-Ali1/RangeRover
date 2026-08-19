@@ -46,10 +46,15 @@ function mapTableRows(
   }));
 }
 
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Engines | Range Rover Engines",
   description:
     "Browse premium Range Rover and Land Rover engine solutions by brand.",
+    alternates: {
+      canonical: "/engines",
+    }
 };
 
 export default function EnginesPage() {

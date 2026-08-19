@@ -6,9 +6,9 @@ export const greaterManchesterArea: Area = {
   title: "Greater Manchester",
   meta: {
     metaTitle:
-      "Greater Manchester Range Rover Engine Supply & Delivery | Fast, Trusted",
+      "Range Rover Reconditioned Engine Supply | Manchester",
     metaDescription:
-      "Range Rover engine supply and delivery across Greater Manchester, covering Manchester, Salford and surrounding areas. Tested engines, code-matched, clear pricing. Free quote today.",
+      "Reconditioned Range Rover engine supply for Greater Manchester, matched to your exact engine code, tested for reliability and warranty covered. Enquire now.",
   },
   headerData: {
     title: "Reconditioned Engines Delivered To Greater Manchester",

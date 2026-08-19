@@ -5,9 +5,9 @@ export const norfolkArea:Area = {
   slug: "norfolk",
   title: "Norfolk",
   meta: {
-    metaTitle: "Norfolk Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Range Rover Reconditioned Engine Supply & Fit | Norfolk",
     metaDescription:
-      "Range Rover engine supply and fit across Norfolk, covering Norwich, Great Yarmouth and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Reconditioned Range Rover engine supply & fit across Norfolk, backed by engine-code matching, full testing and warranty cover. Enquire today.",
   },
   headerData: {
     title: "Norfolk Engine Supply & Fit Service",

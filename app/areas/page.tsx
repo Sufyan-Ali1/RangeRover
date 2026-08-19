@@ -22,11 +22,11 @@ import { headerData } from "../data/areas/main/HeroData";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL || "https://www.rangerover.co.uk"),
-  title: "Range Rover Engine Rebuild Across the UK | Find Your Area",
+  title: "Trusted Range Rover Engine Specialist | UK-Wide Supply",
   description:
-    "Range Rover Engines UK offers fast, warrantied engine rebuilds nationwide. Browse your county below for tested engines, expert fitting.",
+    "Trusted Range Rover engine specialist: tested, reconditioned & used engines, engine-code matching and warranty, dispatched UK-wide. Find your area & quote.",
   alternates: {
-    canonical: `${process.env.SITE_URL || "https://www.rangerover.co.uk"}/areas`,
+    canonical: `/areas`,
   },
 };
 
@@ -55,7 +55,7 @@ export default function AreasPage() {
           </div>
         </div>
       </div>
-      
+
       <div className="w-full bg-white">
         <NationwideSupport data={servicesNationwideSupport} />
       </div>

@@ -5,9 +5,9 @@ export const eastSussexArea: Area = {
   slug: "east-sussex",
   title: "East Sussex",
   meta: {
-    metaTitle: "East Sussex Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Range Rover Engine Supply & Fit | East Sussex Experts",
     metaDescription:
-      "Range Rover engine supply and fit across East Sussex, covering Brighton, Hastings and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "East Sussex Range Rover engine supply & fit, reconditioned to a high standard with engine-code matching, full testing and warranty. Get a free quote today.",
   },
   headerData: {
     title: "East Sussex Engine Supply & Fit Service",

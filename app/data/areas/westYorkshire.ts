@@ -6,9 +6,9 @@ export const westYorkshireArea: Area = {
   title: "West Yorkshire",
   meta: {
     metaTitle:
-      "West Yorkshire Range Rover Engine Supply & Delivery | Fast, Trusted",
+      "Range Rover Reconditioned Engine Supply | W. Yorkshire",
     metaDescription:
-      "Range Rover engine supply and delivery across West Yorkshire, covering Leeds, Bradford and surrounding areas. Tested engines, code-matched, clear pricing. Free quote today.",
+      "West Yorkshire Range Rover owners can order a reconditioned, engine-code matched unit, fully tested and warranty covered. Enquire for a quote today.",
   },
   headerData: {
     title: "Reconditioned Engines Delivered To West Yorkshire",

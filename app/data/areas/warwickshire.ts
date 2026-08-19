@@ -5,9 +5,9 @@ export const warwickshireArea: Area = {
   slug: "warwickshire",
   title: "Warwickshire",
   meta: {
-    metaTitle: "Warwickshire Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Range Rover Engine Supply & Fit | Warwickshire Experts",
     metaDescription:
-      "Range Rover engine supply and fit across Warwickshire, covering Warwick, Nuneaton and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Warwickshire Range Rover engine supply & fit, reconditioned and code-matched to your vehicle, fully tested and warranty-backed. Enquire today.",
   },
   headerData: {
     title: "Warwickshire Engine Supply & Fit Service",

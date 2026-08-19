@@ -5,9 +5,9 @@ export const wiltshireArea:Area = {
   slug: "wiltshire",
   title: "Wiltshire",
   meta: {
-    metaTitle: "Wiltshire Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Reconditioned Range Rover Engine Supply & Fit Wiltshire",
     metaDescription:
-      "Range Rover engine supply and fit across Wiltshire, covering Swindon, Salisbury and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Wiltshire customers get reconditioned Range Rover engine supply & fit with accurate engine-code matching and warranty cover. UK-wide dispatch. Enquire now.",
   },
   headerData: {
     title: "Wiltshire Engine Supply & Fit Service",

@@ -6,9 +6,9 @@ export const londonArea: Area = {
   slug: "london",
 
   meta: {
-    metaTitle: "Range Rover Engine Replacement London | Fast, Trusted Fit",
+    metaTitle: "Range Rover Engine Reconditioning | London Specialist",
     metaDescription:
-      "Range Rover engine replacement across London, covering Croydon, Ilford and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Range Rover engine reconditioning for London drivers. Every engine is code-matched, tested and warranty-backed, with fitting support available. Enquire today.",
   },
   headerData: {
     title: "Range Rover Engine Experts, London",
@@ -60,8 +60,7 @@ export const londonArea: Area = {
   ],
   overview: [
     {
-      overviewHeading:
-        "London's Specialist Range Rover Engine Workshop",
+      overviewHeading: "London's Specialist Range Rover Engine Workshop",
       fullOverviewParagraphs: [
         "If your Range Rover or Land Rover has developed a serious engine fault, you need a team that actually understands these vehicles, not a general mechanic guessing at the problem. We work exclusively on Range Rover and Land Rover engines, covering everything from diagnostics to full reconditioning and replacement.",
         "We serve drivers across London and the surrounding areas, with regular customers travelling in from Croydon, Ilford and beyond. Every engine that leaves our workshop has been rebuilt, repaired or replaced using genuine parts and tested thoroughly before collection.",
@@ -70,7 +69,8 @@ export const londonArea: Area = {
   ],
   technicalContent: [
     {
-      technicalHeader: "Wondering what a London engine reconditioning job actually costs?",
+      technicalHeader:
+        "Wondering what a London engine reconditioning job actually costs?",
       technicalParagraph:
         "Pricing depends on the model, the extent of the fault and whether a rebuild or full replacement is needed. We provide a fixed quote after diagnostics, so you know the exact cost before any work begins.",
     },

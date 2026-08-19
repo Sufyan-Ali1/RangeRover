@@ -5,10 +5,9 @@ export const eastRidingOfYorkshireArea: Area = {
   slug: "east-riding-of-yorkshire",
   title: "East Riding of Yorkshire",
   meta: {
-    metaTitle:
-      "East Riding Range Rover Engine Supply & Delivery | Fast, Trusted",
+    metaTitle: "Range Rover Engine Supply | East Riding of Yorkshire",
     metaDescription:
-      "Range Rover engine supply and delivery across the East Riding of Yorkshire, covering Beverley, Hull and surrounding areas. Tested engines, code-matched, clear pricing. Free quote today.",
+      "Reconditioned Range Rover engine supply for East Riding of Yorkshire, engine-code matched, thoroughly tested and warranty-backed. Get your quote today.",
   },
   headerData: {
     title: "Reconditioned Engines Delivered To East Riding of Yorkshire",

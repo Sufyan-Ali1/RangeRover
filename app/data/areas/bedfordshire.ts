@@ -6,9 +6,9 @@ export const bedfordshireArea: Area = {
   title: "Bedfordshire",
   meta: {
     metaTitle:
-      "Range Rover Engine Replacement Bedfordshire | Fast, Trusted Fit",
+      "Trusted Range Rover Engine Reconditioning Bedfordshire",
     metaDescription:
-      "Range Rover engine replacement across Bedfordshire, covering Luton, Bedford and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Range Rover engine reconditioning for Bedfordshire, backed by 20+ years' expertise, correct engine-code fitment and warranty cover. Compare options today.",
   },
   headerData: {
     title: "Bedfordshire Range Rover Engine Care",

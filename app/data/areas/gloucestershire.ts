@@ -5,9 +5,9 @@ export const gloucestershireArea: Area = {
   slug: "gloucestershire",
   title: "Gloucestershire",
   meta: {
-    metaTitle: "Gloucestershire Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Range Rover Engine Supply & Fit | Gloucestershire",
     metaDescription:
-      "Range Rover engine supply and fit across Gloucestershire, covering Gloucester, Cheltenham and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Gloucestershire Range Rover reconditioned engine supply & fit, with 20+ years matching engine codes correctly and offering warranty. Check compatibility now.",
   },
   headerData: {
     title: "Gloucestershire Engine Supply & Fit Service",

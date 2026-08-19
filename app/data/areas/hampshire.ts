@@ -5,9 +5,9 @@ export const hampshireArea: Area = {
   slug: "hampshire",
   title: "Hampshire",
   meta: {
-    metaTitle: "Hampshire Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Reconditioned Range Rover Engine Supply & Fit Hampshire",
     metaDescription:
-      "Range Rover engine supply and fit across Hampshire, covering Southampton, Portsmouth and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Hampshire drivers rely on us for reconditioned Range Rover engine supply & fit, with careful engine-code matching and warranty included. Find your engine today.",
   },
   headerData: {
     title: "Hampshire Engine Supply & Fit Service",

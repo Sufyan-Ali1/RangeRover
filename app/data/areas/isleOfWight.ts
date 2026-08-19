@@ -6,9 +6,9 @@ export const isleOfWightArea: Area = {
   slug: "isle-of-wight",
   title: "Isle of Wight",
   meta: {
-    metaTitle: "Isle of Wight Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Range Rover Engine Supply & Fit | Isle of Wight Experts",
     metaDescription:
-      "Range Rover engine supply and fit across the Isle of Wight, covering Newport, Ryde and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Reconditioned Range Rover engine supply & fit for the Isle of Wight, engine-code matched, tested and warranty-backed, fitting support available. Enquire today.",
   },
   headerData: {
     title: "Isle of Wight Engine Supply & Fit Service",

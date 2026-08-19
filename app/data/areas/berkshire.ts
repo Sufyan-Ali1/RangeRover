@@ -5,9 +5,9 @@ export const berkshireArea:Area = {
   slug: "berkshire",
   title: "Berkshire",
   meta: {
-    metaTitle: "Range Rover Engine Replacement Berkshire | Fast, Trusted Fit",
+    metaTitle: "Trusted Range Rover Engine Reconditioning | Berkshire",
     metaDescription:
-      "Range Rover engine replacement across Berkshire, covering Reading, Slough and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Range Rover engine reconditioning in Berkshire from specialists who match your engine code, test every rebuild and include warranty. Get a free quote.",
   },
   headerData: {
     title: "Berkshire Range Rover Engine Specialists",

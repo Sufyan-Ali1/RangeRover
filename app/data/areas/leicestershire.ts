@@ -5,9 +5,9 @@ export const leicestershireArea: Area = {
   slug: "leicestershire",
   title: "Leicestershire",
   meta: {
-    metaTitle: "Leicestershire Range Rover Engine Supply & Fit | Fast, Trusted",
+    metaTitle: "Range Rover Engine Supply & Fit | Leicestershire",
     metaDescription:
-      "Range Rover engine supply and fit across Leicestershire, covering Leicester, Loughborough and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Reconditioned Range Rover engine supply & fit for Leicestershire, sourced by engine code, tested for reliability and warranty covered. Get your quote.",
   },
   headerData: {
     title: "Leicestershire Engine Supply & Fit Service",

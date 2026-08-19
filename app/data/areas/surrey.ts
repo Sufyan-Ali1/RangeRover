@@ -5,9 +5,9 @@ export const surreyArea:Area = {
   slug: "surrey",
   title: "Surrey",
   meta: {
-    metaTitle: "Range Rover Engine Replacement Surrey | Fast, Trusted Fit",
+    metaTitle: "Expert Range Rover Engine Reconditioning | Surrey",
     metaDescription:
-      "Range Rover engine replacement across Surrey, covering Guildford, Woking and surrounding areas. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Surrey Range Rover owners trust our engine reconditioning: precise engine-code matching, thorough testing and warranty cover as standard. Find your engine now.",
   },
   headerData: {
     title: "Surrey's Range Rover Engine Specialists",

@@ -5,9 +5,9 @@ export const essexArea: Area = {
   slug: "essex",
   title: "Essex",
   meta: {
-    metaTitle: "Ford Engine Replacement Essex | Fast, Trusted Fit",
+    metaTitle: "Reconditioned Range Rover Engines | Essex Specialist",
     metaDescription:
-      "Ford engine replacement across Essex, covering Chelmsford, Colchester and Basildon. Tested engines, expert fitting, clear pricing. Free quote today.",
+      "Range Rover engine reconditioning for Essex, with engine-code matching, full testing and warranty included, plus UK-wide dispatch. Get your free quote.",
   },
   headerData: {
     title: "Range Rover Engine Specialists, Essex",

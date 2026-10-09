@@ -93,7 +93,7 @@ export const timingChainReplacementData: EngineRebuildData = {
       title: "Jaguar Engines",
       description:
         "Sharing engineering with Land Rover, many Jaguar models suffer similar timing chain wear. Our technicians apply the same specialist diagnostic approach to identify and resolve chain-related faults quickly and accurately. ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

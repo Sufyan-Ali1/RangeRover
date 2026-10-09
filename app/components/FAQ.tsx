@@ -1,6 +1,6 @@
 import type { Faq } from "../data/faqs";
 
-export default function FAQ({ faqs }: { faqs: Faq[] | undefined }) {
+export default function FAQ({ faqs, accordionName }: { faqs: Faq[] | undefined; accordionName?: string }) {
   return (
     <section className="w-full bg-[#F3F4F6]">
       <div className="mx-auto w-full max-w-[1728px] px-6 py-16 sm:px-10 xl:px-[101px] xl:py-20">
@@ -27,6 +27,8 @@ export default function FAQ({ faqs }: { faqs: Faq[] | undefined }) {
               {faqs?.map((faq, i) => (
                 <details
                   key={faq.q}
+                  name={accordionName}
+                  open={accordionName ? i === 0 : undefined}
                   className="group rounded-[10px] border border-[#4CA66B] bg-white open:bg-[#ECFFF3]"
                 >
                   <summary className="flex min-h-[88px] cursor-pointer list-none items-center gap-3 px-4 py-5 sm:min-h-[104px] sm:gap-8 sm:px-8 sm:py-7">

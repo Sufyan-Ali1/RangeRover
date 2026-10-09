@@ -92,7 +92,7 @@ export const engineSwapData: EngineRebuildData = {
       title: "Jaguar Engine Swaps",
       description:
         "Jaguar models sharing engine platforms with Land Rover and Range Rover benefit from the same sourcing knowledge and remapping expertise, including guidance on any IVA testing implications.",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

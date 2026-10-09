@@ -92,7 +92,7 @@ export const timingBeltReplacementData: EngineRebuildData = {
       title: "Jaguar Engines",
       description:
         "Certain Jaguar diesel engines sharing platforms with Land Rover also use belt-driven timing systems. Our specialists identify the correct service requirement for your specific engine.",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

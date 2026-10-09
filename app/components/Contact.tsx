@@ -1,9 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { submitContact, type ContactPayload } from "../actions/submitContact";
-import { lookupVehicle, type VehicleResult } from "../actions/lookupVehicle";
+
+function randomMath() {
+  const a = Math.floor(Math.random() * 10) + 1;
+  const b = Math.floor(Math.random() * 10) + 1;
+  return { a, b, answer: a + b };
+}
 
 type FormFields = Omit<ContactPayload, "browser">;
 type FieldErrors = Partial<Record<keyof FormFields, string>>;
@@ -15,10 +20,10 @@ function validate(form: FormFields): FieldErrors {
     errors.name = "Full name is required.";
   else if (form.name.trim().length < 2)
     errors.name = "Name is too short.";
-  else if (!/^[A-Za-z\s'\-]+$/.test(form.name))
-    errors.name = "Name can only contain letters.";
+  else if (!/^[A-Za-z0-9 ]+$/.test(form.name))
+    errors.name = "Name can only contain letters, numbers and spaces.";
 
-  const phoneDigits = form.phone.replace(/\D/g, "").replace(/^1/, "");
+  const phoneDigits = form.phone.replace(/\D/g, "");
   if (!phoneDigits)
     errors.phone = "Phone number is required.";
   else if (phoneDigits.length < 11)
@@ -34,7 +39,9 @@ function validate(form: FormFields): FieldErrors {
   else if (!/^[A-Z0-9]{1,8}$/.test(form.reg))
     errors.reg = "Registration must be alphanumeric only (max 8 characters).";
 
-  if (form.postcode && !/^[A-Z0-9][A-Z0-9\s]{1,7}$/i.test(form.postcode.trim()))
+  if (!form.postcode.trim())
+    errors.postcode = "Postcode is required.";
+  else if (!/^[A-Z0-9][A-Z0-9\s]{1,7}$/i.test(form.postcode.trim()))
     errors.postcode = "Enter a valid postcode.";
 
   if (!form.message.trim())
@@ -58,6 +65,18 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 export default function Contact() {
   const router = useRouter();
+  const [math, setMath] = useState({ a: 3, b: 5, answer: 8 });
+  const [captcha, setCaptcha] = useState("");
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setMath(randomMath()));
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  const refreshMath = () => {
+    setMath(randomMath());
+    setCaptcha("");
+  };
   const [form, setForm] = useState<FormFields>({
     name: "", phone: "", email: "", reg: "", postcode: "", message: "",
   });
@@ -69,7 +88,9 @@ export default function Contact() {
     const { name, value } = e.target;
     let filtered = value;
 
-    if (name === "reg")
+    if (name === "name")
+      filtered = value.replace(/[^A-Za-z0-9 ]/g, "");
+    else if (name === "reg")
       filtered = value.replace(/[^A-Za-z0-9]/g, "").toUpperCase().slice(0, 8);
     else if (name === "phone")
       filtered = value.replace(/\D/g, "").slice(0, 15);
@@ -87,6 +108,11 @@ export default function Contact() {
     const errors = validate(form);
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors);
+      return;
+    }
+    if (!captcha.trim() || Number(captcha) !== math.answer) {
+      setSubmitError("Incorrect answer to the verification question. Please try again.");
+      refreshMath();
       return;
     }
     setSubmitError("");
@@ -184,9 +210,10 @@ export default function Contact() {
                     <FieldError field="reg" />
                   </div>
                   <div>
-                    <label className="mb-1.5 block text-[12.5px] text-gray-700">Postcode</label>
+                    <label className="mb-1.5 block text-[12.5px] text-gray-700">Postcode *</label>
                     <input
                       name="postcode"
+                      required
                       value={form.postcode}
                       onChange={handleChange}
                       placeholder="RM20 4EL"
@@ -208,6 +235,27 @@ export default function Contact() {
                     className={`${baseInput} resize-none ${borderClass("message")}`}
                   />
                   <FieldError field="message" />
+                </div>
+
+                <div className="rounded-lg border border-gray-200 px-4 py-3">
+                  <p className="mb-2 text-[12.5px] text-gray-700">Human Verification *</p>
+                  <div className="flex items-center gap-3">
+                    <label htmlFor="contact-verification" className="flex-1 text-[14px] font-bold text-gray-800">
+                      What is {math.a} + {math.b}?
+                    </label>
+                    <button type="button" onClick={refreshMath} aria-label="Refresh verification question" className="cursor-pointer text-[12px] text-gray-500 hover:text-[#11633A]">
+                      Refresh
+                    </button>
+                    <input
+                      id="contact-verification"
+                      value={captcha}
+                      onChange={(e) => setCaptcha(e.target.value.replace(/[^0-9]/g, ""))}
+                      inputMode="numeric"
+                      required
+                      placeholder="?"
+                      className="w-14 rounded-lg border border-gray-200 px-2 py-2 text-center text-[14px] font-bold text-gray-800 focus:outline-none focus:ring-1 focus:ring-[#4CA66B]"
+                    />
+                  </div>
                 </div>
 
                 {submitError && (
@@ -248,22 +296,27 @@ export default function Contact() {
                 <div className="mt-4 flex flex-col gap-3">
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400">Phone:</p>
-                    <p className="mt-0.5 text-[16px] font-bold text-gray-900">07477 733313</p>
+                    <a href="tel:+447477733313" className="mt-0.5 inline-block text-[16px] font-bold text-gray-900 hover:text-[#4CA66B] hover:underline focus-visible:underline">07477 733313</a>
                   </div>
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400">Email:</p>
-                    <p className="mt-0.5 text-[14px] font-bold text-gray-900">sales@rangerovergarage.co.uk</p>
+                    <a href="mailto:sales@rangerovergarage.co.uk" className="mt-0.5 inline-block text-[14px] font-bold text-gray-900 hover:text-[#4CA66B] hover:underline focus-visible:underline">sales@rangerovergarage.co.uk</a>
                   </div>
                 </div>
               </div>
 
               <div>
                 <SectionLabel>Address</SectionLabel>
-                <div className="mt-4 text-[14px] leading-[2] text-gray-800">
+                <a
+                  href="https://maps.app.goo.gl/49cNyUKLEiCa4UL57"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 block w-fit text-[14px] font-bold leading-[2] text-gray-800 hover:text-[#4CA66B] hover:underline focus-visible:underline"
+                >
                   Unit 1 Hedley Ave<br />
                   Grays RM20 4EL<br />
                   United Kingdom
-                </div>
+                </a>
               </div>
 
             </div>

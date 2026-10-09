@@ -54,7 +54,7 @@ export default function AuthorityNationwide({
           >
             <Image
               src="/images/workshop-5.webp"
-              alt="Range Rover Garage workshop"
+              alt="Range Rover vehicles lined up outside the Range Rover Garage workshop"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="rounded-2xl object-cover"

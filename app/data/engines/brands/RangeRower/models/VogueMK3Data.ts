@@ -37,7 +37,7 @@ export const RRVogueMK3Data: ModelData = {
       title: "Jaguar",
       description:
         "Our technicians also specialise in Jaguar's AJ-series and diesel V6 units, sharing many components with L322-generation Range Rovers, so the same expertise applies across both marques.  ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

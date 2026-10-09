@@ -22,8 +22,7 @@ export default function AuthorityLeading({ data }: { data: AuthorityLeadingData 
           <div className="flex flex-1 justify-end">
             <Image
               src="/images/group.webp"
-              alt=""
-              aria-hidden="true"
+              alt="Mechanic working on an engine with a torque wrench beside dismantled engine parts"
               width={765}
               height={520}
               sizes="(max-width: 1024px) 100vw, 45vw"

@@ -37,7 +37,7 @@ export const Discovery5Data: ModelData = {
       title: "Jaguar",
       description:
         "The Discovery 5's Ingenium engines are shared with several Jaguar models, so the diagnostic knowledge we've built on this platform applies equally well across both marques.  ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

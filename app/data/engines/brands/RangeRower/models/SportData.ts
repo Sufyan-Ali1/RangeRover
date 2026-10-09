@@ -37,7 +37,7 @@ export const RRSportData: ModelData = {
       title: "Jaguar",
       description:
         "Many Jaguar models share engine architecture with Land Rover, including the AJ133 supercharged petrol, so we bring the same specialist knowledge to Jaguar engine repairs. Explore Jaguar Repairs ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

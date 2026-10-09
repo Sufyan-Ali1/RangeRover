@@ -57,7 +57,7 @@ export default function AuthorityPrecision({ data }: { data: AuthoritySectionDat
           <div className={`relative flex min-h-[260px] flex-1 flex-col transition-all delay-150 duration-700 ease-out motion-reduce:transform-none motion-reduce:opacity-100 sm:min-h-[320px] ${rightClassName}`}>
             <Image
               src="/images/workshop-8.webp"
-              alt="Range Rover engine precision work"
+              alt="Range Rover with its bonnet open and removed engine in the workshop"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="rounded-2xl object-cover"

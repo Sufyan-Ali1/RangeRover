@@ -13,7 +13,7 @@ interface SupplyFitFAQProps {
 export default function SupplyFitFAQ({
   data = supplyAndFitFAQData,
 }: SupplyFitFAQProps) {
-  const [open, setOpen] = useState<number | null>(null);
+  const [open, setOpen] = useState<number | null>(0);
 
   return (
     <section className="w-full bg-[#F3F4F6]">
@@ -39,7 +39,8 @@ export default function SupplyFitFAQ({
               <button
                 type="button"
                 onClick={() => setOpen(open === i ? null : i)}
-                className="flex w-full items-center justify-between px-7 py-5 text-left"
+                aria-expanded={open === i}
+                className="flex w-full cursor-pointer items-center justify-between px-7 py-5 text-left"
               >
                 <span className="text-[12px] font-bold uppercase tracking-[0.1em] text-white sm:text-[13px]">
                   {faq.q}

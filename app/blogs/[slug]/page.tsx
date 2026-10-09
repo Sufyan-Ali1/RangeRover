@@ -4,6 +4,7 @@ import Link from "next/link";
 import blogsData from "../../data/blogs.json";
 import { notFound } from "next/navigation";
 import { fetchBlog, getBlogs, type Blog } from "../../../lib/blogApi";
+import { withBlogImageAlts } from "../../../lib/imageAlt";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -84,14 +85,14 @@ export default async function BlogDetailPage({ params }: Props) {
           {/* ── 2. Full-width blog content ── */}
           <div
             className="blog-content mb-10"
-            dangerouslySetInnerHTML={{ __html: blog.html_content }}
+            dangerouslySetInnerHTML={{ __html: withBlogImageAlts(blog.html_content, blog.title) }}
           />
 
           {/* ── 3. Full-width Image 2 ── */}
           <div className="mb-10 overflow-hidden rounded-xl">
             <img
               src={image2}
-              alt={sibling.title}
+              alt={sibling.image ? sibling.title : blog.title}
               className="w-full object-cover max-h-[500px]"
             />
           </div>

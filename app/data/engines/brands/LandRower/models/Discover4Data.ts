@@ -37,7 +37,7 @@ export const Discovery4Data: ModelData = {
       title: "Jaguar",
       description:
         "Several Discovery 4 engines share components with Jaguar V6 and V8 units of a similar generation, and our workshop applies the same specialist knowledge across both marques.  ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

@@ -73,7 +73,7 @@ export default function Home() {
       <CTA />
       <BlogSection />
       <NationwideSupport data={homeNationwideSupport} />
-      <FAQ faqs={faqs} />
+      <FAQ faqs={faqs} accordionName="homepage-faq" />
       <Location />
       <Footer />
     </div>

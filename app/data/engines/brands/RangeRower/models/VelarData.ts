@@ -37,7 +37,7 @@ export const RRVelarData: ModelData = {
       title: "Jaguar",
       description:
         "The Velar's Ingenium and SDV6 units are also fitted across several Jaguar models, so our technicians bring the same specialist diagnostic knowledge to both brands. ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

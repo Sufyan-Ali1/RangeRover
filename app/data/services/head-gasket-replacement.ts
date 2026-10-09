@@ -93,7 +93,7 @@ export const headGasketReplacementData: EngineRebuildData = {
       title: "Jaguar Engines",
       description:
         "Jaguar engines built on shared Land Rover platforms can suffer similar gasket and cooling system failures. Our specialists apply the same detailed diagnostic process to resolve the issue correctly.",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

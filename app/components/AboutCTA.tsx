@@ -1,31 +1,27 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutCTA() {
   return (
-    <section className="relative w-full overflow-hidden">
-      {/* Background image */}
-      <img
-        src="/section.svg"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60" />
-
-      <div className="relative mx-auto flex w-full max-w-[1728px] flex-col items-center justify-center px-6 py-10 text-center sm:px-10 xl:px-[101px] xl:py-14">
-        <h2 className="mb-3 max-w-[580px] text-[26px] font-black uppercase leading-tight tracking-wide text-white sm:text-[34px] xl:text-[40px]">
-          Speak Directly With Our Engine Specialists Today
-        </h2>
-        <p className="mb-5 text-[13px] font-medium text-white/80">
-          Get honest advice and a clear quote, no obligation attached.
-        </p>
-        <Link
-          href="/get-quote"
-          className="block w-full max-w-[420px] rounded-xl border-2 border-white py-3 text-[13px] font-bold text-white transition hover:bg-white/10"
-        >
-          Contact Our Team
-        </Link>
+    <section className="w-full bg-white py-14 lg:py-20">
+      <div className="mx-auto w-full max-w-[1728px] px-6 sm:px-10 xl:px-[101px]">
+        <div className="grid overflow-hidden rounded-3xl bg-[#0b2419] lg:grid-cols-[1.3fr_1fr]">
+          <div className="px-7 py-10 sm:px-10 sm:py-12 xl:p-14">
+            <h2 className="max-w-[680px] text-[28px] font-black leading-[1.2] tracking-tight text-white sm:text-[36px] xl:text-[42px]">
+              Speak Directly With Our Engine Specialists Today
+            </h2>
+            <p className="mt-5 text-[15px] leading-relaxed text-white/75">
+              Get honest advice and a clear quote, no obligation attached.
+            </p>
+            <Link href="/get-quote" className="mt-7 inline-flex w-full items-center justify-center gap-6 rounded-lg bg-white px-7 py-3.5 text-[14px] font-bold text-[#11633A] transition hover:bg-[#ECFFF3] sm:w-auto">
+              Contact Our Team <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
+          <div className="relative min-h-[240px] lg:min-h-full">
+            <Image src="/section.webp" alt="" aria-hidden="true" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
+            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#0b2419]/30 to-transparent lg:bg-gradient-to-r" />
+          </div>
+        </div>
       </div>
     </section>
   );

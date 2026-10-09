@@ -37,7 +37,7 @@ export const RRSportSVRData: ModelData = {
       title: "Jaguar",
       description:
         "The AJ133 supercharged V8 is shared with high-performance Jaguar models, so the diagnostic and rebuild expertise we've built on the SVR transfers directly across both brands. ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

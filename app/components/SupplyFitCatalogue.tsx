@@ -3,14 +3,14 @@ import Link from "next/link";
 import { engineServices } from "../data/supplyFit/services";
 
 const serviceImages: Record<string, string> = {
-  "engine-rebuild": "/services/engine_rebuild.png",
-  "timing-chain-replacement": "/services/timing_chain_replacement.png",
-  "turbo-replacement": "/services/turbo_replacement.png",
-  "head-gasket-replacement": "/services/head_gasket.png",
-  "engine-repair": "/services/engine_repair.png",
-  "engine-replacement": "/services/engine_replacement.png",
-  "engine-swap": "/services/engine_swap.png",
-  "timing-belt-replacement": "/services/timing_belt_Replacement.jpeg",
+  "engine-rebuild": "/services/engine_rebuild.webp",
+  "timing-chain-replacement": "/services/timing_chain_replacement.webp",
+  "turbo-replacement": "/services/turbo_replacement.webp",
+  "head-gasket-replacement": "/services/head_gasket.webp",
+  "engine-repair": "/services/engine_repair.webp",
+  "engine-replacement": "/services/engine_replacement.webp",
+  "engine-swap": "/services/engine_swap.webp",
+  "timing-belt-replacement": "/services/timing_belt_Replacement.webp",
 };
 
 const services = engineServices.map((service) => ({
@@ -38,9 +38,11 @@ export default function SupplyFitCatalogue() {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <div
+            <Link
               key={service.slug}
-              className="group overflow-hidden rounded-xl border"
+              href={`/services/${service.slug}`}
+              aria-label={service.title}
+              className="group block overflow-hidden rounded-xl border focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#11633A]"
               style={{
                 borderColor: "rgba(74,166,107,0.45)",
                 background: "#0d1117",
@@ -81,8 +83,7 @@ export default function SupplyFitCatalogue() {
                 <p className="mb-4 text-[13px] leading-[1.6] text-white/50">
                   {service.description}
                 </p>
-                <Link
-                  href={`/services/${service.slug}`}
+                <span
                   className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] transition-opacity hover:opacity-70"
                   style={{ color: "#4CA66B" }}
                 >
@@ -99,9 +100,9 @@ export default function SupplyFitCatalogue() {
                   >
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

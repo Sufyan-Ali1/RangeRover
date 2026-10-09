@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import blogsData from "../data/blogs.json";
 
@@ -16,6 +16,29 @@ const posts = (blogsData as Blog[]).slice(0, 4);
 
 export default function BlogSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollPrevious, setCanScrollPrevious] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const updateNavigation = () => {
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      setCanScrollPrevious(container.scrollLeft > 1);
+      setCanScrollNext(container.scrollLeft < maxScroll - 1);
+    };
+
+    const observer = new ResizeObserver(updateNavigation);
+    observer.observe(container);
+    Array.from(container.children).forEach((card) => observer.observe(card));
+    container.addEventListener("scroll", updateNavigation, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      container.removeEventListener("scroll", updateNavigation);
+    };
+  }, []);
 
   const scroll = (dir: "left" | "right") => {
     if (!scrollRef.current) return;
@@ -79,8 +102,9 @@ export default function BlogSection() {
               <button
                 type="button"
                 onClick={() => scroll("left")}
+                disabled={!canScrollPrevious}
                 aria-label="Previous"
-                className="flex h-9 w-9 items-center justify-center bg-[#11633A] text-white transition hover:bg-[#0d4f2d]"
+                className="flex h-9 w-9 cursor-pointer items-center justify-center bg-[#11633A] text-white transition enabled:hover:bg-[#0d4f2d] disabled:cursor-not-allowed disabled:opacity-40"
                 style={{ borderRadius: "6px" }}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -90,8 +114,9 @@ export default function BlogSection() {
               <button
                 type="button"
                 onClick={() => scroll("right")}
+                disabled={!canScrollNext}
                 aria-label="Next"
-                className="flex h-9 w-9 items-center justify-center bg-[#11633A] text-white transition hover:bg-[#0d4f2d]"
+                className="flex h-9 w-9 cursor-pointer items-center justify-center bg-[#11633A] text-white transition enabled:hover:bg-[#0d4f2d] disabled:cursor-not-allowed disabled:opacity-40"
                 style={{ borderRadius: "6px" }}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

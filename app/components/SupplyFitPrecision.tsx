@@ -118,7 +118,7 @@ export default function SupplyFitPrecision({ data }: SupplyFitPrecisionProps) {
     <section className="relative w-full overflow-hidden">
       {/* Background */}
       <img
-        src="/precision.svg"
+        src="/precision.webp"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"

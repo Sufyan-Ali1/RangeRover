@@ -92,7 +92,7 @@ export const engineReplacementData: EngineRebuildData = {
       title: "Jaguar Engines",
       description:
         "Jaguar models sharing engine platforms with Land Rover benefit from the same sourcing network and fitting expertise, ensuring a correctly matched replacement every time.",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

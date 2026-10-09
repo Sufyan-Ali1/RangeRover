@@ -37,7 +37,7 @@ export const Discovery3Data: ModelData = {
       title: "Jaguar",
       description:
         "Our broader diesel and V8 expertise covers Jaguar models of a similar era, giving Discovery 3 owners access to the same specialist diagnostic knowledge across both marques.  ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

@@ -9,7 +9,7 @@ function ModelCard({ model, light }: { model: Model; light: boolean }) {
   const modelSlug = toModelSlug(model.model);
   const imageSrc =
     model.brand === "JAGUAR"
-      ? "/jaguar.svg"
+      ? "/jaguar.webp"
       : `/images/models/${modelSlug}.webp`;
 
   return (
@@ -29,7 +29,7 @@ function ModelCard({ model, light }: { model: Model; light: boolean }) {
         <div className={`h-[200px] w-full overflow-hidden ${light ? "bg-white" : "bg-[#0d0d0d]"}`}>
           <Image
             src={imageSrc}
-            alt={model.model}
+            alt={`${model.brand} ${model.model}`}
             width={640}
             height={400}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

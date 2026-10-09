@@ -37,7 +37,7 @@ export const DiscoverySportData: ModelData = {
       title: "Jaguar",
       description:
         "The Ingenium engines fitted to later Discovery Sport models are shared across several Jaguar models, so our diagnostic expertise applies equally well to both brands.  ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

@@ -22,7 +22,7 @@ function CardIcon({ label }: { label: string }) {
 export function PremiumServiceCards({ cards }: PremiumServiceCardsProps) {
   return (
     <div className="w-full">
-      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+      <div className="w-full">
         <div className="grid gap-6 lg:grid-cols-3">
           {cards.map((card, idx) => {
             const accent = ACCENTS[idx % ACCENTS.length];

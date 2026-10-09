@@ -3,7 +3,7 @@ import { SupplyFitEngine } from "../types";
 export const supplyFitEngines: SupplyFitEngine[] = [
   {
     id: 1,
-    image: "/engines/engine_1.svg",
+    image: "/engines/engine_1.webp",
     title: "Range Rover Sport SVR 5.0L Supercharger AJ133 GEN1",
     description:
       "Fully tested AJ133 GEN1 supercharged unit, supplied and fitted with strict compression and pressure checks completed beforehand.",
@@ -15,7 +15,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 2,
-    image: "/engines/engine_2.svg",
+    image: "/engines/engine_2.webp",
     title: "Range Rover Sport SVR 5.0L Supercharger AJ133 GEN2",
     description:
       "AJ133 supercharged engine sourced, tested and fitted to restore full SVR performance without main dealer pricing.",
@@ -28,7 +28,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 3,
-    image: "/engines/engine_3.svg",
+    image: "/engines/engine_3.webp",
     title: "Range Rover Sport 3.0L Petrol Supercharger AJ133 GEN1",
     description:
       "A dependable 3.0 petrol supercharged AJ133 engine, checked and fitted with all ancillaries carried across correctly.",
@@ -41,7 +41,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 4,
-    image: "/engines/engine_4.svg",
+    image: "/engines/engine_4.webp",
     title: "Land Rover 2.0L Diesel 204DTD 177 hp",
     description:
       "Reconditioned 204DTD unit supplied and fitted, giving Discovery Sport and Evoque owners a reliable, tested replacement.",
@@ -54,7 +54,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 5,
-    image: "/engines/engine_5.svg",
+    image: "/engines/engine_5.webp",
     title: "Land Rover 2.0L Diesel 204DTA Twin Turbo 237hp",
     description:
       "Twin-turbo 204DTA engine supplied and fitted, restoring the stronger power delivery this unit is known for.",
@@ -67,7 +67,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 6,
-    image: "/engines/engine_6.svg",
+    image: "/engines/engine_6.webp",
     title: "Land Rover Range Rover 3.0 TDV6 306DT GEN1",
     description:
       "GEN1 TDV6 306DT engine, pressure and compression tested before fitting to Range Rover and Discovery models.",
@@ -80,7 +80,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 7,
-    image: "/engines/engine_7.svg",
+    image: "/engines/engine_7.webp",
     title: "Land Rover Range Rover 3.0 TDV6 306DT GEN2",
     description:
       "Updated GEN2 TDV6 engine supplied and fitted with careful attention to timing chain and seal condition.",
@@ -93,7 +93,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 8,
-    image: "/engines/engine_8.svg",
+    image: "/engines/engine_8.webp",
     title: "Range Rover 4.4 Diesel Bare Engine TDV8 448DT",
     description:
       "Bare TDV8 448DT block available for supply, ideal where existing ancillaries are being retained and reused.",
@@ -106,7 +106,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 9,
-    image: "/engines/engine_9.svg",
+    image: "/engines/engine_9.webp",
     title: "Range Rover Evoque 2.0L Petrol P250 PT204 (MHEV)",
     description:
       "Mild-hybrid PT204 engine supplied and fitted with full attention to the MHEV system's specific requirements.",
@@ -119,7 +119,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 10,
-    image: "/engines/engine_10.svg",
+    image: "/engines/engine_10.webp",
     title: "Range Rover Sport P400E AJ200P PT204 (PHEV)",
     description:
       "Plug-in hybrid AJ200P engine supplied and fitted with careful integration alongside existing hybrid components.",
@@ -132,7 +132,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 11,
-    image: "/engines/engine_11.svg",
+    image: "/engines/engine_11.webp",
     title: "Range Rover Evoque 2.0L Petrol 204PT Recon.",
     description:
       "Reconditioned 204PT petrol engine supplied and fitted, tested thoroughly to confirm smooth, reliable running.",
@@ -145,7 +145,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 12,
-    image: "/engines/engine_12.svg",
+    image: "/engines/engine_12.webp",
     title: "Land Rover Defender 110 HSE 2.0 Diesel 204DTA",
     description:
       "204DTA engine supply and fit for the Defender 110 HSE, matched precisely to original specification.",
@@ -158,7 +158,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 13,
-    image: "/engines/engine_13.svg",
+    image: "/engines/engine_13-white.webp",
     title: "Land Rover Defender 130 3.0 Diesel D200 DT306",
     description:
       "D200 DT306 diesel engine supplied and fitted for the Defender 130, checked against factory tolerances.",
@@ -171,7 +171,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 14,
-    image: "/engines/engine_14.svg",
+    image: "/engines/engine_14.webp",
     title: "L663 Land Rover Defender 110 3.0 Inline Diesel",
     description:
       "3.0 diesel unit for the L663 Defender 110, supplied and fitted with full diagnostic verification.",
@@ -184,7 +184,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 15,
-    image: "/engines/engine_15.svg",
+    image: "/engines/engine_15.webp",
     title: "Range Rover Evoque 2.0L Petrol P250 AJ20P4",
     description:
       "AJ20P4 petrol engine supplied and fitted, restoring reliable performance to the Evoque P250 range.",
@@ -197,7 +197,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 16,
-    image: "/engines/engine_16.svg",
+    image: "/engines/engine_16.webp",
     title: "Land Rover Ingenium Range Rover P400e 2.0 Petrol",
     description:
       "Ingenium P400e petrol engine supply and fit, carried out with careful hybrid system compatibility checks.",

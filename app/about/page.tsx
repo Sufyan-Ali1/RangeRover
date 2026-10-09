@@ -4,10 +4,9 @@ import AboutSection from "../components/AboutSection";
 import AboutCTA from "../components/AboutCTA";
 import VideoSection from "../components/VideoSection";
 import AuthorityPrecision from "../components/AuthorityPrecision";
-import AuthorityNationwide from "../components/AuthorityNationwide";
+import AboutWorkshop from "../components/AboutWorkshop";
 
 import { aboutPagePrecision } from "../data/about/AboutPrecision";
-import { authorityNationwide } from "../data/about/Nationwide";
 
 const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
@@ -24,12 +23,10 @@ export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <Navbar />
-      <div className="pt-20">
-        <AboutSection />
-      </div>
-      <AboutCTA />
-      <AuthorityNationwide data={authorityNationwide} />
+      <AboutSection />
+      <AboutWorkshop />
       <AuthorityPrecision data={aboutPagePrecision} />
+      <AboutCTA />
       <VideoSection />
       <Footer />
     </div>

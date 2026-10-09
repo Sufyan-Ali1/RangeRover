@@ -56,9 +56,11 @@ export default function EngineServices({
                 {services
                   .slice(pageIdx * perPage, (pageIdx + 1) * perPage)
                   .map((s) => (
-                    <div
+                    <Link
                       key={s.slug}
-                      className="group flex flex-col rounded-xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:border-[#11633A] hover:bg-[#11633A] hover:shadow-lg"
+                      href={`/services/${s.slug}`}
+                      aria-label={s.title}
+                      className="group flex flex-col rounded-xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:border-[#11633A] hover:bg-[#11633A] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#11633A]"
                     >
                       <h3 className="mb-3 text-[16px] font-bold text-gray-900 transition-colors duration-300 group-hover:text-white">
                         {s.title}
@@ -66,8 +68,7 @@ export default function EngineServices({
                       <p className="flex-1 text-[13px] leading-[1.7] text-gray-500 transition-colors duration-300 group-hover:text-white/75">
                         {s.description}
                       </p>
-                      <Link
-                        href={`/services/${s.slug}`}
+                      <span
                         className="mt-5 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#4CA66B] transition-colors duration-300 group-hover:text-[#A6F0C6]"
                       >
                         Explore More
@@ -83,8 +84,8 @@ export default function EngineServices({
                         >
                           <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
-                      </Link>
-                    </div>
+                      </span>
+                    </Link>
                   ))}
               </div>
             ))}
@@ -153,7 +154,7 @@ export default function EngineServices({
           <div className="mt-10 flex justify-center xl:mt-12">
             <Link
               href={viewMoreHref}
-              className="rounded-lg bg-[#4CA66B] px-20 py-3.5 text-[15px] font-semibold text-white transition hover:bg-[#11633A]"
+              className="rounded-lg bg-[#11633A] px-20 py-3.5 text-[15px] font-semibold text-white transition hover:bg-[#0d4f2d]"
             >
               View More
             </Link>

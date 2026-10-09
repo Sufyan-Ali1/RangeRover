@@ -18,6 +18,14 @@ export interface ContactPayload {
 }
 
 export async function submitContact(data: ContactPayload): Promise<{ ok: boolean; message?: string }> {
+  if (!data.name?.trim() || !/^[A-Za-z0-9 ]+$/.test(data.name)) {
+    return { ok: false, message: "Name can only contain letters, numbers and spaces." };
+  }
+
+  if (!data.postcode?.trim()) {
+    return { ok: false, message: "Postcode is required." };
+  }
+
   const { websiteSlug, isConfigured } = getPortalConfig();
 
   if (!isConfigured) {

@@ -37,7 +37,7 @@ export const Freelander1Data: ModelData = {
       title: "Jaguar",
       description:
         "Our workshop's wider petrol engine expertise covers Jaguar units of a similar generation, giving Freelander 1 owners access to broader specialist knowledge under one roof.  ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

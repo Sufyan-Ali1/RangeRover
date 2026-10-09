@@ -32,7 +32,7 @@ export default function Header({
       className={`relative w-full overflow-hidden flex flex-col justify-start ${
         compact 
           ? "py-20 lg:min-h-[720px] lg:justify-center" 
-          : "py-20 lg:min-h-[640px] lg:justify-center"
+          : "pt-28 pb-20 lg:min-h-[720px] lg:justify-center"
       }`}
     >
       {/* Background Image & Overlays */}

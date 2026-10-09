@@ -75,6 +75,7 @@ export default async function ModelPage({ params }: Props) {
       <Navbar />
 
       <Header
+        compact
         title={headerData?.title}
         subtitle={headerData?.subtitle}
         highlights={headerData?.highlights}

@@ -64,7 +64,7 @@ export default function RegPlate() {
           type="button"
           onClick={handleSearch}
           aria-label="Search registration"
-          className="flex items-center justify-center bg-white px-5 transition hover:bg-gray-100"
+          className="flex cursor-pointer items-center justify-center bg-white px-5 transition hover:bg-gray-100"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="11" cy="11" r="8"/>
@@ -83,7 +83,7 @@ export default function RegPlate() {
         <button
           type="button"
           onClick={() => router.push("/get-quote")}
-          className="font-bold text-white/80 underline underline-offset-2 hover:text-white"
+          className="cursor-pointer font-bold text-white/80 underline underline-offset-2 hover:text-white"
         >
           Click Here
         </button>

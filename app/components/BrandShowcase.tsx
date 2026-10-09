@@ -27,7 +27,7 @@ const defaultCards: ExtendedServiceCard[] = [
     title: "Jaguar Engines",
     description:
       "Specialist rebuilds and replacements for Jaguar XE, XF, XJ, F-Pace and F-Type across the full Ingenium, 3.0 V6 Supercharged and 5.0 V8 Supercharged range — OEM components, up to 24 months warranty.",
-    image: "/jaguar.svg",
+    image: "/jaguar.webp",
     href: "/engines/jaguar",
   },
 ];
@@ -39,17 +39,17 @@ interface BrandShowcaseProps {
 function BrandCard({ title, description, image, href }: ExtendedServiceCard) {
   return (
     <div
-      className="flex flex-col rounded-3xl shadow-md overflow-hidden"
+      className="group flex flex-col rounded-3xl shadow-md overflow-hidden"
       style={{ background: "#dff0df" }}
     >
       <div className="flex h-[220px] w-full items-center justify-center px-6 pt-6">
         <Image
           src={image}
-          alt={title}
+          alt={title.replace(/ Engines$/, " vehicle")}
           width={640}
           height={400}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 580px"
-          className="h-full w-full object-contain"
+          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       <div className="flex flex-1 flex-col p-7">

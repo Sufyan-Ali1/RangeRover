@@ -18,7 +18,7 @@ export interface SupplyFitEngine {
 export const supplyFitEngines: SupplyFitEngine[] = [
   {
     id: 1,
-    image: "/engines/engine_1.svg",
+    image: "/engines/engine_1.webp",
     title: "Range Rover Sport SVR 5.0L Supercharger AJ133 GEN1",
     description: "Reconditioned 5.0L Land Rover Range Rover Sport SVR Engine. GEN1 508ps.",
     fits: "Range Rover Sport SVR 2018 - 2022",
@@ -27,7 +27,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 2,
-    image: "/engines/engine_2.svg",
+    image: "/engines/engine_2.webp",
     title: "Range Rover Sport SVR 5.0L Supercharger AJ133 GEN2",
     description: "Reconditioned 5.0L Land Rover Range Rover Sport SVR Engine. GEN2 508ps.",
     fits: "Range Rover Sport SVR 2022 - onwards",
@@ -36,7 +36,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 3,
-    image: "/engines/engine_3.svg",
+    image: "/engines/engine_3.webp",
     title: "Range Rover Sport 3.0L Petrol Supercharger AJ133 GEN1",
     description: "Reconditioned 3.0L Land Rover Range Rover Sport SVR Engine.",
     fits: "Range Rover Sport SVR 2022 - onwards",
@@ -45,7 +45,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 4,
-    image: "/engines/engine_4.svg",
+    image: "/engines/engine_4.webp",
     title: "Land Rover 2.0L Diesel 204DTD 177 hp",
     description: "2.0L Diesel 204DTD BARE ENGINE. Fits 2015 onwards.",
     fits: "Range Rover Evoque, Discovery Sport, Velar, Sport",
@@ -54,7 +54,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 5,
-    image: "/engines/engine_5.svg",
+    image: "/engines/engine_5.webp",
     title: "Land Rover 2.0L Diesel 204DTA Twin Turbo 237hp",
     description: "Reconditioned 2.0L Land Rover Twin Turbo Engine. 2015 – 2022.",
     fits: "Range Rover Velar, Range Rover Sport",
@@ -63,7 +63,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 6,
-    image: "/engines/engine_6.svg",
+    image: "/engines/engine_6.webp",
     title: "Land Rover Range Rover 3.0 TDV6 306DT GEN1",
     description: "Reconditioned 3.0 Diesel V6 Engine code: 306DT.",
     fits: "Range Rover Vogue, Sport, Discovery 4 (2010-2015)",
@@ -72,7 +72,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 7,
-    image: "/engines/engine_7.svg",
+    image: "/engines/engine_7.webp",
     title: "Land Rover Range Rover 3.0 TDV6 306DT GEN2",
     description: "Reconditioned 3.0 Diesel V6 Engine code: 306DT GEN2.",
     fits: "Range Rover Vogue, Sport, Discovery 4 (2010-2015)",
@@ -81,7 +81,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 8,
-    image: "/engines/engine_8.svg",
+    image: "/engines/engine_8.webp",
     title: "Range Rover 4.4 Diesel Bare Engine TDV8 448DT",
     description: "Reconditioned 4.4 Diesel V8 Engine code: 448DT.",
     fits: "Range Rover Vogue, Range Rover Sport (2010-2018)",
@@ -90,7 +90,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 9,
-    image: "/engines/engine_9.svg",
+    image: "/engines/engine_9.webp",
     title: "Range Rover Evoque 2.0L Petrol P250 PT204 (MHEV)",
     description: "Reconditioned 2.0 Petrol Engine code: PT204.",
     fits: "Range Rover Vogue, Range Rover Sport (2019-2025)",
@@ -99,7 +99,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 10,
-    image: "/engines/engine_10.svg",
+    image: "/engines/engine_10.webp",
     title: "Range Rover Sport P400E AJ200P PT204 (PHEV)",
     description: "Reconditioned 2.0 Petrol Engine code: PT204 RDE2.",
     fits: "Range Rover Vogue, Range Rover Sport (398.30 BHP)",
@@ -108,7 +108,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 11,
-    image: "/engines/engine_11.svg",
+    image: "/engines/engine_11.webp",
     title: "Range Rover Evoque 2.0L Petrol 204PT Recon.",
     description: "Reconditioned 2.0 Petrol Engine code: 204PT.",
     fits: "Range Rover Vogue, Range Rover Sport",
@@ -117,7 +117,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 12,
-    image: "/engines/engine_12.svg",
+    image: "/engines/engine_12.webp",
     title: "Land Rover Defender 110 HSE 2.0 Diesel 204DTA",
     description: "Reconditioned 2.0 Diesel Engine code: 204dta.",
     fits: "Land Rover Defender",
@@ -126,7 +126,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 13,
-    image: "/engines/engine_13.svg",
+    image: "/engines/engine_13.webp",
     title: "Land Rover Defender 130 3.0 Diesel D200 DT306",
     description: "Reconditioned 3.0 Diesel Engine inline 6 Engine code: DT306.",
     fits: "Land Rover Defender",
@@ -135,7 +135,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 14,
-    image: "/engines/engine_14.svg",
+    image: "/engines/engine_14.webp",
     title: "L663 Land Rover Defender 110 3.0 Inline Diesel",
     description: "Reconditioned 3.0 Diesel Engine inline 6 Engine code: DT306.",
     fits: "Land Rover Defender 2019 ON",
@@ -144,7 +144,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 15,
-    image: "/engines/engine_15.svg",
+    image: "/engines/engine_15.webp",
     title: "Range Rover Evoque 2.0L Petrol P250 AJ20P4",
     description: "Reconditioned 2.0 Petrol Engine code: P250/AJ20P4.",
     fits: "Range Rover Evoque (2019-2025)",
@@ -153,7 +153,7 @@ export const supplyFitEngines: SupplyFitEngine[] = [
   },
   {
     id: 16,
-    image: "/engines/engine_16.svg",
+    image: "/engines/engine_16.webp",
     title: "Land Rover Ingenium Range Rover P400e 2.0 Petrol",
     description: "Reconditioned 2.0 Petrol Engine code: PT204.",
     fits: "Range Rover Evoque 2018-2020 (PHEV)",

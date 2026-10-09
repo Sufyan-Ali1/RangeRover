@@ -37,7 +37,7 @@ export const Discovery2Data: ModelData = {
       title: "Jaguar",
       description:
         "Our wider engine knowledge covers Jaguar diesel and V8 units of a similar era, giving Discovery 2 owners a single specialist workshop for related engine platforms.  ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

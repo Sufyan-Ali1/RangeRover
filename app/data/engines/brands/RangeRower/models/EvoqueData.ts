@@ -36,7 +36,7 @@ export const RREvoqueData: ModelData = {
       title: "Jaguar",
       description:
         "Sharing the same Ingenium engine family as many Land Rover models, Jaguar engines are repaired here with the same precision, from head gasket faults to full replacements. Explore Jaguar Repairs ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

@@ -163,9 +163,20 @@ export default function Footer() {
 
         {/* Copyright bar */}
         <div className="mt-10 border-t border-[#1f1f1f] pt-5">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <p className="text-[12px] text-[#6b7280]">
               © 2026 Range Rover Garage. All rights reserved.
+            </p>
+            <p className="text-[12px] text-[#6b7280]">
+              Designed &amp; Developed by{" "}
+              <a
+                href="https://4xcode.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold transition hover:text-[#4CA66B] focus-visible:text-[#4CA66B]"
+              >
+                4xcode
+              </a>
             </p>
             <div className="flex gap-6">
               <a

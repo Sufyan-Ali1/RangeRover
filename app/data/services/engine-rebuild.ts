@@ -150,7 +150,7 @@ export const engineRebuildData: EngineRebuildData = {
       title: "Jaguar",
       description:
         "Our engineers strip and rebuild Jaguar AJ133 and Ingenium engines with the same precision applied to every Land Rover project, using dyno testing to confirm performance before handover. ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

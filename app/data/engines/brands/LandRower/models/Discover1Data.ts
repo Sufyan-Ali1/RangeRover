@@ -37,7 +37,7 @@ export const Discovery1Data: ModelData = {
       title: "Jaguar",
       description:
         "Our workshop's broader engine expertise extends to Jaguar V8 and diesel units of a similar era, giving classic vehicle owners a single specialist workshop for multiple marques.  ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

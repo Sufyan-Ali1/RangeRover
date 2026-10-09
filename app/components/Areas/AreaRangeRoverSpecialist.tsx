@@ -8,7 +8,7 @@ export function AreaRangeRoverSpecialist({
 }) {
   return (
     <div className="w-full">
-      <div className="mx-auto w-full max-w-432 px-4 sm:px-6">
+      <div className="w-full">
         <div className="relative overflow-hidden rounded-3xl border border-slate-200/90 bg-linear-to-br from-white via-slate-50/60 to-slate-100/70 p-6 shadow-md ring-1 ring-black/5 sm:p-10">
           {/* Permanent subtle background shade matching your cards style */}
           <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-slate-500/3 to-green-500/4" />

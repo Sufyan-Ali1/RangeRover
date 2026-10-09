@@ -25,15 +25,17 @@ type FieldErrors = Partial<Record<keyof FormFields, string>>;
 function validate(form: FormFields): FieldErrors {
   const errors: FieldErrors = {};
 
-  if (form.reg && !/^[A-Z0-9]{1,8}$/.test(form.reg))
+  if (!form.reg.trim())
+    errors.reg = "Registration is required.";
+  else if (!/^[A-Z0-9]{1,8}$/.test(form.reg))
     errors.reg = "Registration must be alphanumeric only (max 8 characters).";
 
   if (!form.name.trim())
     errors.name = "Full name is required.";
   else if (form.name.trim().length < 2)
     errors.name = "Name is too short.";
-  else if (!/^[A-Za-z\s'\-]+$/.test(form.name))
-    errors.name = "Name can only contain letters.";
+  else if (!/^[A-Za-z0-9 ]+$/.test(form.name))
+    errors.name = "Name can only contain letters, numbers and spaces.";
 
   if (!form.email.trim())
     errors.email = "Email address is required.";
@@ -96,7 +98,9 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
     const { name, value } = e.target;
     let filtered = value;
 
-    if (name === "reg")
+    if (name === "name")
+      filtered = value.replace(/[^A-Za-z0-9 ]/g, "");
+    else if (name === "reg")
       filtered = value.replace(/[^A-Za-z0-9]/g, "").toUpperCase().slice(0, 8);
     else if (name === "phone")
       filtered = value.replace(/\D/g, "").slice(0, 15);
@@ -120,7 +124,7 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
       return;
     }
 
-    if (parseInt(captcha, 10) !== math.answer) {
+    if (!captcha.trim() || Number(captcha) !== math.answer) {
       setSubmitError("Incorrect answer to the verification question. Please try again.");
       refreshMath();
       return;
@@ -219,7 +223,7 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
                 {/* Vehicle Registration */}
                 <div>
                   <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">
-                    Vehicle Registration
+                    Vehicle Registration <span className="text-red-500">*</span>
                   </p>
                   <div className={`flex items-center overflow-hidden rounded-lg border-2 bg-[#FAFAE8] ${fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
                     <div className={`flex items-center justify-center px-3 py-3 text-xl border-r ${fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>

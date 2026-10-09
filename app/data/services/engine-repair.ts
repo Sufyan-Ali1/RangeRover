@@ -92,7 +92,7 @@ export const engineRepairData: EngineRebuildData = {
       title: "Jaguar Engines",
       description:
         "Jaguar engines sharing Land Rover platforms benefit from the same detailed fault-finding approach, helping us pinpoint issues accurately across shared engine families and components.",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

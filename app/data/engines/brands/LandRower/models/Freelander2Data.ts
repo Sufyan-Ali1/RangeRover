@@ -37,7 +37,7 @@ export const Freelander2Data: ModelData = {
       title: "Jaguar",
       description:
         "Our broader diesel expertise covers Jaguar models fitted with related engine platforms, giving Freelander 2 owners access to the same specialist diagnostic knowledge under one roof.  ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

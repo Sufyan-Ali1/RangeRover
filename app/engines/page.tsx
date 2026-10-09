@@ -70,6 +70,7 @@ export default function EnginesPage() {
     <div className="flex min-h-screen flex-col bg-white">
       <Navbar />
       <Header
+        compact
         title={headerData.title}
         subtitle={headerData.subtitle}
         highlights={headerData.highlights}

@@ -24,7 +24,7 @@ export const serviceCards: ExtendedServiceCard[] = [
     title: "Jaguar Engines",
     description:
       "Specialist rebuilds and replacements for Jaguar XE, XF, XJ, F-Pace and F-Type across the full Ingenium, 3.0 V6 Supercharged and 5.0 V8 Supercharged range — OEM components, up to 24 months warranty.",
-    image: "/jaguar.svg",
+    image: "/jaguar.webp",
     href: "/engines/jaguar",
   },
 ];

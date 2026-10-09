@@ -59,7 +59,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
         <Link href="/">
           <Image
             src="/logo.svg"
-            alt="Range Rover Engines"
+            alt="Range Rover Garage"
             width={130}
             height={47}
             priority

@@ -93,7 +93,7 @@ export const turboReplacementData: EngineRebuildData = {
       title: "Jaguar Engines",
       description:
         "Many Jaguar diesel and petrol engines share turbo architecture with Land Rover platforms. Our specialists apply the same rigorous diagnostic process to identify and resolve turbo-related faults efficiently. ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

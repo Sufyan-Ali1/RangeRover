@@ -37,7 +37,7 @@ export const RRVogueMK4Data: ModelData = {
       title: "Jaguar",
       description:
         "The SDV6 and Ingenium units fitted to the L405 are shared with several Jaguar models, so our technicians bring the same diagnostic experience to both marques. ",
-      image: "/jaguar.svg",
+      image: "/jaguar.webp",
       href: "/engines/jaguar",
     },
   ],

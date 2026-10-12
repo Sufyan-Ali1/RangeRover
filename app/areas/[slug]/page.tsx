@@ -29,7 +29,7 @@ export async function generateMetadata({
       title: "Area Not Found | Range Rover Engines UK",
     };
   }
-  const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+  const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 
   return {
     metadataBase: new URL(siteUrl),

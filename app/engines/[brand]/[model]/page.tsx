@@ -21,7 +21,7 @@ interface Props {
   params: Promise<{ brand: string; model: string }>;
 }
 
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export async function generateMetadata({ params }: Props) {
   const { model, brand } = await params;
 

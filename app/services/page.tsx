@@ -19,7 +19,7 @@ import { servicesNationwideSupport } from "../data/services/serviceMainPage";
 import BrandShowcase from "../components/BrandShowcase";
 import { highlights, MainServicesData } from "../data/services/serviceMainPage";
 
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: "Range Rover & Land Rover Engine Services | Full Range",

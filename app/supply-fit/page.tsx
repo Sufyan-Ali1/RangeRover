@@ -15,7 +15,7 @@ import SupplyFitFAQ from "../components/SupplyFitFAQ";
 import Footer from "../components/Footer";
 import { whyData } from "../data/supplyFit/WhyData";
 import { supplyFitGetParts } from "../data/supplyFit/supplyFitGet";
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: "Range Rover Engine Supply and Fit | Genuine OEM Parts",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata: Metadata = {
   title: "Range Rover Engine Specialist | Rebuilds & Replacements",
   description:

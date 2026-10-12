@@ -9,7 +9,7 @@ import { withBlogImageAlts } from "../../../lib/imageAlt";
 import styles from "./blogDetail.module.css";
 
 interface Props { params: Promise<{ slug: string }> }
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 
 export function generateStaticParams() {
   return localBlogs.map(blog => ({ slug: blog.slug }));

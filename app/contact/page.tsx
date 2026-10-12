@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: "Contact Our Range Rover Engine Specialist Team",

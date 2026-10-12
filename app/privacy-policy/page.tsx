@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PrivacyPolicy from "@/app/components/PrivacyPolicy";
 
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Privacy Policy | Range Rover Garage",

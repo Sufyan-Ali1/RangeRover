@@ -1,5 +1,5 @@
 import QuoteSuccess from "../components/QuoteSuccess";
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: "Quote Received | Range Rover Engines",

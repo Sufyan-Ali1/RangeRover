@@ -8,10 +8,6 @@ const nextConfig: NextConfig = {
   productionBrowserSourceMaps: true,
   images: {
     remotePatterns: [
-      { protocol: "https", hostname: "rangerovergarage.co.uk", pathname: "/storage/**" },
-      { protocol: "https", hostname: "www.rangerovergarage.co.uk", pathname: "/storage/**" },
-      { protocol: "https", hostname: "rangerovergarage.co.uk", pathname: "/img/**" },
-      { protocol: "https", hostname: "www.rangerovergarage.co.uk", pathname: "/img/**" },
       { protocol: "https", hostname: "vogueimages.co.uk", pathname: "/**" },
     ],
   },

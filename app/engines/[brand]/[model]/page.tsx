@@ -2,11 +2,9 @@ import Navbar from "../../../components/Navbar";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import FAQ from "@/app/components/FAQ";
-import { faqs } from "@/app/data/faqs";
 import ServicesTicker from "@/app/components/ServicesTicker";
 import engineCodesData from "@/app/data/engineCodesData.json";
 
-// Model page imports
 import Location from "@/app/components/Location";
 import NationwideSupport from "@/app/components/NationwideSupport";
 import BlogSection from "@/app/components/BlogSection";
@@ -17,30 +15,46 @@ import AuthorityPrecision from "@/app/components/AuthorityPrecision";
 import BrandShowcase from "@/app/components/BrandShowcase";
 import Reviews from "@/app/components/Reviews";
 import EngineTable from "@/app/components/EngineTable";
-import { getModelAuthorityNationwide, getModelAuthorityPrecision } from "@/app/data/authority";
-import { getModelNationwideSupport } from "@/app/data/sections";
+import { getBrandsModelsBySlug } from "@/app/data/engines/brands/GetBrandData";
 
 interface Props {
   params: Promise<{ brand: string; model: string }>;
 }
 
-function slugToTitle(slug: string) {
-  return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
-}
-
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export async function generateMetadata({ params }: Props) {
-  const { brand, model } = await params;
-  const brandTitle = slugToTitle(brand);
-  const modelTitle = slugToTitle(model);
+  const { model, brand } = await params;
+
+  const data = getBrandsModelsBySlug(model);
+
   return {
-    title: `${brandTitle} ${modelTitle} Engine | Range Rover Engines`,
-    description: `Specialist engine rebuild and replacement for the ${brandTitle} ${modelTitle} — expert JLR-certified service in Grays, Essex.`,
+    metadataBase: new URL(siteUrl),
+    title: `${data.meta?.title}`,
+    description: `${data.meta?.description}`,
+    alternates: {
+      canonical: `/engines/${brand}/${model}`,
+    },
   };
 }
 
 export default async function ModelPage({ params }: Props) {
   const { brand, model } = await params;
-  const brandTitle = slugToTitle(brand);
+
+  const data = getBrandsModelsBySlug(model);
+
+  const {
+    headerData,
+    BrandsData,
+    ReviewsData,
+    NationwideData,
+    PrecisionData,
+    NationwideSupportData1,
+    NationwideSupportData2,
+    faqsData,
+  } = data;
+  if (!data) {
+    return <div>Model not found</div>;
+  }
 
   const dataKey = `${brand}-${model}-engines` as keyof typeof engineCodesData;
   const engineData = engineCodesData[dataKey] ?? null;
@@ -56,21 +70,27 @@ export default async function ModelPage({ params }: Props) {
       }))
     : [];
 
-  const modelTitle = slugToTitle(model);
-
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <Navbar />
 
       <Header
         compact
-        title={<>{brandTitle}<br />{modelTitle}.</>}
-        subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
+        title={headerData?.title}
+        subtitle={headerData?.subtitle}
+        highlights={headerData?.highlights}
       />
 
-      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
+      <ServicesTicker
+        items={[
+          "Engine Rebuild",
+          "Replacement",
+          "Diagnostics",
+          "Performance Solutions",
+        ]}
+      />
 
-      <BrandShowcase />
+      <BrandShowcase cards={BrandsData} />
 
       {engineData && (
         <EngineTable
@@ -84,15 +104,15 @@ export default async function ModelPage({ params }: Props) {
         />
       )}
 
-      <Reviews />
-      <AuthorityNationwide data={getModelAuthorityNationwide(brandTitle, modelTitle)} />
-      <AuthorityPrecision data={getModelAuthorityPrecision(brandTitle, modelTitle)} />
-      <NationwideSupport data={getModelNationwideSupport(brandTitle, modelTitle)} />
+      <Reviews reviews={ReviewsData} />
+      <AuthorityNationwide data={NationwideData} />
+      <AuthorityPrecision data={PrecisionData} />
+      <NationwideSupport data={NationwideSupportData1} />
       <VideoSection />
       <CTA />
       <BlogSection />
-      <NationwideSupport data={getModelNationwideSupport(brandTitle, modelTitle)} />
-      <FAQ faqs={faqs} />
+      <NationwideSupport data={NationwideSupportData2} />
+      <FAQ faqs={faqsData} />
       <Location />
       <Footer />
     </div>

@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata: Metadata = {
-  title: "Premium Range Rover Engines",
-  description: "Used and Reconditioned Range Rover engines - Tested and Reliable.",
+  title: "Range Rover Engine Specialist | Rebuilds & Replacements",
+  description:
+    "UK-wide Range Rover, Land Rover & Jaguar engine specialists. Warranty-backed rebuilds, repairs and replacements with UK collection. Get a free quote today.",
   icons: {
     icon: "/favicon.svg",
+  },
+  alternates: {
+    canonical: `${siteUrl}`,
   },
 };
 
@@ -17,10 +22,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full w-full max-w-full overflow-x-hidden antialiased"
+      className="h-full w-full max-w-full overflow-x-clip antialiased"
       suppressHydrationWarning
     >
-      <body className="flex min-h-full w-full max-w-full flex-col overflow-x-hidden" suppressHydrationWarning>
+      <body
+        className="flex min-h-full w-full max-w-full flex-col overflow-x-clip"
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

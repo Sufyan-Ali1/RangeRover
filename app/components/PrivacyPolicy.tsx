@@ -1,12 +1,14 @@
 import Navbar from "@/app/components/Navbar";
 import { privacyPolicy } from "@/app/data/legal";
+import LegalPageBackground from "./LegalPageBackground";
 
 export default function PrivacyPolicy() {
   return (
     <>
       <Navbar />
-      <div className="pt-20 min-h-screen bg-white">
-        <div className="mx-auto w-full max-w-[1728px] px-6 py-12 sm:px-10 sm:py-16 xl:px-[101px]">
+      <div className="relative isolate pt-20 min-h-screen bg-white">
+        <LegalPageBackground />
+        <div className="relative z-10 mx-auto w-full max-w-[1728px] px-6 py-12 sm:px-10 sm:py-16 xl:px-[101px]">
           <h1 className="text-4xl font-bold text-gray-900 mb-12">
             {privacyPolicy.title}
           </h1>

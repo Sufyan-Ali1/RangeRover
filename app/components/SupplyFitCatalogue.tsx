@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { engineServices } from "../data/services";
+import { engineServices } from "../data/supplyFit/services";
 
 const serviceImages: Record<string, string> = {
-  "engine-rebuild": "/services/engine_rebuild.png",
-  "timing-chain-replacement": "/services/timing_chain_replacement.png",
-  "turbo-replacement": "/services/turbo_replacement.png",
-  "head-gasket-replacement": "/services/head_gasket.png",
-  "engine-repair": "/services/engine_repair.png",
-  "engine-replacement": "/services/engine_replacement.png",
-  "engine-swap": "/services/engine_swap.png",
-  "timing-belt-replacement": "/services/timing_belt_Replacement.jpeg",
+  "engine-rebuild": "/services/engine_rebuild.webp",
+  "timing-chain-replacement": "/services/timing_chain_replacement.webp",
+  "turbo-replacement": "/services/turbo_replacement.webp",
+  "head-gasket-replacement": "/services/head_gasket.webp",
+  "engine-repair": "/services/engine_repair.webp",
+  "engine-replacement": "/services/engine_replacement.webp",
+  "engine-swap": "/services/engine_swap.webp",
+  "timing-belt-replacement": "/services/timing_belt_Replacement.webp",
 };
 
 const services = engineServices.map((service) => ({
@@ -30,17 +30,23 @@ export default function SupplyFitCatalogue() {
             Engine Services We Offer
           </h2>
           <p className="mx-auto max-w-2xl text-[15px] leading-[1.7] text-gray-500">
-            Browse our specialist Range Rover and Land Rover engine services, from rebuilds and repairs
-            to replacements, swaps and timing system work.
+            Supply and fit is only one part of what we offer. Our workshop
+            handles the full spectrum of engine work, so whatever your vehicle
+            needs, our specialists can take care of it.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <div
+            <Link
               key={service.slug}
-              className="group overflow-hidden rounded-xl border"
-              style={{ borderColor: "rgba(74,166,107,0.45)", background: "#0d1117" }}
+              href={`/services/${service.slug}`}
+              aria-label={service.title}
+              className="group block overflow-hidden rounded-xl border focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#11633A]"
+              style={{
+                borderColor: "rgba(74,166,107,0.45)",
+                background: "#0d1117",
+              }}
             >
               <div className="relative h-[220px] w-full overflow-hidden">
                 {service.image ? (
@@ -53,7 +59,14 @@ export default function SupplyFitCatalogue() {
                   />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center bg-[#111]">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2a2a2a" strokeWidth="1.5">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#2a2a2a"
+                      strokeWidth="1.5"
+                    >
                       <rect x="3" y="3" width="18" height="18" rx="2" />
                       <circle cx="8.5" cy="8.5" r="1.5" />
                       <path d="M21 15l-5-5L5 21" />
@@ -70,18 +83,26 @@ export default function SupplyFitCatalogue() {
                 <p className="mb-4 text-[13px] leading-[1.6] text-white/50">
                   {service.description}
                 </p>
-                <Link
-                  href={`/services/${service.slug}`}
+                <span
                   className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] transition-opacity hover:opacity-70"
                   style={{ color: "#4CA66B" }}
                 >
                   Explore More
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

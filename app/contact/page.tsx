@@ -2,9 +2,15 @@ import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
-  title: "Contact Us | Range Rover Engines",
-  description: "Get in touch with Range Rover Garage — Unit 1 Hedley Ave, Grays RM20 4EL.",
+  metadataBase: new URL(siteUrl),
+  title: "Contact Our Range Rover Engine Specialist Team",
+  description:
+    "Contact our Range Rover engine specialist team in Grays, Essex for honest advice and a free, no-obligation quote. UK-wide collection available. Get in touch.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

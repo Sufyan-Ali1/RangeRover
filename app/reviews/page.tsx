@@ -4,10 +4,15 @@ import { ReviewCard } from "../components/Reviews";
 import VideoSection from "../components/VideoSection";
 import CTA from "../components/CTA";
 import { reviews } from "../data/reviews";
-
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
-  title: "Customer Reviews | Range Rover Engines",
-  description: "Read what our customers say about our Range Rover and Land Rover engine services.",
+  metadataBase: new URL(siteUrl),
+  title: "Range Rover Engine Specialist Reviews | Verified Feedback",
+  description:
+    "Read genuine Range Rover engine specialist reviews from owners across the UK, and see why they trust us for rebuilds, repairs and replacements. Read more.",
+  alternates: {
+    canonical: "/reviews",
+  },
 };
 
 export default function ReviewsPage() {
@@ -21,10 +26,11 @@ export default function ReviewsPage() {
           What Our Customers Say
         </p>
         <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-          Customer Reviews
+          Real Owner Feedback
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-gray-500">
-          Trusted by hundreds of Range Rover and Land Rover owners across the UK.
+          See what Range Rover and Land Rover owners say after trusting us with
+          their engine work.
         </p>
       </div>
 

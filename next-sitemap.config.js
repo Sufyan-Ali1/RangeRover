@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 
-const SITE_URL = process.env.SITE_URL || "http://localhost:3000";
+const SITE_URL = process.env.SITE_URL || "https://rangerover.co.uk";
 
 const serviceSlugsPaths = [
   "engine-rebuild",

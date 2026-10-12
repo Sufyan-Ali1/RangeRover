@@ -25,15 +25,17 @@ type FieldErrors = Partial<Record<keyof FormFields, string>>;
 function validate(form: FormFields): FieldErrors {
   const errors: FieldErrors = {};
 
-  if (form.reg && !/^[A-Z0-9]{1,8}$/.test(form.reg))
+  if (!form.reg.trim())
+    errors.reg = "Registration is required.";
+  else if (!/^[A-Z0-9]{1,8}$/.test(form.reg))
     errors.reg = "Registration must be alphanumeric only (max 8 characters).";
 
   if (!form.name.trim())
     errors.name = "Full name is required.";
   else if (form.name.trim().length < 2)
     errors.name = "Name is too short.";
-  else if (!/^[A-Za-z\s'\-]+$/.test(form.name))
-    errors.name = "Name can only contain letters.";
+  else if (!/^[A-Za-z0-9 ]+$/.test(form.name))
+    errors.name = "Name can only contain letters, numbers and spaces.";
 
   if (!form.email.trim())
     errors.email = "Email address is required.";
@@ -69,10 +71,11 @@ export interface VehicleInfo {
 interface GetQuoteProps {
   initialReg?: string;
   showNotFound?: boolean;
+  lookupError?: string;
   vehicleInfo?: VehicleInfo;
 }
 
-export default function GetQuote({ initialReg = "", showNotFound = false, vehicleInfo }: GetQuoteProps) {
+export default function GetQuote({ initialReg = "", showNotFound = false, lookupError, vehicleInfo }: GetQuoteProps) {
   const router = useRouter();
   const [math, setMath] = useState({ a: 3, b: 5, answer: 8 });
   const [captcha, setCaptcha] = useState("");
@@ -96,7 +99,9 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
     const { name, value } = e.target;
     let filtered = value;
 
-    if (name === "reg")
+    if (name === "name")
+      filtered = value.replace(/[^A-Za-z0-9 ]/g, "");
+    else if (name === "reg")
       filtered = value.replace(/[^A-Za-z0-9]/g, "").toUpperCase().slice(0, 8);
     else if (name === "phone")
       filtered = value.replace(/\D/g, "").slice(0, 15);
@@ -120,7 +125,7 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
       return;
     }
 
-    if (parseInt(captcha, 10) !== math.answer) {
+    if (!captcha.trim() || Number(captcha) !== math.answer) {
       setSubmitError("Incorrect answer to the verification question. Please try again.");
       refreshMath();
       return;
@@ -193,7 +198,7 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
           </div>
         )}
 
-        {vehicleNotFound && (
+        {(vehicleNotFound || lookupError) && (
           <div
             className="mb-6 flex items-start gap-4 rounded-xl border border-gray-200 bg-white px-5 py-4 shadow-sm"
             style={{ borderLeft: "4px solid #C9963A" }}
@@ -202,9 +207,9 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
               <span className="text-[14px] font-black leading-none text-[#C9963A]">!</span>
             </div>
             <div>
-              <p className="text-[13px] font-black uppercase tracking-wide text-gray-900">Vehicle Not Found</p>
+              <p className="text-[13px] font-black uppercase tracking-wide text-gray-900">{lookupError ? "Vehicle Lookup Unavailable" : "Vehicle Not Found"}</p>
               <p className="mt-0.5 text-[13px] text-gray-500">
-                Please enter your details manually below. Our team will contact you shortly.
+                {lookupError ?? "Please enter your details manually below. Our team will contact you shortly."}
               </p>
             </div>
           </div>
@@ -219,7 +224,7 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
                 {/* Vehicle Registration */}
                 <div>
                   <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">
-                    Vehicle Registration
+                    Vehicle Registration <span className="text-red-500">*</span>
                   </p>
                   <div className={`flex items-center overflow-hidden rounded-lg border-2 bg-[#FAFAE8] ${fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
                     <div className={`flex items-center justify-center px-3 py-3 text-xl border-r ${fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
@@ -377,7 +382,7 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
                 Prefer To Call?
               </p>
               <p className="mb-5 text-[13px] leading-relaxed text-white/70">
-                Speak directly with one of our JLR specialists. Mon–Fri 9am–6pm, Sat 7am–2pm.
+                Speak directly with one of our JLR specialists. Mon–Fri 9am–6pm, Sat 8am–2pm.
               </p>
               <div className="flex flex-col gap-3">
                 <a href="tel:01708592377" className="flex items-center gap-3 text-[15px] font-bold text-white hover:text-[#4CA66B] transition">

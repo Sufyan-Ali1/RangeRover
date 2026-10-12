@@ -6,17 +6,24 @@ import SupplyFitCTA from "../components/SupplyFitCTA";
 import SupplyFitContent from "../components/SupplyFitContent";
 import AuthorityNationwide from "../components/AuthorityNationwide";
 import AuthorityPrecision from "../components/AuthorityPrecision";
-import { supplyFitNationwide, supplyFitPrecision } from "../data/authority";
+import { supplyFitPrecision } from "../data/supplyFit/supplyFitPrecision";
+import { supplyFitNationwide } from "../data/supplyFit/SupplyFitNationwide";
 import SupplyFitGetParts from "../components/SupplyFitGetParts";
 import SupplyFitCatalogue from "../components/SupplyFitCatalogue";
 import SupplyFitEnginesQuote from "../components/SupplyFitEnginesQuote";
 import SupplyFitFAQ from "../components/SupplyFitFAQ";
 import Footer from "../components/Footer";
-
+import { whyData } from "../data/supplyFit/WhyData";
+import { supplyFitGetParts } from "../data/supplyFit/supplyFitGet";
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export const metadata = {
-  title: "Supply & Fit Services | Range Rover Garage",
+  metadataBase: new URL(siteUrl),
+  title: "Range Rover Engine Supply and Fit | Genuine OEM Parts",
   description:
-    "Genuine & OEM parts supplied and professionally fitted by Land Rover experts in London. Premium quality, transparent pricing, no compromise.",
+    "Genuine and OEM Range Rover engine supply and fit, professionally installed by JLR specialists in Essex. 12-month warranty, same-day fitting. Get a free quote.",
+  alternates: {
+    canonical: "/supply-fit",
+  },
 };
 
 export default function SupplyFitPage() {
@@ -26,11 +33,11 @@ export default function SupplyFitPage() {
       <SupplyFitHero />
       <SupplyFitEnginesQuote />
       <SupplyFitCatalogue />
-      <SupplyFitPrecision />
+      <SupplyFitPrecision data={whyData} />
       <SupplyFitWorkflow />
       <SupplyFitCTA />
       <SupplyFitContent />
-      <SupplyFitGetParts />
+      <SupplyFitGetParts data={supplyFitGetParts} />
       <AuthorityNationwide data={supplyFitNationwide} />
       <AuthorityPrecision data={supplyFitPrecision} />
       <SupplyFitFAQ />

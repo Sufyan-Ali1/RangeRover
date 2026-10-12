@@ -1,6 +1,10 @@
-import type { ServiceCard } from "../data/serviceCards";
+import type { ExtendedServiceCard } from "../data/serviceCards";
 
-export default function ServiceCards({ cards }: { cards: ServiceCard[] }) {
+export default function ServiceCards({
+  cards,
+}: {
+  cards: ExtendedServiceCard[];
+}) {
   return (
     <section className="w-full bg-[#F3F4F6]">
       <div className="mx-auto w-full max-w-[1728px] px-6 py-14 sm:px-10 xl:px-[101px] xl:py-20">

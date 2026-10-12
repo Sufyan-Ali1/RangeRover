@@ -1,25 +1,22 @@
 import Image from "next/image";
+import {
+  supplyFitHeroData,
+  SupplyFitHeroDataProps,
+} from "../data/supplyFit/SupplyFitHeroData";
 
-export default function SupplyFitHero() {
-  const features = [
-    { icon: "+", label: "Genuine Parts" },
-    { icon: "+", label: "Expert Technicians" },
-    { icon: "+", label: "Warranty Included" },
-    { icon: "+", label: "Same Day Fitting" },
-  ];
+interface SupplyFitHeroProps {
+  data?: SupplyFitHeroDataProps;
+}
 
-  const stats = [
-    { value: "15+", label: "YEARS EXPERIENCE" },
-    { value: "8.5k", label: "PARTS FITTED" },
-    { value: "4.9*", label: "GOOGLE RATING" },
-  ];
-
+export default function SupplyFitHero({
+  data = supplyFitHeroData,
+}: SupplyFitHeroProps) {
   return (
     <section className="relative w-full overflow-hidden bg-white">
       <Image
-        src="/images/supply-fit/background-hero.webp"
-        alt=""
-        aria-hidden="true"
+        src={data.images.background.src}
+        alt={data.images.background.alt}
+        aria-hidden={!data.images.background.alt}
         fill
         sizes="100vw"
         className="absolute inset-0 h-full w-full object-cover"
@@ -37,23 +34,21 @@ export default function SupplyFitHero() {
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-14">
           <div className="flex w-full flex-col lg:w-[52%]">
             <span className="mb-3 inline-flex w-fit items-center rounded-full border border-white/30 bg-black/60 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
-              Range Rover &amp; Land Rover Specialists
+              {data.badgeText}
             </span>
 
-            <h1 className="mb-4 text-[42px] font-black leading-tight sm:text-[52px]">
-              <span className="text-white">Supply &amp; Fit</span>
+            <h1 className="mb-4 text-[30px] font-black leading-tight sm:text-[45px]">
+              <span className="text-white">{data.titleSpan1}</span>
               <br />
-              <span style={{ color: "#11633A" }}>Services</span>
+              <span >{data.titleSpan2}</span>
             </h1>
 
             <p className="mb-5 max-w-[520px] text-[15px] font-semibold leading-[1.6] text-white/90">
-              Genuine &amp; OEM parts supplied and professionally fitted by Land
-              Rover experts in London. Premium quality, transparent pricing, no
-              compromise.
+              {data.description}
             </p>
 
             <div className="mb-5 flex flex-wrap gap-2">
-              {features.map((f) => (
+              {data.features.map((f) => (
                 <span
                   key={f.label}
                   className="flex items-center gap-2 rounded-full bg-black/70 px-4 py-2 text-[13px] font-semibold text-white backdrop-blur-sm"
@@ -66,22 +61,43 @@ export default function SupplyFitHero() {
 
             <div className="mb-7 flex flex-wrap gap-3">
               <a
-                href="tel:01375531355"
+                href={data.phone.href}
                 className="flex items-center gap-2.5 rounded-lg px-6 py-3 text-[15px] font-bold text-white transition-opacity hover:opacity-90"
-                style={{ background: "linear-gradient(94.78deg,#388358 50%,#11633A 100%)" }}
+                style={{
+                  background:
+                    "linear-gradient(94.78deg,#388358 50%,#11633A 100%)",
+                }}
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6.06 6.06l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
-                01375 531355
+                {data.phone.display}
               </a>
               <a
-                href="https://wa.me/441375531355"
+                href={data.whatsapp.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 rounded-lg bg-black/60 px-6 py-3 text-[15px] font-bold text-white backdrop-blur-sm transition-opacity hover:opacity-90"
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                 </svg>
                 WhatsApp Us
@@ -89,7 +105,7 @@ export default function SupplyFitHero() {
             </div>
 
             <div className="flex flex-wrap gap-8 sm:gap-12">
-              {stats.map((s) => (
+              {data.stats.map((s) => (
                 <div key={s.label} className="flex flex-col">
                   <span className="text-[28px] font-black leading-none text-white sm:text-[32px]">
                     {s.value}
@@ -105,8 +121,8 @@ export default function SupplyFitHero() {
           <div className="relative w-full lg:w-[48%]">
             <div className="relative h-[400px] max-h-[400px] overflow-hidden rounded-2xl shadow-2xl">
               <Image
-                src="/images/supply-fit/hero-image.webp"
-                alt="Supply and fit workshop with Range Rover engine being professionally fitted"
+                src={data.images.heroCard.src}
+                alt={data.images.heroCard.alt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 48vw"
                 className="object-cover"
@@ -115,15 +131,30 @@ export default function SupplyFitHero() {
               <div className="absolute bottom-4 left-4 flex items-center gap-3 rounded-xl bg-black/80 px-4 py-3 backdrop-blur-sm">
                 <div
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"
-                  style={{ background: "linear-gradient(135deg,#388358,#11633A)" }}
+                  style={{
+                    background: "linear-gradient(135deg,#388358,#11633A)",
+                  }}
                 >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[13px] font-bold leading-tight text-white">12-month warranty</span>
-                  <span className="text-[11px] text-white/70">On all parts &amp; labour</span>
+                  <span className="text-[13px] font-bold leading-tight text-white">
+                    {data.warrantyBadge.title}
+                  </span>
+                  <span className="text-[11px] text-white/70">
+                    {data.warrantyBadge.subtitle}
+                  </span>
                 </div>
               </div>
             </div>

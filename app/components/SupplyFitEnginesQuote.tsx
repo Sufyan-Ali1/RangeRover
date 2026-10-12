@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { supplyFitEngines } from "../data/supplyFitEngines";
+import { supplyFitEnginesQuoteData } from "../data/supplyFit/SupplyFitEnginesQuoteData";
+import { SupplyFitEnginesQuoteDataProps } from "../data/types";
 
 function gridClass(visible: number) {
   if (visible === 1) return "grid-cols-1";
@@ -11,9 +12,17 @@ function gridClass(visible: number) {
   return "grid-cols-4";
 }
 
-export default function SupplyFitEnginesQuote() {
+interface SupplyFitEnginesQuoteProps {
+  data?: SupplyFitEnginesQuoteDataProps;
+}
+
+export default function SupplyFitEnginesQuote({
+  data = supplyFitEnginesQuoteData,
+}: SupplyFitEnginesQuoteProps) {
   const [page, setPage] = useState(0);
   const [visible, setVisible] = useState(4);
+
+  const enginesList = data.engines;
 
   useEffect(() => {
     const updateVisible = () => {
@@ -37,8 +46,11 @@ export default function SupplyFitEnginesQuote() {
     setPage(0);
   }, [visible]);
 
-  const totalPages = Math.ceil(supplyFitEngines.length / visible);
-  const visibleEngines = supplyFitEngines.slice(page * visible, (page + 1) * visible);
+  const totalPages = Math.ceil(enginesList.length / visible);
+  const visibleEngines = enginesList.slice(
+    page * visible,
+    (page + 1) * visible,
+  );
   const canPrev = page > 0;
   const canNext = page < totalPages - 1;
 
@@ -47,22 +59,19 @@ export default function SupplyFitEnginesQuote() {
       <div className="mx-auto w-full max-w-[1728px] px-6 py-16 sm:px-10 xl:px-[101px] xl:py-20">
         <div className="mb-8 text-center">
           <h2 className="text-[32px] font-black uppercase leading-tight tracking-tight text-gray-900 sm:text-[40px] xl:text-[48px]">
-            Popular Range Rover &amp; Land Rover{" "}
-            <span style={{ color: "#11633A" }}>Engines</span>
+            {data.headingPart1}{" "}
+            <span style={{ color: "#11633A" }}>{data.headingPart2}</span>
             <br />
-            <span style={{ color: "#11633A" }}>Available in Grays England</span>
+            <span style={{ color: "#11633A" }}>{data.headingPart3}</span>
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-[1.7] text-gray-600">
-            We stock and supply a wide range of reconditioned Range Rover and Land Rover engines for
-            customers in Grays England, Thurrock and beyond. From the powerful SVR 5.0L to the efficient
-            204DTD Ingenium units, our Grays workshop is fully equipped for immediate supply and fit.
+            {data.description}
           </p>
         </div>
 
         <div className="mx-auto mb-10 max-w-3xl rounded-xl border border-[#b6e8c8] bg-[#f0faf4] px-6 py-5 text-center">
           <p className="text-[14px] font-semibold leading-[1.7] text-[#11633A]">
-            If you need a specific Range Rover or Land Rover engine code in Grays England, contact our
-            team and we will confirm availability, lead time and a full supply-and-fit price.
+            {data.noticeText}
           </p>
         </div>
 
@@ -72,7 +81,7 @@ export default function SupplyFitEnginesQuote() {
               key={engine.id}
               className="flex h-full min-w-0 flex-col rounded-xl border border-[#c8e6d4] bg-white"
             >
-              <div className="h-[180px] w-full overflow-hidden rounded-t-xl bg-white">
+              <div className="h-[180px] w-full overflow-hidden rounded-t-xl bg-white p-4">
                 <img
                   src={engine.image}
                   alt={engine.title}
@@ -90,15 +99,15 @@ export default function SupplyFitEnginesQuote() {
                   {engine.description}
                 </p>
                 <ul className="mb-3 flex flex-col gap-0.5">
-                  {engine.specs.map((spec) => (
-                    <li key={spec} className="text-[11px] leading-[1.5] text-gray-500">
+                  {engine.specs?.map((spec, index) => (
+                    <li
+                      key={index}
+                      className="text-[11px] leading-[1.5] text-gray-500"
+                    >
                       &bull; {spec}
                     </li>
                   ))}
                 </ul>
-                <p className="mb-1 min-h-[44px] text-[12px] font-semibold" style={{ color: "#11633A" }}>
-                  Fits: {engine.fits}
-                </p>
                 <Link
                   href="/get-quote"
                   className="mt-auto inline-flex items-center justify-center rounded-lg bg-[#11633A] px-4 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-opacity hover:opacity-90"
@@ -120,20 +129,40 @@ export default function SupplyFitEnginesQuote() {
               style={{ background: "#11633A" }}
               aria-label="Previous"
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="M15 18l-6-6 6-6" />
               </svg>
             </button>
 
             <button
               type="button"
-              onClick={() => setPage((current) => Math.min(totalPages - 1, current + 1))}
+              onClick={() =>
+                setPage((current) => Math.min(totalPages - 1, current + 1))
+              }
               disabled={!canNext}
               className="flex h-10 w-10 items-center justify-center rounded-full text-white shadow-lg transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 sm:h-11 sm:w-11"
               style={{ background: "#11633A" }}
               aria-label="Next"
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="M9 18l6-6-6-6" />
               </svg>
             </button>

@@ -1,0 +1,233 @@
+/* blogDetail.module.css */
+
+/* Typography and General Layout */
+.blogContent {
+  line-height: 1.85;
+  font-size: 1.05rem;
+  color: #334155; /* slate-700 */
+  padding-top: 1rem;
+}
+
+/* PARAGRAPHS */
+.blogContent p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #334155;
+}
+
+/* HEADINGS */
+.blogContent h1 {
+  font-size: 2.25rem;
+  margin: 1.25rem 0; 
+  font-weight: 800;
+  line-height: 1.25;
+  color: #0f172a; /* slate-900 */
+}
+
+/* Apply top margin ONLY if the heading is NOT the absolute first element in the text block */
+.blogContent h1:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.blogContent h2 {
+  font-size: 1.75rem;
+  margin: 1rem 0; 
+  font-weight: 750;
+  line-height: 1.3;
+  color: #0f172a;
+}
+
+/* Apply top margin ONLY if the heading is NOT the absolute first element in the text block */
+.blogContent h2:not(:first-child) {
+  margin-top: 2.5rem; /* Prevents double margin layout tracking bugs */
+}
+
+.blogContent h3 {
+  font-size: 1.4rem;
+  margin: 0.8rem 0;
+  font-weight: 650;
+  line-height: 1.35;
+  color: #1e293b; /* slate-800 */
+}
+
+/* Apply top margin ONLY if the heading is NOT the absolute first element in the text block */
+.blogContent h3:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.blogContent h4,
+.blogContent h5,
+.blogContent h6 {
+  color: #475569; /* slate-600 */
+  margin: 1rem 0 0.6rem;
+  font-weight: 600;
+}
+
+.blogContent h4:not(:first-child),
+.blogContent h5:not(:first-child),
+.blogContent h6:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+/* STRONG EMERGENCIES */
+.blogContent strong,
+.blogContent b {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* LISTS */
+.blogContent ul,
+.blogContent ol {
+  margin: 1rem 0 1.6rem;
+  padding-left: 1.75rem;
+  color: #334155;
+}
+
+.blogContent ul {
+  list-style-type: disc;
+}
+
+.blogContent ol {
+  list-style-type: decimal;
+}
+
+.blogContent li {
+  margin-bottom: 0.5rem;
+}
+
+/* TABLES */
+.blogContent table {
+  width: 100%;
+  /* Imported CMS heights must not turn the table into a one-row viewport. */
+  height: auto !important;
+  max-height: none !important;
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  font-size: 15px;
+  display: block;
+  overflow-x: auto;
+}
+
+.blogContent th,
+.blogContent td {
+  border: 1px solid #e2e8f0; /* slate-200 */
+  padding: 12px 14px;
+  color: #334155;
+}
+
+.blogContent th {
+  background: #f1f5f9; /* slate-100 */
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* LINKS */
+.blogContent a {
+  color: #11633A; /* Professional Sky-blue anchor accent */
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.blogContent a:hover {
+  color: #0d4f2d;
+}
+
+/* IMAGES inside markup */
+.blogContent img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 2.5rem 0;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* FIGURES — the API wraps inline images as <figure class="image"><img></figure>;
+   reset the browser default margin so the img's own margin controls spacing. */
+.blogContent figure {
+  margin: 0;
+}
+
+.blogContent figure img {
+  margin: 2.5rem auto;
+  display: block;
+}
+
+.blogContent figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b; /* slate-500 */
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* BLOCKQUOTE */
+.blogContent blockquote {
+  border-left: 4px solid #11633A;
+  padding: 0.75rem 1.25rem;
+  margin: 2rem 0;
+  background: #f8fafc; /* slate-50 */
+  color: #475569;
+  font-style: italic;
+  border-radius: 0 8px 8px 0;
+}
+
+/* CODE BLOCKS */
+.blogContent code {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-family: monospace;
+}
+
+.blogContent pre {
+  background: #0f172a;
+  padding: 1.25rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.blogContent pre code {
+  background: transparent;
+  color: #f8fafc;
+  padding: 0;
+}
+
+/* SAFETY INLINE STYLE OVERRIDES */
+.blogContent span[style*="color: rgb(0"],
+.blogContent span[style*="color:rgb(0"],
+.blogContent span[style*="color: #000"],
+.blogContent span[style*="color:#000"],
+.blogContent span[style*="color: black"] {
+  color: inherit !important;
+}
+
+.blogContent *[style*="background-color: white"],
+.blogContent *[style*="background-color:#fff"] {
+  background-color: transparent !important;
+}
+
+/* RESPONSIVE SCALING */
+@media (max-width: 768px) {
+  .blogContent {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  .blogContent h1 {
+    font-size: 1.85rem;
+    margin: 2.5rem 0 1rem;
+  }
+  .blogContent h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 0.85rem;
+  }
+  .blogContent h3 {
+    font-size: 1.25rem;
+  }
+}

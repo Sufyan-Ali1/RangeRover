@@ -17,7 +17,7 @@ export default function Location() {
         Visit Our Workshop
       </h2>
       <p className="mb-10 text-center text-[15px] text-gray-500">
-        Our fully equipped workshop in Grays, Essex serves customers across London, the South East,<br className="hidden sm:block" /> and the whole of the UK — with free nationwide collection and delivery available.
+        Our fully equipped workshop in Grays, Essex serves customers across London, the South East,<br className="hidden sm:block" /> and the whole of the UK — with nationwide collection and delivery available.
       </p>
 
       {/* Outer card */}
@@ -88,7 +88,7 @@ export default function Location() {
                   Monday - Friday: <strong className="font-bold">9:00 AM - 6:00 PM</strong>
                 </p>
                 <p className="mb-2 text-[14px] text-gray-900">
-                  Saturday: <strong className="font-bold">7:00 AM - 1:00 PM</strong>
+                  Saturday: <strong className="font-bold">8:00 AM - 2:00 PM</strong>
                 </p>
                 <p className="text-[14px] font-bold text-gray-900">
                   Sunday: <span className="text-red-500">Closed</span>

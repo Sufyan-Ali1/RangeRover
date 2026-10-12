@@ -11,9 +11,10 @@ import Location from "../../components/Location";
 import BlogSection from "../../components/BlogSection";
 import CTA from "../../components/CTA";
 import VideoSection from "../../components/VideoSection";
-import { faqs } from "../../data/faqs";
-import { getServiceAuthorityNationwide, getServiceAuthorityPrecision } from "../../data/authority";
-import { getServiceNationwideSupport } from "../../data/sections";
+import { notFound } from "next/navigation";
+
+import { getServiceData } from "../../data/services/getServiceData";
+
 import WarrantySection from "@/app/components/WarrantySection";
 import ServicesTicker from "@/app/components/ServicesTicker";
 import ServiceGallery from "@/app/components/ServiceGallery";
@@ -29,18 +30,42 @@ function slugToTitle(slug: string) {
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 }
-
+const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const title = slugToTitle(slug);
+  const data = getServiceData(slug);
+
   return {
-    title: `${title} | Range Rover Engines`,
-    description: `Expert Range Rover ${title.toLowerCase()} service — trusted specialists in Grays, Essex.`,
+    title: `${data?.meta.title}`,
+    description: `${data?.meta.description}`,
+    metadataBase: new URL(siteUrl),
+    alternates: {
+      canonical: `/services/${slug}`,
+    },
   };
 }
 
 export default async function SubServicePage({ params }: Props) {
   const { slug } = await params;
+
+  const data = getServiceData(slug);
+
+  if (!data) {
+    notFound();
+  }
+
+  const {
+    headerData,
+    reviews,
+    whyEngineData,
+    bookEngineData,
+    galleryData,
+    TrustData,
+    BrandsData,
+    certifiedSpecialistsData,
+    faqs,
+  } = data;
+
   const title = slugToTitle(slug);
 
   return (
@@ -48,26 +73,33 @@ export default async function SubServicePage({ params }: Props) {
       <Navbar />
       <Header
         compact
-        title={title}
-        subtitle="Engine Rebuild • Replacement • Diagnostics • Performance Solutions"
+        title={headerData.title}
+        subtitle={headerData.subtitle}
+        highlights={headerData.highlights}
       />
-      <Reviews />
+      <Reviews reviews={reviews} />
       <ServiceGallery
-        title={`${title} Gallery`}
-        subtitle="A look inside our workshop — precision work on every Range Rover and Land Rover engine."
+        title={galleryData.title}
+        subtitle={galleryData.subtitle}
         images={getServiceImages(slug)}
       />
       <WarrantySection />
-      <ServicesTicker items={["Engine Rebuild", "Replacement", "Diagnostics", "Performance Solutions"]} />
-      <AuthorityNationwide data={getServiceAuthorityNationwide(title)} />
-      <NationwideSupport data={getServiceNationwideSupport(title)} />
-      <BrandShowcase />
-      <AuthorityPrecision data={getServiceAuthorityPrecision(title)} />
-      <NationwideSupport data={getServiceNationwideSupport(title)} />
+      <ServicesTicker
+        items={[
+          "Engine Rebuild",
+          "Replacement",
+          "Diagnostics",
+          "Performance Solutions",
+        ]}
+      />
+      <AuthorityNationwide data={whyEngineData} />
+      <NationwideSupport data={bookEngineData} />
+      <BrandShowcase cards={BrandsData} />
+      <AuthorityPrecision data={certifiedSpecialistsData} />
+      <NationwideSupport data={TrustData} />
       <VideoSection />
       <CTA />
       <BlogSection />
-      <NationwideSupport data={getServiceNationwideSupport(title)} />
       <FAQ faqs={faqs} />
       <Location />
       <Footer />

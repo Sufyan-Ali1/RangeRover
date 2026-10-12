@@ -105,10 +105,10 @@ export default function TrustedSpecialists({ data }: { data: TrustedSpecialistsD
           </div>
 
           {/* ── Right: Car SVG ── */}
-          <div className="flex items-end justify-end px-6 pb-0 sm:px-10 lg:px-0">
+          <div className="flex min-w-0 items-end justify-end px-6 pb-0 sm:px-10 lg:-translate-x-6 lg:px-0 xl:-translate-x-[85px]">
             <Image
               src="/images/car.webp"
-              alt="Range Rover specialist mechanic"
+              alt="Mechanic inspecting a Range Rover engine bay with the bonnet open"
               width={500}
               height={380}
               className="w-full max-w-[400px] lg:max-w-none lg:w-[100%]"

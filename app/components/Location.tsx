@@ -88,7 +88,7 @@ export default function Location() {
                   Monday - Friday: <strong className="font-bold">9:00 AM - 6:00 PM</strong>
                 </p>
                 <p className="mb-2 text-[14px] text-gray-900">
-                  Saturday: <strong className="font-bold">7:00 AM - 1:00 PM</strong>
+                  Saturday: <strong className="font-bold">8:00 AM - 2:00 PM</strong>
                 </p>
                 <p className="text-[14px] font-bold text-gray-900">
                   Sunday: <span className="text-red-500">Closed</span>

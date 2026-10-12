@@ -22,11 +22,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full w-full max-w-full overflow-x-hidden antialiased"
+      className="h-full w-full max-w-full overflow-x-clip antialiased"
       suppressHydrationWarning
     >
       <body
-        className="flex min-h-full w-full max-w-full flex-col overflow-x-hidden"
+        className="flex min-h-full w-full max-w-full flex-col overflow-x-clip"
         suppressHydrationWarning
       >
         {children}

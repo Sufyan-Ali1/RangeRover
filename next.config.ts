@@ -1,11 +1,20 @@
 import type { NextConfig } from "next";
 
 // Import redirects from generated redirects file
-const redirects = require('./lib/redirects.js');
+import redirects from "./lib/redirects.js";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   productionBrowserSourceMaps: true,
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "rangerovergarage.co.uk", pathname: "/storage/**" },
+      { protocol: "https", hostname: "www.rangerovergarage.co.uk", pathname: "/storage/**" },
+      { protocol: "https", hostname: "rangerovergarage.co.uk", pathname: "/img/**" },
+      { protocol: "https", hostname: "www.rangerovergarage.co.uk", pathname: "/img/**" },
+      { protocol: "https", hostname: "vogueimages.co.uk", pathname: "/**" },
+    ],
+  },
   async redirects() {
     return redirects;
   },

@@ -22,6 +22,7 @@ export default async function GetQuotePage({ searchParams }: Props) {
   const { reg } = await searchParams;
 
   let notFound = false;
+  let lookupError: string | undefined;
   let vehicleInfo: VehicleInfo | undefined;
 
   if (reg?.trim()) {
@@ -32,7 +33,8 @@ export default async function GetQuotePage({ searchParams }: Props) {
         data: result.vehicle,
       };
     } else {
-      notFound = true;
+      notFound = result.code === "not_found";
+      if (!notFound) lookupError = result.error;
     }
   }
 
@@ -43,6 +45,7 @@ export default async function GetQuotePage({ searchParams }: Props) {
         <GetQuote
           initialReg={reg ?? ""}
           showNotFound={notFound}
+          lookupError={lookupError}
           vehicleInfo={vehicleInfo}
         />
       </main>

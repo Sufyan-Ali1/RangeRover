@@ -21,7 +21,7 @@ import { engineServicesMain } from "../data/areas/main/EngineServicesData";
 import { headerData } from "../data/areas/main/HeroData";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL || "https://www.rangerover.co.uk"),
+  metadataBase: new URL(process.env.SITE_URL || "https://rangerovergarage.co.uk"),
   title: "Trusted Range Rover Engine Specialist | UK-Wide Supply",
   description:
     "Trusted Range Rover engine specialist: tested, reconditioned & used engines, engine-code matching and warranty, dispatched UK-wide. Find your area & quote.",

@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import VideoSection from "../components/VideoSection";
 import Image from "next/image";
 
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: "Range Rover Engine Rebuild Gallery | Our Workshop",

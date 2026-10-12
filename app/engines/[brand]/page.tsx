@@ -71,7 +71,7 @@ function mapTableRows(
   }));
 }
 
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export async function generateMetadata({ params }: Props) {
   const { brand } = await params;
   const parsed = parseSizeSlug(brand);

@@ -8,7 +8,7 @@ import AboutWorkshop from "../components/AboutWorkshop";
 
 import { aboutPagePrecision } from "../data/about/AboutPrecision";
 
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: "About Us | Range Rover Engine Specialists in Essex",

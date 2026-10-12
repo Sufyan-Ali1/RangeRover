@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import GetQuote, { type VehicleInfo } from "../components/GetQuote";
 import { lookupVehicle } from "../actions/lookupVehicle";
 
-const siteUrl = process.env.SITE_URL || "https://www.rangerover.co.uk";
+const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: "Get a Quote | Range Rover Engines",

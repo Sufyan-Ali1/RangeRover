@@ -330,7 +330,7 @@ export default function Contact() {
                 </p>
                 <p className="text-[14.5px] text-gray-800">
                   <span className="font-semibold">Saturday: </span>
-                  <span className="font-bold">7:00 AM - 1:00 PM</span>
+                  <span className="font-bold">8:00 AM - 2:00 PM</span>
                 </p>
                 <p className="text-[14.5px] text-gray-800">
                   <span className="font-semibold">Sunday: </span>

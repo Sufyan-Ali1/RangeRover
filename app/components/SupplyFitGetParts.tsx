@@ -96,7 +96,7 @@ export default function SupplyFitGetParts({ data }: SupplyFitGetPartsProps) {
               <div className="flex flex-wrap gap-3">
                 {/* Phone - Static */}
                 <a
-                  href="tel:01375531355"
+                  href="tel:01708592377"
                   className="flex items-center gap-2 rounded-lg px-5 py-2.5 text-[13px] font-semibold text-white transition hover:opacity-90"
                   style={{
                     background: "#11633A",

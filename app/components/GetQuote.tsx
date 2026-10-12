@@ -71,10 +71,11 @@ export interface VehicleInfo {
 interface GetQuoteProps {
   initialReg?: string;
   showNotFound?: boolean;
+  lookupError?: string;
   vehicleInfo?: VehicleInfo;
 }
 
-export default function GetQuote({ initialReg = "", showNotFound = false, vehicleInfo }: GetQuoteProps) {
+export default function GetQuote({ initialReg = "", showNotFound = false, lookupError, vehicleInfo }: GetQuoteProps) {
   const router = useRouter();
   const [math, setMath] = useState({ a: 3, b: 5, answer: 8 });
   const [captcha, setCaptcha] = useState("");
@@ -197,7 +198,7 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
           </div>
         )}
 
-        {vehicleNotFound && (
+        {(vehicleNotFound || lookupError) && (
           <div
             className="mb-6 flex items-start gap-4 rounded-xl border border-gray-200 bg-white px-5 py-4 shadow-sm"
             style={{ borderLeft: "4px solid #C9963A" }}
@@ -206,9 +207,9 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
               <span className="text-[14px] font-black leading-none text-[#C9963A]">!</span>
             </div>
             <div>
-              <p className="text-[13px] font-black uppercase tracking-wide text-gray-900">Vehicle Not Found</p>
+              <p className="text-[13px] font-black uppercase tracking-wide text-gray-900">{lookupError ? "Vehicle Lookup Unavailable" : "Vehicle Not Found"}</p>
               <p className="mt-0.5 text-[13px] text-gray-500">
-                Please enter your details manually below. Our team will contact you shortly.
+                {lookupError ?? "Please enter your details manually below. Our team will contact you shortly."}
               </p>
             </div>
           </div>
@@ -381,7 +382,7 @@ export default function GetQuote({ initialReg = "", showNotFound = false, vehicl
                 Prefer To Call?
               </p>
               <p className="mb-5 text-[13px] leading-relaxed text-white/70">
-                Speak directly with one of our JLR specialists. Mon–Fri 9am–6pm, Sat 7am–2pm.
+                Speak directly with one of our JLR specialists. Mon–Fri 9am–6pm, Sat 8am–2pm.
               </p>
               <div className="flex flex-col gap-3">
                 <a href="tel:01708592377" className="flex items-center gap-3 text-[15px] font-bold text-white hover:text-[#4CA66B] transition">

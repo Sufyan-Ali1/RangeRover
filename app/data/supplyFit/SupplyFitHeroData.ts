@@ -46,8 +46,8 @@ export const supplyFitHeroData: SupplyFitHeroDataProps = {
   description:
     "Skip the guesswork of sourcing an engine yourself. We supply a fully tested reconditioned unit matched to your exact model and fit it in-house, so you get a warranted, road-ready engine without chasing parts or garages separately.",
   phone: {
-    display: "01375 531355",
-    href: "tel:01375531355",
+    display: "01708 592377",
+    href: "tel:01708592377",
   },
   whatsapp: {
     number: "441375531355",

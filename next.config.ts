@@ -12,7 +12,15 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    return redirects;
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.rangerovergarage.co.uk" }],
+        destination: "https://rangerovergarage.co.uk/:path*",
+        permanent: true,
+      },
+      ...redirects,
+    ];
   },
   async headers() {
     return [

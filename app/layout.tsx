@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
@@ -39,10 +40,32 @@ export default function RootLayout({
       className="h-full w-full max-w-full overflow-x-clip antialiased"
       suppressHydrationWarning
     >
+      <head>
+        <Script
+          id="google-tag-manager"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WN5SDLNV');`,
+          }}
+        />
+      </head>
       <body
         className="flex min-h-full w-full max-w-full flex-col overflow-x-clip"
         suppressHydrationWarning
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WN5SDLNV"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         {children}
       </body>
     </html>

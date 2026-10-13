@@ -153,6 +153,34 @@ export default function Contact() {
 
             <form onSubmit={handleSubmit} noValidate className="mt-7 flex flex-col gap-4">
 
+                {/* Registration */}
+                <div>
+                  <label htmlFor="contact-registration" className="mb-1.5 block text-[12.5px] text-gray-700">Reg Number *</label>
+                  <div className={`flex overflow-hidden rounded-lg border transition focus-within:border-[#4CA66B] focus-within:ring-1 focus-within:ring-[#4CA66B] ${borderClass("reg")}`}>
+                    <div aria-hidden="true" className="flex shrink-0 flex-col items-center justify-center gap-0.5 bg-[#003087] px-3 py-2">
+                      <svg viewBox="0 0 60 40" className="h-7 w-10">
+                        <rect width="60" height="40" fill="#012169" />
+                        <path d="M0,0 L60,40 M60,0 L0,40" stroke="white" strokeWidth="8" />
+                        <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" strokeWidth="4" />
+                        <path d="M30,0 V40 M0,20 H60" stroke="white" strokeWidth="12" />
+                        <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" strokeWidth="8" />
+                      </svg>
+                      <span className="text-[10px] font-bold tracking-widest text-white">UK</span>
+                    </div>
+                  <input
+                    id="contact-registration"
+                    name="reg"
+                    required
+                    maxLength={8}
+                    value={form.reg}
+                    onChange={handleChange}
+                    placeholder="ENTER REGISTRATION"
+                    className="min-w-0 flex-1 bg-[#F5C400] px-3 py-3 text-[13px] font-black uppercase tracking-[0.1em] text-[#1a1a1a] placeholder:font-bold placeholder:text-[#8B7200] outline-none sm:px-3.5 sm:text-[16px]"
+                  />
+                  </div>
+                  <FieldError field="reg" />
+                </div>
+
                 {/* Full Name + Phone */}
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -196,19 +224,7 @@ export default function Contact() {
                   <FieldError field="email" />
                 </div>
 
-                {/* Reg Number + Postcode */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="mb-1.5 block text-[12.5px] text-gray-700">Reg Number *</label>
-                    <input
-                      name="reg"
-                      value={form.reg}
-                      onChange={handleChange}
-                      placeholder="AB12CDE"
-                      className={`${baseInput} ${borderClass("reg")}`}
-                    />
-                    <FieldError field="reg" />
-                  </div>
+                {/* Postcode */}
                   <div>
                     <label className="mb-1.5 block text-[12.5px] text-gray-700">Postcode *</label>
                     <input
@@ -221,7 +237,6 @@ export default function Contact() {
                     />
                     <FieldError field="postcode" />
                   </div>
-                </div>
 
                 {/* Message */}
                 <div>

@@ -12,7 +12,15 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    return redirects;
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.rangerovergarage.co.uk" }],
+        destination: "https://rangerovergarage.co.uk/:path*",
+        permanent: true,
+      },
+      ...redirects,
+    ];
   },
   async headers() {
     return [
@@ -25,7 +33,7 @@ const nextConfig: NextConfig = {
           { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; font-src 'self' data:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; upgrade-insecure-requests",
+            value: "default-src 'self'; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; font-src 'self' data:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com https://www.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; upgrade-insecure-requests",
           },
           { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" },
         ],

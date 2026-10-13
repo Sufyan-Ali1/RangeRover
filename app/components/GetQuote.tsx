@@ -226,16 +226,26 @@ export default function GetQuote({ initialReg = "", showNotFound = false, lookup
                   <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">
                     Vehicle Registration <span className="text-red-500">*</span>
                   </p>
-                  <div className={`flex items-center overflow-hidden rounded-lg border-2 bg-[#FAFAE8] ${fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
-                    <div className={`flex items-center justify-center px-3 py-3 text-xl border-r ${fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
-                      🇬🇧
+                  <div className={`flex overflow-hidden rounded-lg border transition focus-within:border-[#4CA66B] focus-within:ring-1 focus-within:ring-[#4CA66B] ${fieldErrors.reg ? "border-red-400" : "border-gray-300"}`}>
+                    <div aria-hidden="true" className="flex shrink-0 flex-col items-center justify-center gap-0.5 bg-[#003087] px-3 py-2">
+                      <svg viewBox="0 0 60 40" className="h-7 w-10">
+                        <rect width="60" height="40" fill="#012169" />
+                        <path d="M0,0 L60,40 M60,0 L0,40" stroke="white" strokeWidth="8" />
+                        <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" strokeWidth="4" />
+                        <path d="M30,0 V40 M0,20 H60" stroke="white" strokeWidth="12" />
+                        <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" strokeWidth="8" />
+                      </svg>
+                      <span className="text-[10px] font-bold tracking-widest text-white">UK</span>
                     </div>
                     <input
                       name="reg"
+                      required
+                      maxLength={8}
+                      aria-label="Vehicle registration"
                       value={form.reg}
                       onChange={handleChange}
-                      placeholder="ENTER REG"
-                      className="flex-1 bg-transparent px-4 py-3 text-[15px] font-bold uppercase tracking-widest text-gray-700 placeholder:text-gray-400 focus:outline-none"
+                      placeholder="ENTER REGISTRATION"
+                      className="min-w-0 flex-1 bg-[#F5C400] px-3 py-3 text-[13px] font-black uppercase tracking-[0.1em] text-[#1a1a1a] placeholder:font-bold placeholder:text-[#8B7200] outline-none sm:px-3.5 sm:text-[16px]"
                     />
                   </div>
                   <FieldError field="reg" />

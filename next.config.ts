@@ -19,6 +19,21 @@ const nextConfig: NextConfig = {
         destination: "https://rangerovergarage.co.uk/:path*",
         permanent: true,
       },
+      {
+        source: "/how-engine-rebuild-specialists-extend-the-lifespan-of-your-range-rover",
+        destination: "/blogs",
+        permanent: true,
+      },
+      {
+        source: "/top-5-common-diesel-engine-issues-and-their-fixes",
+        destination: "/blogs",
+        permanent: true,
+      },
+      {
+        source: "/why-is-the-reconditioned-4-4-tdv8-448dt-engine-the-best-replacement-for-range-rover-vogue-sport",
+        destination: "/blogs",
+        permanent: true,
+      },
       ...redirects,
     ];
   },
@@ -33,7 +48,7 @@ const nextConfig: NextConfig = {
           { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; font-src 'self' data:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com https://www.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; upgrade-insecure-requests",
+            value: "default-src 'self'; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tagmanager.google.com https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://tagmanager.google.com https://www.google-analytics.com; script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://tagmanager.google.com https://www.google-analytics.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com https://www.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; upgrade-insecure-requests",
           },
           { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" },
         ],

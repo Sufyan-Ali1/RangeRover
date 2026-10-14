@@ -5,6 +5,9 @@ import "./globals.css";
 const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  verification: {
+    google: "MRAbYY3JV-mTrA0WP9e6O4O-WMXJ3MuxUTy5v6xSCeY",
+  },
   title: "Range Rover Engine Specialist | Rebuilds & Replacements",
   description:
     "UK-wide Range Rover, Land Rover & Jaguar engine specialists. Warranty-backed rebuilds, repairs and replacements with UK collection. Get a free quote today.",

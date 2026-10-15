@@ -5,7 +5,7 @@ import { AreaCard } from "../components/Areas/AreaCard";
 import Location from "../components/Location";
 import AuthorityLeading from "../components/AuthorityLeading";
 import Footer from "../components/Footer";
-import EngineServices from "../components/EngineServices";
+import SupplyFitCatalogue from "../components/SupplyFitCatalogue";
 import CTA from "../components/CTA";
 import TrustedSpecialists from "../components/TrustedSpecialists";
 import NationwideSupport from "../components/NationwideSupport";
@@ -64,7 +64,7 @@ export default function AreasPage() {
       <div className="w-full bg-white">
         <NationwideSupport data={servicesNationwideSupport} />
       </div>
-      <EngineServices
+      <SupplyFitCatalogue
         services={engineServices}
         heading={engineServicesMain.heading}
         intro={engineServicesMain.intro}

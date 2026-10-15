@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { engineServices } from "../data/supplyFit/services";
+import type { Service } from "../data/types";
 
 const serviceImages: Record<string, string> = {
   "engine-rebuild": "/services/engine_rebuild.webp",
@@ -13,12 +13,23 @@ const serviceImages: Record<string, string> = {
   "timing-belt-replacement": "/services/timing_belt_Replacement.webp",
 };
 
-const services = engineServices.map((service) => ({
-  ...service,
-  image: serviceImages[service.slug] ?? "",
-}));
+interface EngineServicesProps {
+  services: Service[];
+  heading?: string;
+  intro?: string;
+  viewMoreHref?: string;
+}
 
-export default function SupplyFitCatalogue() {
+export default function SupplyFitCatalogue({
+  services,
+  heading = "Specialist Engine Services",
+  intro = "We specialize in Land Rover and Range Rover engines, providing dealership-level quality at competitive independent prices.",
+  viewMoreHref,
+}: EngineServicesProps) {
+  const servicesWithImage = services.map((service) => ({
+    ...service,
+    image: serviceImages[service.slug] ?? "",
+  }));
   return (
     <section className="w-full bg-white">
       <div className="mx-auto w-full max-w-[1728px] px-6 py-16 sm:px-10 xl:px-[101px] xl:py-20">
@@ -27,17 +38,15 @@ export default function SupplyFitCatalogue() {
             Catalogue
           </p>
           <h2 className="mb-4 text-[32px] font-black leading-tight text-gray-900 sm:text-[40px]">
-            Engine Services We Offer
+            {heading}
           </h2>
           <p className="mx-auto max-w-2xl text-[15px] leading-[1.7] text-gray-500">
-            Supply and fit is only one part of what we offer. Our workshop
-            handles the full spectrum of engine work, so whatever your vehicle
-            needs, our specialists can take care of it.
+            {intro}
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+          {servicesWithImage.map((service) => (
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}

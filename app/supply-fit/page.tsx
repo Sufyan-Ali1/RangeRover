@@ -15,6 +15,7 @@ import SupplyFitFAQ from "../components/SupplyFitFAQ";
 import Footer from "../components/Footer";
 import { whyData } from "../data/supplyFit/WhyData";
 import { supplyFitGetParts } from "../data/supplyFit/supplyFitGet";
+import { engineServices, engineServicesMain } from "../data/supplyFit/services";
 import fs from 'fs';
 import path from 'path';
 const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
@@ -36,7 +37,11 @@ export default function SupplyFitPage() {
       <Navbar />
       <SupplyFitHero />
       <SupplyFitEnginesQuote />
-      <SupplyFitCatalogue />
+      <SupplyFitCatalogue 
+        services={engineServices}
+        heading={engineServicesMain.heading}
+        intro={engineServicesMain.intro}
+       />
       <SupplyFitPrecision data={whyData} />
       <SupplyFitWorkflow />
       <SupplyFitCTA />

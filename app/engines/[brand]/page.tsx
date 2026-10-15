@@ -22,13 +22,13 @@ import SupplyFitPrecision from "../../components/SupplyFitPrecision";
 import SupplyFitContent from "../../components/SupplyFitContent";
 import SupplyFitGetParts from "../../components/SupplyFitGetParts";
 import engineCodesData from "../../data/engineCodesData.json";
-import EngineServices from "@/app/components/EngineServices";
+import SupplyFitCatalogue from "../../components/SupplyFitCatalogue";
 import { engineSizes } from "../../data/engineSizes";
 import {
   getBrandData,
   getBrandsModelSizesDataBySlug,
 } from "@/app/data/engines/brands/GetBrandData";
-import { notFound } from "next/navigation";
+import { notFound } from "next/navigation"; 
 import fs from 'fs';
 import path from 'path';
 import { error } from "console";
@@ -224,7 +224,7 @@ export default async function BrandPage({ params }: Props) {
           "Performance Solutions",
         ]}
       />
-      <EngineServices services={engineServices} />
+      <SupplyFitCatalogue services={engineServices} />
       <PopularEngineSizes brandSlug={brand} brandTitle={brandTitle} />
       {showModels && (
         <BrowseByModelStatic

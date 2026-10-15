@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import EngineServices from "../components/EngineServices";
+import SupplyFitCatalogue from "../components/SupplyFitCatalogue";
 import FAQ from "../components/FAQ";
 import Location from "../components/Location";
 import NationwideSupport from "../components/NationwideSupport";
@@ -59,7 +59,7 @@ export default function ServicesPage() {
 "
         highlights={highlights}
       />
-      <EngineServices
+      <SupplyFitCatalogue
         services={MainServicesData.services}
         heading={MainServicesData.heading}
         intro={MainServicesData.intro}

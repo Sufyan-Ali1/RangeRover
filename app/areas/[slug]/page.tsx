@@ -10,7 +10,7 @@ import { AreaRangeRoverSpecialist } from "@/app/components/Areas/AreaRangeRoverS
 import Reviews from "@/app/components/Reviews";
 import { AreaMapAndLinks } from "@/app/components/Areas/AreaMapAndLinks";
 import Footer from "@/app/components/Footer";
-import EngineServices from "@/app/components/EngineServices";
+import SupplyFitCatalogue from "../../components/SupplyFitCatalogue";
 
 interface PageProps {
   params: Promise<{
@@ -84,7 +84,7 @@ export default async function AreaDetailPage({ params }: PageProps) {
           <AreaRangeRoverSpecialist data={area.specialistData} />
         )}
       </div>
-      <EngineServices
+      <SupplyFitCatalogue
         services={area.services}
         heading={area.engineServicesMain?.heading}
         intro={area.engineServicesMain?.intro}

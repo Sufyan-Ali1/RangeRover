@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import EngineServices from "./components/EngineServices";
 import BrowseByModelStatic from "./components/BrowseByModelStatic";
 import WarrantySection from "./components/WarrantySection";
 import TrustedSpecialists from "./components/TrustedSpecialists";
@@ -15,6 +14,7 @@ import CTA from "./components/CTA";
 import Location from "./components/Location";
 import Footer from "./components/Footer";
 import ServicesTicker from "./components/ServicesTicker";
+import SupplyFitCatalogue from "./components/SupplyFitCatalogue";
 
 // data
 import { engineServices } from "./data/home/engineServicesData";
@@ -45,11 +45,10 @@ export default function Home() {
         highlights={headerData.highlights}
       />
       <Reviews reviews={reviews} />
-      <EngineServices
+      <SupplyFitCatalogue
         services={engineServices}
         heading={engineServicesMain.heading}
         intro={engineServicesMain.intro}
-        viewMoreHref={engineServicesMain.viewMoreHref}
       />
       <BrowseByModelStatic
         allModels={allBrandModels.filter((model) => model.brand !== "JAGUAR")}

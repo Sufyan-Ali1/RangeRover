@@ -19,6 +19,8 @@ import WarrantySection from "@/app/components/WarrantySection";
 import ServicesTicker from "@/app/components/ServicesTicker";
 import ServiceGallery from "@/app/components/ServiceGallery";
 import { getServiceImages } from "@/app/data/serviceImages";
+import fs from 'fs';
+import path from 'path';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -53,6 +55,13 @@ export default async function SubServicePage({ params }: Props) {
   if (!data) {
     notFound();
   }
+  const schemaPath = path.join(
+    process.cwd(),
+    `app/data/schema/services/${slug}.json`
+  );
+  const schemaJson = fs.existsSync(schemaPath)
+    ? fs.readFileSync(schemaPath, "utf8")
+    : null;
 
   const {
     headerData,
@@ -70,6 +79,7 @@ export default async function SubServicePage({ params }: Props) {
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      {schemaJson && (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />)}
       <Navbar />
       <Header
         compact

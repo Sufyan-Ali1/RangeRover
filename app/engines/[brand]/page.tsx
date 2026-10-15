@@ -22,7 +22,6 @@ import SupplyFitPrecision from "../../components/SupplyFitPrecision";
 import SupplyFitContent from "../../components/SupplyFitContent";
 import SupplyFitGetParts from "../../components/SupplyFitGetParts";
 import engineCodesData from "../../data/engineCodesData.json";
-
 import EngineServices from "@/app/components/EngineServices";
 import { engineSizes } from "../../data/engineSizes";
 import {
@@ -30,6 +29,9 @@ import {
   getBrandsModelSizesDataBySlug,
 } from "@/app/data/engines/brands/GetBrandData";
 import { notFound } from "next/navigation";
+import fs from 'fs';
+import path from 'path';
+import { error } from "console";
 
 interface Props {
   params: Promise<{ brand: string }>;
@@ -75,7 +77,6 @@ const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export async function generateMetadata({ params }: Props) {
   const { brand } = await params;
   const parsed = parseSizeSlug(brand);
-
   if (parsed) {
     const sizeData = getBrandsModelSizesDataBySlug(brand);
 
@@ -128,9 +129,16 @@ export default async function BrandPage({ params }: Props) {
       supplyFitGetParts,
       faqsData,
     } = sizeData;
-
+    const schemaPath = path.join(
+      process.cwd(),
+      `app/data/schema/engines/${brand}.json`
+    );
+    const schemaJson = fs.existsSync(schemaPath)
+      ? fs.readFileSync(schemaPath, "utf8")
+      : null;
     return (
       <div className="flex min-h-screen flex-col bg-white">
+        {schemaJson && (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />)}
         <Navbar />
         <Header
           compact
@@ -191,9 +199,16 @@ export default async function BrandPage({ params }: Props) {
     const modelEngineData = engineCodesData[dataKey];
     return modelEngineData ? mapTableRows(modelEngineData.rows) : [];
   });
-
+  const schemaPath = path.join(
+    process.cwd(),
+    `app/data/schema/engines/${brand}.json`
+  );
+  const schemaJson = fs.existsSync(schemaPath)
+    ? fs.readFileSync(schemaPath, "utf8")
+    : null;
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      {schemaJson && (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />)}
       <Navbar />
       <Header
         compact

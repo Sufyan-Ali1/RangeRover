@@ -4,6 +4,8 @@ import { ReviewCard } from "../components/Reviews";
 import VideoSection from "../components/VideoSection";
 import CTA from "../components/CTA";
 import { reviews } from "../data/reviews";
+import fs from 'fs';
+import path from 'path';
 const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -16,8 +18,10 @@ export const metadata = {
 };
 
 export default function ReviewsPage() {
+  const schemaJson = fs.readFileSync(path.join(process.cwd(), 'app/data/schema/reviews.json'), 'utf8');
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />
       <Navbar />
 
       {/* Page header */}

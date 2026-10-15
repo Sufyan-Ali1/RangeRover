@@ -15,6 +15,8 @@ import SupplyFitFAQ from "../components/SupplyFitFAQ";
 import Footer from "../components/Footer";
 import { whyData } from "../data/supplyFit/WhyData";
 import { supplyFitGetParts } from "../data/supplyFit/supplyFitGet";
+import fs from 'fs';
+import path from 'path';
 const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -27,8 +29,10 @@ export const metadata = {
 };
 
 export default function SupplyFitPage() {
+  const schemaJson = fs.readFileSync(path.join(process.cwd(), 'app/data/schema/supply-fit.json'), 'utf8');
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />
       <Navbar />
       <SupplyFitHero />
       <SupplyFitEnginesQuote />

@@ -21,17 +21,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/how-engine-rebuild-specialists-extend-the-lifespan-of-your-range-rover",
-        destination: "/blogs",
+        destination: "/blogs/how-engine-rebuild-specialists-extend-the-lifespan-of-your-range-rover",
         permanent: true,
       },
       {
         source: "/top-5-common-diesel-engine-issues-and-their-fixes",
-        destination: "/blogs",
+        destination: "/blogs/top-5-common-diesel-engine-issues-and-their-fixes",
         permanent: true,
       },
       {
         source: "/why-is-the-reconditioned-4-4-tdv8-448dt-engine-the-best-replacement-for-range-rover-vogue-sport",
-        destination: "/blogs",
+        destination: "/blogs/why-is-the-reconditioned-4-4-tdv8-448dt-engine-the-best-replacement-for-range-rover-vogue-sport",
         permanent: true,
       },
       ...redirects,

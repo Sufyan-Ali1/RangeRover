@@ -5,6 +5,8 @@ import AboutCTA from "../components/AboutCTA";
 import VideoSection from "../components/VideoSection";
 import AuthorityPrecision from "../components/AuthorityPrecision";
 import AboutWorkshop from "../components/AboutWorkshop";
+import fs from 'fs';
+import path from 'path';
 
 import { aboutPagePrecision } from "../data/about/AboutPrecision";
 
@@ -20,8 +22,10 @@ export const metadata = {
 };
 
 export default function AboutPage() {
+  const schemaJson = fs.readFileSync(path.join(process.cwd(), 'app/data/schema/about.json'), 'utf8');
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />
       <Navbar />
       <AboutSection />
       <AboutWorkshop />

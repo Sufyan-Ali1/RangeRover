@@ -2,6 +2,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import VideoSection from "../components/VideoSection";
 import Image from "next/image";
+import fs from 'fs';
+import path from 'path';
 
 const siteUrl = process.env.SITE_URL || "https://rangerovergarage.co.uk";
 export const metadata = {
@@ -46,8 +48,10 @@ const images = imageNumbers.map((number, i) => ({
 }));
 
 export default function GalleryPage() {
+  const schemaJson = fs.readFileSync(path.join(process.cwd(), 'app/data/schema/gallery.json'), 'utf8');
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />
       <Navbar />
 
       <section className="w-full bg-white pt-32 pb-16 xl:pb-20">

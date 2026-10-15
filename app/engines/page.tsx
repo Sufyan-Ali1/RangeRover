@@ -24,6 +24,8 @@ import {
   engineServices,
   engineServicesMain,
 } from "../data/engines/EnginesServicesData";
+import fs from 'fs';
+import path from 'path';
 
 function mapTableRows(
   rows: Array<{
@@ -58,6 +60,7 @@ export const metadata = {
 };
 
 export default function EnginesPage() {
+  const schemaJson = fs.readFileSync(path.join(process.cwd(), 'app/data/schema/engines.json'), 'utf8');
   const tableRows = allBrandModels.flatMap((model) => {
     const brandSlug = toBrandSlug(model.brand);
     const dataKey =
@@ -68,6 +71,7 @@ export default function EnginesPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />
       <Navbar />
       <Header
         compact

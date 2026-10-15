@@ -30,10 +30,14 @@ import { homeNationwideSupport } from "./data/home/HomeNationwideSupport";
 import { reviews } from "./data/home/reviewsData";
 import { headerData } from "./data/home/heroData";
 import { engineServicesMain } from "./data/home/engineServicesData";
+import fs from 'fs';
+import path from 'path';
 
 export default function Home() {
+  const schemaJson = fs.readFileSync(path.join(process.cwd(), 'app/data/schema/home.json'), 'utf8');
   return (
     <div className="flex w-full flex-1 flex-col bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />
       <Navbar transparent />
       <Header
         title={headerData.title}

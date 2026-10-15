@@ -10,6 +10,8 @@ import CTA from "../components/CTA";
 import TrustedSpecialists from "../components/TrustedSpecialists";
 import NationwideSupport from "../components/NationwideSupport";
 import WarrantySection from "../components/WarrantySection";
+import fs from 'fs';
+import path from 'path';
 
 // data
 import { areasData } from "../data/areas";
@@ -31,8 +33,10 @@ export const metadata: Metadata = {
 };
 
 export default function AreasPage() {
+  const schemaJson = fs.readFileSync(path.join(process.cwd(), 'app/data/schema/areas.json'), 'utf8');
   return (
     <div className="flex min-h-screen flex-col bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />
       <Navbar />
       <Header
         compact

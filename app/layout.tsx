@@ -60,15 +60,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         className="flex min-h-full w-full max-w-full flex-col overflow-x-clip"
         suppressHydrationWarning
       >
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WN5SDLNV"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-            title="Google Tag Manager"
-          />
-        </noscript>
+        {/* Keep extension-modified fallback nodes outside React's child reconciliation. */}
+        <div
+          id="google-tag-manager-fallback"
+          hidden
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: '<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN5SDLNV" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>',
+          }}
+        />
         {children}
       </body>
     </html>

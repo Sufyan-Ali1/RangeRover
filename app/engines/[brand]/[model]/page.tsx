@@ -16,6 +16,8 @@ import BrandShowcase from "@/app/components/BrandShowcase";
 import Reviews from "@/app/components/Reviews";
 import EngineTable from "@/app/components/EngineTable";
 import { getBrandsModelsBySlug } from "@/app/data/engines/brands/GetBrandData";
+import fs from 'fs';
+import path from 'path';
 
 interface Props {
   params: Promise<{ brand: string; model: string }>;
@@ -70,10 +72,17 @@ export default async function ModelPage({ params }: Props) {
       }))
     : [];
 
+  const schemaPath = path.join(
+    process.cwd(),
+    `app/data/schema/engines/${model}.json`
+  );
+  const schemaJson = fs.existsSync(schemaPath)
+    ? fs.readFileSync(schemaPath, "utf8")
+    : null;
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <Navbar />
-
+      {schemaJson && (<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaJson }} />)}
       <Header
         compact
         title={headerData?.title}

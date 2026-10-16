@@ -1,0 +1,470 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AutoRepair",
+      "@id": "https://rangerovergarage.co.uk/#business",
+      "name": "Range Rover Garage",
+      "url": "https://rangerovergarage.co.uk/",
+      "logo": "https://rangerovergarage.co.uk/logo.svg",
+      "image": "https://rangerovergarage.co.uk/logo.svg",
+      "telephone": "+441708592377",
+      "email": "sales@rangerovergarage.co.uk",
+      "description": "Range Rover, Land Rover and Jaguar engine repair, rebuild and replacement specialist in Grays, Essex, with UK-wide vehicle collection and delivery.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 1 Hedley Ave",
+        "addressLocality": "Grays",
+        "addressRegion": "Essex",
+        "postalCode": "RM20 4EL",
+        "addressCountry": "GB"
+      },
+      "hasMap": "https://maps.app.goo.gl/49cNyUKLEiCa4UL57",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+441708592377",
+          "email": "sales@rangerovergarage.co.uk",
+          "contactType": "customer enquiries"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+447477733313",
+          "contactType": "mobile and WhatsApp enquiries",
+          "url": "https://wa.me/447477733313"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Saturday",
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/rangerovergarage/",
+        "https://www.youtube.com/@RangeroverGarage",
+        "https://uk.pinterest.com/rangerovergaragegrays/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Oxfordshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hampshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Berkshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "East Sussex"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Essex"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "London"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Sussex"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bedfordshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Buckinghamshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Cambridgeshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gloucestershire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hertfordshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kent"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Leicestershire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Norfolk"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Northamptonshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Suffolk"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Surrey"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wiltshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Rutland"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Lincolnshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Warwickshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Isle of Wight"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Dorset"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Midlands"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Cheshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Greater Manchester"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Yorkshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "East Riding of Yorkshire"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://rangerovergarage.co.uk/#engine-services",
+        "name": "Range Rover Garage Engine Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-rebuild",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-rebuild#service",
+              "name": "Engine Rebuild",
+              "serviceType": "Engine Rebuild",
+              "url": "https://rangerovergarage.co.uk/services/engine-rebuild",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/timing-chain-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/timing-chain-replacement#service",
+              "name": "Timing Chain Replacement",
+              "serviceType": "Timing Chain Replacement",
+              "url": "https://rangerovergarage.co.uk/services/timing-chain-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/turbo-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/turbo-replacement#service",
+              "name": "Turbo Replacement",
+              "serviceType": "Turbo Replacement",
+              "url": "https://rangerovergarage.co.uk/services/turbo-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/head-gasket-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/head-gasket-replacement#service",
+              "name": "Head Gasket Replacement",
+              "serviceType": "Head Gasket Replacement",
+              "url": "https://rangerovergarage.co.uk/services/head-gasket-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-repair",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-repair#service",
+              "name": "Engine Repair",
+              "serviceType": "Engine Repair",
+              "url": "https://rangerovergarage.co.uk/services/engine-repair",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-replacement#service",
+              "name": "Engine Replacement",
+              "serviceType": "Engine Replacement",
+              "url": "https://rangerovergarage.co.uk/services/engine-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-swap",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-swap#service",
+              "name": "Engine Swap",
+              "serviceType": "Engine Swap",
+              "url": "https://rangerovergarage.co.uk/services/engine-swap",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/timing-belt-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/timing-belt-replacement#service",
+              "name": "Timing Belt Replacement",
+              "serviceType": "Timing Belt Replacement",
+              "url": "https://rangerovergarage.co.uk/services/timing-belt-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rangerovergarage.co.uk/#website",
+      "url": "https://rangerovergarage.co.uk/",
+      "name": "Range Rover Garage",
+      "publisher": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#webpage",
+      "url": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5",
+      "name": "Land Rover Discovery 5 Engine | Rebuild & Supply Fit",
+      "description": "Modern Land Rover Discovery 5 engine supply, rebuild and fitting using genuine and OEM-grade units. Warranty-backed workmanship. Get a free quote today.",
+      "isPartOf": {
+        "@id": "https://rangerovergarage.co.uk/#website"
+      },
+      "publisher": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "about": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "inLanguage": "en-GB",
+      "breadcrumb": {
+        "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#service"
+      },
+      "hasPart": {
+        "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#faq"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rangerovergarage.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Engines",
+          "item": "https://rangerovergarage.co.uk/engines"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Land Rover",
+          "item": "https://rangerovergarage.co.uk/engines/land-rover"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Land Rover Discovery 5 Engine Specialists",
+          "item": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#service",
+      "name": "Land Rover Discovery 5 Engine Specialists",
+      "serviceType": "Land Rover Discovery 5 Engine Specialists",
+      "description": "Modern Land Rover Discovery 5 engine supply, rebuild and fitting using genuine and OEM-grade units. Warranty-backed workmanship. Get a free quote today.",
+      "url": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5",
+      "provider": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#faq",
+      "url": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#faq",
+      "name": "Land Rover Discovery 5 Engine Specialists — FAQs",
+      "isPartOf": {
+        "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#webpage"
+      },
+      "inLanguage": "en-GB",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#faq-question-1",
+          "name": "Is the Land Rover Discovery 5 reliable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reliability is generally solid, though certain Ingenium engines are prone to known issues such as oil dilution and timing chain tensioner wear. Regular servicing and prompt attention to warning signs go a long way toward keeping the Discovery 5 dependable."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#faq-question-2",
+          "name": "Does the Discovery 5 have Ingenium engine problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some Ingenium units have experienced oil dilution and timing chain tensioner wear, issues shared across other Jaguar Land Rover models using the same engine family. We check for both as standard during any Discovery 5 diagnostic visit."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#faq-question-3",
+          "name": "Which engines does the Discovery 5 use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Discovery 5 is fitted with 2.0-litre Ingenium diesel and petrol engines, including SD4 variants, alongside the more powerful 3.0-litre Ingenium six-cylinder diesel found in SD6 and D300 models, some with mild-hybrid assistance."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#faq-question-4",
+          "name": "How much does an engine replacement cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cost depends on the engine variant and the cause of the failure. We provide a fixed, written quote after inspecting the vehicle, so you know the full cost before any work is authorised."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#faq-question-5",
+          "name": "What is oil dilution and how can I prevent it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oil dilution happens when unburned diesel enters the engine oil during regeneration cycles, most common on vehicles used mainly for short journeys. Occasional longer drives and more frequent oil changes can help reduce the risk on affected engines."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#faq-question-6",
+          "name": "Do you collect the vehicle or do I need to bring it in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer nationwide collection and delivery, so distance from our workshop isn't a barrier to having your Discovery 5 assessed. You're also welcome to drop the vehicle off yourself if that's more convenient."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#faq-question-7",
+          "name": "Is there a warranty on reconditioned or replacement engines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, every reconditioned and replacement engine we supply and fit is covered by a warranty, giving you added confidence in the work carried out."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/land-rover/discovery-5#faq-question-8",
+          "name": "How long does a Discovery 5 engine repair take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most repairs are completed within one to two weeks, depending on the fault and parts availability. We'll confirm an accurate timeframe once we've inspected your vehicle."
+          }
+        }
+      ]
+    }
+  ]
+}

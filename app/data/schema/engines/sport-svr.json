@@ -1,0 +1,470 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AutoRepair",
+      "@id": "https://rangerovergarage.co.uk/#business",
+      "name": "Range Rover Garage",
+      "url": "https://rangerovergarage.co.uk/",
+      "logo": "https://rangerovergarage.co.uk/logo.svg",
+      "image": "https://rangerovergarage.co.uk/logo.svg",
+      "telephone": "+441708592377",
+      "email": "sales@rangerovergarage.co.uk",
+      "description": "Range Rover, Land Rover and Jaguar engine repair, rebuild and replacement specialist in Grays, Essex, with UK-wide vehicle collection and delivery.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 1 Hedley Ave",
+        "addressLocality": "Grays",
+        "addressRegion": "Essex",
+        "postalCode": "RM20 4EL",
+        "addressCountry": "GB"
+      },
+      "hasMap": "https://maps.app.goo.gl/49cNyUKLEiCa4UL57",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+441708592377",
+          "email": "sales@rangerovergarage.co.uk",
+          "contactType": "customer enquiries"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+447477733313",
+          "contactType": "mobile and WhatsApp enquiries",
+          "url": "https://wa.me/447477733313"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Saturday",
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/rangerovergarage/",
+        "https://www.youtube.com/@RangeroverGarage",
+        "https://uk.pinterest.com/rangerovergaragegrays/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Oxfordshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hampshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Berkshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "East Sussex"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Essex"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "London"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Sussex"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bedfordshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Buckinghamshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Cambridgeshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gloucestershire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hertfordshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kent"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Leicestershire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Norfolk"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Northamptonshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Suffolk"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Surrey"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wiltshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Rutland"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Lincolnshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Warwickshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Isle of Wight"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Dorset"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Midlands"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Cheshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Greater Manchester"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Yorkshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "East Riding of Yorkshire"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://rangerovergarage.co.uk/#engine-services",
+        "name": "Range Rover Garage Engine Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-rebuild",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-rebuild#service",
+              "name": "Engine Rebuild",
+              "serviceType": "Engine Rebuild",
+              "url": "https://rangerovergarage.co.uk/services/engine-rebuild",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/timing-chain-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/timing-chain-replacement#service",
+              "name": "Timing Chain Replacement",
+              "serviceType": "Timing Chain Replacement",
+              "url": "https://rangerovergarage.co.uk/services/timing-chain-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/turbo-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/turbo-replacement#service",
+              "name": "Turbo Replacement",
+              "serviceType": "Turbo Replacement",
+              "url": "https://rangerovergarage.co.uk/services/turbo-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/head-gasket-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/head-gasket-replacement#service",
+              "name": "Head Gasket Replacement",
+              "serviceType": "Head Gasket Replacement",
+              "url": "https://rangerovergarage.co.uk/services/head-gasket-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-repair",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-repair#service",
+              "name": "Engine Repair",
+              "serviceType": "Engine Repair",
+              "url": "https://rangerovergarage.co.uk/services/engine-repair",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-replacement#service",
+              "name": "Engine Replacement",
+              "serviceType": "Engine Replacement",
+              "url": "https://rangerovergarage.co.uk/services/engine-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-swap",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-swap#service",
+              "name": "Engine Swap",
+              "serviceType": "Engine Swap",
+              "url": "https://rangerovergarage.co.uk/services/engine-swap",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/timing-belt-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/timing-belt-replacement#service",
+              "name": "Timing Belt Replacement",
+              "serviceType": "Timing Belt Replacement",
+              "url": "https://rangerovergarage.co.uk/services/timing-belt-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rangerovergarage.co.uk/#website",
+      "url": "https://rangerovergarage.co.uk/",
+      "name": "Range Rover Garage",
+      "publisher": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#webpage",
+      "url": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr",
+      "name": "Range Rover Sport SVR Engine | Rebuild Specialists",
+      "description": "High-performance Range Rover Sport SVR engine rebuild and replacement, engineered to restore power without compromising reliability. Get a free quote.",
+      "isPartOf": {
+        "@id": "https://rangerovergarage.co.uk/#website"
+      },
+      "publisher": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "about": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "inLanguage": "en-GB",
+      "breadcrumb": {
+        "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#service"
+      },
+      "hasPart": {
+        "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#faq"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rangerovergarage.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Engines",
+          "item": "https://rangerovergarage.co.uk/engines"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Range Rover",
+          "item": "https://rangerovergarage.co.uk/engines/range-rover"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Range Rover Sport SVR Engine Specialists",
+          "item": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#service",
+      "name": "Range Rover Sport SVR Engine Specialists",
+      "serviceType": "Range Rover Sport SVR Engine Specialists",
+      "description": "High-performance Range Rover Sport SVR engine rebuild and replacement, engineered to restore power without compromising reliability. Get a free quote.",
+      "url": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr",
+      "provider": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#faq",
+      "url": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#faq",
+      "name": "Range Rover Sport SVR Engine Specialists — FAQs",
+      "isPartOf": {
+        "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#webpage"
+      },
+      "inLanguage": "en-GB",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#faq-question-1",
+          "name": "What engine does the Range Rover Sport SVR use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The SVR is powered by a supercharged 5.0-litre AJ133 V8, producing between 550 and 575 horsepower depending on model year. It's the same engine family used across several high-performance Jaguar Land Rover models."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#faq-question-2",
+          "name": "Is the Range Rover Sport SVR reliable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The AJ133 is generally a strong engine, though it's known for cam follower wear that can lead to more serious camshaft damage if ignored. With regular servicing and prompt attention to early warning signs, most SVR engines perform reliably."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#faq-question-3",
+          "name": "Are SVR engines expensive to maintain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maintenance costs are higher than a standard Range Rover Sport, reflecting the performance nature of the supercharged V8 and the specialist knowledge required to service it properly. Using an experienced specialist rather than a generalist garage often reduces costs over the car's lifetime."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#faq-question-4",
+          "name": "How much does it cost to rebuild an SVR engine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cost depends on the extent of the damage and whether the supercharger requires attention alongside the engine itself. We provide a fixed, written quote after inspection, so you know the full cost before any work is authorised."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#faq-question-5",
+          "name": "What are common Range Rover SVR engine problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cam follower wear is the most frequently reported issue, alongside supercharger servicing needs and, in some cases, oil consumption concerns. We check for all of these as standard during any SVR diagnostic."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#faq-question-6",
+          "name": "Do you collect the vehicle or do I need to bring it in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer nationwide collection and delivery, so you don't need to be near our workshop to have your SVR properly assessed. You're also welcome to drop the car off yourself."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#faq-question-7",
+          "name": "Is there a warranty on reconditioned or replacement engines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, every reconditioned and replacement engine we supply and fit is covered by a warranty, giving you confidence in the work carried out on your SVR."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/sport-svr#faq-question-8",
+          "name": "How long does an SVR engine rebuild or replacement take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most rebuilds and replacements are completed within one to two weeks, though performance-specification work can take longer depending on parts availability. We'll confirm an accurate timeframe once we've inspected your vehicle."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AutoRepair",
+      "@id": "https://rangerovergarage.co.uk/#business",
+      "name": "Range Rover Garage",
+      "url": "https://rangerovergarage.co.uk/",
+      "logo": "https://rangerovergarage.co.uk/logo.svg",
+      "image": "https://rangerovergarage.co.uk/logo.svg",
+      "telephone": "+441708592377",
+      "email": "sales@rangerovergarage.co.uk",
+      "description": "Range Rover, Land Rover and Jaguar engine repair, rebuild and replacement specialist in Grays, Essex, with UK-wide vehicle collection and delivery.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 1 Hedley Ave",
+        "addressLocality": "Grays",
+        "addressRegion": "Essex",
+        "postalCode": "RM20 4EL",
+        "addressCountry": "GB"
+      },
+      "hasMap": "https://maps.app.goo.gl/49cNyUKLEiCa4UL57",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+441708592377",
+          "email": "sales@rangerovergarage.co.uk",
+          "contactType": "customer enquiries"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+447477733313",
+          "contactType": "mobile and WhatsApp enquiries",
+          "url": "https://wa.me/447477733313"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Saturday",
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/rangerovergarage/",
+        "https://www.youtube.com/@RangeroverGarage",
+        "https://uk.pinterest.com/rangerovergaragegrays/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Oxfordshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hampshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Berkshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "East Sussex"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Essex"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "London"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Sussex"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bedfordshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Buckinghamshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Cambridgeshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gloucestershire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hertfordshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kent"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Leicestershire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Norfolk"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Northamptonshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Suffolk"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Surrey"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wiltshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Rutland"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Lincolnshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Warwickshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Isle of Wight"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Dorset"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Midlands"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Cheshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Greater Manchester"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Yorkshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "East Riding of Yorkshire"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://rangerovergarage.co.uk/#engine-services",
+        "name": "Range Rover Garage Engine Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-rebuild",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-rebuild#service",
+              "name": "Engine Rebuild",
+              "serviceType": "Engine Rebuild",
+              "url": "https://rangerovergarage.co.uk/services/engine-rebuild",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/timing-chain-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/timing-chain-replacement#service",
+              "name": "Timing Chain Replacement",
+              "serviceType": "Timing Chain Replacement",
+              "url": "https://rangerovergarage.co.uk/services/timing-chain-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/turbo-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/turbo-replacement#service",
+              "name": "Turbo Replacement",
+              "serviceType": "Turbo Replacement",
+              "url": "https://rangerovergarage.co.uk/services/turbo-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/head-gasket-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/head-gasket-replacement#service",
+              "name": "Head Gasket Replacement",
+              "serviceType": "Head Gasket Replacement",
+              "url": "https://rangerovergarage.co.uk/services/head-gasket-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-repair",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-repair#service",
+              "name": "Engine Repair",
+              "serviceType": "Engine Repair",
+              "url": "https://rangerovergarage.co.uk/services/engine-repair",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-replacement#service",
+              "name": "Engine Replacement",
+              "serviceType": "Engine Replacement",
+              "url": "https://rangerovergarage.co.uk/services/engine-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/engine-swap",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/engine-swap#service",
+              "name": "Engine Swap",
+              "serviceType": "Engine Swap",
+              "url": "https://rangerovergarage.co.uk/services/engine-swap",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://rangerovergarage.co.uk/services/timing-belt-replacement",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://rangerovergarage.co.uk/services/timing-belt-replacement#service",
+              "name": "Timing Belt Replacement",
+              "serviceType": "Timing Belt Replacement",
+              "url": "https://rangerovergarage.co.uk/services/timing-belt-replacement",
+              "provider": {
+                "@id": "https://rangerovergarage.co.uk/#business"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rangerovergarage.co.uk/#website",
+      "url": "https://rangerovergarage.co.uk/",
+      "name": "Range Rover Garage",
+      "publisher": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#webpage",
+      "url": "https://rangerovergarage.co.uk/engines/range-rover/evoque",
+      "name": "Range Rover Evoque Engine Repair | Specialist Rebuilds",
+      "description": "Expert Range Rover Evoque engine repair, rebuild and replacement addressing common faults with genuine parts and warranty. Get a quote.",
+      "isPartOf": {
+        "@id": "https://rangerovergarage.co.uk/#website"
+      },
+      "publisher": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "about": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "inLanguage": "en-GB",
+      "breadcrumb": {
+        "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#service"
+      },
+      "hasPart": {
+        "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#faq"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rangerovergarage.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Engines",
+          "item": "https://rangerovergarage.co.uk/engines"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Range Rover",
+          "item": "https://rangerovergarage.co.uk/engines/range-rover"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Range Rover Evoque Engine Repair Specialists",
+          "item": "https://rangerovergarage.co.uk/engines/range-rover/evoque"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#service",
+      "name": "Range Rover Evoque Engine Repair Specialists",
+      "serviceType": "Range Rover Evoque Engine Repair Specialists",
+      "description": "Expert Range Rover Evoque engine repair, rebuild and replacement addressing common faults with genuine parts and warranty. Get a quote.",
+      "url": "https://rangerovergarage.co.uk/engines/range-rover/evoque",
+      "provider": {
+        "@id": "https://rangerovergarage.co.uk/#business"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#faq",
+      "url": "https://rangerovergarage.co.uk/engines/range-rover/evoque#faq",
+      "name": "Range Rover Evoque Engine Repair Specialists — FAQs",
+      "isPartOf": {
+        "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#webpage"
+      },
+      "inLanguage": "en-GB",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#faq-question-1",
+          "name": "Why does my Range Rover Evoque keep overheating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Overheating in the Evoque is most commonly linked to a coolant leak from the thermostat housing, water pump or intercooler pipework on Ingenium engines. Left unresolved, it can lead to head gasket failure, so we recommend having it diagnosed as soon as warning signs appear."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#faq-question-2",
+          "name": "Is the Range Rover Evoque a reliable car overall?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Evoque is well-regarded for driving experience and design, though early Ingenium engines have a known pattern of coolant-related issues. With proactive maintenance and prompt repairs, most owners run their Evoque reliably for years."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#faq-question-3",
+          "name": "How much does an Evoque engine replacement typically cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Costs vary depending on whether a rebuild, reconditioned unit or full replacement is required, and whether it's the Si4 petrol or TD4 diesel engine. We provide a fixed, itemised quote after diagnosis so you know the exact cost before agreeing to any work."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#faq-question-4",
+          "name": "What are the most common Evoque engine problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most frequently reported issues are coolant leaks, overheating, thermostat housing failure and, in some cases, timing chain wear. Early diagnosis usually keeps repair costs to a fraction of what a neglected fault can eventually cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#faq-question-5",
+          "name": "Do you work on both the Si4 petrol and TD4 diesel Evoque?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our technicians work on both the Si4 2.0 petrol and TD4 2.2 diesel Ingenium engines across first and second generation Evoque models, including the Convertible variant."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#faq-question-6",
+          "name": "Can I get an Evoque engine repair quote before booking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, get in touch with your Evoque's symptoms and mileage, and we'll advise on likely causes and next steps. A fixed quote is confirmed once we've carried out a full diagnostic on the vehicle."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://rangerovergarage.co.uk/engines/range-rover/evoque#faq-question-7",
+          "name": "Do you collect vehicles that aren't local to your workshop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer collection and delivery for Evoque owners across the UK, so you don't need to be based near our Grays workshop to use our engine repair service."
+          }
+        }
+      ]
+    }
+  ]
+}

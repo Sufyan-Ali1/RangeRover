@@ -1,4 +1,4 @@
-import { Service } from "../types";
+import { EngineServicesMain, Service } from "../types";
 
 export const engineServices: Service[] = [
   {
@@ -50,3 +50,9 @@ export const engineServices: Service[] = [
       "Scheduled and emergency timing belt replacement, protecting your engine from avoidable, costly failure.",
   },
 ];
+export const engineServicesMain: EngineServicesMain = {
+  heading: "Engine Services We Offer",
+  intro:
+    "Supply and fit is only one part of what we offer. Our workshop handles the full spectrum of engine work, so whatever your vehicle needs, our specialists can take care of it.",
+  viewMoreHref: "/services",
+};

@@ -19,7 +19,7 @@ import engineCodesData from "../data/engineCodesData.json";
 import { allBrandModels, toBrandSlug, toModelSlug } from "../data/models";
 import { reviews } from "../data/engines/ReviewsData";
 import { headerData } from "../data/engines/HeroData";
-import EngineServices from "../components/EngineServices";
+import SupplyFitCatalogue from "../components/SupplyFitCatalogue";
 import {
   engineServices,
   engineServicesMain,
@@ -105,7 +105,7 @@ export default function EnginesPage() {
           notFoundHref="/get-quote"
         />
       )}
-      <EngineServices
+      <SupplyFitCatalogue
         services={engineServices}
         heading={engineServicesMain.heading}
         intro={engineServicesMain.intro}

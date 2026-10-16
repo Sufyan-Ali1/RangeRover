@@ -22,7 +22,6 @@ const brandSlugs = [
 const modelsBrand = {
   "range-rover": ["evoque", "sport", "vogue-old-mk-3", "vogue-new-mk-4", "velar", "sport-svr"],
   "land-rover": ["discovery-1", "discovery-2", "discovery-3", "discovery-4", "discovery-5", "discovery-sport", "freelander-1", "freelander-2"],
-  jaguar: ["xe", "xf", "xj", "f-pace", "e-pace", "f-type"],
 };
 
 const engineSizeSlugs = {

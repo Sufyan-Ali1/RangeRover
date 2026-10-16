@@ -28,7 +28,7 @@ export default function FAQ({ faqs, accordionName }: { faqs: Faq[] | undefined; 
                 <details
                   key={faq.q}
                   name={accordionName}
-                  open={accordionName ? i === 0 : undefined}
+                  open={i === 0}
                   className="group rounded-[10px] border border-[#4CA66B] bg-white open:bg-[#ECFFF3]"
                 >
                   <summary className="flex min-h-[88px] cursor-pointer list-none items-center gap-3 px-4 py-5 sm:min-h-[104px] sm:gap-8 sm:px-8 sm:py-7">

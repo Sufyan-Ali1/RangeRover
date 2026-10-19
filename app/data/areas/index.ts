@@ -27,6 +27,17 @@ import { cheshireArea } from "./cheshire";
 import { greaterManchesterArea } from "./greaterManchester";
 import { westYorkshireArea } from "./westYorkshire";
 import { eastRidingOfYorkshireArea } from "./eastRidingOfYorkshire";
+import { chelmsfordArea } from "./chelmsford";
+import { harlowArea } from "./harlow";
+import { eppingArea } from "./epping";
+import { rayleighArea } from "./rayleigh";
+import { stanfordlehopeArea } from "./stanford-le-hope";
+import { waltonontheNazeArea } from "./walton-on-the-naze";
+import { tendringArea } from "./tendring";
+import { barkingArea } from "./barking";
+import { chadwellHeathArea } from "./chadwell-heath";
+import { walthamstowArea } from "./walthamstow";
+import { whitechapelArea } from "./whitechapel";
 
 export const areasData = [
   oxfordshireArea,
@@ -58,4 +69,15 @@ export const areasData = [
   greaterManchesterArea,
   westYorkshireArea,
   eastRidingOfYorkshireArea,
+  chelmsfordArea,
+  harlowArea,
+  eppingArea,
+  rayleighArea,
+  stanfordlehopeArea,
+  waltonontheNazeArea,
+  tendringArea,
+  barkingArea,
+  chadwellHeathArea,
+  walthamstowArea,
+  whitechapelArea,
 ];

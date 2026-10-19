@@ -35,7 +35,7 @@ export default function SupplyFitCatalogue({
       <div className="mx-auto w-full max-w-[1728px] px-6 py-16 sm:px-10 xl:px-[101px] xl:py-20">
         <div className="mb-10 text-center">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#4CA66B]">
-            Catalogue
+            Our Services
           </p>
           <h2 className="mb-4 text-[32px] font-black leading-tight text-gray-900 sm:text-[40px]">
             {heading}

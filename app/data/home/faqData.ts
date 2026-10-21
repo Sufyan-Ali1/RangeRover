@@ -36,4 +36,12 @@ export const faqs: faqs[] = [
     q: "Do you collect vehicles or do I need to bring it in?",
     a: "We offer UK-wide collection and delivery, so you never need to arrange your own transport or take time off work to bring your vehicle to us.",
   },
+  {
+        q: "Is there a charge for initial diagnostics, sundries, and consumables?",
+        a: "Yes, a standard combined charge of £95 may apply for initial diagnostics, sundries, and consumables associated with your vehicle's repair. We will explain any applicable charges before work proceeds."
+    },
+    {
+        q: "Are service charges and additional parts included in the quoted price?",
+        a: " All service charges are separate and are not included in the quoted prices unless explicitly stated. We charge separately for any major engine work. Fresh engine oil and a new oil filter are also charged additionally, as used engine oil and old oil filters cannot be reused. If you have any questions or require further clarification regarding our charges, please speak to a member of our team. We’ll be happy to assist you."
+    }
 ];

@@ -1,3 +1,4 @@
+import { galleryWorkshopImages } from "../data/workshopImages";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import VideoSection from "../components/VideoSection";
@@ -41,11 +42,14 @@ const imageDescriptions: Record<number, string> = {
   22: "Front view of a Range Rover outside Range Rover Garage",
 };
 
-const images = imageNumbers.map((number, i) => ({
+const previousGalleryImages = imageNumbers.map((number) => ({
   src: `/range-rover/range rover garage image ${number}.webp`,
   alt: imageDescriptions[number],
-  priority: i < 4,
+  width: 800,
+  height: 600,
 }));
+
+const images = [...galleryWorkshopImages, ...previousGalleryImages];
 
 export default function GalleryPage() {
   const schemaJson = fs.readFileSync(path.join(process.cwd(), 'app/data/schema/gallery.json'), 'utf8');
@@ -61,7 +65,7 @@ export default function GalleryPage() {
           </h1>
 
           <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 xl:columns-4">
-            {images.map((img) => (
+            {images.map((img, index) => (
               <div
                 key={img.src}
                 className="mb-4 overflow-hidden rounded-xl break-inside-avoid"
@@ -69,9 +73,9 @@ export default function GalleryPage() {
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  width={800}
-                  height={600}
-                  priority={img.priority}
+                  width={img.width}
+                  height={img.height}
+                  preload={index < 2}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   className="w-full h-auto object-cover transition duration-300 hover:scale-105"
                 />

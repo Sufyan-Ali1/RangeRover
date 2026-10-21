@@ -6,15 +6,18 @@ import { useEffect, useRef, useState } from "react";
 interface ServiceGalleryImage {
   src: string;
   alt: string;
+  width?: number;
+  height?: number;
 }
 
 interface ServiceGalleryProps {
   title: string;
   subtitle?: string;
   images: ServiceGalleryImage[];
+  imageFit?: "cover" | "contain";
 }
 
-export default function ServiceGallery({ title, subtitle, images }: ServiceGalleryProps) {
+export default function ServiceGallery({ title, subtitle, images, imageFit = "cover" }: ServiceGalleryProps) {
   const [active, setActive] = useState(0);
   const trackRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
@@ -61,7 +64,7 @@ export default function ServiceGallery({ title, subtitle, images }: ServiceGalle
         if (child && el) el.scrollTo({ left: child.offsetLeft, behavior: "smooth" });
         return next;
       });
-    }, 3500);
+    }, 2000);
     return () => window.clearInterval(id);
   }, [isPaused, total]);
 
@@ -94,14 +97,22 @@ export default function ServiceGallery({ title, subtitle, images }: ServiceGalle
             {images.map((img, i) => (
               <div
                 key={i}
-                className="snap-center shrink-0 w-full sm:w-[80%] md:w-[65%] lg:w-[55%] relative rounded-3xl overflow-hidden shadow-xl"
-                style={{ aspectRatio: "16/9" }}
+                className={[
+                  "snap-center shrink-0 relative rounded-3xl overflow-hidden shadow-xl",
+                  imageFit === "contain"
+                    ? "self-start"
+                    : "w-full sm:w-[80%] md:w-[65%] lg:w-[55%]",
+                ].join(" ")}
+                style={imageFit === "contain" ? {
+                  aspectRatio: `${img.width ?? 16} / ${img.height ?? 9}`,
+                  width: `min(100%, calc(clamp(280px, 45vw, 480px) * ${(img.width ?? 16) / (img.height ?? 9)}))`,
+                } : { aspectRatio: "16/9" }}
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover"
+                  className={imageFit === "contain" ? "object-contain" : "object-cover"}
                   sizes="(min-width: 1024px) 55vw, (min-width: 768px) 65vw, 80vw"
                 />
               </div>

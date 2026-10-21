@@ -1,3 +1,5 @@
+import ServiceGallery from "../../components/ServiceGallery";
+import { rangeRoverWorkshopImages, landRoverWorkshopImages } from "../../data/workshopImages";
 import Navbar from "../../components/Navbar";
 import Header from "../../components/Header";
 import BrowseByModelStatic from "../../components/BrowseByModelStatic";
@@ -225,6 +227,14 @@ export default async function BrandPage({ params }: Props) {
         ]}
       />
       <SupplyFitCatalogue services={engineServices} />
+      {showModels && (
+        <ServiceGallery
+          title={`${brandTitle} Workshop Gallery`}
+          subtitle={`Explore our ${brandTitle} vehicles and engine work at the garage.`}
+          images={brand === "range-rover" ? rangeRoverWorkshopImages : landRoverWorkshopImages}
+          imageFit="contain"
+        />
+      )}
       <PopularEngineSizes brandSlug={brand} brandTitle={brandTitle} />
       {showModels && (
         <BrowseByModelStatic

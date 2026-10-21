@@ -1,3 +1,5 @@
+import ServiceGallery from "./components/ServiceGallery";
+import { homeWorkshopImages } from "./data/workshopImages";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import BrowseByModelStatic from "./components/BrowseByModelStatic";
@@ -45,6 +47,12 @@ export default function Home() {
         highlights={headerData.highlights}
       />
       <Reviews reviews={reviews} />
+      <ServiceGallery
+        title="Inside Our Workshop"
+        subtitle="A look at our vehicles, engine repairs and rebuilds at Range Rover Garage."
+        images={homeWorkshopImages}
+        imageFit="contain"
+      />
       <SupplyFitCatalogue
         services={engineServices}
         heading={engineServicesMain.heading}

@@ -257,3 +257,31 @@ export interface EngineSizesData {
   supplyFitContentData: SupplyFitContentDataProps;
   faqsData?: Faq[];
 }
+
+export interface OilLevelNoticeText {
+  text: string;
+  bold?: boolean;
+}
+
+export interface OilLevelNoticeData {
+  eyebrow: string;
+  title: string;
+  titleHighlight: string;
+  images: {
+    desktop: string;
+    mobile: string;
+    mobileWidth: number;
+    mobileHeight: number;
+    alt: string;
+  };
+  paragraphs: OilLevelNoticeText[][];
+  warranty: { title: string; description: OilLevelNoticeText[] };
+  support: {
+    title: string;
+    description: string;
+    phone: { label: string; href: string };
+    whatsapp: { label: string; href: string };
+    link: { label: string; href: string };
+  };
+  location: { name: string; addressLines: string[]; mapHref: string };
+}

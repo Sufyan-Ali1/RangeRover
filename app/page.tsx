@@ -1,3 +1,5 @@
+import OilLevelNotice from "./components/OilLevelNotice";
+import { homeOilLevelNotice } from "./data/home/oilLevelNotice";
 import ServiceGallery from "./components/ServiceGallery";
 import { homeWorkshopImages } from "./data/workshopImages";
 import Navbar from "./components/Navbar";
@@ -58,6 +60,7 @@ export default function Home() {
         heading={engineServicesMain.heading}
         intro={engineServicesMain.intro}
       />
+      <OilLevelNotice data={homeOilLevelNotice} />
       <BrowseByModelStatic
         allModels={allBrandModels.filter((model) => model.brand !== "JAGUAR")}
         bgImage="/images/browsebymodel.webp"
@@ -75,6 +78,7 @@ export default function Home() {
         ]}
       />
       <WarrantySection />
+      
       <TrustedSpecialists data={homeTrustedSpecialists} />
       <AuthorityLeading data={authorityLeading} />
 

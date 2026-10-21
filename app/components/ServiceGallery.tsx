@@ -64,7 +64,7 @@ export default function ServiceGallery({ title, subtitle, images, imageFit = "co
         if (child && el) el.scrollTo({ left: child.offsetLeft, behavior: "smooth" });
         return next;
       });
-    }, 3500);
+    }, 2000);
     return () => window.clearInterval(id);
   }, [isPaused, total]);
 

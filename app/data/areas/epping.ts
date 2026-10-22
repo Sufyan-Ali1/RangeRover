@@ -5,9 +5,8 @@ export const eppingArea: Area = {
   slug: "epping",
   title: "Epping",
   meta: {
-    metaTitle: "Range Rover Engine Reconditioning | Epping",
-    metaDescription:
-      "Cambridgeshire Range Rover engine reconditioning from specialists who code-match, test and warranty every engine before dispatch. Request your quote today.",
+    metaTitle: "Range Rover & Land Rover Engine Specialist Epping | CM16",
+    metaDescription: "Range Rover & Land Rover engine specialist Epping for rebuilds, timing chains and reconditioned engines. Collection from Theydon Bois and North Weald.",
   },
   headerData: {
     title: "Range Rover & Land Rover Engine Specialist Epping",

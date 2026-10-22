@@ -33,8 +33,8 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(siteUrl),
-    title: area.meta.metaTitle,
-    description: area.meta.metaDescription,
+    title: area.meta?.metaTitle,
+    description: area.meta?.metaDescription,
     alternates: {
       canonical: `/areas/${area.slug}`,
     },

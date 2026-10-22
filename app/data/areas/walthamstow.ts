@@ -5,9 +5,8 @@ export const walthamstowArea: Area = {
   slug: "walthamstow",
   title: "Walthamstow",
   meta: {
-    metaTitle: "Range Rover Engine Reconditioning | Walthamstow",
-    metaDescription:
-      "Cambridgeshire Range Rover engine reconditioning from specialists who code-match, test and warranty every engine before dispatch. Request your quote today.",
+    metaTitle: "Range Rover & Land Rover Engine Specialist Walthamstow | E17",
+    metaDescription: "Range Rover & Land Rover engine specialist Walthamstow for rebuilds, diagnostics and replacement engines. Collection from Leyton, Chingford and Highams Park.",
   },
   headerData: {
     title: "Range Rover & Land Rover Engine Specialist Serving Walthamstow, E17",

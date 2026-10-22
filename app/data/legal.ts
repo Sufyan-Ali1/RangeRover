@@ -144,6 +144,14 @@ export const termsAndConditions: LegalDocument = {
     {
       "title": "23. Selling the Vehicle (Torts (Interference with Goods) Act 1977 – UK law):",
       "content": "If the customer refuses to collect or pay, the law gives garages a process to dispose of the car:\n\n1. You must give written notice to the owner, stating:\n\n2. If no response after a reasonable period (often 14–28 days), you can sell the car.\n\n3. The proceeds must be used to settle the debt, but any surplus belongs to the customer."
+    },
+    {
+      "title": "24. Initial Diagnostics, Sundries and Consumables",
+      "content": "24.1 A standard combined charge of £95 may apply for initial diagnostics, sundries, and consumables associated with your vehicle's repair. We will explain any applicable charges before work proceeds."
+    },
+    {
+      "title": "25. Service Charges and Additional Parts",
+      "content": "25.1 All service charges are separate and are not included in the quoted prices unless explicitly stated. We charge separately for any major engine work.\n\n25.2 Fresh engine oil and a new oil filter are also charged additionally, as used engine oil and old oil filters cannot be reused.\n\n25.3 If you have any questions or require further clarification regarding our charges, please speak to a member of our team. We’ll be happy to assist you."
     }
   ]
 };

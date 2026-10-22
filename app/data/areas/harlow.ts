@@ -5,9 +5,8 @@ export const harlowArea: Area = {
   slug: "harlow",
   title: "Harlow",
   meta: {
-    metaTitle: "Range Rover Engine Reconditioning | Harlow",
-    metaDescription:
-      "Cambridgeshire Range Rover engine reconditioning from specialists who code-match, test and warranty every engine before dispatch. Request your quote today.",
+    metaTitle: "Range Rover & Land Rover Engine Specialist Harlow, Essex",
+    metaDescription: "Range Rover & Land Rover engine specialist Harlow offering Defender rebuilds, diagnostics and turbo repairs, with collection from Old Harlow and Church Langley.",
   },
   headerData: {
     title: "Range Rover & Land Rover Engine Specialist Harlow",

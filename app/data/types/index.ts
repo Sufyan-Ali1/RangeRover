@@ -84,7 +84,7 @@ export interface Area {
   id: string;
   slug: string;
   title: string;
-  meta: Meta;
+  meta?: Meta;
   headerData?: HeaderData;
   reviews: Review[];
   overview?: Overview[];

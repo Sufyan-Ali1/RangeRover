@@ -5,9 +5,8 @@ export const waltonontheNazeArea: Area = {
   slug: "walton-on-the-naze",
   title: "Walton-on-the-Naze",
   meta: {
-    metaTitle: "Range Rover Engine Reconditioning | Walton-on-the-Naze",
-    metaDescription:
-      "Cambridgeshire Range Rover engine reconditioning from specialists who code-match, test and warranty every engine before dispatch. Request your quote today.",
+    metaTitle: "Range Rover & Land Rover Engine Specialist Walton-on-the-Naze",
+    metaDescription: "Range Rover & Land Rover engine specialist Walton-on-the-Naze: Defender rebuilds and diagnostics with door-to-door collection from Frinton and Kirby Cross.",
   },
   headerData: {
     title: "Range Rover & Land Rover Engine Specialist for Walton-on-the-Naze, Essex",

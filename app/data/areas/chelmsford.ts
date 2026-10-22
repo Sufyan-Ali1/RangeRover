@@ -5,9 +5,8 @@ export const chelmsfordArea: Area = {
   slug: "chelmsford",
   title: "Chelmsford",
   meta: {
-    metaTitle: "Range Rover Engine Reconditioning | Chelmsford",
-    metaDescription:
-      "Cambridgeshire Range Rover engine reconditioning from specialists who code-match, test and warranty every engine before dispatch. Request your quote today.",
+    metaTitle: "Range Rover & Land Rover Engine Specialist Chelmsford, Essex",
+    metaDescription: "Range Rover & Land Rover engine specialist Chelmsford: rebuilds, timing chains and turbos with collection from Broomfield and Springfield. Get a quote.",
   },
   headerData: {
     title: "Range Rover & Land Rover Engine Specialist Chelmsford",

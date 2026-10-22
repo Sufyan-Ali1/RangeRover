@@ -5,9 +5,8 @@ export const tendringArea: Area = {
   slug: "tendring",
   title: "Tendring",
   meta: {
-    metaTitle: "Range Rover Engine Reconditioning | Tendring",
-    metaDescription:
-      "Cambridgeshire Range Rover engine reconditioning from specialists who code-match, test and warranty every engine before dispatch. Request your quote today.",
+    metaTitle: "Range Rover & Land Rover Engine Specialist Tendring, Essex",
+    metaDescription: "Range Rover & Land Rover engine specialist Tendring: rebuilds, turbo replacement and reconditioned engines, collected from Clacton, Weeley and Thorpe-le-Soken.",
   },
   headerData: {
     title: "Range Rover & Land Rover Engine Specialist Serving Tendring, Essex",

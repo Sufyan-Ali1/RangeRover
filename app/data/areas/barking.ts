@@ -5,9 +5,8 @@ export const barkingArea: Area = {
   slug: "barking",
   title: "Barking",
   meta: {
-    metaTitle: "Range Rover Engine Reconditioning | Barking",
-    metaDescription:
-      "Cambridgeshire Range Rover engine reconditioning from specialists who code-match, test and warranty every engine before dispatch. Request your quote today.",
+    metaTitle: "Range Rover & Land Rover Engine Specialist Barking | IG11",
+    metaDescription: "Range Rover & Land Rover engine specialist Barking, a short A13 drive away. Rebuilds, timing chains and head gaskets with collection from Dagenham and East Ham.",
   },
   headerData: {
     title: "Range Rover & Land Rover Engine Specialist Barking, East London",

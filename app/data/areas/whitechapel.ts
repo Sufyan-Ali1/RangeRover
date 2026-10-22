@@ -5,9 +5,8 @@ export const whitechapelArea: Area = {
   slug: "whitechapel",
   title: "Whitechapel",
   meta: {
-    metaTitle: "Range Rover Engine Reconditioning | Whitechapel",
-    metaDescription:
-      "Cambridgeshire Range Rover engine reconditioning from specialists who code-match, test and warranty every engine before dispatch. Request your quote today.",
+    metaTitle: "Range Rover & Land Rover Engine Specialist Whitechapel | E1",
+    metaDescription: "Range Rover & Land Rover engine specialist Whitechapel: rebuilds and turbo repairs with collection from Shoreditch, Mile End and Stepney. Itemised quotes first.",
   },
   headerData: {
     title: "Range Rover & Land Rover Engine Specialist Serving Walthamstow, E17",

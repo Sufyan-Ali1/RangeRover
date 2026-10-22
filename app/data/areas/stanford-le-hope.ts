@@ -5,9 +5,8 @@ export const stanfordlehopeArea: Area = {
   slug: "stanford-le-hope",
   title: "Stanford-le-Hope",
   meta: {
-    metaTitle: "Range Rover Engine Reconditioning | Stanford-le-Hope",
-    metaDescription:
-      "Cambridgeshire Range Rover engine reconditioning from specialists who code-match, test and warranty every engine before dispatch. Request your quote today.",
+    metaTitle: "Range Rover & Land Rover Engine Specialist Stanford-le-Hope",
+    metaDescription: "Range Rover & Land Rover engine specialist Stanford-le-Hope, minutes away in Grays. Rebuilds, timing chains and diagnostics for Corringham and Linford drivers.",
   },
   headerData: {
     title: "Range Rover & Land Rover Engine Specialist in Stanford-le-Hope, Essex",

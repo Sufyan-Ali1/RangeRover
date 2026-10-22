@@ -39,6 +39,45 @@ import { chadwellHeathArea } from "./chadwell-heath";
 import { walthamstowArea } from "./walthamstow";
 import { whitechapelArea } from "./whitechapel";
 
+import { basildonArea } from "./basildon";
+import { bexleyheathArea } from "./bexleyheath";
+import { billericayArea } from "./billericay";
+import { brentwoodArea } from "./brentwood";
+import { canaryWharfArea } from "./canary-wharf";
+import { canveyIslandArea } from "./canvey-island";
+import { castlePointArea } from "./castle-point";
+import { charltonArea } from "./charlton";
+import { chigwellArea } from "./chigwell";
+import { chingfordArea } from "./chingford";
+import { clactonOnSeaArea } from "./clacton-on-sea";
+import { colchesterArea } from "./colchester";
+import { dagenhamArea } from "./dagenham";
+import { dartfordArea } from "./dartford";
+import { eppingForestArea } from "./epping-forest";
+import { erithArea } from "./erith";
+import { frintonOnSeaArea } from "./frinton-on-sea";
+import { gravesendArea } from "./gravesend";
+import { graysArea } from "./grays";
+import { greenwichArea } from "./greenwich";
+import { hackneyArea } from "./hackney";
+import { ilfordArea } from "./ilford";
+import { loughtonArea } from "./loughton";
+import { maldonArea } from "./maldon";
+import { mileEndArea } from "./mile-end";
+import { rainhamArea } from "./rainham";
+import { rochfordArea } from "./rochford";
+import { romfordArea } from "./romford";
+import { southBenfleetArea } from "./south-benfleet";
+import { southendOnSeaArea } from "./southend-on-sea";
+import { stratfordArea } from "./stratford";
+import { tilburyArea } from "./tilbury";
+import { tottenhamArea } from "./tottenham";
+import { upminsterArea } from "./upminster";
+import { uttlesfordArea } from "./uttlesford";
+import { wickfordArea } from "./wickford";
+import { withamArea } from "./witham";
+import { woodfordArea } from "./woodford";
+
 export const areasData = [
   oxfordshireArea,
   hampshireArea,
@@ -80,4 +119,42 @@ export const areasData = [
   chadwellHeathArea,
   walthamstowArea,
   whitechapelArea,
+  basildonArea,
+  bexleyheathArea,
+  billericayArea,
+  brentwoodArea,
+  canaryWharfArea,
+  canveyIslandArea,
+  castlePointArea,
+  charltonArea,
+  chigwellArea,
+  chingfordArea,
+  clactonOnSeaArea,
+  colchesterArea,
+  dagenhamArea,
+  dartfordArea,
+  eppingForestArea,
+  erithArea,
+  frintonOnSeaArea,
+  gravesendArea,
+  graysArea,
+  greenwichArea,
+  hackneyArea,
+  ilfordArea,
+  loughtonArea,
+  maldonArea,
+  mileEndArea,
+  rainhamArea,
+  rochfordArea,
+  romfordArea,
+  southBenfleetArea,
+  southendOnSeaArea,
+  stratfordArea,
+  tilburyArea,
+  tottenhamArea,
+  upminsterArea,
+  uttlesfordArea,
+  wickfordArea,
+  withamArea,
+  woodfordArea,
 ];

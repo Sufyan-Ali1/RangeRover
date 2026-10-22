@@ -5,9 +5,8 @@ export const chadwellHeathArea: Area = {
   slug: "chadwell-heath",
   title: "Chadwell Heath",
   meta: {
-    metaTitle: "Range Rover Engine Reconditioning | Chadwell Heath",
-    metaDescription:
-      "Cambridgeshire Range Rover engine reconditioning from specialists who code-match, test and warranty every engine before dispatch. Request your quote today.",
+    metaTitle: "Range Rover & Land Rover Engine Specialist Chadwell Heath",
+    metaDescription: "Range Rover & Land Rover engine specialist Chadwell Heath: rebuilds, head gasket repairs and engine replacements, with collection from Romford and Goodmayes.",
   },
   headerData: {
     title: "Range Rover & Land Rover Engine Specialist Chadwell Heath, London",

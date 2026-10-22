@@ -5,9 +5,8 @@ export const rayleighArea: Area = {
   slug: "rayleigh",
   title: "Rayleigh",
   meta: {
-    metaTitle: "Range Rover Engine Reconditioning | Rayleigh",
-    metaDescription:
-      "Cambridgeshire Range Rover engine reconditioning from specialists who code-match, test and warranty every engine before dispatch. Request your quote today.",
+    metaTitle: "Range Rover & Land Rover Engine Specialist Rayleigh | SS6",
+    metaDescription: "Range Rover & Land Rover engine specialist Rayleigh: engine rebuilds, head gasket repairs and replacements, collected from Hockley, Rawreth and Hullbridge.",
   },
   headerData: {
     title: "Range Rover & Land Rover Engine Specialist Rayleigh",

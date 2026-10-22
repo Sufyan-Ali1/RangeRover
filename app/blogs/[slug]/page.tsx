@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import BlogContactForm from "../../components/BlogContactForm";
+import BlogEngineChoiceModal from "../../components/BlogEngineChoiceModal";
 import { getBlogBySlug, localBlogs, formatBlogDate } from "../../../lib/blogs";
 import { withBlogImageAlts } from "../../../lib/imageAlt";
 import styles from "./blogDetail.module.css";
@@ -61,6 +62,7 @@ export default async function BlogDetailPage({ params }: Props) {
           </div>
         </div>
       </main>
+      <BlogEngineChoiceModal key={slug} blogId={slug} />
       <Footer />
     </div>
   );

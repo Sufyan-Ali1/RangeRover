@@ -1,6 +1,16 @@
-import { steps } from "../data/supplyFit/ProcessSteps";
+import { steps as defaultSteps, type ProcessStep } from "../data/supplyFit/ProcessSteps";
 
-export default function SupplyFitWorkflow() {
+interface SupplyFitWorkflowProps {
+  steps?: ProcessStep[];
+  title?: string;
+  description?: string;
+}
+
+export default function SupplyFitWorkflow({
+  steps = defaultSteps,
+  title = "Our Supply and Fit Process",
+  description = "From first contact to final delivery, here's exactly what happens when you book an engine supply and fit with us.",
+}: SupplyFitWorkflowProps = {}) {
   return (
     <section className="w-full bg-[#F3F4F6]">
       <div className="mx-auto w-full max-w-[1728px] px-6 py-16 sm:px-10 xl:px-[101px] xl:py-20">
@@ -9,11 +19,10 @@ export default function SupplyFitWorkflow() {
           Workflow
         </p>
         <h2 className="mb-3 text-[36px] font-black leading-tight text-gray-900 sm:text-[42px]">
-          Our Supply and Fit Process
+          {title}
         </h2>
         <p className="mb-14 max-w-[560px] text-[15px] leading-[1.65] text-gray-600">
-          From first contact to final delivery, here's exactly what happens when
-          you book an engine supply and fit with us.
+          {description}
         </p>
 
         {/* Steps */}
@@ -29,7 +38,7 @@ export default function SupplyFitWorkflow() {
           />
 
           {/* Mobile / tablet grid */}
-          <div className="grid grid-cols-2 gap-y-12 sm:grid-cols-3 lg:hidden">
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 min-[400px]:grid-cols-2 sm:grid-cols-3 lg:hidden">
             {steps.map((step) => (
               <div
                 key={step.number}

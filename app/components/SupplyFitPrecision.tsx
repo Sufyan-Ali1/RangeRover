@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { SupplyFitPrecisionData } from "../data/types";
 
 type FeatureIcon =
@@ -11,6 +12,8 @@ type FeatureIcon =
 
 interface SupplyFitPrecisionProps {
   data: SupplyFitPrecisionData;
+  compact?: boolean;
+  columns?: 2 | 3;
 }
 
 const icons: Record<FeatureIcon, React.ReactNode> = {
@@ -113,12 +116,36 @@ const icons: Record<FeatureIcon, React.ReactNode> = {
   ),
 };
 
-export default function SupplyFitPrecision({ data }: SupplyFitPrecisionProps) {
+export default function SupplyFitPrecision({ data, compact = false, columns = 3 }: SupplyFitPrecisionProps) {
+  if (compact) {
+    return (
+      <section className="w-full border-y border-[#d6f0e2] bg-[#F3FAF5]">
+        <div className="mx-auto w-full max-w-[1728px] px-6 py-8 sm:px-10 xl:px-[101px]">
+          <h2 className="sr-only">{data.title}</h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {data.features.map((feature) => (
+              <div key={feature.title} className="flex items-start gap-3">
+                <span aria-hidden="true" className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#11633A]/10 text-[#11633A]">
+                  {icons[feature.icon]}
+                </span>
+                <div className="min-w-0">
+                  <h3 className="text-sm font-bold text-gray-900">{feature.title}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-slate-600">{feature.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
   return (
-    <section className="relative w-full overflow-hidden">
+    <section className="relative w-full overflow-hidden bg-[#0d1117]">
       {/* Background */}
-      <img
+      <Image
         src="/precision.webp"
+        fill
+        sizes="100vw"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"
@@ -145,7 +172,7 @@ export default function SupplyFitPrecision({ data }: SupplyFitPrecisionProps) {
         </div>
 
         {/* Features */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className={`grid grid-cols-1 gap-5 sm:grid-cols-2 ${columns === 3 ? "lg:grid-cols-3" : "lg:grid-cols-2"}`}>
           {data.features.map((feature) => (
             <div
               key={feature.title}

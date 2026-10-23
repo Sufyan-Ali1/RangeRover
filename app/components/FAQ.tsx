@@ -1,6 +1,6 @@
 import type { Faq } from "../data/faqs";
 
-export default function FAQ({ faqs, accordionName }: { faqs: Faq[] | undefined; accordionName?: string }) {
+export default function FAQ({ faqs, accordionName, description = "Everything you need to know about our Range Rover and Land Rover engine rebuild, replacement and repair services - answered by our JLR-trained specialists." }: { faqs: Faq[] | undefined; accordionName?: string; description?: string }) {
   return (
     <section className="w-full bg-[#F3F4F6]">
       <div className="mx-auto w-full max-w-[1728px] px-6 py-16 sm:px-10 xl:px-[101px] xl:py-20">
@@ -10,9 +10,7 @@ export default function FAQ({ faqs, accordionName }: { faqs: Faq[] | undefined; 
               Frequently Asked Questions
             </h2>
             <p className="mb-8 text-[14px] leading-relaxed text-gray-500">
-              Everything you need to know about our Range Rover and Land Rover
-              engine rebuild, replacement and repair services - answered by our
-              JLR-trained specialists.
+              {description}
             </p>
             <a
               href="/get-quote"

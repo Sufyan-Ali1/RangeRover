@@ -31,7 +31,14 @@ function question() {
   return { a: Math.floor(Math.random() * 10) + 1, b: Math.floor(Math.random() * 10) + 1 };
 }
 
-export default function BlogContactForm() {
+interface BlogContactFormProps {
+  title?: string;
+  submitLabel?: string;
+  compact?: boolean;
+  registrationFirst?: boolean;
+}
+
+export default function BlogContactForm({ title = "Send a Message", submitLabel = "Send Message", compact = false, registrationFirst = false }: BlogContactFormProps = {}) {
   const router = useRouter();
   const id = useId();
   const [fields, setFields] = useState<Fields>({ name: "", email: "", phone: "", reg: "", postcode: "", message: "" });
@@ -78,19 +85,40 @@ export default function BlogContactForm() {
     }
   }
 
-  const fieldClass = (name: keyof Fields) => `w-full rounded-xl border bg-slate-50 px-3 py-2.5 text-[14px] outline-none transition focus:border-[#11633A] focus:ring-1 focus:ring-[#11633A] ${errors[name] ? "border-red-400" : "border-slate-200"}`;
+  const fieldClass = (name: keyof Fields) => `w-full rounded-xl border bg-slate-50 px-3 py-2.5 text-[14px] text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-[#11633A] focus:ring-1 focus:ring-[#11633A] ${errors[name] ? "border-red-400" : "border-slate-200"}`;
+  const orderedInputs = registrationFirst
+    ? [...inputs.filter(input => input.name === "reg"), ...inputs.filter(input => input.name !== "reg")]
+    : inputs;
 
   return (
-    <div className="rounded-3xl border border-slate-200 bg-white px-5 py-6 shadow-sm sm:px-6">
-      <h2 className="mb-5 text-xl font-bold text-slate-900">Send a Message</h2>
+    <div className="rounded-3xl border border-slate-200 bg-white px-5 py-6 text-slate-900 shadow-sm sm:px-6">
+      <h2 className="mb-5 text-xl font-bold text-slate-900">{title}</h2>
       <form onSubmit={submit} noValidate className="flex flex-col gap-4">
-        {inputs.map(input => (
-          <div key={input.name}>
+        <div className={compact ? "grid grid-cols-1 gap-4 sm:grid-cols-2" : "flex flex-col gap-4"}>
+        {orderedInputs.map(input => (
+          <div key={input.name} className={compact && registrationFirst && input.name === "reg" ? "sm:col-span-2" : undefined}>
             <label htmlFor={`${id}-${input.name}`} className="mb-1.5 block text-[13px] font-semibold text-slate-700">{input.label} *</label>
-            <input id={`${id}-${input.name}`} name={input.name} type={input.type ?? "text"} required value={fields[input.name]} onChange={event => change(input.name, event.target.value)} placeholder={input.placeholder} aria-invalid={Boolean(errors[input.name])} aria-describedby={errors[input.name] ? `${id}-${input.name}-error` : undefined} className={fieldClass(input.name)} />
+            {registrationFirst && input.name === "reg" ? (
+              <div className={`flex overflow-hidden rounded-lg border transition focus-within:border-[#4CA66B] focus-within:ring-1 focus-within:ring-[#4CA66B] ${errors.reg ? "border-red-400" : "border-slate-200"}`}>
+                <div aria-hidden="true" className="flex shrink-0 flex-col items-center justify-center gap-0.5 bg-[#003087] px-3 py-2">
+                  <svg viewBox="0 0 60 40" className="h-7 w-10">
+                    <rect width="60" height="40" fill="#012169" />
+                    <path d="M0,0 L60,40 M60,0 L0,40" stroke="white" strokeWidth="8" />
+                    <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" strokeWidth="4" />
+                    <path d="M30,0 V40 M0,20 H60" stroke="white" strokeWidth="12" />
+                    <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" strokeWidth="8" />
+                  </svg>
+                  <span className="text-[10px] font-bold tracking-widest text-white">UK</span>
+                </div>
+                <input id={`${id}-reg`} name="reg" required maxLength={8} value={fields.reg} onChange={event => change("reg", event.target.value)} placeholder="ENTER REGISTRATION" aria-invalid={Boolean(errors.reg)} aria-describedby={errors.reg ? `${id}-reg-error` : undefined} className="min-w-0 flex-1 bg-[#F5C400] px-3 py-3 text-[13px] font-black uppercase tracking-[0.1em] text-[#1a1a1a] placeholder:font-bold placeholder:text-[#8B7200] outline-none sm:px-3.5 sm:text-[16px]" />
+              </div>
+            ) : (
+              <input id={`${id}-${input.name}`} name={input.name} type={input.type ?? "text"} required value={fields[input.name]} onChange={event => change(input.name, event.target.value)} placeholder={input.placeholder} aria-invalid={Boolean(errors[input.name])} aria-describedby={errors[input.name] ? `${id}-${input.name}-error` : undefined} className={fieldClass(input.name)} />
+            )}
             {errors[input.name] && <p id={`${id}-${input.name}-error`} className="mt-1 text-xs text-red-600">{errors[input.name]}</p>}
           </div>
         ))}
+        </div>
         <div>
           <label htmlFor={`${id}-message`} className="mb-1.5 block text-[13px] font-semibold text-slate-700">Issue with vehicle *</label>
           <textarea id={`${id}-message`} name="message" required rows={3} value={fields.message} onChange={event => change("message", event.target.value)} placeholder="Describe the issue with your vehicle..." aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? `${id}-message-error` : undefined} className={`${fieldClass("message")} resize-y`} />
@@ -99,12 +127,12 @@ export default function BlogContactForm() {
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
           <div className="flex items-center gap-2">
             <label htmlFor={`${id}-answer`} className="shrink-0 text-[13px] text-slate-700">What is {math.a} + {math.b}?</label>
-            <input id={`${id}-answer`} required inputMode="numeric" value={answer} onChange={event => { setAnswer(event.target.value.replace(/\D/g, "")); setVerificationError(""); }} placeholder="Answer" aria-invalid={Boolean(verificationError)} aria-describedby={verificationError ? `${id}-verification-error` : undefined} className="min-w-0 flex-1 rounded-lg border border-slate-200 bg-white px-2 py-2 text-center text-[13px] outline-none focus:ring-1 focus:ring-[#11633A]" />
+            <input id={`${id}-answer`} required inputMode="numeric" value={answer} onChange={event => { setAnswer(event.target.value.replace(/\D/g, "")); setVerificationError(""); }} placeholder="Answer" aria-invalid={Boolean(verificationError)} aria-describedby={verificationError ? `${id}-verification-error` : undefined} className="min-w-0 flex-1 rounded-lg border border-slate-200 bg-white px-2 py-2 text-center text-[13px] text-slate-900 placeholder:text-slate-400 outline-none focus:ring-1 focus:ring-[#11633A]" />
             <button type="button" aria-label="Refresh verification question" onClick={() => { setMath(question()); setAnswer(""); setVerificationError(""); }} className="cursor-pointer rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-[#11633A] hover:bg-[#ECFFF3]">↻</button>
           </div>
           {verificationError && <p id={`${id}-verification-error`} className="mt-1 text-xs text-red-600">{verificationError}</p>}
         </div>
-        <button type="submit" disabled={submitting} className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-xl bg-[#11633A] py-3 text-[14px] font-bold text-white transition hover:bg-[#0d4f2d] disabled:cursor-not-allowed disabled:opacity-50">{submitting ? "Sending…" : "Send Message"}<span aria-hidden="true">↗</span></button>
+        <button type="submit" disabled={submitting} className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-xl bg-[#11633A] py-3 text-[14px] font-bold text-white transition hover:bg-[#0d4f2d] disabled:cursor-not-allowed disabled:opacity-50">{submitting ? "Sending…" : submitLabel}<span aria-hidden="true">↗</span></button>
         {submitError && <p role="alert" className="text-sm text-red-600">{submitError}</p>}
       </form>
     </div>

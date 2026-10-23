@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import {
   supplyFitHeroData,
@@ -6,10 +7,16 @@ import {
 
 interface SupplyFitHeroProps {
   data?: SupplyFitHeroDataProps;
+  rightContent?: ReactNode;
+  title?: ReactNode;
+  actions?: ReactNode;
 }
 
 export default function SupplyFitHero({
   data = supplyFitHeroData,
+  rightContent,
+  title,
+  actions,
 }: SupplyFitHeroProps) {
   return (
     <section className="relative w-full overflow-hidden bg-white">
@@ -38,9 +45,7 @@ export default function SupplyFitHero({
             </span>
 
             <h1 className="mb-4 text-[30px] font-black leading-tight sm:text-[45px]">
-              <span className="text-white">{data.titleSpan1}</span>
-              <br />
-              <span >{data.titleSpan2}</span>
+              {title ?? <><span className="text-white">{data.titleSpan1}</span><br /><span>{data.titleSpan2}</span></>}
             </h1>
 
             <p className="mb-5 max-w-[520px] text-[15px] font-semibold leading-[1.6] text-white/90">
@@ -59,7 +64,7 @@ export default function SupplyFitHero({
               ))}
             </div>
 
-            <div className="mb-7 flex flex-wrap gap-3">
+            {actions ?? <div className="mb-7 flex flex-wrap gap-3">
               <a
                 href={data.phone.href}
                 className="flex items-center gap-2.5 rounded-lg px-6 py-3 text-[15px] font-bold text-white transition-opacity hover:opacity-90"
@@ -102,7 +107,7 @@ export default function SupplyFitHero({
                 </svg>
                 WhatsApp Us
               </a>
-            </div>
+            </div>}
 
             <div className="flex flex-wrap gap-8 sm:gap-12">
               {data.stats.map((s) => (
@@ -119,7 +124,7 @@ export default function SupplyFitHero({
           </div>
 
           <div className="relative w-full lg:w-[48%]">
-            <div className="relative h-[400px] max-h-[400px] overflow-hidden rounded-2xl shadow-2xl">
+            {rightContent ?? <div className="relative h-[400px] max-h-[400px] overflow-hidden rounded-2xl shadow-2xl">
               <Image
                 src={data.images.heroCard.src}
                 alt={data.images.heroCard.alt}
@@ -157,7 +162,7 @@ export default function SupplyFitHero({
                   </span>
                 </div>
               </div>
-            </div>
+            </div>}
           </div>
         </div>
       </div>

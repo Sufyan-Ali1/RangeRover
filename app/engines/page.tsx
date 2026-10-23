@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import BrowseByModelStatic from "../components/BrowseByModelStatic";
@@ -111,6 +112,11 @@ export default function EnginesPage() {
         intro={engineServicesMain.intro}
         viewMoreHref={engineServicesMain.viewMoreHref}
       />
+      <div className="mx-auto w-full max-w-[1728px] px-6 pb-10 sm:px-10 xl:px-[101px]">
+        <Link href="/reconditioned-engine" className="inline-flex min-h-12 items-center rounded-xl border-2 border-[#11633A] px-6 py-3 text-sm font-bold text-[#11633A] transition-colors hover:bg-[#ECFFF3]">
+          Explore Reconditioned Engine Options →
+        </Link>
+      </div>
       <Reviews reviews={reviews} />
       <AuthorityNationwide data={enginesPageNationwide} />
       <AuthorityPrecision data={enginesPagePrecision} />

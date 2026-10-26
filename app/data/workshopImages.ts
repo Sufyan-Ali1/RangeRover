@@ -14,7 +14,7 @@ const workshopPhotos = {
   12: { src: "/images/rrg_images/12.webp", width: 1152, height: 2048, alt: "Engine assembly on a stand in the workshop" },
   13: { src: "/images/rrg_images/13.webp", width: 1152, height: 2048, alt: "Removed engine with the flywheel visible" },
   14: { src: "/images/rrg_images/14.webp", width: 1152, height: 2048, alt: "Engine assembly and wiring during workshop repairs" },
-  15: { src: "/images/rrg_images/15.webp", width: 1152, height: 2048, alt: "Grey Range Rover outside the workshop" },
+  15: { src: "/images/workshop-5.webp", width: 1200, height: 900, alt: "Range Rover vehicles lined up outside the workshop" },
   16: { src: "/images/rrg_images/16.webp", width: 1152, height: 2048, alt: "Land Rover raised on a lift during engine removal" },
   17: { src: "/images/rrg_images/17.webp", width: 1152, height: 2048, alt: "Grey Land Rover with its bonnet open in the workshop" },
   18: { src: "/images/rrg_images/18.webp", width: 1152, height: 2048, alt: "Engine and hoses supported by a red workshop stand" },

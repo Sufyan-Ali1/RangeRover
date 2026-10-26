@@ -106,7 +106,6 @@ export default async function ModelPage({ params }: Props) {
           title={engineData.title}
           rows={tableRows}
           rowsPerPage={9}
-          getQuoteHref="/get-quote"
           notFoundText="Did Not Find Your Engine code."
           notFoundLinkText="CLICK HERE"
           notFoundHref="/get-quote"

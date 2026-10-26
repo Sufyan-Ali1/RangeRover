@@ -100,7 +100,6 @@ export default function EnginesPage() {
           title="Engine Codes to Help You Find Your Vehicle"
           rows={tableRows}
           rowsPerPage={9}
-          getQuoteHref="/get-quote"
           notFoundText="Did Not Find Your Engine code."
           notFoundLinkText="CLICK HERE"
           notFoundHref="/get-quote"

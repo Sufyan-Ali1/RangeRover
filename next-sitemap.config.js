@@ -1,6 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
 
 const SITE_URL = process.env.SITE_URL || "https://rangerovergarage.co.uk";
+const engineCodesData = require("./app/data/engineCodesData.json");
+const { getEngineCodeHref } = require("./app/data/engines/engineCodeLinks.cjs");
 
 const serviceSlugsPaths = [
   "engine-rebuild",
@@ -61,6 +63,16 @@ module.exports = {
       for (const model of models) {
         paths.push(field(`/engines/${brand}/${model}`, 0.7));
       }
+    }
+
+    // Share the table's URL resolver so aliases and engine-size rows stay aligned.
+    const engineCodePaths = new Set(
+      Object.values(engineCodesData).flatMap((group) =>
+        group.rows.map(getEngineCodeHref),
+      ),
+    );
+    for (const enginePath of engineCodePaths) {
+      paths.push(field(enginePath, 0.7));
     }
 
     return paths;

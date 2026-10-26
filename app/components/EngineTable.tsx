@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { getEngineCodeHref } from "@/app/data/engines/engineCodeLinks.cjs";
 
 export interface EngineTableRow {
   make: string;
@@ -15,7 +16,6 @@ export interface EngineTableProps {
   title: string;
   rows: EngineTableRow[];
   rowsPerPage?: number;
-  getQuoteHref?: string | ((row: EngineTableRow) => string);
   notFoundText?: string;
   notFoundLinkText?: string;
   notFoundHref?: string;
@@ -25,7 +25,6 @@ export default function EngineTable({
   title,
   rows,
   rowsPerPage = 9,
-  getQuoteHref = "/get-quote",
   notFoundText = "Did Not Find Your Engine code.",
   notFoundLinkText = "CLICK HERE",
   notFoundHref = "/get-quote",
@@ -36,14 +35,12 @@ export default function EngineTable({
   const start = (page - 1) * rowsPerPage;
   const visibleRows = rows.slice(start, start + rowsPerPage);
 
-  const getHref = (row: EngineTableRow) =>
-    typeof getQuoteHref === "function" ? getQuoteHref(row) : getQuoteHref;
 
   // Show up to 5 page numbers centred around current page
   const pageWindow = 5;
   const halfWindow = Math.floor(pageWindow / 2);
   let pageStart = Math.max(1, page - halfWindow);
-  let pageEnd = Math.min(totalPages, pageStart + pageWindow - 1);
+  const pageEnd = Math.min(totalPages, pageStart + pageWindow - 1);
   if (pageEnd - pageStart < pageWindow - 1) {
     pageStart = Math.max(1, pageEnd - pageWindow + 1);
   }
@@ -71,8 +68,8 @@ export default function EngineTable({
                     {col}
                   </th>
                 ))}
-                {/* Empty header for Get Quote column */}
-                <th className="bg-[#0d4f2d] px-6 py-4" />
+                {/* Engine details action column */}
+                <th scope="col" className="bg-[#0d4f2d] px-6 py-4"><span className="sr-only">Engine details</span></th>
               </tr>
             </thead>
             <tbody>
@@ -89,10 +86,11 @@ export default function EngineTable({
                   <td className="px-6 py-4 text-[13px] text-gray-700">{row.yearRange}</td>
                   <td className="border-l border-gray-200 bg-[#11633A] px-6 py-4">
                     <Link
-                      href={getHref(row)}
+                      href={getEngineCodeHref(row)}
+                      aria-label={`Explore ${row.make} ${row.model} ${row.engineCode} engine`}
                       className="whitespace-nowrap text-[14px] font-bold text-white hover:text-white/80"
                     >
-                      Get Quote
+                      Explore Engine
                     </Link>
                   </td>
                 </tr>

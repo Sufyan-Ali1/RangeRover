@@ -162,7 +162,6 @@ export default async function BrandPage({ params }: Props) {
             title={engineData.title}
             rows={tableRows}
             rowsPerPage={9}
-            getQuoteHref="/get-quote"
             notFoundText="Did Not Find Your Engine code."
             notFoundLinkText="CLICK HERE"
             notFoundHref="/get-quote"
@@ -250,7 +249,6 @@ export default async function BrandPage({ params }: Props) {
           title={`${brandTitle} Engine Codes to Help You Find Your Vehicle`}
           rows={brandTableRows}
           rowsPerPage={9}
-          getQuoteHref="/get-quote"
           notFoundText="Did Not Find Your Engine code."
           notFoundLinkText="CLICK HERE"
           notFoundHref="/get-quote"

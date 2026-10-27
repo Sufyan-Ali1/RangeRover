@@ -1,4 +1,5 @@
 import OilLevelNotice from "./components/OilLevelNotice";
+import BonnetDiagnosticAnimation from "./components/BonnetDiagnosticAnimation";
 import { homeOilLevelNotice } from "./data/home/oilLevelNotice";
 import ServiceGallery from "./components/ServiceGallery";
 import { homeWorkshopImages } from "./data/workshopImages";
@@ -78,6 +79,7 @@ export default function Home() {
         ]}
       />
       <WarrantySection />
+      <BonnetDiagnosticAnimation />
       
       <TrustedSpecialists data={homeTrustedSpecialists} />
       <AuthorityLeading data={authorityLeading} />

@@ -6,6 +6,11 @@
 }
 
 @theme inline {
+  --color-brand: #11633A;
+  --color-brand-dark: #0D4F2D;
+  --color-brand-soft: #DFF0DF;
+  --color-brand-mint: #A6F0C6;
+  --color-surface: #F9FAFB;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: Arial, Helvetica, sans-serif;

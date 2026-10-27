@@ -1,11 +1,29 @@
-export default function EngineWaveDivider() {
+interface EngineWaveDividerData {
+  eyebrow: string;
+  title: string;
+  description: string;
+  paragraphs: string[];
+}
+
+export default function EngineWaveDivider({ data }: { data: EngineWaveDividerData }) {
   return (
-    <div className="bg-white px-5 py-6 sm:px-8" aria-hidden="true">
+    <section aria-labelledby="engine-workshop-intro-title" className="relative isolate overflow-hidden bg-white px-5 pb-28 pt-14 sm:px-8 lg:pb-32 lg:pt-16">
+      <div className="relative z-10 mx-auto max-w-[1216px] text-left">
+        <p className="text-xs font-bold uppercase tracking-wide text-[#11633A]">{data.eyebrow}</p>
+        <h2 id="engine-workshop-intro-title" className="mt-2 text-3xl font-extrabold leading-tight tracking-tight text-[#0d4f2d] sm:text-4xl">{data.title}</h2>
+        <p className="mt-4 text-sm leading-7 text-gray-600 sm:text-base">{data.description}</p>
+        <div className="mt-5 space-y-5">
+          {data.paragraphs.map((paragraph, index) => (
+            <p key={index} className="text-sm leading-7 text-gray-600 sm:text-base">{paragraph}</p>
+          ))}
+        </div>
+      </div>
       <svg
+        aria-hidden="true"
         viewBox="0 0 1200 210"
         fill="none"
         preserveAspectRatio="none"
-        className="mx-auto block h-28 w-full max-w-[1216px] sm:h-40 lg:h-52"
+        className="pointer-events-none absolute inset-x-0 -bottom-12 -z-10 mx-auto h-[180px] w-full max-w-[1216px]"
         focusable="false"
       >
         <path
@@ -29,6 +47,6 @@ export default function EngineWaveDivider() {
           fill="#56a575"
         />
       </svg>
-    </div>
+    </section>
   );
 }

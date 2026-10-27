@@ -73,7 +73,7 @@ export default async function EngineCodePage({ params }: Props) {
         <EngineFinalCTA data={engineData.finalCta} />
         <EngineServices data={engineData.engineServices} />
         <EngineCompatibilityFitting data={engineData.compatibilityFitting} />
-        <EngineWaveDivider />
+        <EngineWaveDivider data={engineData.workshopIntro} />
         <EngineGallery data={engineData.engineGallery} />
         <EngineWhyChoose data={engineData.whyChoose} />
         <FAQ

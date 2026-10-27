@@ -68,8 +68,8 @@ export default function EngineTable({
                     {col}
                   </th>
                 ))}
-                {/* Engine details action column */}
-                <th scope="col" className="bg-[#0d4f2d] px-6 py-4"><span className="sr-only">Engine details</span></th>
+                {/* Quote action column */}
+                <th scope="col" className="bg-[#0d4f2d] px-6 py-4"><span className="sr-only">Get a quote</span></th>
               </tr>
             </thead>
             <tbody>
@@ -80,17 +80,25 @@ export default function EngineTable({
                 >
                   <td className="px-6 py-4 text-[13px] text-gray-700">{row.make}</td>
                   <td className="px-6 py-4 text-[13px] text-gray-700">{row.model}</td>
-                  <td className="px-6 py-4 text-[13px] text-gray-700">{row.engineCode}</td>
+                  <td className="px-6 py-4 text-[13px] text-gray-700">
+                    <Link
+                      href={getEngineCodeHref(row)}
+                      aria-label={`Explore ${row.make} ${row.model} ${row.engineCode} engine`}
+                      className="font-semibold text-[#11633A] underline underline-offset-4 hover:text-[#0d4f2d] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#11633A]"
+                    >
+                      {row.engineCode}
+                    </Link>
+                  </td>
                   <td className="px-6 py-4 text-[13px] text-gray-700">{row.actualCC}</td>
                   <td className="px-6 py-4 text-[13px] text-gray-700">{row.powerKwHp}</td>
                   <td className="px-6 py-4 text-[13px] text-gray-700">{row.yearRange}</td>
                   <td className="border-l border-gray-200 bg-[#11633A] px-6 py-4">
                     <Link
-                      href={getEngineCodeHref(row)}
-                      aria-label={`Explore ${row.make} ${row.model} ${row.engineCode} engine`}
+                      href="/get-quote"
+                      aria-label={`Get a quote for ${row.make} ${row.model} ${row.engineCode}`}
                       className="whitespace-nowrap text-[14px] font-bold text-white hover:text-white/80"
                     >
-                      Explore Engine
+                      Get Quote
                     </Link>
                   </td>
                 </tr>
